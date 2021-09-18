@@ -1,9 +1,15 @@
 
+body {
+    background-color: var(--color-primary-light);
+}
+
 /** NAVBAR **/
 
 .navbar {
     padding: 0.5rem 2rem;
     margin: 0;
+    background-color: var(--color-primary-light);
+    box-shadow: 0px 0px 15px 0px #202124;
 }   
 
     .navbar a h2 {
@@ -26,6 +32,14 @@
     background-repeat: no-repeat;
 }
 
-ul {
+.nav ul {
     list-style: none;
 }
+
+.nav a {
+    color: var(--color-primary-dark);
+}
+
+    .nav a:hover {
+        color: var(--color-primary-accent-purple);
+    }

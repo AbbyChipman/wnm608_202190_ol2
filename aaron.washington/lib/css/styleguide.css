@@ -9,7 +9,7 @@
     --color-primary-dark: #202124;
     --color-primary-light: #f7f7f7;
     --color-primary-accent-red: #ea3d3d;
-    --color-primary-accent-purple: #aa5bEb;
+    --color-primary-accent-purple: #a124db;
     --color-text-dark: #202124;
     --color-text-light: #fff;
 
@@ -40,11 +40,11 @@ a {
     color:#aa5bEb;
     text-decoration: none;
     font-family: 'Rubik', Arial, sans-serif;
+    transition: all 0.2s ease;
 }
 
     a:hover {
         color: #ea3d3d;
-        text-decoration: underline;
     }
 
 
