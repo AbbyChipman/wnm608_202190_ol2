@@ -39,16 +39,12 @@ p {
 a {
     color:#aa5bEb;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
     font-family: 'Rubik', Arial, sans-serif;
-    font-weight: 400;
 }
 
     a:hover {
         color: #ea3d3d;
         text-decoration: underline;
-        font-family: 'Rubik', Arial, sans-serif;
-        font-weight: 500;
     }
 
 

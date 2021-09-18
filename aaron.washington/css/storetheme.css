@@ -1,0 +1,31 @@
+
+/** NAVBAR **/
+
+.navbar {
+    padding: 0.5rem 2rem;
+    margin: 0;
+}   
+
+    .navbar a h2 {
+        color: var(--color-primary-dark);
+    }
+
+        .navbar a:hover {
+            color: var(--color-primary-dark);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+
+.home-logo {
+    width: 4rem;
+    height: var(--header-height);
+    background-image: url('../img/AW-Logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+}

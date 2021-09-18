@@ -10,24 +10,35 @@
         @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style> 
     <link rel="stylesheet" href="lib/css/styleguide.css">
+    <link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
     
-<!-- header>h1+p -->    
-<header>
-    <h1>Hi there!</h1>
-    <p>Thanks for visiting my site, practicing Emmet is fun.</p>
+<!-- ** Navbar ** header>h1+p -->    
+<header class="display-flex flex-align-center navbar">
+    <div class="flex-none">
+        <a href="#">
+            <div class="home-logo"></div>
+        </a>
+    </div>
+    <div class="flex-none">
+        <a href="#">
+            <h2>esome Stuff</h2>
+        </a>
+    </div>
+    <div class="flex-stretch"></div>
+    <nav class="flex-none nav">
+        <ul class="display-flex">
+            <li class="flex-stretch"><a href="#article1">Link1</a></li>
+            <li class="flex-stretch"><a href="#article2">Link2</a></li>
+            <li class="flex-stretch"><a href="#article3">Link3</a></li>
+            <li class="flex-stretch"><a href="#article4">Link4</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- nav.nav>ul>li*4>a[href=#article$]>{Link$} -->
-<nav class="nav">
-    <ul class="container display-flex">
-        <li class="flex-stretch"><a href="#article1">Link1</a></li>
-        <li class="flex-stretch"><a href="#article2">Link2</a></li>
-        <li class="flex-stretch"><a href="#article3">Link3</a></li>
-        <li class="flex-stretch"><a href="#article4">Link4</a></li>
-    </ul>
-</nav>
+
 
 <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*3>lorem40 -->
 <div class="container">
