@@ -21,30 +21,79 @@ body {
     margin: 0;
     font-size: 100%;
     font-family: 'Rubik', Arial, sans-serif;
+    background-color: var(--color-primary-light);
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 700;
+    margin: 1rem 0rem;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
 }
 
 p {
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 400;
+    font-size: 1rem;
+    margin: 0.5rem 0rem 1.5rem 0rem;
+    padding: 0;
 }
 
 a {
     color:#aa5bEb;
     text-decoration: none;
     font-family: 'Rubik', Arial, sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease-in-out;
 }
 
     a:hover {
         color: #ea3d3d;
+    }
+
+
+button {
+    color: var(--color-primary-dark);
+    min-width: 9rem;
+    margin: 0;
+    padding: 1rem;
+    border: 0.15rem solid var(--color-primary-dark);
+    background-color: rgba(0,0,0,0);
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+    button:hover {
+        color: var(--color-primary-light);
+        border: 0.15rem solid var(--color-primary-dark);
+        font-weight: 500;
+        cursor: pointer;
+        background-color: rgba(32,33,36,1);
     }
 
 
@@ -91,5 +140,62 @@ a {
 
 
 
-/** COMPONENTS **/
+/********** COMPONENTS **********/
 
+
+/** NAVBAR **/
+
+.navbar {
+    padding: 0.75rem 2rem;
+    margin: 0;
+    background-color: var(--color-primary-light);
+    /*box-shadow: 0px 0px 8px 0px #202124;*/
+}   
+
+    .navbar a h5 {
+        color: var(--color-primary-dark);
+        margin: 0;
+        font-weight: 500;
+    }
+
+        .navbar a:hover {
+            color: var(--color-primary-dark);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+
+.home-logo {
+    width: 4rem;
+    height: var(--header-height);
+    background-image: url('../img/AW-Logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav a {
+    color: var(--color-primary-dark);
+    padding: 0 2.5rem;
+    font-size: 1rem;
+}
+
+    .nav a:hover {
+        color: var(--color-primary-accent-purple);
+    }
+
+
+
+/** HERO **/
+
+.hero {
+    background-image: url('#');
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
