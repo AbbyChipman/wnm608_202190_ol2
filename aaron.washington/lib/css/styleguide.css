@@ -1,0 +1,99 @@
+
+/**  CSS RESET **/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-dark: #202124;
+    --color-primary-light: #f7f7f7;
+    --color-primary-accent-red: #ea3d3d;
+    --color-primary-accent-purple: #aa5bEb;
+    --color-text-dark: #202124;
+    --color-text-light: #fff;
+
+    --header-height: 3rem;
+    --spacing: 1rem;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Rubik', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color:#aa5bEb;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 400;
+}
+
+    a:hover {
+        color: #ea3d3d;
+        text-decoration: underline;
+        font-family: 'Rubik', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+
+
+/** GRID LAYOUT **/
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.flex-stretch {
+    flex: 1 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+
+
+/** COMPONENTS **/
+
