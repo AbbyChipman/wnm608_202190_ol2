@@ -266,8 +266,8 @@ button.light {
 /** CARDS **/
 
 .card-row {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .card {
@@ -450,11 +450,28 @@ button.light {
 
 footer {
     color: var(--color-primary-light);
-    padding: 0.75rem 2rem;
+    padding: 1rem 2rem;
     margin: 0;
     background-color: var(--color-primary-dark);
 } 
 
-    footer .nav {
-        color: var(--color-primary-light);
+    footer .nav ul {
+        padding-left: 0;
+    }
+
+        footer .nav li {
+            text-align: center;
+        }
+
+            footer .nav li a {
+                color: var(--color-primary-light);
+            }
+
+
+    footer p.copyright {
+        text-align: center;
+        font-size: 0.7rem;
+        font-weight: 300;
+        margin-top: 4rem;
+        margin-bottom: 0.5rem;
     }
