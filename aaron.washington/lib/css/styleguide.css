@@ -9,7 +9,7 @@
     --color-primary-dark: #202124;
     --color-primary-light: #f7f7f7;
     --color-primary-accent-red: #ea3d3d;
-    --color-primary-accent-purple: #A643B8;
+    --color-primary-accent-purple: #AC56E6;
     --color-text-dark: #202124;
     --color-text-light: #fff;
 
@@ -247,6 +247,11 @@ button.light {
 
 /** CARD **/
 
+.card-row {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 .card {
     margin: 0;
     padding: 1rem;
@@ -305,8 +310,13 @@ button.light {
 
 /** ABOUT **/
 
+.gray-bg {
+    background-color: #ededed;
+}
+
 .about-us {
-    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .about-text {
@@ -316,4 +326,41 @@ button.light {
 
     .about-text p {
         margin-top: 1rem;
+    }
+
+
+
+/** NEWSLETTER **/
+
+.news-row {
+    background-color: var(--color-primary-accent-red);
+}
+
+.news-img {
+    width: 60%;
+    height: 30vh;
+    background-image: url('../../img/AW-landing-newsletter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-primary-dark);
+}
+
+.news-text {
+    color: var(--color-primary-light);
+    padding: 3rem 4rem;
+}
+
+    .news-text h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .news-text p {
+        max-width: 65%;
+        margin-bottom: 0.5rem;
+    }
+
+    .news-text button {
+        margin-bottom: 0;
     }
