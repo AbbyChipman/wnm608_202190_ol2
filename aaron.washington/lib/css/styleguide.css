@@ -60,6 +60,7 @@ p {
     font-size: 1rem;
     margin: 0.5rem 0rem 1.5rem 0rem;
     padding: 0;
+    line-height: 1.5rem;
 }
 
 a {
@@ -158,6 +159,10 @@ button.light {
     justify-content: center;
 }
 
+.flex-basis-none {
+    flex-basis: 0;
+}
+
 
 
 /********** COMPONENTS **********/
@@ -214,8 +219,7 @@ button.light {
 .hero {
     width: 100%;
     height: 40vh;
-    background-position-x: right;
-    background-position-y: center;
+    background-position: center;    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -237,7 +241,7 @@ button.light {
 
 
 .hero-landing {
-    background-image: url('#');
+    background-image: url('../../img/AW-landing-hero.jpg');
 }
 
 
@@ -257,36 +261,59 @@ button.light {
             color: var(--color-primary-light);
         }
 
-    .card a h4 {
+    .card a h5 {
+        margin: 0;
         font-weight: 400;
     }
 
 
 .card-img {
     width: 100%;
-    height: 5vh;
+    height: 20vh;
     padding: 2rem;
     text-align: center;
-    background-position-x: right;
-    background-position-y: center;
+    border-radius: 1rem;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
+    background-position: center;
     background-color: var(--color-primary-dark);
+    transition: all 0.5s ease-in-out;
 }
 
+    .card-img:hover {
+        background-size: 110%;
+    }
+
+
 .card-bg-1 {
-    background-image: url('#');
+    background-image: url('../../img/AW-landing-shop_men.jpg');
 }
 
 .card-bg-2 {
-    background-image: url('#');
+    background-image: url('../../img/AW-landing-shop_women.jpg');
 }
 
 .card-bg-3 {
-    background-image: url('#');
+    background-image: url('../../img/AW-landing-shop_kids.jpg');
 }
 
 .card-bg-4 {
-    background-image: url('#');
+    background-image: url('../../img/AW-landing-shop_trends.jpg');
 }
+
+
+
+/** ABOUT **/
+
+.about-us {
+    margin-top: 3rem;
+}
+
+.about-text {
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+    .about-text p {
+        margin-top: 1rem;
+    }
