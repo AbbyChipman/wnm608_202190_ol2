@@ -222,7 +222,6 @@ button.light {
     background-position: center;    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
     background-color: var(--color-primary-dark);
 }
 
@@ -236,9 +235,9 @@ button.light {
         font-weight: 600;
     }
 
-    .hero-text h5 {
-        color: var(--color-primary-dark);
-        font-weight: 400;
+    .hero-text p {
+        font-weight: 300;
+        margin-bottom: 1rem;
     }
 
 
@@ -247,7 +246,7 @@ button.light {
 }
 
 
-/** CARD **/
+/** CARDS **/
 
 .card-row {
     padding-top: 0.5rem;
@@ -310,6 +309,53 @@ button.light {
 
 
 
+/** DISCOUNT **/
+
+.discount-row {
+    background-color: var(--color-primary-accent-purple);
+}
+
+.discount-img {
+    width: 60%;
+    height: 30vh;
+    background-image: url('#');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-primary-dark);
+}
+
+.discount-title {
+    color: var(--color-primary-light);
+    margin-right: -7.5rem;
+    z-index: 5;
+}
+
+    .discount-title h1 {
+        margin: 0;
+        line-height: 5.5rem;
+        font-size: 7rem;
+        text-align: right;
+    }
+
+        .discount-title h1 span {
+            font-size: 6.45rem;
+        }
+
+
+.discount-offer h1 {
+    text-align: right;
+}
+
+.discount-offer h5 {
+    text-align: center;
+    position: relative;
+    left: 9%;
+    margin-top: -2.3rem;
+}
+
+
+
 /** ABOUT **/
 
 .gray-bg {
@@ -339,7 +385,7 @@ button.light {
 }
 
 .news-img {
-    width: 60%;
+    width: 55%;
     height: 30vh;
     background-image: url('../../img/AW-landing-newsletter.jpg');
     background-repeat: no-repeat;
@@ -350,7 +396,7 @@ button.light {
 
 .news-text {
     color: var(--color-primary-light);
-    padding: 3rem 4rem;
+    padding: 1rem 4rem;
 }
 
     .news-text h3 {
@@ -359,7 +405,6 @@ button.light {
     }
 
     .news-text p {
-        max-width: 65%;
         margin-bottom: 0.5rem;
     }
 
