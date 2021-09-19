@@ -8,8 +8,9 @@
 :root {
     --color-primary-dark: #202124;
     --color-primary-light: #f7f7f7;
-    --color-primary-accent-red: #ea3d3d;
-    --color-primary-accent-purple: #AC56E6;
+    --color-accent-red-light: #ea3d3d;
+    --color-accent-purple-light: #B263E6;
+    --color-accent-purple-dark: #4E2C66;
     --color-text-dark: #202124;
     --color-text-light: #fff;
 
@@ -72,7 +73,7 @@ a {
 
     a:hover {
         cursor: pointer;
-        color: var(--color-primary-accent-red);
+        color: var(--color-accent-purple-light);
     }
 
 
@@ -209,7 +210,7 @@ button.light {
 }
 
     .nav a:hover {
-        color: var(--color-primary-accent-red);
+        color: var(--color-accent-purple-light);
     }
 
 
@@ -231,14 +232,30 @@ button.light {
     color: var(--color-primary-light);
 }
 
+    .hero-text h2 {
+        color: #e7aa55;
+        line-height: 4rem;
+    }
+
     .hero-text h4 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
         font-weight: 600;
     }
 
-    .hero-text p {
+    /*.hero-text p {
         font-weight: 300;
         margin-bottom: 1rem;
+    }*/
+
+    .hero-text button {
+        border: 0.15rem solid #e7aa55;
     }
+
+        .hero-text button:hover {
+            border: 0.15rem solid #e7aa55;
+            background-color: rgba(231,170,85,1);
+        }
 
 
 .hero-landing {
@@ -312,17 +329,13 @@ button.light {
 /** DISCOUNT **/
 
 .discount-row {
-    background-color: var(--color-primary-accent-purple);
+    background-color: var(--color-primary-dark);
 }
 
-.discount-img {
-    width: 60%;
-    height: 30vh;
-    background-image: url('#');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--color-primary-dark);
+.discount-offer {
+    color: var(--color-primary-light);
+    position: relative;
+    right: -2.3rem;
 }
 
 .discount-offer h1 {
@@ -335,14 +348,22 @@ button.light {
 .discount-offer h5 {
     text-align: center;
     position: relative;
-    left: 8%;
-    margin-top: -2.3rem;
-    font-weight: 500;
+    left: 5%;
+    margin-top: -0.1rem;
+    font-weight: 300;
 }
+
+    .discount-offer h5.promo {
+        text-align: right;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        margin-right: -0.8rem;
+    }
+
 
 .discount-title {
     color: var(--color-primary-light);
-    margin-right: -7.5rem;
+    margin-right: -6.5rem;
     z-index: 5;
 }
 
@@ -351,12 +372,23 @@ button.light {
         line-height: 5.5rem;
         font-size: 7rem;
         text-align: right;
-        text-shadow: 7px 7px 0 var(--color-primary-accent-purple);
+        text-shadow: 8px 8px 0 var(--color-primary-dark);
     }
 
         .discount-title h1 span {
             font-size: 6.45rem;
         }
+
+
+.discount-img {
+    width: 60%;
+    height: 28vh;
+    background-image: url('../../img/AW-landing-discount.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-primary-dark);
+}
 
 
 
@@ -381,7 +413,7 @@ button.light {
 /** NEWSLETTER **/
 
 .news-row {
-    background-color: var(--color-primary-accent-red);
+    background-color: var(--color-accent-purple-dark);
 }
 
 .news-img {
@@ -410,4 +442,19 @@ button.light {
 
     .news-text button {
         margin-bottom: 0;
+    }
+
+
+
+/** FOOTER **/
+
+footer {
+    color: var(--color-primary-light);
+    padding: 0.75rem 2rem;
+    margin: 0;
+    background-color: var(--color-primary-dark);
+} 
+
+    footer .nav {
+        color: var(--color-primary-light);
     }
