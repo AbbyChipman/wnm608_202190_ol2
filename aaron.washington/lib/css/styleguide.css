@@ -325,6 +325,21 @@ button.light {
     background-color: var(--color-primary-dark);
 }
 
+.discount-offer h1 {
+    margin: 0;
+    line-height: 5.5rem;
+    font-size: 7rem;
+    text-align: right;
+}
+
+.discount-offer h5 {
+    text-align: center;
+    position: relative;
+    left: 8%;
+    margin-top: -2.3rem;
+    font-weight: 500;
+}
+
 .discount-title {
     color: var(--color-primary-light);
     margin-right: -7.5rem;
@@ -336,6 +351,7 @@ button.light {
         line-height: 5.5rem;
         font-size: 7rem;
         text-align: right;
+        text-shadow: 7px 7px 0 var(--color-primary-accent-purple);
     }
 
         .discount-title h1 span {
@@ -343,24 +359,8 @@ button.light {
         }
 
 
-.discount-offer h1 {
-    text-align: right;
-}
-
-.discount-offer h5 {
-    text-align: center;
-    position: relative;
-    left: 9%;
-    margin-top: -2.3rem;
-}
-
-
 
 /** ABOUT **/
-
-.gray-bg {
-    background-color: #ededed;
-}
 
 .about-us {
     padding-top: 3rem;
