@@ -1,7 +1,46 @@
 :root {
-    --color-offwhite: #f4f4f4;
+  --color-main-light: #d3f7fa;
+  --color-main-medium: #41acb6;
+  --color-main-dark: #011618;
 }
 
 body {
-    background-color:var(--color-offwhite);
+  background-color: var(--color-main-light);
+  color: var(--color-main-dark)
+}
+
+.navbar {
+  background-color: transparent;
+  color: var(--color-main-dark);
+  line-height: var(--header-height);
+}
+
+.navbar h1 {
+  font-size: 1em;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.card.outline {
+  border-radius: 0.2em;
+  border: 3px solid var(--color-main-dark);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-main-dark);
+  font-family: var(--font-sans);
+}
+
+.heading {
+  color: var(--color-main-dark);
+}
+
+.heading h3 {
+  width: 50%;
+}
+
+.article-body {
+  padding-left: 10px;
+}
+
+.text-center {
+  text-align: center;
 }

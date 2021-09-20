@@ -78,8 +78,20 @@ a:hover {
 .flex-align-center {
   align-items: center;
 }
+
+.flex-align-left {
+  align-items: left;
+}
 .flex-justify-center {
   justify-content: center;
+}
+
+.flex-justify-left {
+  justify-content: left;
+}
+
+.flex-justify-right {
+  justify-content: right;
 }
 
 /* COMPONENT CLASSES */
@@ -130,23 +142,42 @@ a:hover {
 }
 
 .card.dark {
-    background-color: var(--color-neutral-dark);
-    color: var(--color-neutral-light);
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-light);
 }
 
 .card.medium {
-    background-color: var(--color-neutral-medium);
+  background-color: var(--color-neutral-medium);
 }
 
 .card.flat {
-    padding:0;
+  padding: 0;
+}
+
+.card.outline {
+  border-radius: 0.2em;
+  border: 3px solid var(--color-neutral-light);
+  background-color: 0, rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+  position: relative;
 }
 
 .view-window {
-    height: 25vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-head {
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
