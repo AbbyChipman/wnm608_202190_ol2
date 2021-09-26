@@ -4,9 +4,28 @@
   --color-main-dark: #011618;
 }
 
+@media (max-width: 800px) {
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .navbar h1 {
+    padding-left: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar .display-flex {
+    display: block;
+  }
+  .navbar .nav li {
+    line-height: 1em;
+  }
+}
+
 body {
   background-color: var(--color-main-light);
-  color: var(--color-main-dark)
+  color: var(--color-main-dark);
 }
 
 .navbar {

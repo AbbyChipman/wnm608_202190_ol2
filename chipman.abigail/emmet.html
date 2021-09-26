@@ -4,32 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/css/styleguide.css">
+    <link rel="stylesheet" href="lib/css/gridsystem.css">
+    <link rel="stylesheet" href="css/storetheme.css">
     <title>Great Scott! Abby's Emmet page</title>
 </head>
 <body>
-    <header>
-        <h1>Great Scott! This page was built with Emmet</h1>
-        <p>(not Brown, sadly...)</p>
+    <header class="navbar">
+        <div class="container display-flex">
+            <div class="flex-none">
+                <h1>Great Scott!</h1>
+            </div>
+            <div class="flex-stretch"></div>
+            <nav class="flex-none nav">
+                <ul class="container display-flex">
+                    <li><a href="#article1">Link 1</a></li>
+                    <li><a href="#article2">Link 2</a></li>
+                    <li><a href="#article3">Link 3</a></li>
+                    <li><a href="#article4">Link 4</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="#article1">Link 1</a></li>
-            <li><a href="#article2">Link 2</a></li>
-            <li><a href="#article3">Link 3</a></li>
-            <li><a href="#article4">Link 4</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
-        <article id="article1" class="article">
-            <h2>Article 1</h2>
+        <div class="card outline">
+            <h2>grid</h2>
+            <div class="grid">
+                <div class="col-xs-6">Column 6</div>
+                <div class="col-xs-6">Column 6</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-6">Column 6</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card outline">
+            <h2>responsive grid</h2>
+            <div class="grid">
+                <div class="col-xs-12 col-md-0">Column 6</div>
+                <div class="col-xs-12 col-md-0">Column 6</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-4">Column 4</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+                <div class="col-xs-3">Column 3</div>
+            </div>
+            <div class="grid ten gap">
+                <div class="col-xs-2">Column 2</div>
+                <div class="col-xs-2">Column 2</div>
+                <div class="col-xs-2">Column 2</div>
+                <div class="col-xs-2">Column 2</div>
+                <div class="col-xs-2">Column 2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid gap xs-small md-medium">
+            <div class="col-xs-6 col-md-3">
+                <div class="card soft">Card
+                <img src="https://via.placeholder.com/500" alt="" class= "media-image">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card soft">Card
+                <img src="https://via.placeholder.com/500" alt="" class= "media-image">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card soft">Card
+                <img src="https://via.placeholder.com/500" alt="" class= "media-image">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card soft">Card
+                <img src="https://via.placeholder.com/500" alt="" class= "media-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <article id="article1" class="article card soft">
+            <div class="display-flex flex-align-center">
+                <div class="flex-stretch">
+                    <h2>Article 1</h2>
+                </div>
+                <div class="flex-none">
+                    <small>5:20 am</small>
+                </div>
+            </div>
             <div class="article-body">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ex veniam fugit quo in esse, illo quam soluta obcaecati modi voluptatem, est facere excepturi repellat molestiae. Molestiae officia beatae eius quisquam sapiente consequatur blanditiis dignissimos. Minima accusamus laboriosam nam exercitationem.</p>
                 <p>Eos corporis ut vitae repellat ducimus amet vero optio, commodi sed minus blanditiis sapiente consectetur ad, hic laborum laudantium, earum eius id. Ad iste laborum unde rem, praesentium, quod id facilis assumenda beatae illo, distinctio ducimus eligendi aliquam blanditiis nemo.</p>
                 <p>Eius expedita ad mollitia repellendus dolorem fugiat deleniti architecto nostrum tenetur voluptatum, libero omnis minima, dolorum dolore non. Impedit omnis sit voluptates accusamus officia deleniti odio rerum exercitationem consectetur saepe et aliquid similique velit, architecto dolor, itaque at non reiciendis.</p>
             </div>
         </article>
-        <article id="article2" class="article">
+        <article id="article2" class="article card soft">
             <h2>Article 2</h2>
             <div class="article-body">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam inventore iusto commodi sapiente, veritatis incidunt a animi blanditiis saepe dolor error tempore architecto harum voluptates modi perferendis nulla reiciendis consectetur corporis, adipisci voluptatum qui nemo? Illum blanditiis quod iusto.</p>
@@ -37,7 +120,11 @@
                 <p>Iure eum sequi consequuntur, perspiciatis porro eligendi, minima earum, aliquam tempore excepturi voluptatum sit perferendis ea eos cumque beatae consectetur maxime similique nostrum non amet. Reprehenderit ipsa unde, doloribus perferendis omnis dicta, voluptate exercitationem sint quis nesciunt, illo praesentium ratione?</p>
             </div>
         </article>
-        <article id="article3" class="article">
+        </div>
+        <div class="view-window" style="background-image:url(lib/img/glitter-background.jpg);">
+
+        </div>
+        <article id="article3" class="article card soft">
             <h2>Article 3</h2>
             <div class="article-body">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, deserunt dolorum eius minima dolor reiciendis maiores id ipsa enim distinctio sit. Ex fugiat ipsa ea odit illo suscipit, beatae voluptatum unde dolor tempora incidunt sed magni ratione, numquam, corrupti nam.</p>
@@ -45,7 +132,7 @@
                 <p>Libero ex provident quo quam, reiciendis laboriosam voluptatum nihil doloremque praesentium porro quae debitis dolorum dolore soluta magnam. Debitis tenetur quisquam explicabo, quaerat eos obcaecati corporis quia ipsa illum, ad earum sit, veniam voluptas expedita minus eaque voluptate. Explicabo, delectus!</p>
             </div>
         </article>
-        <article id="article4" class="article">
+        <article id="article4" class="article card soft">
             <h2>Article 4</h2>
             <div class="article-body">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit tenetur nisi. Fuga pariatur rerum optio! Sed accusantium, consectetur saepe suscipit voluptatum esse qui culpa aliquam perspiciatis nisi harum magni voluptates. Consequuntur hic, expedita quae sequi similique magnam rem maxime.</p>
