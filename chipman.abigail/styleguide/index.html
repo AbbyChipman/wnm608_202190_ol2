@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/css/styleguide.css">
+    <link rel="stylesheet" href="../lib/css/gridsystem.css">
+    <link rel="stylesheet" href="../css/abdztheme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Quicksand:wght@400;700&family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>CSS Styleguide</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container display-flex">
+            <div class="flex-none">
+                <h1>abbydazzled.com Styleguide</h1>
+            </div>
+            <div class="flex-stretch"></div>
+            <nav class="flex-none nav">
+                <ul class="container display-flex">
+                    <li><a href="#toc">Table of Contents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="top"></div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Table of Contents</h2>
+        </div>
+    </div>
+   
+    <div class="container" id="toc">
+        <div class="card soft">
+            <div class="nav" class="nav">
+                <ul>
+                    <li><a href="#typography">Typography</a></li>
+                    <ul>
+                        <li><a href="#headings">Headings</a></li>
+                        <li><a href="#paragraphs">Paragraphs</a></li>
+                    </ul>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#view-window">View Window</a></li>
+                    <li><a href="#navigations">Navigations</a></li>
+                    <li><a href="#grid-system">Grid System</a></li>
+                    <li><a href="#flex-system">Flex System</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#figures">Figures</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Typography</h2>
+        </div>
+    </div>
+
+    <div class="container" id="typography">
+
+        <div class="card soft">
+            <h3 id="headings">Headings</h3>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </div>
+        <div>
+            <div class="card soft">
+                <h3 id="paragraphs">Paragraphs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, exercitationem hic ex enim veritatis
+                    sapiente debitis iure nam eius. Facere rerum cum amet mollitia et ipsum, ad quaerat laborum
+                    temporibus?</p>
+                <p>Cupiditate qui suscipit odit obcaecati. Ipsum, non! Error minima architecto, tenetur quo ex odio iure
+                    cupiditate fuga pariatur illum facilis at officia tempore, inventore beatae accusamus provident, ab
+                    iste magnam.</p>
+                <p>Nesciunt quisquam maiores recusandae repudiandae ipsa, quod temporibus reiciendis adipisci, minus
+                    rerum cum aliquam fugiat nobis iste quis fugit deleniti corporis aperiam, accusamus assumenda odio
+                    excepturi. Iste rem eaque et.</p>
+            </div>
+        </div>
+        <a href="#top">Back to top</a>
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Colors</h2>
+        </div>
+    </div>
+
+   <div class="container" id=colors>
+       <div class="card soft">
+        <h3>Main Color</h3>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-main-light);">#ede3f0</div>
+                <figcaption class="color-label">Main color light</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-main-medium); color: var(--color-white);">#792a84</div>
+                <figcaption class="color-label">Main color medium</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-main-dark); color: var(--color-white)">#4c1c54</div>
+                <figcaption class="color-label">Main color dark</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-main-tone);">#7d5f82</div>
+                <figcaption class="color-label">Main color tone</figcaption>
+            </div>
+        </div>
+
+        <h3>Secondary Color</h3>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-secondary-light);">#f8eaf4</div>
+                <figcaption class="color-label">Secondary color light</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-secondary-medium); color: var(--color-white);">#c658a5</div>
+                <figcaption class="color-label">Secondary color medium</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-secondary-dark); color: var(--color-white)">#512547</div>
+                <figcaption class="color-label">Secondary color dark</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-secondary-tone);">#99728e</div>
+                <figcaption class="color-label">Secondary color tone</figcaption>
+            </div>
+        </div>
+        
+        <h3>Accent Color</h3>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-accent-light);">#f8f9e5</div>
+                <figcaption class="color-label">Accent color light</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-accent-medium); color: var(--color-white);">#d7df27</div>
+                <figcaption class="color-label">Accent color medium</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-accent-dark); color: var(--color-white)">#512547</div>
+                <figcaption class="color-label">Accent color dark</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-accent-tone);">#959768</div>
+                <figcaption class="color-label">Accent color tone</figcaption>
+            </div>
+        </div>
+
+        <h3>Text Color</h3>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-3"></div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-text-light);">#8ca19b</div>
+                <figcaption class="color-label">text color light</figcaption>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="card color-chip" style="background-color: var(--color-text-dark); color: var(--color-white)">#1c4436</div>
+                <figcaption class="color-label">text color dark</figcaption>
+            <div class="col-xs-12 col-md-3"></div>
+
+            </div>
+        </div>
+       </div>
+   </div>
+
+   <a href="#top">Back to top</a>
+
+   
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Cards</h2>
+        </div>
+    </div>
+
+    <div class="container" id="cards">
+        <div class="card soft">
+            <h3>Standard Cards</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard</h3>
+                        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard Light</h3>
+                        <div class="card light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard Medium</h3>
+                        <div class="card medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard Dark</h3>
+                        <div class="card dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard Flat</h3>
+                        <div class="card flat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Standard Rainbow</h3>
+                        <div class="card rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Hard Cards</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard</h3>
+                        <div class="card hard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard Light</h3>
+                        <div class="card hard light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard Medium</h3>
+                        <div class="card hard medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard Dark</h3>
+                        <div class="card hard dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard Flat</h3>
+                        <div class="card hard flat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Hard Rainbow</h3>
+                        <div class="card hard rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Soft Cards</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft</h3>
+                        <div class="card soft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft Light</h3>
+                        <div class="card soft light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft Medium</h3>
+                        <div class="card soft medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft Dark</h3>
+                        <div class="card soft dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft Flat</h3>
+                        <div class="card soft flat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <h3>Soft Rainbow</h3>
+                        <div class="card soft rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae doloremque quisquam optio eius repudiandae, ea, aspernatur laboriosam officiis exercitationem.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+
+
+        <a href="#top">Back to top</a>
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>View Windows</h2>
+        </div>
+    </div>
+    
+    <div class="view-window" style="background-image:url(../lib/img/glitter-background.jpg);">
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Navigations</h2>
+        </div>
+    </div>
+
+
+    <div class="container" id="navigations">
+
+        <script>
+            const makeNav = (classes='') => {
+                const links = ['home','store','about'];
+                let ran = Math.floor(Math.random()*links.length);
+                document.write(`
+                <div>
+                    <nav class="${classes}">
+                        <ul>
+                        ${links.reduce((r,o,i)=>{
+                            return r+`<li class=${ran==i?'active':''}><a href="#">${o}</a></li>`;
+                        },'')}
+                        </ul>
+                    </nav>
+                </div>
+                `);
+            }
+        </script>
+
+        <div class="card soft">
+            <h3>Basic Nav</h3>
+            <script>makeNav('nav')</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Flex Nav</h3>
+            <script>makeNav('nav nav-flex')</script>
+            
+        </div>
+
+        <div class="card soft">
+            <h3>Stretch Nav</h3>
+            <script>makeNav('nav nav-stretch')</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Pills Nav</h3>
+            <script>makeNav('nav nav-pills')</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Crumbs</h3>
+            <script>makeNav('nav nav-crumbs')</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Material</h3>
+            <script>makeNav('nav nav-material')</script>
+        </div>
+
+        <script>
+            $("#navigations a").on("click",function(e){
+                e.preventDefault();
+                $(this).closest("li").addClass("active")
+                   . siblings().removeClass("active")
+            })
+        </script>
+
+<a href="#top">Back to top</a>
+
+    </div>
+
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Grid System</h2>
+        </div>
+        </div>
+    <div class="container" id="grid-system">
+        <div class="card soft">
+            <p>content</p>
+        </div>
+
+        <a href="#top">Back to top</a>
+
+    </div>
+
+
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Flex System</h2>
+        </div>
+    </div>
+    <div class="container" id="flex-system">
+       <div class="card soft">
+           <p>content</p>
+       </div>
+
+       <a href="#top">Back to top</a>
+
+    </div>
+
+    <script>
+    const makeTable = (classes='') => {
+        const head = ['ID','Name','Original Network','Year Debuted','No. of Seasons'];
+        const body = [
+            ['Twilight Zone','CBS','1959','5'],
+            ['Star Trek','NBC','1966','3'],
+            ['Doctor Who (New)','BBC','2005','13'],
+            ['Quantum Leap','NBC','1989','5'],
+            ['Once Upon a Time','ABC','2011','7'],
+        ];
+
+    document.write(`
+    <table class="${classes}">
+        <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+        <tbody>${body.reduce((r,o,i)=>r+
+           `<tr>${
+               [i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+           }</tr>`,'')
+        }</tbody>
+    </table>
+    `);
+    }
+    </script>
+   
+
+   <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+    <div class="card section">
+        <h2>Tables</h2>
+    </div>
+    </div>
+
+   
+    <div class="container" id="tables">
+        <div class="card soft">
+            <h3>Basic Table</h3>
+            <script>makeTable("table")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Table</h3>
+            <script>makeTable("table striped")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined Vertical</h3>
+            <script>makeTable("table lined vertical")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined Horizontal</h3>
+            <script>makeTable("table lined horizontal")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined Border</h3>
+            <script>makeTable("table lined border")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined All</h3>
+            <script>makeTable("table lined all")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Combinations</h3>
+            <script>makeTable("table lined vertical border striped")</script>
+        </div>
+
+        <a href="#top">Back to top</a>
+
+
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section">
+            <h2>Figures</h2>
+        </div>
+    </div>
+
+    <div class="container" id="figures">
+        <div class="card soft">
+            <h3>Basic Figure</h3>
+            <figure class="figure">
+                <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                <figcaption>Product</figcaption>
+            </figure>
+
+            <div class="card soft">
+                <h3>Figure Grid</h3>
+                <div class="grid gap">
+                    <div class="col-xs-12 col-md-6">
+                    <figure class="figure">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>Product</figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <figure class="figure">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>Product</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+            <h3>Product Grid</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-3">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div>Product Name</div>
+                            <div>$3.99</div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div>Product Name</div>
+                            <div>$3.99</div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div>Product Name</div>
+                            <div>$3.99</div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <figure class="figure product">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div>Product Name</div>
+                            <div>$3.99</div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        <div class="card soft">
+        <h3>Product Overlay</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$3.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$3.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="https://via.placeholder.com/400x400?text=Product" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$3.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top">Back to top</a>
+
+</body>
+
+</html>

@@ -1,9 +1,44 @@
 :root {
-  --color-main-light: #d3f7fa;
-  --color-main-medium: #73dfe9;
-  --color-main-dark: #011618;
+  --color-main-light: #ede3f0;
+  --color-main-medium: #792a84;
+  --color-main-dark: #4c1c54;
+  --color-main-tone: #7d5f82;
+
+  --color-secondary-light: #f8eaf4;
+  --color-secondary-medium: #c658a5;
+  --color-secondary-dark: #512547;
+  --color-secondary-tone: #99728e;
+
+  --color-accent-light: #f8f9e5;
+  --color-accent-medium: #d7df27;
+  --color-accent-dark: #373917;
+  --color-accent-tone: #959768;
+
+  --color-text-light: #8ca19b;
+  --color-text-dark: #1c4436;
+
+  --font-display: "Spicy Rice", Arial, sans-serif;
+  --font-serif: "Mountains of Christmas", serif;
+  --font-sans: "Quicksand", sans-serif;
 }
 
+h1 {
+  font-family: var(--font-serif);
+  color: var(--color-main-medium);
+}
+
+h2 {
+  font-family: var(--font-display);
+  color: var(--color-secondary-medium);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+}
 @media (max-width: 800px) {
   .container {
     padding-left: 1em;
@@ -24,20 +59,21 @@
 }
 
 body {
-  background-color: var(--color-main-light);
-  color: var(--color-main-dark);
+  background: var(--color-main-light);
+  color: var(--color-text-dark);
 }
 
 .navbar {
-  background-color: transparent;
-  color: var(--color-main-dark);
+  background: linear-gradient(to right, #4c1c54, #792a84);
+  color: var(--color-white);
   line-height: var(--header-height);
 }
 
 .navbar h1 {
-  font-size: 1em;
+  font-size: 1.5em;
+  color: var(--color-white);
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
 }
 
 .card.outline {
@@ -66,7 +102,7 @@ body {
 
 .figure.product {
   border-radius: 0.5em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px hsla(308, 77%, 46%, 0.096);
   overflow: hidden;
 }
 .product-overlay {
@@ -79,7 +115,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(87, 14, 116, 0.11);
   opacity: 0;
   transition: all 0.3s;
   display: flex;
@@ -116,11 +152,23 @@ body {
     width: 100%;
     height: initial;
     background-color: initial;
-    opacity:1;
+    opacity: 1;
   }
   .product-overlay .caption-body {
     transform: none;
-    padding:0;
+    padding: 0;
   }
+}
 
+/* COLOR CHIP */
+
+.color-chip {
+  margin: 0.2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.color-label {
+  font-weight: bold;
+  text-align: center;
 }

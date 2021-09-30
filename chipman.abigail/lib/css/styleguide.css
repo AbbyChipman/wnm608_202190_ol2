@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 a {
@@ -109,6 +109,81 @@ a:hover {
   margin-bottom: 0;
   padding-left: 0;
 }
+.nav a {
+  display: block;
+  padding: 0.2em 0.5em;
+}
+
+.nav a:hover {
+  background-color: var(--color-accent-medium);
+  color: var(--color-main-dark);
+  text-decoration: none;
+}
+
+.nav .active a {
+  background-color: var(--color-secondary-light);
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+  display: flex;
+}
+
+.nav-material li,
+.nav-stretch li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-pills a {
+  border-radius: 2em;
+  padding: 0.5em 1em;
+}
+
+.nav-crumbs a {
+  display: inline-block;
+}
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.nav-crumbs li:not(:first-child)::before {
+  content: "/";
+}
+
+.nav-material a {
+  padding: 0.5em 1em;
+  position: relative;
+}
+.nav-material .active a {
+  background-color: transparent;
+  color: inherit;
+}
+.nav-material a:hover {
+  background-color: var(--color-accent-light);
+  color: inherit;
+}
+.nav-material a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-main-dark);
+  transition: all 0.3s;
+}
+.nav-material .active a::after {
+  height: 4px;
+}
 
 .navbar {
   background-color: var(--color-neutral-dark);
@@ -130,41 +205,54 @@ a:hover {
 
 .card {
   background-color: var(--color-white);
-  margin-top: 1em;
-  margin-bottom: 1em;
   padding: 1em;
 
-  overflow: hidden;
-  position: relative;
-}
+  margin-bottom: 1em;
+  margin-top: 1em;
 
+  position: relative;
+  overflow: hidden;
+}
 .card.soft {
   border-radius: 0.5em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
-
 .card.hard {
-  border-radius: 0.2em;
+  border-radius: 0.3em;
   border: 2px solid var(--color-neutral-medium);
 }
-
 .card.dark {
   background-color: var(--color-neutral-dark);
-  color: var(--color-neutral-light);
+  color: var(--color-white);
 }
-
 .card.medium {
   background-color: var(--color-neutral-medium);
+}
+
+.card.light {
+  background-color: var(--color-neutral-light);
 }
 
 .card.flat {
   padding: 0;
 }
 
-.card.outline {
-  border-radius: 0.2em;
-  border: 3px solid var(--color-neutral-light);
-  background-color: 0, rgba(255, 255, 255, 0.1);
+.card.rainbow {
+  background: linear-gradient(
+    to bottom,
+    #fdedec,
+    #fdfbec,
+    #f5fdec,
+    #ecfdfd,
+    #f5ecfd
+  );
+}
+
+.card.section {
+  padding: 0.5em;
+  height:75%;
+  margin-bottom: 0.75em;
+  border-radius: 0.5em;
 }
 
 .card img {
@@ -178,6 +266,16 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+}
+.view-window-small {
+  position:relative;
+  overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:scroll;
+  height:15vh;
 }
 
 .section-head {
@@ -187,4 +285,50 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* TABLES */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.2em 0.5em;
+}
+
+.table.striped tbody tr:nth-child(odd) {
+  background-color: var(--color-accent-light);
+}
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+  border-left: 1px solid var(--color-main-dark);
+}
+.table.lined.all tbody tr,
+.table.lined.horizontal tbody tr {
+  border-top: 1px solid var(--color-main-dark);
+}
+
+.table.lined.all,
+.table.lined.border {
+  border: 1px solid var(--color-main-dark);
+}
+
+/* FIGURE */
+
+.figure {
+  margin: 0;
+  background-color: var(--color-white);
+}
+.figure img {
+  width: 100%;
+  vertical-align: text-bottom;
+}
+.figure figcaption {
+  font-weight: bold;
+  padding: 1em;
 }
