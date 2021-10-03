@@ -7,12 +7,14 @@
 
 :root {
     --color-primary-dark: #202124;
-    --color-primary-light: #f7f7f7;
+    --color-primary-medium: #3d3e44;
+    --color-primary-light: #fff;
     --color-accent-red-light: #ea3d3d;
-    --color-accent-purple-light: #B263E6;
-    --color-accent-purple-dark: #4E2C66;
-    --color-text-dark: #202124;
-    --color-text-light: #fff;
+    --color-accent-red-medium:#ab3934;
+    --color-accent-red-dark:#672320;
+    --color-neutral-light: #a5aaba;
+    --color-neutral-medium: #73757f;
+    --color-neutral-dark: #000;
 
     --header-height: 3rem;
     --spacing: 1rem;
@@ -73,7 +75,7 @@ a {
 
     a:hover {
         cursor: pointer;
-        color: var(--color-accent-purple-light);
+        color: var(--color-accent-red-light);
     }
 
 
@@ -220,7 +222,7 @@ button.light {
 }
 
     .nav a:hover {
-        color: var(--color-accent-purple-light);
+        color: var(--color-accent-red-light);
     }
 
 
@@ -423,7 +425,7 @@ button.light {
 /** NEWSLETTER **/
 
 .news-row {
-    background-color: var(--color-accent-purple-dark);
+    background-color: var(--color-accent-red-dark);
 }
 
 .news-img {
