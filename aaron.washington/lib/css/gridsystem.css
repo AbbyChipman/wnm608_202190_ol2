@@ -29,6 +29,10 @@
     }
 
 
+    .col-xs-0 {
+        display: none;
+    }
+
     .col-xs-1 {
         grid-column: span 1;
     }
@@ -95,6 +99,10 @@
         --grid-gap: 0.5em;
     }
 
+
+    .col-sm-0 {
+        display: none;
+    }
 
     .col-sm-1 {
         grid-column: span 1;
@@ -163,6 +171,10 @@
     }
 
 
+    .col-md-0 {
+        display: none;
+    }
+
     .col-md-1 {
         grid-column: span 1;
     }
@@ -230,6 +242,10 @@
     }
 
 
+    .col-lg-0 {
+        display: none;
+    }
+
     .col-lg-1 {
         grid-column: span 1;
     }
@@ -296,6 +312,10 @@
         --grid-gap: 0.5em;
     }
 
+
+    .col-xl-0 {
+        display: none;
+    }
 
     .col-xl-1 {
         grid-column: span 1;

@@ -166,6 +166,16 @@ button.light {
 
 
 
+/*** SMALL CLASSES ***/
+
+.media-image {
+    max-width: 100%;
+    vertical-align: text-bottom;
+}
+
+
+
+
 /********** COMPONENTS **********/
 
 
