@@ -146,6 +146,12 @@ button.light {
 
 
 
+hr {
+    border-color: var(--color-accent-red-light);
+}
+
+
+
 /** GRID LAYOUT **/
 
 .container {
@@ -253,6 +259,11 @@ button.light {
     }
 
 
+.nav-flex ul {
+    display: flex;
+}
+
+
 
 /** HERO **/
 
@@ -311,8 +322,10 @@ button.light {
 
 .card {
     margin: 0;
+    color: #fff;
     padding: 1rem;
     border-radius: 1rem;
+    background-color: var(--color-primary-dark);
 }
 
     .card a,

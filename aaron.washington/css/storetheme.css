@@ -8,11 +8,28 @@ body {
     padding-bottom: 0.5em;
 }
 
+    #tableofcontents ul li a:hover {
+        color: var(--color-accent-red-light);
+    }
+
+
+    #tableofcontents .card {
+        width: 50%;
+    }
+
+    #tableofcontents h3 {
+        padding-left: 1rem;
+    }
+
 
 @media (max-width: 800px) {
     .container {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    #tableofcontents .card {
+        width: 100%;
     }
     
     /*.navbar h1 {
