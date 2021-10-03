@@ -283,7 +283,7 @@ button.light {
 .card {
     margin: 0;
     padding: 1rem;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-dark);
 }
 
     .card a {
