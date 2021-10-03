@@ -222,7 +222,7 @@ button.light {
 }
 
     .nav a:hover {
-        color: var(--color-accent-red-light);
+        color: var(--color-accent-red-medium);
     }
 
 
