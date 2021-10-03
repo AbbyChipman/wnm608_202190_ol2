@@ -26,31 +26,43 @@ body {
     font-family: 'Rubik', Arial, sans-serif;
 }
 
+@font-face {
+    font-family: BrandonText-Regular;
+    src: url('../../fonts/BrandonText-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: BrandonText-Bold;
+    src: url('../../fonts/BrandonText-Bold.otf');
+    font-weight: 700;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Rubik', Arial, sans-serif;
+    font-family: BrandonText-Bold, 'Rubik', Arial, sans-serif;
     font-weight: 700;
-    margin: 1rem 0rem 0.5rem 0rem;
+    margin: 1em 0em 0.5em 0em;
     padding: 0;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 4em;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 h5 {
