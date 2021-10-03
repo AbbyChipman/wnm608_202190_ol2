@@ -15,6 +15,7 @@ body {
 
     #tableofcontents .card {
         width: 50%;
+        text-align: left;
     }
 
     #tableofcontents h3 {

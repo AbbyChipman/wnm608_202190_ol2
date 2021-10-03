@@ -323,7 +323,9 @@ hr {
 .card {
     margin: 0;
     color: #fff;
-    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2rem;
     border-radius: 1rem;
     background-color: var(--color-primary-dark);
 }
@@ -353,8 +355,9 @@ hr {
     height: 20vh;
     color: #fff;
     text-align: center;
+    vertical-align: middle;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 1rem;
     background-color: var(--color-primary-dark);
 }
@@ -364,11 +367,33 @@ hr {
     height: 20vh;
     color: var(--color-primary-dark);
     text-align: center;
+    vertical-align: middle;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 1rem;
     border: 1px solid var(--color-primary-medium);
     background-color: var(--color-primary-light);
+}
+
+.card.primlight {
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-medium);
+    background-color: var(--color-primary-light);
+}
+
+    .card.primlight h4 {
+        color: var(--color-primary-dark);
+    }
+
+
+.card.acclight {
+    color: var(--color-primary-light);
+    background-color: var(--color-accent-red-light);
+}
+
+.card.neutlight {
+    color: var(--color-primary-dark);
+    background-color: var(--color-neutral-light);
 }
 
 .card-img {
