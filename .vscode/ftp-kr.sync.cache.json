@@ -1,0 +1,144 @@
+{
+  "ftp://ftp.aaronjosephmusic.com@aaronjosephmusiccom": {
+    "aau": {
+      "wnm608_202190_ol2": {
+        ".DS_Store": {
+          "type": "-",
+          "size": 10244,
+          "lmtime": 1633295145083,
+          "modified": false
+        },
+        "README.md": {
+          "type": "-",
+          "size": 32,
+          "lmtime": 0,
+          "modified": false
+        },
+        "aaron.washington": {
+          ".DS_Store": {
+            "type": "-",
+            "size": 14340,
+            "lmtime": 1633295194140,
+            "modified": false
+          },
+          "README.md": {
+            "type": "-",
+            "size": 212,
+            "lmtime": 1633295814599,
+            "modified": false
+          },
+          "aaron.washington.html": {
+            "type": "-",
+            "size": 236,
+            "lmtime": 0,
+            "modified": false
+          },
+          "css": {
+            "storetheme.css": {
+              "type": "-",
+              "size": 373,
+              "lmtime": 1633294818569,
+              "modified": false
+            }
+          },
+          "fonts": {
+            "BrandonText-Black.otf": {
+              "type": "-",
+              "size": 71736,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "BrandonText-Bold.otf": {
+              "type": "-",
+              "size": 73508,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "BrandonText-Medium.otf": {
+              "type": "-",
+              "size": 73000,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "BrandonText-Regular.otf": {
+              "type": "-",
+              "size": 70892,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "HVD Fonts - BrandonText-Black.otf": {
+              "type": "-",
+              "size": 71736,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "HVD Fonts - BrandonText-Bold.otf": {
+              "type": "-",
+              "size": 73508,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "HVD Fonts - BrandonText-Medium.otf": {
+              "type": "-",
+              "size": 73000,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "HVD Fonts - BrandonText-Regular.otf": {
+              "type": "-",
+              "size": 70892,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "HVD Fonts - BrandonText-RegularItalic.otf": {
+              "type": "-",
+              "size": 68836,
+              "lmtime": 1361401582000,
+              "modified": false
+            },
+            "BrandonText-RegularItalic.otf": {
+              "type": "-",
+              "size": 68836,
+              "lmtime": 1361401582000,
+              "modified": false
+            }
+          },
+          "img": {},
+          "index.html": {
+            "type": "-",
+            "size": 6358,
+            "lmtime": 1633295820831,
+            "modified": false
+          },
+          "lib": {
+            "css": {
+              "gridsystem.css": {
+                "type": "-",
+                "size": 4827,
+                "lmtime": 1633290487880,
+                "modified": false
+              },
+              "styleguide.css": {
+                "type": "-",
+                "size": 8542,
+                "lmtime": 1633295817071,
+                "modified": false
+              }
+            }
+          },
+          "styleguide": {
+            "index.html": {
+              "type": "-",
+              "size": 3713,
+              "lmtime": 1633295819745,
+              "modified": false
+            }
+          },
+          "untitled folder": {}
+        },
+        "untitled folder": {}
+      }
+    }
+  },
+  "$version": 1
+}
