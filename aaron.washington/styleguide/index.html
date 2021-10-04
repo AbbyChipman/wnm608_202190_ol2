@@ -21,7 +21,7 @@
 <body>
     
 <!-- ** Navbar ** header>h1+p -->    
-<header class="display-flex flex-align-center navbar">
+<header class="display-flex flex-align-center navbar" id="top">
     <div class="flex-none">
         <a href="#">
             <div class="home-logo"></div>
@@ -53,11 +53,9 @@
             </ul>
             <li><a href="#colors">Color Palette</a></li>
             <li><a href="#cards">Cards</a></li>
-            <li><a href="#viewwindow">View Window</a></li>
             <li><a href="#navigation">Navigation</a></li>
-            <li><a href="#gridsystem">Grid System</a></li>
-            <li><a href="#flexsystem">Flex System</a></li>
             <li><a href="#tables">Tables</a></li>
+            <li><a href="#hero">Product Hero</a></li>
             <li><a href="#figures">Figures</a></li>
         </ul>
     </div>
@@ -166,14 +164,7 @@
 </div>
 
 
-<div class="container" id="viewwindow">
-    <hr>
-    <h3 style="margin-left: 1rem;">VIEW WINDOW</h3>
-    <hr>
-    <br />
-</div>
-
-
+<!-- ** NAVIGATION ** -->
 <div class="container" id="navigation">
     <hr>
     <h3 style="margin-left: 1rem;">NAVIGATION</h3>
@@ -267,21 +258,7 @@
 </div>
 
 
-<div class="container" id="gridsystem">
-    <hr>
-    <h3 style="margin-left: 1rem;">GRID SYSTEM</h3>
-    <hr>
-    <br />
-</div>
-
-
-<div class="container" id="flexsystem">
-    <hr>
-    <h3 style="margin-left: 1rem;">FLEX SYSTEM</h3>
-    <hr>
-    <br />
-</div>
-
+<!-- ** TABLES ** -->
 <script>
     const makeTable = (classes='') => {
         const head = ['ID','Universe','Hero Name','Alter Ego','Rank'];
@@ -343,6 +320,27 @@
 </div>
 
 
+<!-- ** HERO ** -->
+<div class="container" id="hero">
+        <hr>
+        <h3 style="margin-left: 1rem;">PRODUCT HERO BANNER</h3>
+        <hr>
+        <br />
+        <div class="hero hero-landing display-flex flex-align-center">
+            <div class="container flex-stretch">
+                <div class="hero-text">
+                    <h2>TITLE GOES HERE</h2>
+                    <h4>Subtitle Here</h4>
+                    <!--<p>Check out this season&apos;s featured designs.</p>-->
+                    <button class="light">CTA Button</button>
+                </div>
+                <div class="flex-stretch"></div>
+            </div>
+        </div>
+</div>
+
+
+<!-- ** FIGURES ** -->
 <div class="container" id="figures">
     <hr>
     <h3 style="margin-left: 1rem;">FIGURES</h3>
@@ -453,7 +451,9 @@
     </div>
 </div>
 
-<button><a href="">Back to Top</a></button>
+<div class="container">
+    <button class="dark"><a href="#top">Back to Top&nbsp;&uarr;</a></button>
+</div>
     
 
 </body>
