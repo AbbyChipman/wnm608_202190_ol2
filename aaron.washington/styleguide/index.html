@@ -57,6 +57,7 @@
             <li><a href="#navigation">Navigation</a></li>
             <li><a href="#gridsystem">Grid System</a></li>
             <li><a href="#flexsystem">Flex System</a></li>
+            <li><a href="#tables">Tables</a></li>
         </ul>
     </div>
 </div>
@@ -278,6 +279,60 @@
     <h3 style="margin-left: 1rem;">FLEX SYSTEM</h3>
     <hr>
     <br />
+</div>
+
+<script>
+    const makeTable = (classes='') => {
+        const head = ['Universe','Hero Name','Alter Ego','Rank'];
+        const body = [
+            ['DC','Batman','Bruce Wayne','1'],
+            ['DC','Deathstroke','Slade Wilson','2'],
+            ['MARVEL','Venom','Eddy Brock','3'],
+            ['DC','Joker','Unknown','4'],
+            ['MARVEL','Carnage','Kletus Cassidy','5'],
+        ];
+
+        document.write (`
+        <table class="${classes}">
+            <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+            <tbody>${body.reduce((r,o,i)=>r+
+                `<tr>${
+                    [i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+                }</tr>`,'')
+            }</tbody>
+        </table>
+        `);
+    }
+</script>
+
+<div class="container" id="tables">
+    <hr>
+    <h3 style="margin-left: 1rem;">TABLES</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table striped")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table lined vertical")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table lined horizontal")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table lined border")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <script>makeTable("table lined all")</script>
+    </div>
 </div>
     
 
