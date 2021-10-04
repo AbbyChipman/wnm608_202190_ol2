@@ -23,6 +23,23 @@ body {
     }
 
 
+#cards .card-light h4,
+#cards .card-dark h4,
+#cards .card-img h4 {
+    position: relative;
+    top: 36%;
+}
+
+
+.card nav,
+.card-light nav,
+.card-dark nav {
+    text-align: left;
+}
+
+
+
+
 @media (max-width: 800px) {
     .container {
         padding-left: 1em;
@@ -30,7 +47,7 @@ body {
     }
 
     #tableofcontents .card {
-        width: 100%;
+        width: 80%;
     }
     
     /*.navbar h1 {
@@ -46,5 +63,9 @@ body {
 
     .navbar .nav li {
         line-height: 2em;
+    }
+
+    #tableofcontents .card {
+        width: 100%;
     }
 }

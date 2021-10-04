@@ -27,7 +27,7 @@
     </div>
     <div class="flex-none">
         <a href="#">
-            <h5>esome&nbsp;&nbsp;Styleguide</h5>
+            <h4>esome&nbsp;&nbsp;Styleguide</h4>
         </a>
     </div>
     <div class="flex-stretch"></div>
@@ -103,6 +103,36 @@
                 <h4>Neutral Light<br />&num;A5AABA</h4>
             </div>
         </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card primmed">
+                <h4>Primary Medium<br />&num;3D3E44</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card accmed">
+                <h4>Accent Medium<br />&num;AB3934</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card neutmed">
+                <h4>Neutral Medium<br />&num;73757F</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card primdark">
+                <h4>Primary Dark<br />&num;202124</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card accdark">
+                <h4>Accent Dark<br />&num;672320</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card neutdark">
+                <h4>Neutral Dark<br />&num;000</h4>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -145,6 +175,83 @@
     <h3 style="margin-left: 1rem;">NAVIGATION</h3>
     <hr>
     <br />
+    <script>
+        const makeNav = (classes='') => {
+            const links = ['home','store','about'];
+            document.write(`
+            <div class="card-light">
+                <nav class="${classes}">
+                    <h4><b>Crumbs Nav</b></h4>
+                    <ul>
+                    ${links.reduce((r,o,i)=>{
+                        return r+`<li><a href="#">${o}</a></li>`;
+                    },'')}
+                    </ul>
+                </nav>
+            </div>
+            `);
+        }
+    </script>
+    <div class="card-light">
+        <nav class="nav flex-none">
+            <h4><b>Basic Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-flex">
+            <h4><b>Flex Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-stretch">
+            <h4><b>Stretch Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-pills">
+            <h4><b>Pills Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <script>makeNav('nav nav-crumbs')</script>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-material">
+            <h4><b>Material Nav</b></h4>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">store</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+    </div>
 </div>
 
 

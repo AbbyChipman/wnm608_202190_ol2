@@ -259,9 +259,103 @@ hr {
     }
 
 
+#navigation .card-light {
+    height: auto;
+}
+
+#navigation nav ul {
+    padding-left: 0;
+}
+
+#navigation nav ul li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+    #navigation nav ul li:hover {
+        color: #fff;
+        background-color: var(--color-accent-red-light);
+    }
+
+
+#navigation nav ul li a {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+    #navigation nav ul li:hover a {
+        color: #fff;
+    }
+
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
 .nav-flex ul {
     display: flex;
 }
+
+.nav-material li,
+.nav-stretch li {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.nav-pills li {
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-crumbs a {
+    display: inline-block;
+}
+
+.nav-crumbs ul li {
+    color: var(--color-primary-dark) !important;
+    background-color: transparent !important;
+}
+
+    .nav-crumbs ul li:hover a {
+        color: var(--color-primary-dark) !important;
+        background-color: transparent !important;
+        text-decoration: underline !important;
+    }
+
+
+.nav-crumbs li:not(:first-child)::before {
+    content:'/';
+}
+
+.nav-material li {
+    padding: 0.5rem 1rem;
+    position: relative;
+    background-color: transparent;
+}
+
+    .nav-material ul li:hover {
+        color: var(--color-primary-dark) !important;
+        background-color: var(--color-neutral-light) !important;
+    }
+
+    .nav-material ul li:hover a {
+        color: var(--color-primary-dark) !important;
+    }
+
+
+.nav-material li::after {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-primary-medium);
+}
+
+    .nav-material li:hover::after {
+        height: 4px;
+    }
 
 
 
@@ -325,7 +419,7 @@ hr {
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 1rem;
     background-color: var(--color-primary-dark);
 }
@@ -357,7 +451,7 @@ hr {
     text-align: center;
     vertical-align: middle;
     margin: 0;
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 1rem;
     background-color: var(--color-primary-dark);
 }
@@ -369,7 +463,7 @@ hr {
     text-align: center;
     vertical-align: middle;
     margin: 0;
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 1rem;
     border: 1px solid var(--color-primary-medium);
     background-color: var(--color-primary-light);
@@ -387,13 +481,35 @@ hr {
 
 
 .card.acclight {
-    color: var(--color-primary-light);
     background-color: var(--color-accent-red-light);
 }
 
 .card.neutlight {
-    color: var(--color-primary-dark);
     background-color: var(--color-neutral-light);
+}
+
+.card.primmed {
+    background-color: var(--color-primary-medium);
+}
+
+.card.accmed {
+    background-color: var(--color-accent-red-medium);
+}
+
+.card.neutmed {
+    background-color: var(--color-neutral-medium);
+}
+
+.card.primdark {
+    background-color: var(--color-primary-dark);
+}
+
+.card.accdark {
+    background-color: var(--color-accent-red-dark);
+}
+
+.card.neutdark {
+    background-color: var(--color-neutral-dark);
 }
 
 .card-img {
