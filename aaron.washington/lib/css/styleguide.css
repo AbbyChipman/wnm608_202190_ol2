@@ -710,11 +710,37 @@ hr {
     border: 1px solid var(--color-neutral-medium);
 }
 
-#tables .card-light h4 {
+#tables .card-light h4,
+#figures .card-light h4 {
     text-align: left;
     margin-top: 0rem;
     margin-bottom: 1rem;
 }
+
+
+
+
+/** FIGURES **/
+
+#figures .card-light {
+    height: auto;
+}
+
+.figure {
+    margin: 0;
+}
+
+.figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.figure figcaption {
+    padding: 1rem;
+}
+
+
+
 
 
 
