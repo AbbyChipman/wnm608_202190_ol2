@@ -259,6 +259,12 @@ hr {
     }
 
 
+.nav ul li.active {
+    background-color: var(--color-neutral-light) !important;
+    color: inherit;
+}
+
+
 #navigation .card-light {
     height: auto;
 }
@@ -351,9 +357,10 @@ hr {
     width: 100%;
     height: 0;
     background-color: var(--color-primary-medium);
+    transition: all 0.3s ease;
 }
 
-    .nav-material li:hover::after {
+    .nav-material .active::after {
         height: 4px;
     }
 
