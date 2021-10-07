@@ -93,6 +93,12 @@ body {
 
 
 
+#forms .card-light {
+    text-align: left;
+    height: auto;
+}
+
+
 @media (max-width: 800px) {
     .container {
         padding-left: 1em;
