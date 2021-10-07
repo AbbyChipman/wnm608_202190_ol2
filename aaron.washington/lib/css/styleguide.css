@@ -746,6 +746,10 @@ hr {
     margin: 1rem 0rem;
 }
 
+.form-input,
+.form-button,
+.form-hotdog,
+.form-hotdog input,
 .form-item {
     font: inherit;
     display: inline-block;
@@ -801,7 +805,21 @@ hr {
     outline: 0;
 }
     
+    .form-hotdog.dark,
+    .form-hotdog.dark input {
+        background-color: var(--color-primary-dark);
+        color: var(--color-primary-light);
+    }
 
+    .form-hotdog.light,
+    .form-hotdog.light input {
+        background-color: var(--color-primary-light);
+        color: var(--color-primary-dark);
+    }
+
+    .form-hotdog.light {
+        border: 1px solid var(--color-primary-dark);
+    }
 
 
 
