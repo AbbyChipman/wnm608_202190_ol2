@@ -750,7 +750,6 @@ hr {
     border-bottom: 2px solid var(--color-neutral-medium);
     border-radius: 0.5rem;
     padding: 1rem;
-    margin-bottom: 1rem;
     font: inherit;
     -webkit-appearance: none;
     color: var(--color-primary-dark);
@@ -761,6 +760,19 @@ hr {
     .form-input:focus{
         border-bottom: 2px solid var(--color-accent-red-light);
     }
+
+
+.form-label {
+    font-size: 0.8rem;
+    color: var(--color-primary-medium);
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.15rem;
+}
+
+.form-control {
+    margin: 1rem 0rem;
+}
 
 
 
