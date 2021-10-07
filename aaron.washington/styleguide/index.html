@@ -53,8 +53,9 @@
             <li><a href="#figures">Figures</a></li>
             <li><a href="#figures">Forms</a></li>
             <ul>
-                <li><a href="#default-inputs">Default Inputs</a></li>
-                <li><a href="#brand-inputs">Branded Inputs</a></li>
+                <li><a href="#inputs">Inputs</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#hotdog">Hotdog</a></li>
             </ul>
         </ul>
     </div>
@@ -457,7 +458,7 @@
     <h3 style="margin-left: 1rem;">FORMS</h3>
     <hr>
     <br />
-    <h4><b>Inputs</b></h4>
+    <h4 id="inputs"><b>Inputs</b></h4>
     <div class="card-light">
         <h4><b>Default Inputs</b></h4>
         <form>
@@ -476,10 +477,10 @@
     <div class="card-light">
         <h4><b>Branded Inputs</b></h4>
         <form>
-            <input type="text" class="form-input" placeholder="Text"><br />
-            <input type="number" class="form-input" placeholder="Number"><br />
-            <input type="password" class="form-input" placeholder="Password"><br />
-            <input type="search" class="form-input" placeholder="Search">
+            <input type="text" class="form-item form-input" placeholder="Text"><br />
+            <input type="number" class="form-item form-input" placeholder="Number"><br />
+            <input type="password" class="form-item form-input" placeholder="Password"><br />
+            <input type="search" class="form-item form-input" placeholder="Search">
         </form>
     </div>
     <br />
@@ -487,13 +488,13 @@
         <h4><b>Form Labels</b></h4>
         <form>
             <label class="form-label">Example</label>
-            <input type="text" class="form-input" placeholder="Text"><br />
+            <input type="text" class="form-item form-input" placeholder="Text"><br />
             <label class="form-label">Example</label>
-            <input type="number" class="form-input" placeholder="Number"><br />
+            <input type="number" class="form-item form-input" placeholder="Number"><br />
             <label class="form-label">Example</label>
-            <input type="password" class="form-input" placeholder="Password"><br />
+            <input type="password" class="form-item form-input" placeholder="Password"><br />
             <label class="form-label">Example</label>
-            <input type="search" class="form-input" placeholder="Search">
+            <input type="search" class="form-item form-input" placeholder="Search">
         </form>
     </div>
     <br />
@@ -502,27 +503,51 @@
         <form>
             <div class="form-control">
                 <label class="form-label">Example</label>
-                <input type="text" class="form-input" placeholder="Text">
+                <input type="text" class="form-item form-input" placeholder="Text">
             </div>
             <div class="form-control">
                 <label class="form-label">Example</label>
-                <input type="number" class="form-input" placeholder="Number">
+                <input type="number" class="form-item form-input" placeholder="Number">
             </div>
             <div class="form-control">
                 <label class="form-label">Example</label>
-                <input type="password" class="form-input" placeholder="Password">
+                <input type="password" class="form-item form-input" placeholder="Password">
             </div>
             <div class="form-control grid gap">
                 <div class="col-xs-12 col-md-6">
                     <label class="form-label">Example</label>
-                    <input type="search" class="form-input" placeholder="Search">
+                    <input type="search" class="form-item form-input" placeholder="Search">
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <label class="form-label">Example</label>
-                    <input type="search" class="form-input" placeholder="Search">
+                    <input type="search" class="form-item form-input" placeholder="Search">
                 </div>
             </div>
         </form>
+    </div>
+    <br />
+    <br />
+    <h4 id="buttons"><b>Buttons</b></h4>
+    <div class="card-light">
+        <h4><b>Default Button</b></h4>
+        <button>Button</button>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Custom Button</b></h4>
+        <button class="form-item form-button form-control">Button</button>
+        <input type="button" class="form-item form-button form-control" value="Input">
+        <a href="#" class="form-item form-button form-control">Anchor</a>
+    </div>
+    <br />
+    <br />
+    <h4 id="hotdog"><b>Hotdog</b></h4>
+    <div class="card-light">
+        <div class="form-control">
+            <form>
+                <input type="search" class="form-item form-hotdog" placeholder="Search">
+            </form>
+        </div>
     </div>
 </div>
 

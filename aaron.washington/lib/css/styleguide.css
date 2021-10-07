@@ -102,7 +102,6 @@ a {
         color: var(--color-accent-red-light);
     }
 
-
 button.dark {
     margin-top: 1rem;
     color: var(--color-primary-dark);
@@ -743,17 +742,24 @@ hr {
 
 /** FORMS **/
 
-.form-input {
+.form-control {
+    margin: 1rem 0rem;
+}
+
+.form-item {
+    font: inherit;
     display: inline-block;
     background-color: var(--color-neutral-light);
     border-width: 0;
-    border-bottom: 2px solid var(--color-neutral-medium);
     border-radius: 0.5rem;
-    padding: 1rem;
-    font: inherit;
     -webkit-appearance: none;
     color: var(--color-primary-dark);
     width: 100%;
+}
+
+.form-input {
+    border-bottom: 2px solid var(--color-neutral-medium);
+    padding: 1rem;
     outline: 0;
 }
 
@@ -770,9 +776,31 @@ hr {
     padding: 0.5rem 0.15rem;
 }
 
-.form-control {
-    margin: 1rem 0rem;
+.form-button {
+    padding: 0.75rem;
+    cursor: pointer;
+    text-align: center;
 }
+
+    .form-button:hover {
+        background-color: var(--color-neutral-medium);
+        text-decoration: none;
+        color: var(--color-primary-light);
+    }
+
+    .form-button:active {
+        background-color: var(--color-accent-red-light);
+        color: var(--color-primary-light);
+    }
+
+
+.form-hotdog {
+    display: flex;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    outline: 0;
+}
+    
 
 
 
