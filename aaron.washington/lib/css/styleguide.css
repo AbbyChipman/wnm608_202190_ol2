@@ -16,7 +16,7 @@ html {
     --color-accent-red-light: #ea3d3d;
     --color-accent-red-medium:#ab3934;
     --color-accent-red-dark:#672320;
-    --color-neutral-light: #a5aaba;
+    --color-neutral-light: #d0d2d8;
     --color-neutral-medium: #73757f;
     --color-neutral-dark: #000;
 
@@ -740,6 +740,26 @@ hr {
 }
 
 
+
+/** FORMS **/
+
+.form-input {
+    display: inline-block;
+    background-color: var(--color-neutral-light);
+    border-width: 0;
+    border-bottom: 1px solid var(--color-neutral-medium);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font: inherit;
+    -webkit-appearance: none;
+    color: var(--color-primary-dark);
+    width: 100%;
+}
+
+    .form-input:active {
+        border-width: 0;
+        border-bottom: 2px solid var(--color-accent-red-light);
+    }
 
 
 
