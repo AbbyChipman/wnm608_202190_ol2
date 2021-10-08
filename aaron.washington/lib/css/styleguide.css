@@ -207,6 +207,10 @@ hr {
     vertical-align: text-bottom;
 }
 
+.hidden {
+    display: none;
+}
+
 
 
 
@@ -850,6 +854,31 @@ hr {
     }
 
 
+.toggle label {
+    font-size: 1.2em;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 0.1rem solid var(--color-neutral-medium);
+    border-radius: 1em;
+    position: relative;
+}
+
+.toggle label::after {
+    content:'';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 1em;
+    position: absolute;
+    background-color: var(--color-primary-medium);
+    transition: all 0.3s ease;
+}
+
+.toggle input:checked + label::after { 
+    transform: translateX(1.1em);
+}
+    
 
 
 

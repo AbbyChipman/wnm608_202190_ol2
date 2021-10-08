@@ -97,6 +97,22 @@ body {
     text-align: left;
 }
 
+.favorite label {
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: var(--color-neutral-medium);
+    cursor: pointer;
+}
+
+/* input inside favorite, if checked, do this to the following element of label */
+.favorite input:checked + label {
+    color: var(--color-accent-red-light);
+    transform: scale(1.5, 1.5);
+}
+
+
+
+
 
 @media (max-width: 800px) {
     .container {
