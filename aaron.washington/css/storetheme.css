@@ -27,7 +27,7 @@ body {
 #cards .card-dark h4,
 #cards .card-img h4 {
     position: relative;
-    top: 36%;
+    top: 1rem;
 }
 
 
@@ -95,7 +95,6 @@ body {
 
 #forms .card-light {
     text-align: left;
-    height: auto;
 }
 
 
