@@ -101,13 +101,17 @@ a:hover {
   vertical-align: text-bottom;
 }
 
+.hidden {
+  display: none;
+}
+
 /* COMPONENT CLASSES */
 
 .nav ul {
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 1.5em;
 }
 .nav a {
   display: block;
@@ -116,12 +120,12 @@ a:hover {
 
 .nav a:hover {
   background-color: var(--color-accent-medium);
-  color: var(--color-main-dark);
+  color: var(--color-accent-dark);
   text-decoration: none;
 }
 
 .nav .active a {
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-accent-light);
   color: inherit;
   text-decoration: none;
 }
@@ -250,9 +254,12 @@ a:hover {
 
 .card.section {
   padding: 0.5em;
-  height:75%;
+  height: 75%;
   margin-bottom: 0.75em;
   border-radius: 0.5em;
+}
+.card.section a {
+  text-decoration: none;
 }
 
 .card img {
@@ -266,16 +273,15 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
 .view-window-small {
-  position:relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
 
-  background-size:cover;
-  background-position:center;
-  background-attachment:scroll;
-  height:15vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 15vh;
 }
 
 .section-head {
@@ -331,4 +337,119 @@ a:hover {
 .figure figcaption {
   font-weight: bold;
   padding: 1em;
+}
+
+/* FORM CLASSES */
+.form-control {
+  margin: 1em 0;
+}
+.form-select > select,
+.hotdog,
+.hotdog input,
+.form-button,
+.form-button-light,
+.form-input,
+.form-item {
+  display: inline-block;
+  background-color: transparent;
+  border-width: 0;
+  font: inherit;
+  -webkit-appearance: none;
+  width: 100%;
+  outline: 0;
+}
+
+.form-input {
+  padding: 0.5em 1em;
+  border-bottom: 2px solid var(--color-main-light);
+}
+.form-input:focus {
+  border-bottom-color: var(--color-main-medium);
+  background-color: var(--color-accent-light);
+}
+.form-label {
+  font-size: 0.8em;
+  color: var(--color-main-medium);
+  display: block;
+  width: 100%;
+}
+.form-button-light,
+.form-button {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  background-color: var(--color-neutral-light);
+  cursor: pointer;
+  text-align: center;
+}
+.form-button:hover,
+.form-button:hover {
+  text-decoration: none;
+}
+.form-button:active,
+.form-button:active {
+  background-color: var(--color-accent-medium);
+}
+.form-select {
+  position: relative;
+}
+.form-select::after {
+  content: "▾";
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  position: absolute;
+  top: 50%;
+  right: 0.2em;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-neutral-medium);
+}
+.form-select > select {
+  padding: 0.5em 1em;
+  background-color: var(--color-neutral-light);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.hotdog {
+  background-color: var(--color-neutral-light);
+  border-radius: 2em;
+  padding: 0.5em 1.5em;
+  display: flex;
+}
+.hotdog.dark {
+  background-color: var(--color-neutral-medium);
+  color: var(--color-white);
+}
+.hotdog.dark input {
+  color: var(--color-white);
+}
+.hotdog.light {
+  background-color: var(--color-white);
+  color: var(--color-neutral-dark);
+}
+
+/* TOGGLE */
+
+.toggle label {
+  font-size: 1.3em;
+  display: inline-block;
+  width: 2em;
+  height: 1em;
+  border: 0.1em solid var(--color-neutral-medium);
+  border-radius: 1em;
+  position: relative;
+}
+.toggle label::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 1em;
+  position: absolute;
+  background-color: var(--color-neutral-light);
+  transition: all 0.3s;
+}
+.toggle input:checked + label::after {
+  transform: translateX(1em);
+  background-color: var(--color-main-medium);
 }

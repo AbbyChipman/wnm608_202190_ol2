@@ -17,27 +17,32 @@
   --color-text-light: #8ca19b;
   --color-text-dark: #1c4436;
 
-  --font-display: "Spicy Rice", Arial, sans-serif;
   --font-serif: "Mountains of Christmas", serif;
-  --font-sans: "Quicksand", sans-serif;
+  --font-sans: "Handlee", sans-serif;
 }
 
 h1 {
   font-family: var(--font-serif);
+  font-weight: bold;
   color: var(--color-main-medium);
 }
 
 h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
+  font-weight: bold;
   color: var(--color-secondary-medium);
 }
 
-h3,
+h3 {
+  font-family: var(--font-sans);
+  color: var(--color-main-dark);
+}
+
 h4,
 h5,
 h6 {
   font-family: var(--font-sans);
-  color: var(--color-text-dark);
+  color: var(--color-accent-dark);
 }
 @media (max-width: 800px) {
   .container {
@@ -60,18 +65,30 @@ h6 {
 
 body {
   background: var(--color-main-light);
-  color: var(--color-text-dark);
+  color: var(--color-accent-dark);
+  padding-bottom: 4em;
+}
+
+.favorite label {
+  transition: all 0.3s;
+  display: inline-block;
+  transform: scale(1, 1);
+  color: var(--color-neutral-medium);
+}
+.favorite input:checked + label {
+  color: red;
+  transform: scale(1.5, 1.5);
 }
 
 .navbar {
   background: linear-gradient(to right, #4c1c54, #792a84);
-  color: var(--color-white);
+  color: var(--color-accent-light);
   line-height: var(--header-height);
 }
 
 .navbar h1 {
   font-size: 1.5em;
-  color: var(--color-white);
+  color: var(--color-accent-light);
   margin: 0;
   font-family: var(--font-serif);
 }
@@ -84,6 +101,17 @@ body {
   font-family: var(--font-sans);
 }
 
+.card.light {
+  background-color: var(--color-accent-light);
+}
+
+.card.medium {
+  background-color: var(--color-secondary-medium);
+  color: var(--color-accent-light);
+}
+.card.dark {
+  background-color: var(--color-main-dark);
+}
 .heading {
   color: var(--color-main-dark);
 }
@@ -165,10 +193,28 @@ body {
 .color-chip {
   margin: 0.2em;
   text-align: center;
+  color: var(--color-accent-light);
   font-weight: bold;
+}
+.color-chip.light {
+  margin: 0.2em;
+  text-align: center;
+  color: var(--color-accent-dark);
 }
 
 .color-label {
   font-weight: bold;
   text-align: center;
+}
+
+/* BUTTON */
+
+.form-button {
+  font-family: var(--font-serif);
+  background-color: var(--color-secondary-medium);
+  color: var(--color-accent-light);
+}
+.form-button-light {
+  background-color: var(--color-secondary-light);
+  color: var(--color-accent-dark);
 }

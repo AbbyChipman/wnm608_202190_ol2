@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Quicksand:wght@400;700&family=Spicy+Rice&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>CSS Styleguide</title>
@@ -42,20 +42,31 @@
    
     <div class="container" id="toc">
         <div class="card soft">
-            <div class="nav" class="nav">
+            <div class="nav">
                 <ul>
-                    <li><a href="#typography">Typography</a></li>
-                    <ul>
-                        <li><a href="#headings">Headings</a></li>
-                        <li><a href="#paragraphs">Paragraphs</a></li>
-                    </ul>
+                    <li><a href="#typography">Typography</a>
+                        <ul>
+                            <li><a href="#headings">Headings</a></li>
+                            <li><a href="#paragraphs">Paragraphs</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#colors">Colors</a></li>
                     <li><a href="#cards">Cards</a></li>
-                    <li><a href="#view-window">View Window</a></li>
                     <li><a href="#navigations">Navigations</a></li>
                     <li><a href="#grid-system">Grid System</a></li>
                     <li><a href="#flex-system">Flex System</a></li>
                     <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a>
+                        <ul>
+                            <li><a href="#inputs">Inputs</a></li>
+                            <li><a href="#labels">Labels</a></li>
+                            <li><a href="#controls">Controls</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#hotdog">Hotdog</a></li>
+                            <li><a href="#select">Select</a></li>
+                            <li><a href="#checkbox">Checkbox</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#figures">Figures</a></li>
                 </ul>
             </div>
@@ -63,12 +74,12 @@
     </div>
 
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Typography</h2>
+        <div class="card section" id="typography">
+            <a href="#top"><h2>Typography</h2></a>
         </div>
     </div>
 
-    <div class="container" id="typography">
+    <div class="container">
 
         <div class="card soft">
             <h3 id="headings">Headings</h3>
@@ -97,25 +108,25 @@
     </div>
 
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Colors</h2>
+        <div class="card section" id="colors">
+            <a href="#top"><h2>Colors</h2></a>
         </div>
     </div>
 
-   <div class="container" id=colors>
+   <div class="container">
        <div class="card soft">
         <h3>Main Color</h3>
         <div class="grid gap">
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-main-light);">#ede3f0</div>
+                <div class="card color-chip light" style="background-color: var(--color-main-light);">#ede3f0</div>
                 <figcaption class="color-label">Main color light</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-main-medium); color: var(--color-white);">#792a84</div>
+                <div class="card color-chip" style="background-color: var(--color-main-medium)">#792a84</div>
                 <figcaption class="color-label">Main color medium</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-main-dark); color: var(--color-white)">#4c1c54</div>
+                <div class="card color-chip" style="background-color: var(--color-main-dark)">#4c1c54</div>
                 <figcaption class="color-label">Main color dark</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
@@ -127,15 +138,15 @@
         <h3>Secondary Color</h3>
         <div class="grid gap">
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-secondary-light);">#f8eaf4</div>
+                <div class="card color-chip light" style="background-color: var(--color-secondary-light);">#f8eaf4</div>
                 <figcaption class="color-label">Secondary color light</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-secondary-medium); color: var(--color-white);">#c658a5</div>
+                <div class="card color-chip" style="background-color: var(--color-secondary-medium)">#c658a5</div>
                 <figcaption class="color-label">Secondary color medium</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-secondary-dark); color: var(--color-white)">#512547</div>
+                <div class="card color-chip" style="background-color: var(--color-secondary-dark)">#512547</div>
                 <figcaption class="color-label">Secondary color dark</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
@@ -147,15 +158,15 @@
         <h3>Accent Color</h3>
         <div class="grid gap">
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-accent-light);">#f8f9e5</div>
+                <div class="card color-chip light" style="background-color: var(--color-accent-light);">#f8f9e5</div>
                 <figcaption class="color-label">Accent color light</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-accent-medium); color: var(--color-white);">#d7df27</div>
+                <div class="card color-chip light" style="background-color: var(--color-accent-medium)">#d7df27</div>
                 <figcaption class="color-label">Accent color medium</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-accent-dark); color: var(--color-white)">#512547</div>
+                <div class="card color-chip" style="background-color: var(--color-accent-dark)">#512547</div>
                 <figcaption class="color-label">Accent color dark</figcaption>
             </div>
             <div class="col-xs-12 col-md-3">
@@ -163,34 +174,19 @@
                 <figcaption class="color-label">Accent color tone</figcaption>
             </div>
         </div>
-
-        <h3>Text Color</h3>
-        <div class="grid gap">
-            <div class="col-xs-12 col-md-3"></div>
-            <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-text-light);">#8ca19b</div>
-                <figcaption class="color-label">text color light</figcaption>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <div class="card color-chip" style="background-color: var(--color-text-dark); color: var(--color-white)">#1c4436</div>
-                <figcaption class="color-label">text color dark</figcaption>
-            <div class="col-xs-12 col-md-3"></div>
-
-            </div>
         </div>
-       </div>
+        <a href="#top">Back to top</a>
    </div>
 
-   <a href="#top">Back to top</a>
 
    
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Cards</h2>
+        <div class="card section" id="cards">
+            <a href="#top"><h2>Cards</h2></a>
         </div>
     </div>
 
-    <div class="container" id="cards">
+    <div class="container">
         <div class="card soft">
             <h3>Standard Cards</h3>
             <div class="grid gap">
@@ -328,30 +324,16 @@
                 </div>
             </div>
         </div>
-    </div>
-            
-
-
         <a href="#top">Back to top</a>
     </div>
 
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>View Windows</h2>
-        </div>
-    </div>
-    
-    <div class="view-window" style="background-image:url(../lib/img/glitter-background.jpg);">
-    </div>
-
-    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Navigations</h2>
+        <div class="card section" id="navigations">
+            <a href="#top"><h2>Navigations</h2></a>
         </div>
     </div>
 
-
-    <div class="container" id="navigations">
+    <div class="container">
 
         <script>
             const makeNav = (classes='') => {
@@ -417,12 +399,62 @@
 
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
         <div class="card section">
-            <h2>Grid System</h2>
+            <a href="#top"><h2>Grid System</h2></a>
         </div>
         </div>
     <div class="container" id="grid-system">
         <div class="card soft">
-            <p>content</p>
+            <h3>Dozenal Grid (divisible by 12)</h3>
+            <h3>evenly divided</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-12 card hard flat">column 12</div>
+                <div class="col-xs-12 col-md-6 card hard flat">Column 6
+                </div>
+                <div class="col-xs-12 col-md-6 card hard flat">Column 6
+                </div>
+                <div class="col-xs-12 col-md-4 card hard flat">column 4</div>
+                <div class="col-xs-12 col-md-4 card hard flat">column 4</div>
+                <div class="col-xs-12 col-md-4 card hard flat">column 4</div>
+                <div class="col-xs-12 col-md-3 card hard flat">column 3</div>
+                <div class="col-xs-12 col-md-3 card hard flat">column 3</div>
+                <div class="col-xs-12 col-md-3 card hard flat">column 3</div>
+                <div class="col-xs-12 col-md-3 card hard flat">column 3</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-2 card hard flat">column 2</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+                <div class="col-xs-12 col-md-1 card hard flat">column 1</div>
+            </div>
+            <h3>Uneven divisions</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4 card hard flat">Column 4</div>
+                <div class="col-xs-12 col-md-8 card hard flat">Column 8</div>
+                <div class="col-xs-12 col-md-8 card hard flat">Column 8</div>
+                <div class="col-xs-12 col-md-4 card hard flat">Column 4</div>
+                <div class="col-xs-12 col-md-3 card hard flat">Column 3</div>
+                <div class="col-xs-12 col-md-3 card hard flat">Column 3</div>
+                <div class="col-xs-12 col-md-6 card hard flat">Column 6</div>
+                <div class="col-xs-12 col-md-3 card hard flat">Column 3</div>
+                <div class="col-xs-12 col-md-6 card hard flat">Column 6</div>
+                <div class="col-xs-12 col-md-3 card hard flat">Column 3</div>
+                <div class="col-xs-12 col-md-2 card hard flat">Column 2</div>
+                <div class="col-xs-12 col-md-10 card hard flat">Column 10</div>
+                <div class="col-xs-12 col-md-10 card hard flat">Column 10</div>
+                <div class="col-xs-12 col-md-2 card hard flat">Column 2</div>
+            </div>
         </div>
 
         <a href="#top">Back to top</a>
@@ -432,13 +464,61 @@
 
 
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Flex System</h2>
+        <div class="card section" id="flex-system">
+            <a href="#top"><h2>Flex System</h2></a>
         </div>
     </div>
-    <div class="container" id="flex-system">
+    <div class="container">
        <div class="card soft">
-           <p>content</p>
+        <h3>Display Flex</h3>
+           <div class="card hard flat display-flex">
+               <div class="card hard flat flex-none">
+                   <img src="https://via.placeholder.com/100px" alt="">
+                </div>
+                <div class="card hard flat flex-stretch"></div>
+                <div class="card hard flat flex-none">
+                    <img src="https://via.placeholder.com/100px" alt="">
+                 </div>
+            </div>
+        </div>
+
+       <div class="card soft">
+           <h3>Display Inline-Flex</h3>
+           <div class="display-inline-flex">
+            <div class="card hard flat flex-none">
+                <img src="https://via.placeholder.com/100px" alt="">
+             </div>
+             <div class="card hard flat flex-stretch"></div>
+             <div class="card hard flat flex-none">
+                 <img src="https://via.placeholder.com/100px" alt="">
+              </div>
+         </div>
+       </div>
+
+       <div class="card soft">
+        <h3>Display Block</h3>
+        <div class="display-block">
+            <div class="card hard flat flex-none">
+                <img src="https://via.placeholder.com/100px" alt="">
+             </div>
+             <div class="card hard flat flex-stretch"></div>
+             <div class="card hard flat flex-none">
+                 <img src="https://via.placeholder.com/100px" alt="">
+              </div>
+         </div>
+       </div>
+
+       <div class="card soft">
+        <h3>Display Inline-Block</h3>
+        <div class="display-inline-block">
+            <div class="card hard flat flex-none">
+                <img src="https://via.placeholder.com/100px" alt="">
+             </div>
+             <div class="card hard flat flex-stretch"></div>
+             <div class="card hard flat flex-none">
+                 <img src="https://via.placeholder.com/100px" alt="">
+              </div>
+         </div>
        </div>
 
        <a href="#top">Back to top</a>
@@ -472,7 +552,8 @@
 
    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
     <div class="card section">
-        <h2>Tables</h2>
+        <a href="#top"><h2>Tables</h2></a>
+
     </div>
     </div>
 
@@ -515,16 +596,192 @@
 
         <a href="#top">Back to top</a>
 
-
     </div>
-
+    
     <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
-        <div class="card section">
-            <h2>Figures</h2>
+        <div class="card section" id="forms">
+            <a href="#top"><h2>Forms</h2></a>
         </div>
     </div>
 
-    <div class="container" id="figures">
+    <div class="container">
+        <div class="card soft">
+            <h3 id="inputs">Inputs</h3>
+
+            <h3>Form Input</h3>
+                <form>
+                    <input type="text" placeholder="Text" class="form-input">
+                    <input type="number" placeholder="Number" class="form-input">
+                    <input type="password" placeholder="Password" class="form-input">
+                    <input type="search" placeholder="Search" class="form-input">
+                </form>
+        </div>
+
+        <div class="card soft">    
+            <h3 id="labels">Form Labels</h3>
+                <form>
+                    <label class="form-label">Text Label</label>
+                    <input type="text" placeholder="Text" class="form-input">
+
+                    <label class="form-label">Number Label</label>
+                    <input type="number" placeholder="Number" class="form-input">
+
+                    <label class="form-label">Password Label</label>
+                    <input type="password" placeholder="Password" class="form-input">
+
+                    <label class="form-label">Search Label</label>
+                    <input type="search" placeholder="Search" class="form-input">
+                </form>
+        </div>
+
+        <div class="card soft">    
+            <h3 id="controls">Form Controls</h3>
+                <form>
+                    <div class="form-control display-flex flex-align-center">
+                    <div class="flex-none">
+                        <label class="form-label">Text Label</label>
+                    </div>
+                    <div class="flex-stretch">
+                        <input type="text" placeholder="Text" class="form-input">
+                    </div>
+
+                    <div class="flex-none">
+                        <label class="form-label">Text Label</label>
+                    </div>
+                    <div class="flex-stretch"><input type="text" placeholder="Text" class="form-input">
+                    </div>
+                    </div>
+    
+                    <div class="form-control">
+                        <label class="form-label">Number Label</label>
+                        <input type="number" placeholder="Number" class="form-input">
+                    </div>
+    
+                    <div class="form-control">
+                        <label class="form-label">Password Label</label>
+                        <input type="password" placeholder="Password" class="form-input">
+                    </div>
+
+                    <div class="form-control">
+                        <label class="form-label">Search Label</label>
+                        <input type="search" placeholder="Search" class="form-input">
+                    </div>
+                </form>
+        </div>
+
+        <div class="card soft">
+            <h3 id="buttons">Buttons</h3>
+            <h3>Form Buttons</h3>
+            <div class="form-control"><button type="button" class="form-button">Button</button></div>
+            <div class="form-control"><input type="button" class="form-button" value="Input"></div>
+            <div class="form-control"><a href="#" class="form-button">Anchor</a></div>
+
+            <div class="display-flex">
+                <div class="flex-stretch"></div>
+                <div class="form-control flex-none"><button type="button" class="form-button-light">Continue Shopping</button></div>
+                <div class="flex-stretch"></div>
+                <div class="form-control"><button type="button" class="form-button">Proceed to Cart</button></div>
+            </div>
+        </div>
+        
+
+        <div class="card soft">
+            <h3 id="hotdog">Hotdog</h3>
+            <div class="form-control">
+                <form>
+                    <input type="search" class="hotdog" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form>
+                    <input type="search" class="hotdog dark" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form class="card dark">
+                    <input type="search" class="hotdog light" placeholder="Search">
+                </form>
+            </div>
+
+            <div class="form-control">
+                <form class="hotdog">
+                    <span>&equiv;</span>
+                    <input type="search" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form class="hotdog dark">
+                    <span>&equiv;</span>
+                    <input type="search" placeholder="Search">
+                </form>
+            </div>
+        </div>
+
+        <div class="card soft">
+            <h3 id="select">Select</h3>
+            <div class="form-select">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="display-flex">
+                <div class="flex-stretch"></div>
+                <div class="flex-none">
+                    <div class="form-select">
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card soft">
+            <h3 id="checkbox">Checkboxes</h3>
+            <h3>Basic Checkbox</h3>
+                <label>Label<input type="checkbox" id="input-1"></label>
+                <label for="input-1">This is also a label</label>
+
+            <h3>Heart Checkbox</h3>
+                <div class="favorite">
+                    <input type="checkbox" id="heart-example" class="hidden">
+                    <label for="heart-example">&hearts;</label>
+                </div>
+
+            <h3>Toggle</h3>
+                <div class="toggle">
+                    <input type="checkbox" id="toggle-1" class="hidden">
+                    <label for="toggle-1"></label>
+                </div>
+                <div class="display-flex flex-align-center">
+                    <div class="flex-none">
+                        <label for="toggle-2">Display Warning?</label>
+                    </div>
+                    <div class="flex-stretch"></div>
+                    <div class="flex-none">
+                        <div class="toggle" style="font-size:2em">
+                            <input type="checkbox" id="toggle-2" class="hidden">
+                            <label for="toggle-2"></label>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+        <a href="#top">Back to top</a>
+    </div>
+
+    <div class="view-window-small display-flex flex-align-center flex-justify-center" style="background-image:url(../lib/img/glitter-background.jpg);">
+        <div class="card section" id="figures">
+            <a href="#top"><h2>Figures</h2></a>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="card soft">
             <h3>Basic Figure</h3>
             <figure class="figure">
