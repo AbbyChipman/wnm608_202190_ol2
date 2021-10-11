@@ -456,7 +456,7 @@ hr {
 
 .card-dark {
     width: 100%;
-    min-height: 10vh;
+    min-height: 15vh;
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -468,7 +468,7 @@ hr {
 
 .card-light {
     width: 100%;
-    min-height: 10vh;
+    min-height: 15vh;
     color: var(--color-primary-dark);
     text-align: center;
     vertical-align: middle;
@@ -524,7 +524,7 @@ hr {
 
 .card-img {
     width: 100%;
-    min-height: 10vh;
+    min-height: 15vh;
     padding: 1.25rem;
     text-align: center;
     border-radius: 1rem;
@@ -809,17 +809,23 @@ hr {
     padding: 1.5rem;
     outline: 0;
 }
-    
+
+    .form-hotdog input:focus {
+        outline: 0;
+    }
+        
     .form-hotdog.dark,
     .form-hotdog.dark input {
         background-color: var(--color-primary-dark);
         color: var(--color-primary-light);
+        outline: 0;
     }
 
     .form-hotdog.light,
     .form-hotdog.light input {
         background-color: var(--color-primary-light);
         color: var(--color-primary-dark);
+        outline: 0;
     }
 
     .form-hotdog.light {
@@ -877,8 +883,66 @@ hr {
 
 .toggle input:checked + label::after { 
     transform: translateX(1.1em);
+    background-color: var(--color-accent-red-light);
 }
     
+
+
+
+/** NOTIFICATIONS **/
+
+.card.warning,
+.card.error,
+.card.pay-success {
+    text-align: left;
+    position: relative;
+}
+
+.warning h5::after,
+.error h5::after,
+.pay-success h5::after {
+    content:'✗';
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    right: 1.8rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.card.warning {
+    background-color: var(--color-accent-red-light);
+    color: #fff;
+}
+
+.card.error {
+    background-color: #F9DC61;
+}
+
+    .card.error h5 {
+        max-width: 92%;
+        color: var(--color-primary-medium);
+    }
+
+
+.card.pay-success {
+    background-color: #3BCC5D;
+    color: #fff;
+}
+
+.warning h5::before,
+.error h5::before {
+    content:'⚠';
+    display: inline-block;
+}
+
+.pay-success h5::before {
+    content:'☑';
+    font-size: 2rem;
+    display: inline-block;
+}
+
+
 
 
 

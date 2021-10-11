@@ -49,7 +49,6 @@
             <li><a href="#cards">Cards</a></li>
             <li><a href="#navigation">Navigation</a></li>
             <li><a href="#tables">Tables</a></li>
-            <li><a href="#hero">Product Hero</a></li>
             <li><a href="#figures">Figures</a></li>
             <li><a href="#figures">Forms</a></li>
             <ul>
@@ -59,6 +58,9 @@
                 <li><a href="#select">Select</a></li>
                 <li><a href="#checkbox">Check Boxes</a></li>
             </ul>
+            <li><a href="#notify">Notifications</a></li>
+            <li><a href="#hero">Product Hero Banner</a></li>
+            <li><a href="#callout">Callout Banner</a></li>
         </ul>
     </div>
 </div>
@@ -68,6 +70,8 @@
     <hr>
     <h3 style="margin-left: 1rem;">TYPOGRAPHY</h3>
     <hr>
+    <br />
+    <h4>Fonts&colon;&nbsp;&nbsp;<span style="font-family: BrandonText-Regular;"><b style="font-family: BrandonText-Bold;">Brandon Text</b> for Headings</span>, <span style="font-family: Rubik"><b>Rubik</b> for Body Copy</span></h4>
     <br />
     <div class="display-block" id="headings">
         <h1>Heading 1</h1>
@@ -322,26 +326,6 @@
 </div>
 
 
-<!-- ** HERO ** -->
-<div class="container" id="hero">
-        <hr>
-        <h3 style="margin-left: 1rem;">PRODUCT HERO BANNER</h3>
-        <hr>
-        <br />
-        <div class="hero hero-landing display-flex flex-align-center">
-            <div class="container flex-stretch">
-                <div class="hero-text">
-                    <h2>TITLE GOES HERE</h2>
-                    <h4>Subtitle Here</h4>
-                    <!--<p>Check out this season&apos;s featured designs.</p>-->
-                    <button class="light">CTA Button</button>
-                </div>
-                <div class="flex-stretch"></div>
-            </div>
-        </div>
-</div>
-
-
 <!-- ** FIGURES ** -->
 <div class="container" id="figures">
     <hr>
@@ -540,6 +524,16 @@
         <button class="form-button form-control">Button</button>
         <input type="button" class="form-button form-control" value="Input">
         <a href="#buttons" class="form-button form-control">Anchor</a>
+        <br />
+        <div class="display-flex">
+            <div class="flex-stretch" style="text-align: center; padding: 1rem;">
+                <a href="#buttons"><button class="dark">Button Dark</button></a>
+            </div>
+            <br />
+            <div class="flex-stretch" style="background-color: var(--color-primary-dark); text-align: center; padding: 2rem;">
+                <a href="#buttons"><button class="light" style="margin-top: 0;">Button Light</button></a>
+            </div>
+        </div>
     </div>
     <br />
     <br />
@@ -631,6 +625,75 @@
     </div>
 </div>
 
+
+<!-- ** NOTIFICATIONS ** -->
+<div class="container" id="notify">
+    <hr>
+    <h3 style="margin-left: 1rem;">NOTIFICATIONS</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <h4><b>Warning</b></h4>
+        <div class="card warning">
+            <h5>&nbsp;&nbsp;WARNING: Lorem ipsum set dolor amit!</h5>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Error</b></h4>
+        <div class="card error">
+            <h5>&nbsp;&nbsp;ERROR: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nulla non molestie orci. Quisque sed dolor vitae dolor elementum tincidunt congue ut eros. 
+                Integer efficitur finibus ornare. Quisque tincidunt volutpat nulla, nec pulvinar nisi fermentum ut. 
+                Phasellus congue consectetur nunc. Cras eu urna et neque dapibus eleifend. 
+                Duis urna eros, vehicula nec massa a, rutrum auctor lacus.</h5>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Payment Successful</b></h4>
+        <div class="card pay-success">
+            <h5>&nbsp;&nbsp;Payment Successful! Thank you for your purchase.</h5>
+        </div>
+    </div>
+</div>
+
+
+<!-- ** HERO BANNER ** -->
+<div class="container" id="hero">
+    <hr>
+    <h3 style="margin-left: 1rem;">PRODUCT HERO BANNER</h3>
+    <hr>
+    <br />
+    <div class="hero hero-landing display-flex flex-align-center">
+        <div class="container flex-stretch">
+            <div class="hero-text">
+                <h2>TITLE GOES HERE</h2>
+                <h4>Subtitle Here</h4>
+                <!--<p>Check out this season&apos;s featured designs.</p>-->
+                <button class="light">CTA Button</button>
+            </div>
+            <div class="flex-stretch"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- *** CALLOUT BANNER *** -->
+<div class="container" id="callout">
+    <hr>
+    <h3 style="margin-left: 1rem;">CALLOUT BANNER</h3>
+    <hr>
+    <br />
+    <div class="news-row display-flex flex-align-center">
+        <div class="flex-none news-img"></div>
+        <div class="flex-stretch news-text">
+            <h3>TITLE GOES HERE</h3>
+            <p>Body copy description here.</p>
+            <button class="light">CTA Button</button>
+        </div>
+    </div>
+</div>
 
 
 <!-- ** BACK TO TOP ** -->

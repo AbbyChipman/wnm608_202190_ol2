@@ -93,7 +93,8 @@ body {
 
 
 
-#forms .card-light {
+#forms .card-light,
+#notify .card-light {
     text-align: left;
 }
 
