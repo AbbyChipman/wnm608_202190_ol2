@@ -130,6 +130,10 @@ a:hover {
   text-decoration: none;
 }
 
+.indent {
+  font-style: italic;
+}
+
 .nav-material ul,
 .nav-crumbs ul,
 .nav-pills ul,
