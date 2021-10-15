@@ -50,7 +50,7 @@ a:hover {
 /* LAYOUT CLASSES */
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -253,13 +253,18 @@ a:hover {
 }
 
 .card.section {
+  height: 90%;
   padding: 0.5em;
-  height: 75%;
-  margin-bottom: 0.75em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   border-radius: 0.5em;
+  opacity: 0.8;
 }
 .card.section a {
   text-decoration: none;
+}
+.card.section h2 {
+  font-weight: bold;
 }
 
 .card img {
@@ -328,14 +333,14 @@ a:hover {
 
 .figure {
   margin: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-accent-light);
 }
 .figure img {
   width: 100%;
   vertical-align: text-bottom;
 }
 .figure figcaption {
-  font-weight: bold;
+  color: var(--color-secondary-dark);
   padding: 1em;
 }
 
@@ -369,6 +374,8 @@ a:hover {
 }
 .form-label {
   font-size: 0.8em;
+  font-weight: bold;
+  font-style: italic;
   color: var(--color-main-medium);
   display: block;
   width: 100%;
@@ -380,14 +387,17 @@ a:hover {
   background-color: var(--color-neutral-light);
   cursor: pointer;
   text-align: center;
+  -webkit-appearance: none;
 }
-.form-button:hover,
+.form-button-light:hover,
 .form-button:hover {
   text-decoration: none;
 }
-.form-button:active,
+.product-button:active,
+.form-button-light:active,
 .form-button:active {
   background-color: var(--color-accent-medium);
+  color: var(--color-main-dark);
 }
 .form-select {
   position: relative;
@@ -435,7 +445,7 @@ a:hover {
   display: inline-block;
   width: 2em;
   height: 1em;
-  border: 0.1em solid var(--color-neutral-medium);
+  border: 0.1em solid var(--color-neutral-light);
   border-radius: 1em;
   position: relative;
 }
@@ -451,5 +461,6 @@ a:hover {
 }
 .toggle input:checked + label::after {
   transform: translateX(1em);
+  border: 0.1em solid var(--color-main-medium);
   background-color: var(--color-main-medium);
 }

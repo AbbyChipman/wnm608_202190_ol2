@@ -18,7 +18,7 @@
   --color-text-dark: #1c4436;
 
   --font-serif: "Mountains of Christmas", serif;
-  --font-sans: "Handlee", sans-serif;
+  --font-sans: "Comic Neue", sans-serif;
 }
 
 h1 {
@@ -35,6 +35,8 @@ h2 {
 
 h3 {
   font-family: var(--font-sans);
+  font-weight: bold;
+  font-style: italic;
   color: var(--color-main-dark);
 }
 
@@ -42,6 +44,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-sans);
+  font-weight: bold;
+  font-style: italic;
   color: var(--color-accent-dark);
 }
 @media (max-width: 800px) {
@@ -76,7 +80,7 @@ body {
   color: var(--color-neutral-medium);
 }
 .favorite input:checked + label {
-  color: red;
+  color: var(--color-secondary-medium);
   transform: scale(1.5, 1.5);
 }
 
@@ -133,12 +137,26 @@ body {
   box-shadow: 0 2px 5px hsla(308, 77%, 46%, 0.096);
   overflow: hidden;
 }
+.product-price {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.product-title {
+  font-size: 0.9em;
+  font-style: italic;
+  text-decoration: none;
+}
+
 .product-overlay {
+  border-radius: 0.5em;
   position: relative;
   overflow: hidden;
 }
 .product-overlay figcaption {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -154,7 +172,7 @@ body {
   opacity: 1;
 }
 .product-overlay .caption-body {
-  background-color: white;
+  background-color: var(--color-accent-light);
   border-radius: 0.5em;
   padding: 1em;
   transform: translateY(2em);
@@ -169,6 +187,19 @@ body {
 }
 .product-overlay:hover img {
   transform: scale(1.4, 1.4);
+}
+.product-overlay button {
+  display: inline-block;
+  width: 100%;
+  border-width: 0;
+  border-radius: 2em;
+  background-color: var(--color-secondary-medium);
+  color: var(--color-accent-light);
+  font-family: var(--font-serif);
+}
+.product-overlay button:hover {
+  background-color: var(--color-secondary-tone);
+  box-shadow: 0 2px 5px var(--color-accent-medium);
 }
 
 @media (max-width: 400px) {
@@ -208,13 +239,31 @@ body {
 }
 
 /* BUTTON */
-
+.overlay-button,
+.product-button,
 .form-button {
   font-family: var(--font-serif);
+  font-size: 1.5em;
   background-color: var(--color-secondary-medium);
   color: var(--color-accent-light);
 }
 .form-button-light {
   background-color: var(--color-secondary-light);
   color: var(--color-accent-dark);
+}
+.product-button:hover,
+.form-button:hover,
+.form-button-light:hover {
+  background-color: var(--color-secondary-tone);
+  box-shadow: 0 2px 5px var(--color-accent-medium);
+}
+.overlay-button,
+.product-button {
+  display: inline-block;
+  width: 100%;
+  border-width: 0;
+  padding: 0.5em 0.5em;
+}
+.form-button-light:hover {
+  color: var(--color-main-light);
 }
