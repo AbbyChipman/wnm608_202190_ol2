@@ -1,14 +1,22 @@
 h1,
 h2 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
+
 h3,
-h4,
+h4 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
 h5,
 h6 {
     font-family: 'Noto Sans', sans-serif;
+    font-weight: 0;
 }
+
 
 a {
     color: inherit;
@@ -28,9 +36,13 @@ li {
 
 li:hover {
     text-decoration: none;
-    color: violet;
+    color: 56ACEC;
 }
 
+.title {
+    padding: 0.5em;
+    background-color: 56ACEC;
+}
 
 /* LAYOUT CLASSES */
 .container {
@@ -82,14 +94,15 @@ li:hover {
 
 .nav a {
     display: block;
-    padding: 0.2en 0.5em;
+    padding: 0;
+    margin: 0;
 }
-
+/* 
 .nav a:hover {
     background-color: var(--color-main-medium);
     color: var(--color-white);
     text-decoration: none;
-}
+} */
 
 .nav .active .a {
     background-color: var(--color-main-light);
@@ -106,11 +119,6 @@ li:hover {
 
 }
 
-.nav-stretch ul {
-    display: flex;
-
-}
-
 .nav-material li,
 .nav-stretch li {
     flex: 1 1 auto;
@@ -122,6 +130,7 @@ li:hover {
     border-radius: 2em;
     padding: 0.5em 1em;
 }
+
 
 .nav-crumbs a {
     display: inline-block;
@@ -187,357 +196,71 @@ li:hover {
     padding: 0 0.5em;
 }
 
-/* CARD */
-.card {
-    background-color: var(--color-white);
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 1em;
-    overflow: hidden;
-    position: relative;
-}
-
-.card.soft {
-    border-radius: 0.3em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card.hard {
-    border-radius: 0.3em;
-    border: 2px solid var(--color-neutral-medium);
-}
-
-.card.dark {
-    background-color: var(--color-neutral-dark);
-}
-
-.card.medium {
-    background-color: var(--color-neutral-medium);
-}
-
-.card.flat {
-    padding: 0;
-}
-
-#card-group {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin: 1em 1em;
-    width: 100px;
-    height: 100px;
-}
-
-#card-group:hover {
-    transform: scale(1.2)
-}
-
-.card1 {
-    background-color: #ffffff;
-}
-
-.card2 {
-    background-color: #e4e4e4;
-}
-
-.card3 {
-    background-color: #707070;
-}
-
-.card4 {
-    background-color: #000000;
-}
-
-.card5 {
-    background-color: #56acec;
-}
-
-.card6 {
-    background-color: #49cae4;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
-    position: relative;
-}
-
-.card-box {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.card-text {
-    text-align: center;
-    color: black;
-}
-
-.card-text:hover {
-    text-align: center;
-    color: white;
-}
-
-.view-window {
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* tables */
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th,
-.table td {
+figcaption {
+    font-size: 1em;
     text-align: left;
-    padding: 0.2em 0.5em;
 }
 
-.table.striped tbody tr:nth-child(odd) {
-    background-color: var(--color-neutral-light);
+.table_of {
+    padding-right: 30px;
+    color: var(--color-neutral-dark);
+    text-align: center;
+    font-weight: 300;
+    text-decoration-line: underline;
+    font-size: 0.9em;
 }
 
-.table.lined.all th:not(:first-child),
-.table.lined.all td:not(:first-child),
-.table.lined.vertical th:not(:first-child),
-.table.lined.vertical td:not(:first-child) {
-    border-left: 1px solid var(--color-neutral-medium);
-}
-
-.table.lined.all tbody tr,
-.table.lined.all tbody tr {
-    border-top: 1px solid var(--color-neutral-medium);
-}
-
-.table.lined.all,
-.table.lined.border {
-    border: 1px solid var(--color-neutral-medium);
-}
-
-/* figure */
-
-.figure {
-    margin: 0;
-    background-color: var(--color-white);
-
-}
-
-.figure img {
-    width: 100%;
-    vertical-align: text-bottom;
-}
-
-.figure figcaption {
-    padding: 1em;
-}
-
-.figure.product {
-    border-radius: 0.5em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.product-overlay {
+#main_nav {
     position: relative;
 }
 
-.product-overlay figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.product-overlay:hover figcaption {
-    opacity: 1;
+.main_nav2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: #333;
+    display: flex;
 }
 
-.product-overlay .caption-body {
-    background-color: white;
-    border-radius: 0.5em;
-    padding: 1em;
-    transform: translateY(2em);
-    transition: all 0.3s;
-}
 
-.product-overlay:hover .caption-body {
-    transform: translateY(0);
-}
-
-@media (max-width:600px) {
-    .product-overlay figcaption {
-        position: relative;
-        display: block;
-        top: initial;
-        left: initial;
-        width: 100%;
-        height: initial;
-        opacity: 1;
-        background-color: initial;
-    }
-
-    .product-overlay:hover .caption-body {
-        transform: none;
-        padding: 0;
-    }
-}
-
-/* forms */
-
-.hotdog,
-.hotdog input,
-.form-input,
-.form-button,
-.form-item {
-    display: inline-block;
-    background-color: transparent;
-    border-width: 0;
-
-    font: inherit;
-    -webkit-appearance: none;
-    color: inherit;
-    width: 100%;
-    outline: 0;
-}
-
-.form-input {
-    border-bottom: 1px solid var(--color-neutral-light);
-    padding: 0.5em 1em;
-}
-
-.form-input:focus {
-    border-bottom-color: var(--color-main-medium);
-}
-
-.form-label {
-    font-size: 0.8em;
-    color: var(--color-neutral-medium);
+#main_nav {
     display: block;
-    width: 100%;
-
-}
-
-.form-control {
-    margin: 1em 0;
-    color: var(--color-neutral-medium);
-}
-
-.form-button {
-    background-color: var(--color-neutral-light);
-    border-radius: 0.2em;
-    cursor: pointer;
+    color: white;
     text-align: center;
-    padding: 0.5em 1em;
-}
-
-.form-button:hover {
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-.form-button:active {
-    background-color: var(--color-main-light);
-}
-
-.hotdog {
-    background-color: var(--color-neutral-light);
-    border-radius: 2em;
-    padding: 0.5em 1.5em;
+.flexboxNav {
     display: flex;
+    justify-content: flex-start;
+    background-color: rgb(162, 165, 167);
 }
 
-.hotdog.dark {
-    background-color: var(--color-neutral-dark);
-    color: var(--color-neutral-light);
+.flexboxList {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(162, 165, 167);
 }
 
-.hotdog.light {
-    background-color: var(--color-white);
-    color: var(--color-white);
+.flexboxList2{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(162, 165, 167);
 }
 
-.form-select>select {
-    padding: 0.5em 1em;
-    background-color: var(--color-neutral-light);
-    border-radius: 0.3em;
-    cursor: pointer;
+.flexboxItems {
+    background-color: #f1f1f1;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
 }
 
-.form-select {
-    position: relative;
-}
-
-.form-select::after {
-    content'▾';
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    position: absolute;
-    top: 50%;
-    right: 0.5em;
-    tranform: translateY(-50%);
-    pointer-events: none;
-    color: var(--color-neutral-medium);
-}
-
-.favorite label {
-    transition: all 0.3s;
-    display: inline-block;
-    transform: scale(1, 1);
-    color: var(--color-neutral-medium);
-}
-
-.favorite input:checked+label {
-    color: pink;
-    transform: scale(1.5, 1.3);
-}
-
-/* Toggle */
-
-.toggle label {
-    font-size: 1.3em;
-    display: inline-block;
-    width: 2em;
-    height: 1em;
-    border: 0.1em solid var(--color-neutral-medium);
-    background-color: var(--color-neutral-white);
-    border-radius: 1em;
-    position: relative;
-}
-
-.toggle label::after {
-    content: '';
-    display: inline-block;
-    width: 0.8em;
-    height: 0.81em;
-    border-radius: 1em;
-    position: absolute;
-    background-color: var(--color-neutral-medium);
-    transition: all 0.3s;
-}
-
-.toggle input:checked+label::after {
-    transform: translateX(1em);
-
-}
-
-.checkbox input[type="checkbox"] + label::after {
-    content: none;
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
 }
