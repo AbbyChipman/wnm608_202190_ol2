@@ -199,6 +199,11 @@ hr {
     flex-basis: 0;
 }
 
+.grid img {
+    max-height: 70vh;
+    max-width: 100%;
+}
+
 
 
 /*** SMALL CLASSES ***/
@@ -941,6 +946,11 @@ hr {
 }
 
 
+/** PRODUCT PAGE **/
+
+.grid .product-text {
+    padding: 1rem; 
+}
 
 
 
