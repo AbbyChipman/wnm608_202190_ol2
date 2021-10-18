@@ -226,10 +226,9 @@ hr {
     /*box-shadow: 0px 0px 8px 0px #202124;*/
 }   
 
-    .navbar a h5 {
+    .navbar a h3 {
         color: var(--color-primary-dark);
         margin: 0;
-        font-weight: 500;
     }
 
         .navbar a:hover {
@@ -456,7 +455,6 @@ hr {
 
 .card-dark {
     width: 100%;
-    min-height: 15vh;
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -468,7 +466,6 @@ hr {
 
 .card-light {
     width: 100%;
-    min-height: 15vh;
     color: var(--color-primary-dark);
     text-align: center;
     vertical-align: middle;
@@ -524,7 +521,7 @@ hr {
 
 .card-img {
     width: 100%;
-    min-height: 15vh;
+    min-height: 20vh;
     padding: 1.25rem;
     text-align: center;
     border-radius: 1rem;
@@ -901,7 +898,7 @@ hr {
 .warning h5::after,
 .error h5::after,
 .pay-success h5::after {
-    content:'✗';
+    content:'✕';
     font-size: 1.8rem;
     position: absolute;
     top: 50%;

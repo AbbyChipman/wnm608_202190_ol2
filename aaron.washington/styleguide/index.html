@@ -21,16 +21,18 @@
 <body>
     
 <!-- ** Navbar ** header>h1+p -->    
-<header class="display-flex flex-align-center navbar" id="top">
-    <div class="flex-none" style="margin-left: 7rem;">
-        <a href="#">
-            <div class="home-logo"></div>
-        </a>
-    </div>
-    <div class="flex-none">
-        <a href="#">
-            <h4>esome&nbsp;&nbsp;Styleguide</h4>
-        </a>
+<header class="container" id="top">
+    <div class="display-flex flex-align-center navbar">
+        <div class="flex-none">
+            <a href="#">
+                <div class="home-logo"></div>
+            </a>
+        </div>
+        <div class="flex-none">
+            <a href="#">
+                <h3>esome&nbsp;&nbsp;Styleguide</h3>
+            </a>
+        </div>
     </div>
 </header>
 
@@ -264,6 +266,34 @@
 </div>
 
 
+
+<!-- ** GRID SYSTEM ** -->
+<div class="container" id="grid">
+    <hr>
+    <h3 style="margin-left: 1rem;">GRID SYSTEM</h3>
+    <hr>
+    <br />
+    <div class="grid">
+        <div class="col-xs-12 form-control">
+            <div class="card-light">
+                <h4>12</h4>
+            </div>
+        </div>
+        <div class="col-xs-6 form-control">
+            <div class="card-light">
+                <h4>6</h4>
+            </div>
+        </div>
+        <div class="col-xs-6 form-control">
+            <div class="card-light">
+                <h4>6</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- ** TABLES ** -->
 <script>
     const makeTable = (classes='') => {
@@ -273,7 +303,7 @@
             ['DC','Deathstroke','Slade Wilson','2'],
             ['MARVEL','Venom','Eddy Brock','3'],
             ['DC','Joker','Unknown','4'],
-            ['MARVEL','Carnage','Kletus Cassidy','5'],
+            ['MARVEL','Carnage','Cletus Kasady','5'],
         ];
 
         document.write (`

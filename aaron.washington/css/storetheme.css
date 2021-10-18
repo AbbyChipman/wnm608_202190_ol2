@@ -113,6 +113,12 @@ body {
 
 
 
+#grid .grid .form-control .card-light {
+    background-color: var(--color-neutral-light);
+}
+
+
+
 
 
 @media (max-width: 800px) {
