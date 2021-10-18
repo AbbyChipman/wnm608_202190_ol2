@@ -23,11 +23,9 @@ body {
     }
 
 
-#cards .card-light h4,
-#cards .card-dark h4,
 #cards .card-img h4 {
     position: relative;
-    top: 1rem;
+    top: 4.75rem;
 }
 
 
@@ -92,7 +90,7 @@ body {
 
 
 
-
+#grid .card-light .title,
 #forms .card-light,
 #notify .card-light {
     text-align: left;
@@ -113,7 +111,7 @@ body {
 
 
 
-#grid .grid .form-control .card-light {
+#grid .grid div .card-light {
     background-color: var(--color-neutral-light);
 }
 
