@@ -85,14 +85,13 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(to right, #4c1c54, #792a84);
-  color: var(--color-accent-light);
+  background-color: var(--color-white);
+  color: var(--color-main-dark);
   line-height: var(--header-height);
 }
 
 .navbar h1 {
   font-size: 1.5em;
-  color: var(--color-accent-light);
   margin: 0;
   font-family: var(--font-serif);
 }
@@ -115,13 +114,6 @@ body {
 }
 .card.dark {
   background-color: var(--color-main-dark);
-}
-.heading {
-  color: var(--color-main-dark);
-}
-
-.heading h3 {
-  width: 50%;
 }
 
 .article-body {

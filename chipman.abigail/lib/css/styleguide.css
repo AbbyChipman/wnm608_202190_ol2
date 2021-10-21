@@ -82,6 +82,10 @@ a:hover {
 .flex-align-left {
   align-items: left;
 }
+.flex-align-right {
+  align-items: right;
+}
+
 .flex-justify-center {
   justify-content: center;
 }
@@ -208,7 +212,9 @@ a:hover {
 .navbar a {
   padding: 0 0.5em;
 }
-
+.logo {
+  margin-top: 10px;
+}
 /* CARD */
 
 .card {
@@ -259,7 +265,6 @@ a:hover {
 .card.section {
   height: 90%;
   padding: 0.5em;
-  margin-top: 0.25em;
   margin-bottom: 0.25em;
   border-radius: 0.5em;
   opacity: 0.8;
@@ -274,7 +279,6 @@ a:hover {
 .card img {
   position: relative;
 }
-
 .view-window {
   height: 75vh;
   position: relative;
@@ -288,7 +292,6 @@ a:hover {
   overflow: hidden;
 
   background-size: cover;
-  background-position: center;
   background-attachment: scroll;
   height: 15vh;
 }
