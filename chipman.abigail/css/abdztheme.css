@@ -66,11 +66,26 @@ h6 {
     line-height: 1em;
   }
 }
+.page-head {
+  color: var(--color-accent-light);
+}
 
 body {
   background: var(--color-main-light);
   color: var(--color-accent-dark);
   padding-bottom: 4em;
+}
+
+hr {
+  border-width: 0;
+  margin: 1em 0;
+  border-bottom: solid 1px var(--color-main-medium);
+}
+
+.double {
+  border-top: solid 1px var(--color-main-medium);
+  border-bottom: solid 1px var(--color-main-medium);
+  padding: 2px 0px;
 }
 
 .favorite label {
@@ -90,7 +105,7 @@ body {
   line-height: var(--header-height);
 }
 
-.navbar h1 {
+.navbar h1 .navbar li {
   font-size: 1.5em;
   margin: 0;
   font-family: var(--font-serif);
@@ -246,8 +261,10 @@ body {
 .product-button:hover,
 .form-button:hover,
 .form-button-light:hover {
-  background-color: var(--color-secondary-tone);
-  box-shadow: 0 2px 5px var(--color-accent-medium);
+  background-color: var(--color-accent-medium);
+  box-shadow: 0 2px 5px var(--color-secondary-tone);
+  color: var(--color-main-dark);
+  text-decoration: none;
 }
 .overlay-button,
 .product-button {
@@ -258,4 +275,20 @@ body {
 }
 .form-button-light:hover {
   color: var(--color-main-light);
+}
+
+.hotdog {
+  background-color: var(--color-accent-light);
+  color: var(--color-main-dark);
+  border: solid 0.5px var(--color-main-dark);
+  border-radius: 2em;
+  padding: 0.25em 1.25em;
+  display: flex;
+}
+
+.nav-crumbs a {
+  color: var(--color-main-tone);
+}
+.nav-crumbs a:hover {
+  color: var(--color-secondary-medium);
 }

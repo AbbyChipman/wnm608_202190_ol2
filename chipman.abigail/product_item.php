@@ -19,22 +19,24 @@
                         <h2>Product # <?= $_GET['id'] ?></h2>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 
     <div class="container">
         <div class="card soft">
-            <p>This is Product #<?= $_GET["id"]?></p>
-            <p>This is where the information about the product will be, including images, description, reviews, and a way to add the item to the cart. Click the button to go to the cart page (page is a placeholder - no products are added at this time.)</p>
-            <div class="grid gap">
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="cart.php" class="form-button">Add to Cart</a>
-                </div>
-            <div class="col-xs-12 col-md-4"></div>
-        </div>
+
+            <div class="nav nav-crumbs">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="product_list.php">Products</a></li>
+                    <li><a href="#">Product #<?= $_GET["id"]?></a></li>
+                </ul>
+            </div>
+
+            <?php include "parts/prod_info.php" ?>
+
+            
         </div>
     </div>
 </body>

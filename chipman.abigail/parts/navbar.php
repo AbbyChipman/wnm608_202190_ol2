@@ -4,6 +4,11 @@
             <img src="img/logoColorNav.png" alt="AbbyDazzled Logo" class="logo">
             </div>
             <div class="flex-stretch"></div>
+            <div class="form-control flex-stretch">
+                <form>
+                    <input type="search" class="hotdog" placeholder="Search">
+                </form>
+            </div>
             <nav class="nav nav-flex">
                 <ul>
                     <li><a href="index.php">Home</a></li>

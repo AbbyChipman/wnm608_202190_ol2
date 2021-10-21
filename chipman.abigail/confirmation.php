@@ -9,9 +9,18 @@
 
     <?php include "parts/navbar.php" ?>
 
-    <div class="view-window-small display-flex flex-align-right flex-justify-center" style="background-image:url(lib/img/glitter-background.jpg);">
-        <div class="card section rainbow">
-            <h2>Confirmation</h2>
+    <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
+        <div class="container">
+            <div class="grid">
+                <div class="col-xs-12 col-md-4"></div>
+                <div class="col-xs-12 col-md-4"></div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card section rainbow">
+                        <h2>Order Confirmation</h2>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 

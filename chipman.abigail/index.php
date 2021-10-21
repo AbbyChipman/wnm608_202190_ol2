@@ -9,10 +9,11 @@
 
     <?php include "parts/navbar.php" ?>
 
-    <div class="container">
-        <div class="card soft">
-            <h2>Welcome to the home page of AbbyDazzled Designs!</h2>
-            <p>There will be more interesting stuff here soon, I promise.</p>
+    <div class="view-window" style="background-image:url(lib/img/glitter-background.jpg);">
+        <div class="container display-block">
+            <h1 class="page-head">Welcome to AbbyDazzled Designs</h1>
+            <h2 class="page-head">There will be more interesting things here soon.<h2>
+            <h2 class="page-head">Promise!</h2>
         </div>
     </div>
 </body>
