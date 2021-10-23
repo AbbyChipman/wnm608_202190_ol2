@@ -57,6 +57,9 @@ h6 {
     padding-left: 0.5em;
   }
 }
+a:hover {
+  text-decoration: none;
+}
 
 @media (max-width: 400px) {
   .navbar .display-flex {
@@ -144,6 +147,10 @@ hr {
   box-shadow: 0 2px 5px hsla(308, 77%, 46%, 0.096);
   overflow: hidden;
 }
+.figure.product a {
+  text-decoration: none;
+}
+
 .product-price {
   font-size: 1.3em;
   font-weight: bold;
@@ -195,6 +202,7 @@ hr {
 .product-overlay:hover img {
   transform: scale(1.4, 1.4);
 }
+.product-overlay a,
 .product-overlay button {
   display: inline-block;
   width: 100%;
@@ -203,10 +211,16 @@ hr {
   background-color: var(--color-secondary-medium);
   color: var(--color-accent-light);
   font-family: var(--font-serif);
+  text-align: center;
 }
+.product-overlay a:hover,
 .product-overlay button:hover {
-  background-color: var(--color-secondary-tone);
-  box-shadow: 0 2px 5px var(--color-accent-medium);
+  background-color: var(--color-accent-medium);
+  box-shadow: 0 2px 5px var(--color-secondary-tone);
+}
+.product-overlay a,
+.product-overlay a:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 400px) {

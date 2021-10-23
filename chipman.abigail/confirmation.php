@@ -3,7 +3,7 @@
 <head>
 <?php include "parts/meta.php" ?>
 
-    <title>AbbyDazzled Designs - Cart</title>
+    <title>AbbyDazzled Designs - Order Confirmed!</title>
 </head>
 <body>
 
