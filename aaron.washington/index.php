@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AWesome Stuff</title>
+    <link rel="stylesheet" href="lib/css/styleguide.css">
     <?php include "parts/meta.php"; ?>
 </head>
 <body>
@@ -50,14 +51,14 @@
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
                         <a href="shop.php?id=teen">
-                            <div class="display-flex flex-align-center card-img card-bg-3">
+                            <div class="display-flex flex-align-center card-img card-bg-4">
                                 <h3 class="flex-stretch">Teen</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
                         <a href="shop.php?id=womens">
-                            <div class="display-flex flex-align-center card-img card-bg-4">
+                            <div class="display-flex flex-align-center card-img card-bg-3">
                                 <h3 class="flex-stretch">Kids</h3>
                             </div>
                         </a>
