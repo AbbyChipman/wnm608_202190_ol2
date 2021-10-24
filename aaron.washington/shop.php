@@ -25,13 +25,15 @@
     </div>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs">
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#"><?= $_GET['id'] ?></a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="nav nav-crumbs">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#"><?= $_GET['id'] ?></a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- *** PRODUCT LIST *** -->
     <div class="container">

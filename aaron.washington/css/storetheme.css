@@ -45,7 +45,13 @@ body {
 .product-overlay {
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.3s ease-in-out;
 }
+
+    .product-overlay:hover {
+        box-shadow: 0 4px 7px rgba(0,0,0,0.2);
+    }
 
     .product-overlay figcaption {
         position: absolute;
@@ -55,7 +61,7 @@ body {
         height: 100%;
         background-color: rgba(0,0,0,0.5);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,7 +77,7 @@ body {
             border-radius: 0.5rem;
             padding: 2rem;
             transform: translateY(2rem);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
 
             .product-overlay:hover .caption-body {
@@ -79,14 +85,14 @@ body {
             }
 
 
-        .product-overlay img {
+        /*.product-overlay img {
             transform: scale(1,1);
             transition: all 0.3s ease;
         }
 
             .product-overlay:hover img {
                 transform: scale(1.2,1.2);
-            }
+            }*/
 
 
 

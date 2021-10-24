@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AWesome Stuff</title>
-    <link rel="stylesheet" href="lib/css/styleguide.css">
     <?php include "parts/meta.php"; ?>
 </head>
 <body>
@@ -25,12 +24,12 @@
     </div>
 
     <!-- *** CATEGORIES *** -->
-    <div class="container">
+    <div class="container" style="margin-top: 3rem;">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                 <div class="flex-stretch text-center">
                     <h2>Apparel For Everyone</h2>
-                    <h5>A clever copy blurb that says something more enticing than &quot;here are categories to choose from.&quot;</h5>
+                    <h5>A clever blurb of copy that says something more enticing than &quot;here are categories to choose from.&quot;</h5>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
