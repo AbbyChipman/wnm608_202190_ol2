@@ -1,14 +1,22 @@
 h1,
 h2 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
+
 h3,
-h4,
+h4 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
 h5,
 h6 {
     font-family: 'Noto Sans', sans-serif;
+    font-weight: 0;
 }
+
 
 a {
     color: inherit;
@@ -27,14 +35,14 @@ li {
 }
 
 li:hover {
-    text-decoration: underline;
-    color: violet;
+    text-decoration: none;
+    color: 56ACEC;
 }
 
-#paragraphs:hover {
-    text-decor
+.title {
+    padding: 0.5em;
+    background-color: 56ACEC;
 }
-
 
 /* LAYOUT CLASSES */
 .container {
@@ -84,6 +92,92 @@ li:hover {
     padding-left: 0;
 }
 
+.nav a {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+/* 
+.nav a:hover {
+    background-color: var(--color-main-medium);
+    color: var(--color-white);
+    text-decoration: none;
+} */
+
+.nav .active .a {
+    background-color: var(--color-main-light);
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+    display: flex;
+
+}
+
+.nav-material li,
+.nav-stretch li {
+    flex: 1 1 auto;
+    text-align: center;
+
+}
+
+.nav-pills a {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+
+.nav-crumbs a {
+    display: inline-block;
+}
+
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.nav-crumbs li:not(:first-child)::before {
+    content: '/';
+}
+
+.nav-material a {
+    padding: 0.5em 1em;
+    position: relative;
+}
+
+.nav-material a:hover {
+    background-color: var(--color-neutral-light);
+    color: inherit;
+}
+
+
+.nav-material a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-main-medium);
+
+}
+
+.nav-material .active a {
+    background-color: transparent;
+    color: inherit;
+}
+
+.nav-material a:hover::after {
+    height: 4px;
+}
+
 .navbar {
     background-color: var(--color-neutral-dark);
     color: whitesmoke;
@@ -102,106 +196,149 @@ li:hover {
     padding: 0 0.5em;
 }
 
-/* CARD */
-.card {
-    background-color: var(--color-white);
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 1em;
-    overflow: hidden;
+figcaption {
+    font-size: 1em;
+    text-align: left;
+}
+
+.table_of {
+    padding-right: 30px;
+    color: var(--color-neutral-dark);
+    text-align: center;
+    font-weight: 300;
+    text-decoration-line: underline;
+    font-size: 0.9em;
+}
+
+#main_nav {
     position: relative;
 }
 
-.card.soft {
-    border-radius: 0.3em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card.hard {
-    border-radius: 0.3em;
-    border: 2px solid var(--color-neutral-medium);
-}
-
-.card.dark {
-    background-color: var(--color-neutral-dark);
-}
-
-.card.medium {
-    background-color: var(--color-neutral-medium);
-}
-
-.card.flat {
+.main_nav2 {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
 }
 
-#card-group {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+#main_nav {
+    display: block;
+    color: white;
     text-align: center;
-    margin: 1em 1em;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main_title{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.flexboxNav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(162, 165, 167);
+}
+
+.flexboxList {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(162, 165, 167);
+}
+
+.flexboxList2{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(162, 165, 167);
+}
+
+.flexboxItems {
+    background-color: #f1f1f1;
     width: 100px;
     height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
 }
 
-#card-group:hover {
-    transform: scale(1.2)
+li a:hover {
+    background-color: #111;
 }
 
-.card1 {
-    background-color: #ffffff;
-}
+/* Trending Section */
 
-.card2 {
-    background-color: #e4e4e4;
-}
-
-.card3 {
-    background-color: #707070;
-}
-
-.card4 {
-    background-color: #000000;
-}
-
-.card5 {
-    background-color: #56acec;
-}
-
-.card6 {
-    background-color: #49cae4;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
-    position: relative;
-}
-
-.card-box {
+div.cnt23{}
+div.cnt23 section{
     display: flex;
-    flex-direction: row;
-
+    justify-content: space-around;
+    background-color: white;
 }
+div.cnt23 section article{
+    width: calc(25% - 20px);
 
-.card-text {
-    text-align: center;
-    color: black;
-}
-
-.card-text:hover {
-    text-align: center;
-    color: white;
-}
-
-.view-window {
-    height: 50vh;
     position: relative;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+}
+div.cnt23 section article .image{
+    height: 240px; 
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+div.cnt23 section article .texts{    
+    padding: 40px 20px;
+    background-color: rgba(23, 22, 22, 0.8);
+    position: absolute;
+    top: 240px;
+    height: 240px;
+    transition-property: top;
+    transition-duration: 0.4s;
+}
+
+div.cnt23 section article:hover .texts{    
+   top:0;
+   color: white;
+}
+div.cnt23 section article .texts h4{
+    color: white;
+}
+  
+}
+div.cnt23 section article .texts p{
+    color: white;
+}
+div.cnt23 section article .texts nav{
+    position: absolute;
+    color: white;
+    
+}
+
+
+div.cnt23 .i1{background-image: url(../img/top.png);}
+div.cnt23 .i2{background-image: url(../img/leggings.png);}
+div.cnt23 .i3{background-image: url(../img/outer.png);}
+div.cnt23 .i4{background-image: url(../img/swimwear.png);}
+
+.sale_flyer{
+    height: 480px;
+    width: 740px; 
+    object-fit: cover;
+    display: block;
+
+    background-image: url(../img/sale1.png);
+}
+
+.member_gift{
+    height:200px; 
+    object-fit: cover;
+    display: block;
+
+    background-image: url(../img/member_gift.png);
 }

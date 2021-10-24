@@ -1,0 +1,443 @@
+/* CARD */
+.card {
+    background-color: var(--color-white);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.card.soft {
+    border-radius: 0.3em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.hard {
+    border-radius: 0.3em;
+    border: 2px solid var(--color-neutral-medium);
+}
+
+.card.dark {
+    background-color: var(--color-neutral-dark);
+}
+
+.card.medium {
+    background-color: var(--color-neutral-medium);
+}
+
+.card.flat {
+    padding: 0;
+}
+
+#card-group {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 1em 1em;
+    padding: 0.5em;
+    width: 100px;
+    height: 200px;
+
+    
+}
+
+#card-group:hover {
+    transform: scale(1.2)
+}
+
+.card1 {
+    background-color: #ffffff;
+}
+
+.card2 {
+    background-color: #e4e4e4;
+}
+
+.card3 {
+    background-color: #707070;
+}
+
+.card4 {
+    background-color: #000000;
+}
+
+.card5 {
+    background-color: #56acec;
+}
+
+.card6 {
+    background-color: #49cae4;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    position: relative;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card-text {
+    color: black;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+.card-text:hover {
+    text-align: center;
+    color: white;
+}
+
+.view-window {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* tables */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 0.2em 0.5em;
+}
+
+.table.striped tbody tr:nth-child(odd) {
+    background-color: var(--color-neutral-light);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+    border-left: 1px solid var(--color-neutral-medium);
+}
+
+.table.lined.all tbody tr,
+.table.lined.all tbody tr {
+    border-top: 1px solid var(--color-neutral-medium);
+}
+
+.table.lined.all,
+.table.lined.border {
+    border: 1px solid var(--color-neutral-medium);
+}
+
+/* figure */
+
+.figure {
+    margin: 0;
+    background-color: var(--color-white);
+
+}
+
+.figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.figure figcaption {
+    padding: 1em;
+}
+
+.figure.product {
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.figure.product {
+    border-radius: 0.4em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+
+
+.product-overlay {
+    position: relative;
+}
+    .product-overlay figcaption {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(154, 153, 153, 0.7);
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    }
+
+    .product-overlay:hover figcaption {
+    opacity: 1;
+    overflow: hidden;
+    }
+
+    .product-overlay .caption-body{
+        background-color: white;
+        /*border-radius: 0.5em; */
+        padding:1em;
+        transform:translateY(2em);
+        transition: all 0.3s;
+    }
+
+    .product-overlay:hover .caption-body{
+        transform:translateY(0);
+    }
+
+
+    .product-overlay img{
+        transform:scale(1,1);
+        transition: all 0.3s;
+    }
+
+    .product-overlay:hover img{
+        transform:scale();
+    }
+
+@media (max-width:600px) {
+    .product-overlay figcaption {
+        position:relative;
+        display:block;
+        top:initial;
+        left:initial;
+        width:100%;
+        height:initial;
+        opacity:1;
+        background-color: initial;
+    }
+        .product-overlay .caption-body{
+            transform:none;
+            padding:0;
+        }
+}
+
+
+
+/* forms */
+
+.hotdog,
+.hotdog input,
+.form-input,
+.form-button,
+.form-item {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+}
+
+.form-input {
+    border-bottom: 1px solid var(--color-neutral-light);
+    padding: 0.5em 1em;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--color-main-medium);
+}
+
+.form-label {
+    font-size: 0.8em;
+    color: var(--color-neutral-medium);
+    display: block;
+    width: 100%;
+
+}
+
+.form-control {
+    margin: 1em 0;
+    color: var(--color-neutral-medium);
+}
+
+.form-button {
+    background-color: var(--color-neutral-light);
+    border-radius: 0.2em;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+.form-button:hover {
+    text-decoration: none;
+}
+
+.form-button:active {
+    background-color: var(--color-main-light);
+}
+
+.hotdog {
+    background-color: var(--color-neutral-light);
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    display: flex;
+}
+
+.hotdog.dark {
+    background-color: var(--color-neutral-dark);
+    color: var(--color-main-light);
+}
+
+.hotdog.light {
+    background-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.form-select>select {
+    padding: 0.5em 1em;
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.form-select {
+    position: relative;
+}
+
+.form-select::after {
+    content'▾';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    tranform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-neutral-medium);
+}
+
+.favorite label {
+    transition: all 0.3s;
+    display: inline-block;
+    transform: scale(1, 1);
+    color: var(--color-neutral-medium);
+}
+
+.favorite input:checked+label {
+    color: pink;
+    transform: scale(1.5, 1.3);
+}
+
+/* Toggle */
+
+.toggle label {
+    font-size: 1.3em;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 0.1em solid var(--color-neutral-medium);
+    background-color: var(--color-neutral-white);
+    border-radius: 1em;
+    position: relative;
+}
+
+.toggle label::after {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.81em;
+    border-radius: 1em;
+    position: absolute;
+    background-color: var(--color-neutral-medium);
+    transition: all 0.3s;
+}
+
+.toggle input:checked+label::after {
+    transform: translateX(1em);
+
+}
+
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/* Buttons */
+
+.button-default{
+    background-color: #e5e5e5; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+}
+.button1 {
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .button2 {
+    background-color: white; 
+    border: solid 0.3px black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .form-button2,
+  .form-button3{
+    background-color: #e5e5e5; 
+    border: none;
+    color: black;
+    border: solid 0.3px rgb(98, 98, 98);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100px;
+    height: 20px;
+  }
+.butto_add{
+    width:115px;
+    background-color: black; 
+    border: solid 0.3px black;
+    color: white;
+}
+  figcaption{
+      font-size: 1em;
+      text-align: left;
+  }
+
+.hotdog_dark{
+    content: white;
+}
