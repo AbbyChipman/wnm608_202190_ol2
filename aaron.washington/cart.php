@@ -35,6 +35,39 @@
                         <h5>&dollar;24.99</h5>
                     </div>
                 </div>
+                <div class="card-light cart-item form-control display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch" style="padding-left: 2em;">
+                        <h3>Premium Tshirt</h3>
+                        <h5>&dollar;24.99</h5>
+                    </div>
+                </div>
+                <div class="card-light cart-item form-control display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch" style="padding-left: 2em;">
+                        <h3>Premium Tshirt</h3>
+                        <h5>&dollar;24.99</h5>
+                    </div>
+                </div>
+                <div class="card-light cart-item form-control display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch" style="padding-left: 2em;">
+                        <h3>Premium Tshirt</h3>
+                        <h5>&dollar;24.99</h5>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
@@ -48,7 +81,7 @@
                     <h3>Total: &dollar;99.96</h3>
                     <form>
                         <div class="form-control">
-                            <label class="form-label">Promo Code&quest;</label>
+                            <label class="form-label" style="text-align: left;">Got a Promo Code&quest;</label>
                             <input type="text" class="form-input" placeholder="Enter Code">
                         </div>
                     <form>
