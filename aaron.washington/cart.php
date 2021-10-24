@@ -86,7 +86,7 @@
                         </div>
                     <form>
                 </div>
-                <a href="checkout.php" style="width: 100%;"><button class="dark">Checkout</button></a>
+                <a href="checkout.php"><button class="dark" style="width: 100%;">Checkout</button></a>
             </div>
         </div>
     </div>
