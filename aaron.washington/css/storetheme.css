@@ -73,11 +73,11 @@ body {
         }
 
         .product-overlay .caption-body {
+            text-align: center;
             background-color: #fff;
             color: var(--color-primary-dark);
             border-radius: 0.5rem;
             padding: 2rem;
-            text-align: center;
             transform: translateY(2rem);
             transition: all 0.3s ease-in-out;
         }
