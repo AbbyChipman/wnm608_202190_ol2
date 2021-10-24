@@ -43,11 +43,11 @@
                             <input type="password" class="form-input" placeholder="Text">
                         </div>
                         <div class="form-control grid gap">
-                            <div class="col-xs-12 col-md-7 col-lg-9">
+                            <div class="col-xs-12 col-md-7 col-lg-8">
                                 <label class="form-label">City</label>
                                 <input type="search" class="form-input" placeholder="Text">
                             </div>
-                            <div class="col-xs-12 col-md-2 col-lg-1">
+                            <div class="col-xs-12 col-md-2 col-lg-2">
                                 <label class="form-label">State</label>
                                 <input type="search" class="form-input" placeholder="TN">
                             </div>
