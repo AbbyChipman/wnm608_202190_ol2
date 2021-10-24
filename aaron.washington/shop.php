@@ -18,7 +18,7 @@
             <div class="flex-stretch">
                 <div class="text-center" style="color: #fff;">
                     <h2>IT'S THAT TIME OF YEAR</h2>
-                    <h4>Use Code FALLISHERE to get 30&percnt; off your entire purchase.</h4>
+                    <h4 style="color: var(--color-neutral-light);">Use Code FALLISHERE to get 30&percnt; off your entire purchase.</h4>
                 </div>
             </div>
         </div>
