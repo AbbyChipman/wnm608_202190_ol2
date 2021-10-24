@@ -24,7 +24,7 @@
     </div>
 
     <!-- *** CATEGORIES *** -->
-    <div class="container" style="margin-top: 3rem;">
+    <!--<div class="container" style="margin-top: 3rem;">-->
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                 <div class="flex-stretch text-center">
@@ -34,28 +34,28 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="grid gap">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Mens">
                             <div class="display-flex flex-align-center card-img card-bg-1">
                                 <h3 class="flex-stretch">Mens</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Womens">
                             <div class="display-flex flex-align-center card-img card-bg-2">
                                 <h3 class="flex-stretch">Womens</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Teen">
                             <div class="display-flex flex-align-center card-img card-bg-3">
                                 <h3 class="flex-stretch">Teen</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Kids">
                             <div class="display-flex flex-align-center card-img card-bg-4">
                                 <h3 class="flex-stretch">Kids</h3>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!--</div>-->
 
     <!-- *** FOOTER *** -->
     <?php include "parts/footer.php"; ?>
