@@ -14,7 +14,7 @@
 
     <!-- *** CATEGORY HERO *** -->
     <div class="container">
-        <div class="hero display-flex flex-align-center">
+        <div class="hero display-flex flex-align-center" style="min-height: 17vh;">
             <div class="flex-stretch">
                 <div class="text-center" style="color: #fff;">
                     <h2>IT'S THAT TIME OF YEAR</h2>

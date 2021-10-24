@@ -24,7 +24,7 @@
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-                <div class="card-light cart-item display-flex">
+                <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
@@ -35,7 +35,7 @@
                         <h4>&dollar;24.99</h4>
                     </div>
                 </div>
-                <div class="card-light cart-item display-flex">
+                <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
@@ -46,7 +46,7 @@
                         <h4>&dollar;24.99</h4>
                     </div>
                 </div>
-                <div class="card-light cart-item display-flex">
+                <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
@@ -57,7 +57,7 @@
                         <h4>&dollar;24.99</h4>
                     </div>
                 </div>
-                <div class="card-light cart-item display-flex">
+                <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
@@ -79,7 +79,7 @@
                     </ul>
                     <hr>
                     <h3>&dollar;99.96</h3>
-                    <a href="#"><button class="dark">Checkout</button></a>
+                    <a href="#"><button class="dark" style="width: 100%;">Checkout</button></a>
                 </div>
             </div>
         </div>
