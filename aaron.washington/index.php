@@ -35,24 +35,32 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="grid gap">
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                        <div class="display-flex flex-align-center card-img card-bg-1">
-                            <h3 class="flex-stretch">Mens</h3>
-                        </div>
+                        <a href="shop.php?id=mens">
+                            <div class="display-flex flex-align-center card-img card-bg-1">
+                                <h3 class="flex-stretch">Mens</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                        <div class="display-flex flex-align-center card-img card-bg-2">
-                        <h3 class="flex-stretch">Womens</h3>
-                        </div>
+                        <a href="shop.php?id=womens">
+                            <div class="display-flex flex-align-center card-img card-bg-2">
+                                <h3 class="flex-stretch">Womens</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                        <div class="display-flex flex-align-center card-img card-bg-3">
-                        <h3 class="flex-stretch">Teen</h3>
-                        </div>
+                        <a href="shop.php?id=teen">
+                            <div class="display-flex flex-align-center card-img card-bg-3">
+                                <h3 class="flex-stretch">Teen</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                        <div class="display-flex flex-align-center card-img card-bg-4">
-                        <h3 class="flex-stretch">Kids</h3>
-                        </div>
+                        <a href="shop.php?id=kids">
+                            <div class="display-flex flex-align-center card-img card-bg-4">
+                                <h3 class="flex-stretch">Kids</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
