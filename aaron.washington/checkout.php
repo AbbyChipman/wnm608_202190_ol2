@@ -49,11 +49,11 @@
                             </div>
                             <div class="col-xs-12 col-md-2 col-lg-1">
                                 <label class="form-label">State</label>
-                                <input type="search" class="form-input" placeholder="Initials">
+                                <input type="search" class="form-input" placeholder="TN">
                             </div>
                             <div class="col-xs-12 col-md-3 col-lg-2">
                                 <label class="form-label">ZIP</label>
-                                <input type="search" class="form-input" placeholder="Number">
+                                <input type="search" class="form-input" placeholder="Code">
                             </div>
                         </div>
                     </form>
@@ -85,16 +85,21 @@
                         </div>
                     </form>
                 </div>
+                <!-- *** BUTTONS *** -->
+                <div class="display-flex">
+                    <div class="flex-none">
+                        <a href="cart.php"><button class="dark">&lsaquo;&nbsp;Back to Cart</button></a>
+                    </div>
+                    <div class="flex-stretch"></div>
+                    <div class="flex-none">
+                        <a href="summary.php"><button class="dark">Confirm Payment&nbsp;&rsaquo;</button></a>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
                 <div style="width: 100%; visibility: hidden;"></div>
             </div>
         </div>
-    </div>
-
-    <!-- *** BACK BUTTON *** -->
-    <div class="container">
-        <a href="cart.php"><button class="dark">&lsaquo;&nbsp;Back to Cart</button></a>
     </div>
 
     <!-- *** FOOTER *** -->
