@@ -39,21 +39,22 @@
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
                     <ul>
-                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
                     </ul>
                     <hr>
-                    <h3>&dollar;99.96</h3>
+                    <h3>Total: &dollar;99.96</h3>
                     <a href="checkout.php"><button class="dark" style="width: 100%;">Checkout</button></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- *** FOOTER *** -->
-    <?php include "parts/footer.php"; ?>
-
 </body>
+
+<!-- *** FOOTER *** -->
+<?php include "parts/footer.php"; ?>
+
 </html>

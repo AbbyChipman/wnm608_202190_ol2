@@ -12,12 +12,12 @@
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** HERO *** -->
-    <div class="hero hero-landing display-flex flex-align-center" style="min-height: 40vh;">
+    <div class="hero hero-landing display-flex flex-align-center" style="min-height: 43vh;">
         <div class="container flex-stretch">
             <div class="hero-text">
                 <h2>MAKING PRICES FALL</h2>
                 <h4>Get 30&percnt; off your entire purchase with code FALLISHERE.</h4>
-                <button class="light">Start Saving&nbsp;&rsaquo;</button>
+                <a href="shop.php?id=Shop"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
             </div>
             <div class="flex-stretch"></div>
         </div>
@@ -34,28 +34,28 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="grid gap">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Mens">
                             <div class="display-flex flex-align-center card-img card-bg-1">
                                 <h3 class="flex-stretch">Mens</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Womens">
                             <div class="display-flex flex-align-center card-img card-bg-2">
                                 <h3 class="flex-stretch">Womens</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Teen">
                             <div class="display-flex flex-align-center card-img card-bg-3">
                                 <h3 class="flex-stretch">Teen</h3>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
                         <a href="shop.php?id=Kids">
                             <div class="display-flex flex-align-center card-img card-bg-4">
                                 <h3 class="flex-stretch">Kids</h3>
@@ -66,9 +66,10 @@
             </div>
         </div>
     </div>
-
-    <!-- *** FOOTER *** -->
-    <?php include "parts/footer.php"; ?>
     
 </body>
+
+ <!-- *** FOOTER *** -->
+ <?php include "parts/footer.php"; ?>
+
 </html>

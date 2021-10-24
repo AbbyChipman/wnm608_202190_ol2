@@ -23,91 +23,72 @@
     <!-- *** CHECKOUT FORM *** -->
     <div class="container">
         <div class="grid gap">
-            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">&nbsp;</div>
+            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+                <div style="width: 100%; visibility: hidden;"></div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-                <div class="card-light">
+                <div class="card-light text-left form-control">
                     <h4><b>Personal</b></h4>
                     <form>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
+                            <label class="form-label">First Name&ast;</label>
                             <input type="text" class="form-input" placeholder="Text">
                         </div>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="number" class="form-input" placeholder="Number">
+                            <label class="form-label">Last Name&ast;</label>
+                            <input type="number" class="form-input" placeholder="Text">
                         </div>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="password" class="form-input" placeholder="Password">
+                            <label class="form-label">Address</label>
+                            <input type="password" class="form-input" placeholder="Text">
                         </div>
                         <div class="form-control grid gap">
-                            <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
+                            <div class="col-xs-12 col-md-7 col-lg-9">
+                                <label class="form-label">City</label>
+                                <input type="search" class="form-input" placeholder="Text">
                             </div>
-                            <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
+                            <div class="col-xs-12 col-md-2 col-lg-1">
+                                <label class="form-label">State</label>
+                                <input type="search" class="form-input" placeholder="Initials">
+                            </div>
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <label class="form-label">ZIP</label>
+                                <input type="search" class="form-input" placeholder="Number">
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="card-light">
+                <div class="card-light text-left form-control">
                     <h4><b>Billing</b></h4>
                     <form>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="text" class="form-input" placeholder="Text">
+                            <label class="form-label">Name on Card</label>
+                            <input type="text" class="form-input" placeholder="First and Last Names">
                         </div>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
+                            <label class="form-label">Card Number</label>
                             <input type="number" class="form-input" placeholder="Number">
                         </div>
                         <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="password" class="form-input" placeholder="Password">
+                            <label class="form-label">Card Expiration</label>
+                            <input type="password" class="form-input" placeholder="Date">
                         </div>
                         <div class="form-control grid gap">
                             <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
+                                <label class="form-label">CVC</label>
+                                <input type="search" class="form-input" placeholder="Number">
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-light">
-                    <h4><b>Shipping</b></h4>
-                    <form>
-                        <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="text" class="form-input" placeholder="Text">
-                        </div>
-                        <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="number" class="form-input" placeholder="Number">
-                        </div>
-                        <div class="form-control">
-                            <label class="form-label">Example</label>
-                            <input type="password" class="form-input" placeholder="Password">
-                        </div>
-                        <div class="form-control grid gap">
-                            <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <label class="form-label">Example</label>
-                                <input type="search" class="form-input" placeholder="Search">
+                                <label class="form-label">ZIP Code</label>
+                                <input type="search" class="form-input" placeholder="Number">
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">&nbsp;</div>
+            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+                <div style="width: 100%; visibility: hidden;"></div>
+            </div>
         </div>
     </div>
 
