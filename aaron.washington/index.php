@@ -66,6 +66,9 @@
             </div>
         </div>
     </div>
+
+    <!-- *** FOOTER *** -->
+    <?php include "parts/footer.php"; ?>
     
 </body>
 </html>

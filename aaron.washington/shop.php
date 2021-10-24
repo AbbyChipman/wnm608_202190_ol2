@@ -22,6 +22,12 @@
             </div>
         </div>
     </div>
+
+    <!-- *** CRUMB NAV *** -->
     
+
+    <!-- *** FOOTER *** -->
+    <?php include "parts/footer.php"; ?>
+
 </body>
 </html>
