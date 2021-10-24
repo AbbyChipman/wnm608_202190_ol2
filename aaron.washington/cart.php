@@ -46,6 +46,12 @@
                     </ul>
                     <hr>
                     <h3>Total: &dollar;99.96</h3>
+                    <form>
+                        <div class="form-control">
+                            <label class="form-label">Promo Code&quest;</label>
+                            <input type="text" class="form-input" placeholder="Enter Code">
+                        </div>
+                    <form>
                     <a href="checkout.php"><button class="dark" style="width: 100%;">Checkout</button></a>
                 </div>
             </div>
