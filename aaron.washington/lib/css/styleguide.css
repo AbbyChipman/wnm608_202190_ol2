@@ -217,6 +217,10 @@ hr {
     display: none;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
 
 
 

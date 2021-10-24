@@ -1,15 +1,21 @@
-<header class="navbar">
-    <div class="container display-flex">
-        <div class="flex-none">
-            <h1>Store</h1>
-        </div>
-        <div class="flex-stretch"></div>
-        <nav class="nav nav-flex flex-none">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="product_list.php">Store</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-        </nav>
+<header class="display-flex flex-align-center navbar">
+    <div class="flex-none">
+        <a href="#">
+            <div class="home-logo"></div>
+        </a>
     </div>
+    <div class="flex-none">
+        <a href="index.php">
+            <h5>esome Stuff</h5>
+        </a>
+    </div>
+    <div class="flex-stretch"></div>
+    <nav class="flex-none nav">
+        <ul class="display-flex">
+            <li><a href="#">What&apos;s New</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </nav>
 </header>

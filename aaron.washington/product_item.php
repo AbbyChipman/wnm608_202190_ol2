@@ -14,7 +14,7 @@
     <div class="container">
         <div class="card-light">
             <h2>Product Item</h2>
-            <p>This is item something</p>
+            <p>This is item # <?= $_GET['id'] ?></p>
         </div>
     </div>
     
