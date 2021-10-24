@@ -12,7 +12,7 @@
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs">
+    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
         <ul style="margin-left: 0;">
             <li class="active"><a href="#">Cart Overview</a></li>
             <li><a href="#">Checkout</a></li>
@@ -46,11 +46,14 @@
                     </ul>
                     <hr>
                     <h3>&dollar;99.96</h3>
-                    <a href="#"><button class="dark" style="width: 100%;">Checkout</button></a>
+                    <a href="checkout.php"><button class="dark" style="width: 100%;">Checkout</button></a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- *** FOOTER *** -->
+    <?php include "parts/footer.php"; ?>
 
 </body>
 </html>

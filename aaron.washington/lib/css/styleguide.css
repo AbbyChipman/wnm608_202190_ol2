@@ -273,7 +273,7 @@ hr {
 
 .nav ul li.active {
     /*background-color: var(--color-neutral-light) !important;*/
-    border-bottom: 2px solid var(--color-neutral-medium);
+    border-bottom: 1px solid var(--color-neutral-medium);
     color: inherit;
 }
 
