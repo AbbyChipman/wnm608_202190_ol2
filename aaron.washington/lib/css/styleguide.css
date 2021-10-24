@@ -336,6 +336,11 @@ hr {
 
 .nav-crumbs a {
     display: inline-block;
+    padding: 0rem 1.5rem;
+}
+
+.nav-crumbs ul {
+    padding-left: 0;
 }
 
 .nav-crumbs ul li {
@@ -392,7 +397,7 @@ hr {
 .hero {
     width: 100%;
     min-height: 15vh;
-    background-position: center;    
+    background-position: center top;    
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-primary-dark);

@@ -27,7 +27,7 @@
     <!-- *** CRUMB NAV *** -->
     <div class="container">
         <nav class="nav nav-crumbs">
-            <ul style="margin-left: 0;">
+            <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#"><?= $_GET['id'] ?></a></li>
             </ul>
