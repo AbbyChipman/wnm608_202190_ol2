@@ -56,7 +56,7 @@
                         </a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                        <a href="shop.php?id=kids">
+                        <a href="shop.php?id=womens">
                             <div class="display-flex flex-align-center card-img card-bg-4">
                                 <h3 class="flex-stretch">Kids</h3>
                             </div>
