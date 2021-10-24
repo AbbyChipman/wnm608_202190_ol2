@@ -532,7 +532,9 @@ hr {
 .card-img {
     width: 100%;
     min-height: 20vh;
+    color: #fff;
     padding: 1.25rem;
+    margin: 0;
     text-align: center;
     border-radius: 1rem;
     background-repeat: no-repeat;

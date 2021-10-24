@@ -26,32 +26,32 @@
     <!-- *** CATEGORIES *** -->
     <div class="display-flex flex-align-center">
         <div class="grid gap">
-            <div class="display-flex col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                 <div class="flex-stretch">
                     <h2>Shop by Category</h2>
                     <p>A clever copy blurb that says something more enticing than &lpar;here are categories to choose from.&rpar;</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="grid gap">
-                    <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
-                        <div class="display-flex card card-img card-bg-1">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                        <div class="display-flex flex-align-center card-img card-bg-1">
                             <h3 class="flex-stretch">Mens</h3>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
-                        <div class="card card-img card-bg-2">
-                            <h3>Womens</h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                        <div class="display-flex flex-align-center card-img card-bg-2">
+                        <h3 class="flex-stretch">Womens</h3>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
-                        <div class="card card-img card-bg-3">
-                            <h3>Teen</h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                        <div class="display-flex flex-align-center card-img card-bg-3">
+                        <h3 class="flex-stretch">Teen</h3>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
-                        <div class="card card-img card-bg-4">
-                            <h3>Kids</h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+                        <div class="display-flex flex-align-center card-img card-bg-4">
+                        <h3 class="flex-stretch">Kids</h3>
                         </div>
                     </div>
                 </div>
