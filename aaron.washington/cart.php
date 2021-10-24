@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                <div class="card-light cart-total">
+                <div class="card-light cart-total form-control">
                     <ul>
                         <li>&dollar;24.99<br />Premium Tshirt</li>
                         <li>&dollar;24.99<br />Premium Tshirt</li>
