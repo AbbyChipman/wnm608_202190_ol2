@@ -966,10 +966,11 @@ hr {
 
 .cart-item {
     text-align: left;
+    padding-left: 2em;
 }
 
     .cart-item img {
-        max-width: 50px;
+        max-width: 75px;
     }
 
 
@@ -977,6 +978,11 @@ hr {
     list-style-type: none;
     text-align: left;
     margin-left: 0;
+    padding-left: 0;
+}
+
+.cart-total ul li {
+    margin-bottom: 0.5rem;
 }
 
 .cart-total h3 {

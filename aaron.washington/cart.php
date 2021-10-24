@@ -30,52 +30,19 @@
                             alt="Premium Tshirt &ndash; Mens"
                             title="Premium Tshirt &ndash; Mens" />
                     </div>
-                    <div class="flex-stretch">
-                        <h2>Premium Tshirt</h2>
-                        <h4>&dollar;24.99</h4>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch">
-                        <h2>Premium Tshirt</h2>
-                        <h4>&dollar;24.99</h4>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch">
-                        <h2>Premium Tshirt</h2>
-                        <h4>&dollar;24.99</h4>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch">
-                        <h2>Premium Tshirt</h2>
-                        <h4>&dollar;24.99</h4>
+                    <div class="flex-stretch" style="padding-left: 2em;">
+                        <h3>Premium Tshirt</h3>
+                        <h5>&dollar;24.99</h5>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
                     <ul>
-                        <li>&dollar;24.99<br />Premium Tshirt</li>
-                        <li>&dollar;24.99<br />Premium Tshirt</li>
-                        <li>&dollar;24.99<br />Premium Tshirt</li>
-                        <li>&dollar;24.99<br />Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
+                        <li><b>&dollar;24.99</b><br />Premium Tshirt</li>
                     </ul>
                     <hr>
                     <h3>&dollar;99.96</h3>
