@@ -24,42 +24,54 @@
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-                <div class="card-light">
-                    <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                        alt="Premium Tshirt &ndash; Mens"
-                        title="Premium Tshirt &ndash; Mens" 
-                        style="max-width: 100px;" />
+                <div class="card-light cart-item display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch">
                         <h2>Premium Tshirt</h2>
                         <h4>&dollar;24.99</h4>
+                    </div>
                 </div>
-                <div class="card-light">
-                    <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                        alt="Premium Tshirt &ndash; Mens"
-                        title="Premium Tshirt &ndash; Mens" 
-                        style="max-width: 100px;" />
+                <div class="card-light cart-item display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch">
                         <h2>Premium Tshirt</h2>
                         <h4>&dollar;24.99</h4>
+                    </div>
                 </div>
-                <div class="card-light">
-                    <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                        alt="Premium Tshirt &ndash; Mens"
-                        title="Premium Tshirt &ndash; Mens" 
-                        style="max-width: 100px;" />
+                <div class="card-light cart-item display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch">
                         <h2>Premium Tshirt</h2>
                         <h4>&dollar;24.99</h4>
+                    </div>
                 </div>
-                <div class="card-light">
-                    <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                        alt="Premium Tshirt &ndash; Mens"
-                        title="Premium Tshirt &ndash; Mens" 
-                        style="max-width: 100px;" />
+                <div class="card-light cart-item display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch">
                         <h2>Premium Tshirt</h2>
                         <h4>&dollar;24.99</h4>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                <div class="card-light">
-                    <ul style="margin-left: 0;">
+                <div class="card-light cart-total">
+                    <ul>
                         <li>&dollar;24.99<br />Premium Tshirt</li>
                         <li>&dollar;24.99<br />Premium Tshirt</li>
                         <li>&dollar;24.99<br />Premium Tshirt</li>

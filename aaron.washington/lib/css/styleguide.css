@@ -961,6 +961,30 @@ hr {
 
 
 
+/** CART **/
+
+.cart-item {
+    text-align: left;
+}
+
+    .cart-item img {
+        max-width: 50px;
+    }
+
+
+.cart-total ul {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0;
+}
+
+.cart-total h3 {
+    text-align: left;
+}
+
+
+
+
 /** FOOTER **/
 
 footer {
