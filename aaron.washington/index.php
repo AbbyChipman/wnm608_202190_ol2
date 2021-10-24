@@ -12,7 +12,7 @@
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** HERO *** -->
-    <div class="hero hero-landing display-flex flex-align-center" style="min-height: 43vh;">
+    <div class="hero hero-landing display-flex flex-align-center" style="min-height: 45vh;">
         <div class="container flex-stretch">
             <div class="hero-text">
                 <h2>MAKING PRICES FALL</h2>
