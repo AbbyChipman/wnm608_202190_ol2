@@ -17,6 +17,16 @@
             <p>This is item # <?= $_GET['id'] ?></p>
         </div>
     </div>
+
+
+    <!-- *** CRUMB NAV *** -->
+    <nav class="nav nav-crumbs">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#"><?= $_GET['id'] ?></a></li>
+        </ul>
+    </nav>
     
 </body>
 </html>

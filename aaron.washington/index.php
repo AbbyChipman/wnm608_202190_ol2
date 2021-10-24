@@ -24,7 +24,7 @@
     </div>
 
     <!-- *** CATEGORIES *** -->
-    <div class="display-flex flex-align-center">
+    <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                 <div class="flex-stretch text-center">
