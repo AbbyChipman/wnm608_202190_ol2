@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping Cart &ndash; AWesome Stuff</title>
+    <title>Checkout &ndash; AWesome Stuff</title>
     <?php include "parts/meta.php"; ?>
 </head>
 <body>
