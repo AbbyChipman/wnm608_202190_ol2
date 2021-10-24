@@ -21,7 +21,9 @@
     </nav>
 
     <!-- *** PRODUCT CONTENT *** -->
-   <div class="container">
+    <br />
+    <br />
+    <div class="container">
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
                 <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
@@ -64,7 +66,7 @@
                 <a href="cart.php"><button class="dark">Add to Cart</button></a>
             </div>
         </div>
-   </div>
+    </div>
     
 </body>
 </html>
