@@ -546,6 +546,7 @@ hr {
 
     .card-img:hover {
         background-size: 110%;
+        cursor: pointer;
     }
 
 

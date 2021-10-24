@@ -27,7 +27,7 @@
     <div class="display-flex flex-align-center">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
-                <div class="flex-stretch">
+                <div class="flex-stretch text-center">
                     <h2>Shop by Category</h2>
                     <p>A clever copy blurb that says something more enticing than &lpar;here are categories to choose from.&rpar;</p>
                 </div>
