@@ -7,3 +7,18 @@
     <title>Shopping Cart &ndash; AWesome Stuff</title>
     <?php include "parts/meta.php"; ?>
 </head>
+<body>
+
+    <?php include "parts/navbar.php"; ?>
+
+    <!-- *** CRUMB NAV *** -->
+    <nav class="nav nav-crumbs">
+        <ul>
+            <li><a href="#">Cart Overview</a></li>
+            <li style="color: var(--color-neutral-light);">Checkout</li>
+            <li style="color: var(--color-neutral-light);">Summary</li>
+        </ul>
+    </nav>
+
+</body>
+</html>

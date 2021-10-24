@@ -74,6 +74,7 @@ body {
 
         .product-overlay .caption-body {
             background-color: #fff;
+            color: var(--color-primary-dark);
             border-radius: 0.5rem;
             padding: 2rem;
             transform: translateY(2rem);
@@ -142,6 +143,12 @@ body {
 
 
 @media (max-width: 600px) {
+
+    .card-img:hover {
+        background-size: 150%;
+        cursor: pointer;
+    }
+
     .product-overlay figcaption {
         position: relative;
         display: block;
