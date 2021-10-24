@@ -27,9 +27,8 @@
     <!-- *** CRUMB NAV *** -->
     <div class="container">
         <nav class="nav nav-crumbs">
-            <ul>
+            <ul style="margin-left: 0;">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Shop</a></li>
                 <li><a href="#"><?= $_GET['id'] ?></a></li>
             </ul>
         </nav>
@@ -39,12 +38,12 @@
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt1">
+                <a href="product.php?id=Mens&prd=Tshirt1">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -52,12 +51,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt2">
+                <a href="product.php?id=Mens&prd=Tshirt2">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -65,12 +64,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt3">
+                <a href="product.php?id=Mens&prd=Tshirt3">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -78,12 +77,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt4">
+                <a href="product.php?id=Mens&prd=Tshirt4">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -91,12 +90,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt5">
+                <a href="product.php?id=Mens&prd=Tshirt5">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -104,12 +103,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt6">
+                <a href="product.php?id=Mens&prd=Tshirt6">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -117,12 +116,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt7">
+                <a href="product.php?id=Mens&prd=Tshirt7">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
@@ -130,12 +129,12 @@
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=mens&prd=Tshirt8">
+                <a href="product.php?id=Mens&prd=Tshirt8">
                     <figure class="figure product-overlay">
                         <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
                         <figcaption>
                             <div class="caption-body">
-                                <div>T-Shirt</div>
+                                <div>Premium T-Shirt</div>
                                 <div>$24.99</div>
                             </div>
                         </figcaption>
