@@ -25,7 +25,7 @@
 
     <!-- *** CATEGORIES *** -->
     <!--<div class="container" style="margin-top: 3rem;">-->
-        <div class="grid gap">
+        <div class="grid gap" style="margin-top: 3rem; margin-bottom: 3rem;">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                 <div class="flex-stretch text-center">
                     <h2>Apparel For Everyone</h2>
