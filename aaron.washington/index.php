@@ -12,12 +12,12 @@
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** HERO *** -->
-    <div class="hero hero-landing display-flex flex-align-center">
+    <div class="hero hero-landing display-flex flex-align-center" style="min-height: 40vh;">
         <div class="container flex-stretch">
             <div class="hero-text">
-                <h2>TITLE GOES HERE</h2>
-                <h4>Subtitle Here</h4>
-                <button class="light">CTA Button</button>
+                <h2>MAKING PRICES FALL</h2>
+                <h4>Get 30&percnt; off your entire purchase with code FALLISHERE.</h4>
+                <button class="light">Start Saving&nbsp;&rsaquo;</button>
             </div>
             <div class="flex-stretch"></div>
         </div>

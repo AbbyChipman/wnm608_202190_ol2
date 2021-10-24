@@ -11,20 +11,8 @@
 
     <?php include "parts/navbar.php"; ?>
 
-    <!-- *** CATEGORY HERO SPACER *** -->
-    <div class="container" style="visibility: hidden;">
-        <div class="hero display-flex flex-align-center">
-            <div class="flex-stretch">
-                <div class="text-center" style="color: #fff;">
-                    <h2>SPECIAL ON ALL MENSWEAR</h2>
-                    <h4>Use Code IROCK23 to get 25&percnt; off your entire purchase.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs">
+    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
         <ul style="margin-left: 0;">
             <li><a href="index.php">Home</a></li>
             <li><a href="shop.php?id=Mens"><?= $_GET['id'] ?></a></li>

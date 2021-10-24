@@ -17,8 +17,8 @@
         <div class="hero display-flex flex-align-center">
             <div class="flex-stretch">
                 <div class="text-center" style="color: #fff;">
-                    <h2>SPECIAL ON ALL MENSWEAR</h2>
-                    <h4>Use Code IROCK23 to get 25&percnt; off your entire purchase.</h4>
+                    <h2>IT'S THAT TIME OF YEAR</h2>
+                    <h4>Use Code FALLISHERE to get 30&percnt; off your entire purchase.</h4>
                 </div>
             </div>
         </div>
