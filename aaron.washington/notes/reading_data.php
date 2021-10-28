@@ -2,10 +2,9 @@
 
 include "../lib/php/functions.php";
 
-$notes_object = file_get_jason("notes.json");
-$users_array = file_get_jason("../data/users.json");
+$notes_object = file_get_json("notes.json");
+$users_array = file_get_json("../data/users.json");
 
-//print_p($notes);
 
 ?>
 
