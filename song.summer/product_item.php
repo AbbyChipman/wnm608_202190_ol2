@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Product Items</title>
 
 <?php include "parts/meta.php"; ?>
 
@@ -11,12 +10,11 @@
 
 <?php include "parts/navbar.php"; ?>
 
-<div class="container">
+    <div class="container">
         <div class="card soft">
-         
-            <p>Main Page</p>
+            <h2>Product Item</h2>
+           <p>This is item # <?= $_GET['id'] ?> </p>
         </div>
     </div>
-
 </body>
 </html>

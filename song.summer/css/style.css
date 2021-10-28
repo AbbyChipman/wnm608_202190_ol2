@@ -1,5 +1,5 @@
 h1,
-h2 {
+h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
@@ -30,13 +30,20 @@ a:hover {
 }
 
 li {
-    margin: 0.7em;
+    /* margin: 0.7em;  turn on if neede*/
     list-style-type: none;
+    text-decoration: none;
 }
+
+
 
 li:hover {
     text-decoration: none;
-    color: 56ACEC;
+    color: #56ACEC;
+}
+
+.admin_title{
+    font-size: 0.5em;
 }
 
 .title {
@@ -94,9 +101,18 @@ li:hover {
 
 .nav a {
     display: block;
-    padding: 0;
+    padding: 9px; 
     margin: 0;
 }
+
+/* original v
+ .nav a {
+    display: block;
+    padding: 0px; 
+    margin: 0;
+} */
+
+
 /* 
 .nav a:hover {
     background-color: var(--color-main-medium);
@@ -184,6 +200,23 @@ li:hover {
     line-height: var(--header-height);
     text-align: center;
     font-size: 4em;
+}
+
+.navbar_2 {
+    background-color: var(--color-neutral-dark);
+    color: whitesmoke;
+    line-height: var(--header-height);
+    text-align: center;
+    font-size: 1em;
+}
+
+.navbar_3 {
+    background-color: var(--color-neutral-dark);
+    color: whitesmoke;
+    line-height: var(--header-height);
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 20px !important;
 }
 
 .navbar h1 {
