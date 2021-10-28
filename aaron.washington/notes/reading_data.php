@@ -1,3 +1,12 @@
+<?php 
+
+$filename = "notes.json";
+$file = file_get_contents($filename);
+
+echo $file;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
