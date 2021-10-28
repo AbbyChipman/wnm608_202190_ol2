@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Aaron Washington",
+        "type": "Parent",
+        "email":"aaronjwashington2@gmail.com",
+        "classes":[606,608,123]
+    },
+    {
+        "name":"Rebecca Washington",
+        "type": "Parent",
+        "email":"abwashington1216@gmail.com",
+        "classes":[123,456,789]
+    },
+    {
+        "name":"Elaine Marie Washington",
+        "type": "Child",
+        "email":"bestdaughter@gmail.com",
+        "classes":[395,936,507]
+    },
+    {
+        "name":"WestLee Joseph Washington",
+        "type": "Child",
+        "email":"bestson@gmail.com",
+        "classes":[256,945,937]
+    }
+    
+]

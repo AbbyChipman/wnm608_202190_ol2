@@ -2,9 +2,8 @@
 
 include "../lib/php/functions.php";
 
-$filename = "notes.json";
-$file = file_get_contents($filename);
-$notes_object = json_decode($file);
+$notes_object = file_get_jason("notes.json");
+$users_array = file_get_jason("../data/users.json");
 
 //print_p($notes);
 
@@ -31,6 +30,20 @@ $notes_object = json_decode($file);
             
             for($i=0;$i<count($notes_object->notes);$i++){
                 echo "<li>{$notes_object->notes[$i]}</li>";
+            }
+            
+            ?>
+        </div>
+        <div class="card-light">
+            <h2>Users</h2>
+
+            <?php 
+            
+            for($i=0;$i<count($users_array);$i++){
+                echo "<li>
+                    <strong>{$users_array[$i]->name}</strong>
+                    <span>{$users_array[$i]->type}</span>
+                </li>";
             }
             
             ?>
