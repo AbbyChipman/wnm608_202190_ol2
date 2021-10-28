@@ -1,9 +1,12 @@
 <?php 
 
+include "../lib/php/functions.php";
+
 $filename = "notes.json";
 $file = file_get_contents($filename);
+$notes = json_decode($file);
 
-echo $file;
+print_p($notes);
 
 ?>
 
