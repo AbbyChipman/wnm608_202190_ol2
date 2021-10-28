@@ -4,9 +4,9 @@ include "../lib/php/functions.php";
 
 $filename = "notes.json";
 $file = file_get_contents($filename);
-$notes = json_decode($file);
+$notes_object = json_decode($file);
 
-print_p($notes);
+//print_p($notes);
 
 ?>
 
@@ -23,65 +23,19 @@ print_p($notes);
 
     <?php include "../parts/navbar.php"; ?>
 
-    <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
-        <ul style="margin-left: 0;">
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="../shop.php?id=Mens"><?= $_GET['id'] ?></a></li>
-            <li class="active"><a href="#"><?= $_GET['prd'] ?></a></li>
-        </ul>
-    </nav>
-
-    <!-- *** PRODUCT CONTENT *** -->
-    <br />
-    <br />
     <div class="container">
-        <div class="grid gap">
-            <div class="col-xs-6" style="text-align: center;">
-                <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                     alt="Premium Tshirt &ndash; Mens"
-                     title="Premium Tshirt &ndash; Mens" />
-            </div>
-            <div class="col-xs-6 product-text">
-                <h3>Premium T-shirt &ndash; Mens</h3>
-                <h4><b>&dollar;24.99</b></h4>
-                <p>
-                    Product Description copy goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Mauris non interdum erat. Quisque ut euismod lorem. Aliquam ac condimentum dui. 
-                    Nullam purus elit, semper id suscipit non, tincidunt eget justo.
-                </p>
-                <br />
-                <h5>Size</h5>
-                <div class="form-select form-control" style="width: 6rem;">
-                    <select>
-                        <option>XS</option>
-                        <option>SM</option>
-                        <option>MD</option>
-                        <option>LG</option>
-                        <option>XL</option>
-                        <option>2X</option>
-                    </select>
-                </div>
-                <br />
-                <h5>Quantity</h5>
-                <div class="form-select form-control" style="width: 6rem;">
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                    </select>
-                </div>
-                <br />
-                <a href="../cart.php"><button class="dark">Add to Cart</button></a>
-            </div>
+        <div class="card-light">
+            <h2>Notes</h2>
+
+            <?php 
+            
+            for($i=0;$i<count($notes_object->notes);$i++){
+                echo "<li>{$notes_object->notes[$i]}</li>";
+            }
+            
+            ?>
         </div>
     </div>
-
-    <!-- *** FOOTER *** -->
-    <?php include "../parts/footer.php"; ?>
     
 </body>
 </html>
