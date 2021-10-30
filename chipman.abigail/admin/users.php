@@ -12,17 +12,15 @@ $classes = implode(", ", $user->classes);
 echo <<<HTML
 
 
-<nav class="nav nav-crumbs">
-    <ul>
-        <li><a href="admin/users.php">Back</a></li>
-    </ul>
-</nav>
-
 <div class="grid">
     <div class="col-xs-12 col-md-3"></div>
-    <div class="col-xs-12 col-md-6 card soft light">
-    <h2>$user->name</h2>
-        <div>
+    <div class="col-xs-12 col-md-6 card soft">
+        <nav class="nav nav-crumbs">
+            <ul>
+                <li><a href="admin/users.php">Back</a></li>
+            </ul>
+        </nav>
+            <h2>$user->name</h2>
             <form action="">
                 <label for="name" class="form-label">Name: </label>
                 <input type="text" class="form-input" size="30" id="name" placeholder='$user->name'>
@@ -40,7 +38,6 @@ echo <<<HTML
                 <input type="submit" class="form-button" value=
                 "Update Information">
             </form>
-        </div>
     <div class="col-xs-12 col-md-3"></div>
 </div>
 HTML;
@@ -63,8 +60,9 @@ HTML;
     <header class="navbar">
         <div class="container display-flex flex-align-center">
             <div class="flex-none">
-                <h2>User Admin</h2>
+            <img src="img/logoColorNav.png" alt="AbbyDazzled Logo" class="logo">
             </div>
+            <div class="flex-none"><h2>User Admin</h2></div>
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">
                 <ul>
@@ -74,18 +72,48 @@ HTML;
         </div>
     </header>
 
+    <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
+        <div class="container">
+            <div class="grid">
+                <div class="col-xs-12 col-md-4"></div>
+                <div class="col-xs-12 col-md-4"></div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="card section rainbow">
+                        <h2>User Administration</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
         <div class="container">
 
-            <div class="card soft">
+         
                 <?php
                     if(isset($_GET['id'])) {
                         showUserPage($users [$_GET['id']]);
                     } else {
                 ?>
-            </div>
 
-        
+
+            <div class="card soft">
+
+                <h2>User List</h2>
+                <nav class="nav">
+                    <ul>
+                        <?php
+                        for($i=0;$i<count($users);$i++){
+                            echo "<li>
+                            <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
+                            </li>";
+                        }
+                        ?>
+                    </ul>
+                </nav>
+
                 <?php } ?>
+            </div>
         </div>
 </body>
 </html>
