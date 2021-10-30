@@ -3,7 +3,7 @@
 <head>
 <?php include "parts/meta.php" ?>
 
-    <title>AbbyDazzled Designs - Product # <?= $_GET['id'] ?></title>
+    <title>Product # <?= $_GET['id'] ?></title>
 </head>
 <body>
 

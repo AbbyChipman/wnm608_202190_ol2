@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Abigail Chipman",
+        "type":"teacher",
+        "email":"amchipman71@gmail.com",
+        "classes":[608,700,623,613]
+    },
+    {
+        "name":"Mike Nesmith",
+        "type":"student",
+        "email":"nezmerized@gmail.com",
+        "classes":[608,613,700,710]
+    },
+    {
+        "name":"Peter Tork",
+        "type":"student",
+        "email":"eltorko@gmail.com",
+        "classes":[608,700,702]
+    },
+    {
+        "name":"Micky Dolenz",
+        "type":"student",
+        "email":"circusboi@aol.com",
+        "classes":[608,610,625,700]
+    },
+    {
+        "name":"Davy Jones",
+        "type":"student",
+        "email":"mrjones@gmail.com",
+        "classes":[608,700,725,900]
+    }
+]

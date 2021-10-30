@@ -3,7 +3,7 @@
 <head>
 <?php include "parts/meta.php" ?>
     
-    <title id="name">AbbyDazzled Designs - Products</title>
+    <title id="name">Products</title>
 </head>
 <body>
     <?php include "parts/navbar.php" ?>

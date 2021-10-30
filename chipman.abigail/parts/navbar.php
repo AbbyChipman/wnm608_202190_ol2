@@ -6,12 +6,13 @@
             <div class="flex-stretch"></div>
             <div class="form-control flex-stretch">
                 <form>
-                    <input type="search" class="hotdog" placeholder="Search">
+                    <input type="search" class="hotdog nav-search" placeholder="Search">
                 </form>
             </div>
             <nav class="nav nav-flex">
                 <ul>
                     <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
                     <li><a href="product_list.php">Store</a></li>
                     <li><a href="cart.php">Cart</a></li>
                 </ul>

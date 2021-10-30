@@ -68,6 +68,9 @@ a:hover {
   .navbar .nav li {
     line-height: 1em;
   }
+  .nav-search {
+    display: none;
+  }
 }
 .page-head {
   color: var(--color-accent-light);
