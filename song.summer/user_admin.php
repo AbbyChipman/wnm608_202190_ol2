@@ -1,27 +1,23 @@
 <?php 
 
-include "../lib/php/function.php";
+include "../song.summer/lib/php/function.php";
 
-$filename = "../data/users.json";
+$filename = "../song.summer/data/users.json";
 $users = file_get_json($filename);
 
-// print_r($users);
+$uid = count($users);
 
-$empty_user = (object)[
+$new_user = (object)[
+    "id"=>$uid,
     "name"=>"",
     "type"=>"",
     "email"=>"",
     "classes"=>[]
 ];
 
-// echo "EMPTY_USER: <br>";
-// print_r($empty_user);
-
-// print_p([$_GET,$_POST]);
-
 if(isset($_GET['action'])) {
     switch($_GET['action']){
-        case"update":
+        case "update":
             $users[$_GET['id']]->name = $_POST['user-name'];
             $users[$_GET['id']]->type = $_POST['user-type'];
             $users[$_GET['id']]->email = $_POST['user-email'];
@@ -30,21 +26,30 @@ if(isset($_GET['action'])) {
             file_put_contents($filename,json_encode($users));
             header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
-        case"create":
+        case "create":
+            $new_user->id = $uid; 
+            $new_user->name = $_POST['user-name'];
+            $new_user->type = $_POST['user-type'];
+            $new_user->email = $_POST['user-email'];
+            $new_user->classes = explode(",", $_POST['user-classes']);
+
+            $id = count($users);
+
+            $users[] = $new_user;
+
+
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
             break;
-        case"delete":
+        case "delete":
+            array_splice($users,$_GET['id'],1);
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}");
             break;
     }
 }
 
-if(isset($_POST['user-name'])) {
-    $users[$_GET['id']]->name = $_POST['user-name'];
-    $users[$_GET['id']]->type = $_POST['user-type'];
-    $users[$_GET['id']]->email = $_POST['user-email'];
-    $users[$_GET['id']]->classes = explode(",", $_POST['user-classes']);
-
-    file_put_contents($filename,json_encode($users));
-}
+// print_p([$_GET,$_POST]);
 
 
 function showUserPage($user) {
@@ -56,6 +61,7 @@ $classes = implode(", ", $user->classes);
     // heredoc
 
 $form = <<<HTML
+
 
 <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 <h2>$addoredit User</h2>
@@ -73,7 +79,7 @@ $form = <<<HTML
     <input class="form-input" name="user-email" id="user-email" type="text" value="$user->email" placeholder="Enter the email"> 
 </div>
 <div class="form-control" >
-    <label class="form-label" for="user-Classes" >Classes</label>
+    <label class="form-label" for="user-classes" >Classes</label>
     <input class="form-input" name="user-classes" id="user-classes" type="text" value="$classes" placeholder="Enter the classes"> 
 </div>
 <div class="form-control" >
@@ -108,11 +114,12 @@ $output = $id == "new" ? $form :
     </div>
     ";
 
+$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+
 echo <<<HTML
-<nav class="nav nav-crumbs">
-<ul>
-    <li><a href="../admin/users.php">Back</a></li>
-</ul>
+<nav class="display-flex">
+    <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
+    <div class="flex-none">$delete</div>
 </nav>
 $output
 HTML;
@@ -125,9 +132,11 @@ HTML;
 <meta charset="UTF-8">
     <title>User Admin Page</title>
 
-    <?php include "../parts/meta.php"; ?>
+    <?php include "../song.summer/parts/meta.php"; ?>
 </head>
 <body>
+
+<?php include "../song.summer/parts/navbar.php"; ?>
 
 <header class="navbar_2">
     <div class="container display-flex">
@@ -150,8 +159,7 @@ HTML;
         <?php
 
         if(isset($_GET['id'])) { 
-            // echo "IS SET: ".$users[$_GET['id']];
-            showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
+            showUserPage($_GET['id'] == "new" ? $new_user : $users[$_GET['id']]); 
         } else{
 
         ?>
@@ -160,12 +168,11 @@ HTML;
         <nav class="nav">
             <ul>
         <?php 
-        // echo "USER TYPE: ".gettype($users)."<br>";
 
-        for($i=0;$i<count($users);$i++){
-            echo "<li>
-                <a href='../admin/users.php?id=$i'>{$users[$i]->name}</a>
-            </li>";
+        if(isset($users)) { 
+            foreach($users as $user){
+                echo "<li><a href='{$_SERVER['PHP_SELF']}?id={$user->id}'>{$user->name}</a></li>";
+            }
         }
         ?>
         </ul>
@@ -178,6 +185,9 @@ HTML;
 
         </div>
     </div>
+
+    <ul class="table_of"><a href="index.php">Back To Home</a></ul>
+
 </body>
 </html>
  

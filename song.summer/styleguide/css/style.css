@@ -217,7 +217,7 @@ figcaption {
 .main_nav2 {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10;
     overflow: hidden;
     background-color: #333;
     display: flex;

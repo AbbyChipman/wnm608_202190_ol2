@@ -1,49 +1,43 @@
 [{
-        "name": "Summer Song",
-        "type": "Student",
-        "email": "ssong10@art.edu",
-        "classes": [608, 605, 610]
-    },
-
-
-    {
-        "name": "Phoebe Buffay",
-        "type": "Singer",
-        "email": "phoebe@gmail.com",
-        "classes": [610, 605, 620]
-    },
-
-
-    {
-        "name": "Joey Tribbiani",
-        "type": "Actor",
-        "email": "joeyt@aol.com",
-        "classes": [608, 605, 613]
-    },
-
-
-    {
-        "name": "Chandler Bing",
-        "type": "Pilot",
-        "email": "chandler1@gmail.com",
-        "classes": [608, 605, 610, 688]
-    },
-
-
-    {
-        "name": "Monica Gellar",
-        "type": "Chef",
-        "email": "monicag@yahoo.com",
-        "classes": [608, 605, 610, 612]
-    },
-
-    {
-        "name": "James Kay",
-        "type": "Killer",
-        "email": "killera@yahoo.com",
-        "classes": [670, 605, 610, 611]
-    }
-
-
-
+    "id": 0,
+    "name": "Summer Song",
+    "type": "Student",
+    "email": "ssong10@art.edu",
+    "classes": [608, 605, 610]
+},
+{
+    "id": 1,
+    "name": "Phoebe Buffay",
+    "type": "Singer",
+    "email": "phoebe@gmail.com",
+    "classes": [610, 605, 620]
+},
+{
+    "id": 2,
+    "name": "Joey Tribbiani",
+    "type": "Actor",
+    "email": "joeyt@aol.com",
+    "classes": [608, 605, 613]
+},
+{
+    "id": 3,
+    "name": "Chandler Bing",
+    "type": "Pilot",
+    "email": "chandler1@gmail.com",
+    "classes": [608, 605, 610, 688]
+},
+{
+    "id": 4,
+    "name": "Monica Gellar",
+    "type": "Chef",
+    "email": "monicag@yahoo.com",
+    "classes": [608, 605, 610, 612]
+},
+{
+    "id": 5,
+    "name": "James Kay",
+    "type": "Killer",
+    "email": "killera@yahoo.com",
+    "classes": [670, 605, 610, 611]
+}
 ]

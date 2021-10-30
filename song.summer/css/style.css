@@ -1,5 +1,5 @@
 h1,
-h2{
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
@@ -30,25 +30,18 @@ a:hover {
 }
 
 li {
-    /* margin: 0.7em;  turn on if neede*/
+    margin: 0.7em;
     list-style-type: none;
-    text-decoration: none;
 }
-
-
 
 li:hover {
     text-decoration: none;
     color: #56ACEC;
 }
 
-.admin_title{
-    font-size: 0.5em;
-}
-
 .title {
     padding: 0.5em;
-    background-color: 56ACEC;
+    background-color: #56ACEC;
 }
 
 /* LAYOUT CLASSES */
@@ -101,18 +94,9 @@ li:hover {
 
 .nav a {
     display: block;
-    padding: 9px; 
+    padding: 0;
     margin: 0;
 }
-
-/* original v
- .nav a {
-    display: block;
-    padding: 0px; 
-    margin: 0;
-} */
-
-
 /* 
 .nav a:hover {
     background-color: var(--color-main-medium);
@@ -202,23 +186,6 @@ li:hover {
     font-size: 4em;
 }
 
-.navbar_2 {
-    background-color: var(--color-neutral-dark);
-    color: whitesmoke;
-    line-height: var(--header-height);
-    text-align: center;
-    font-size: 1em;
-}
-
-.navbar_3 {
-    background-color: var(--color-neutral-dark);
-    color: whitesmoke;
-    line-height: var(--header-height);
-    text-align: center;
-    font-size: 1.5em;
-    padding-top: 20px !important;
-}
-
 .navbar h1 {
     font-size: 1em;
     margin: 0;
@@ -250,7 +217,7 @@ figcaption {
 .main_nav2 {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10;
     overflow: hidden;
     background-color: #333;
     display: flex;
@@ -305,7 +272,7 @@ li a:hover {
 
 /* Trending Section */
 
-div.cnt23{}
+/* div.cnt23{} */
 div.cnt23 section{
     display: flex;
     justify-content: space-around;
@@ -343,7 +310,7 @@ div.cnt23 section article .texts h4{
     color: white;
 }
   
-}
+
 div.cnt23 section article .texts p{
     color: white;
 }
