@@ -7,7 +7,27 @@ $users = file_get_json("../data/users.json");
 
 
 function showUserPage($user) {
-    print_p($user);
+
+$classes = implode(", ", $user->classes);
+
+//heredoc, last line MUST be completely on the left
+echo <<<HTML
+<div>
+    <h3>$user->name</h3>
+    <div>
+        <strong>Type</strong>
+        <span>$user->type</span>
+    </div>
+    <div>
+        <strong>Email</strong>
+        <span>$user->email</span>
+    </div>
+    <div>
+        <strong>Classes</strong>
+        <span>$classes</span>
+    </div>
+</div>
+HTML;
 }
 
 
