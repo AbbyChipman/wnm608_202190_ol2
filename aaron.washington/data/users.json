@@ -12,15 +12,15 @@
         "classes":[123,456,789]
     },
     {
-        "name":"Elaine Marie Washington",
-        "type": "Child",
-        "email":"bestdaughter@gmail.com",
+        "name":"Larry Armstrong",
+        "type": "Friend",
+        "email":"goodbrother@gmail.com",
         "classes":[395,936,507]
     },
     {
-        "name":"WestLee Joseph Washington",
-        "type": "Child",
-        "email":"bestson@gmail.com",
+        "name":"Lucas Suddreth",
+        "type": "Friend",
+        "email":"bestbuddy@gmail.com",
         "classes":[256,945,937]
     }
     
