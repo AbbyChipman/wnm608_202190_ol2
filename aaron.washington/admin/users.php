@@ -12,7 +12,7 @@ $classes = implode(", ", $user->classes);
 
 //heredoc, last line MUST be completely on the left
 echo <<<HTML
-<nav class="nav-crumbs">
+<nav class="nav nav-crumbs">
     <ul>
         <li><a href="admin/users.php">Back</a></li>
     </ul>
@@ -52,7 +52,7 @@ HTML;
     <header class="navbar">
         <div class="container display-flex">
             <div class="flex-none">
-                <h5>User Admin</h5>
+                <h4>User Admin</h4>
             </div>
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">
