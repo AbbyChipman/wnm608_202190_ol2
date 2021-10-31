@@ -12,6 +12,11 @@ $classes = implode(", ", $user->classes);
 
 //heredoc, last line MUST be completely on the left
 echo <<<HTML
+<nav class="nav-crumbs">
+    <ul>
+        <li><a href="admin/users.php">Back</a></li>
+    </ul>
+</nav>
 <div>
     <h3>$user->name</h3>
     <div>
