@@ -5,6 +5,12 @@ include "../lib/php/functions.php";
 $users = file_get_json("../data/users.json");
 
 
+
+function showUserPage($user) {
+    print_p($user);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,8 +38,16 @@ $users = file_get_json("../data/users.json");
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" style="padding-top: 3rem;">
         <div class="card-light" style="text-align: left;">
+            <?php
+
+            if(isset($_GET['id'])) {
+                showUserPage($users[$_GET['id']]);
+            } else {
+
+            ?>
+
             <h2>User List</h2>
 
             <nav class="nav">
@@ -51,6 +65,8 @@ $users = file_get_json("../data/users.json");
 
                 </ul>
             </nav>
+
+            <?php } ?>
         </div>
     </div>
     
