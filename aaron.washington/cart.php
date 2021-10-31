@@ -85,7 +85,7 @@
                             <input type="text" class="form-input" placeholder="Enter Code">
                         </div>
                     <form>
-                    <a href="checkout.php" style="width: 100%;">Checkout</a>
+                    <button class="dark" style="width: 100%;" action="checkout.php">Checkout</button>
                 </div>
             </div>
         </div>
