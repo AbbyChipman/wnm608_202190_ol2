@@ -24,7 +24,7 @@ echo <<<HTML
 <div class="grid gap">
 
 <div class="col-xs-6">
-    <div class="card-light">
+    <div class="card-light" style="text-align: left;">
         <h3>$user->name</h3>
         <div>
             <strong>Type</strong>
@@ -51,18 +51,18 @@ echo <<<HTML
             </div>
             <div class="form-control">
                 <label class="form-label">Type</label>
-                <input type="number" class="form-input" placeholder="Enter User Type">
+                <input type="text" class="form-input" placeholder="Enter User Type">
             </div>
             <div class="form-control">
                 <label class="form-label">Email</label>
-                <input type="password" class="form-input" value="$user->email" placeholder="Enter User Email">
+                <input type="email" class="form-input" value="$user->email" placeholder="Enter User Email">
             </div>
             <div class="form-control">
                 <label class="form-label">Classes</label>
-                <input type="password" class="form-input" placeholder="Enter User Classes">
+                <input type="text" class="form-input" placeholder="Enter User Classes">
             </div>
             <div class="form-control">
-                <input type="button" class="form-button form-control" value="Save Changes">
+                <input type="submit" class="form-button form-control" value="Save Changes">
             </div>
         </form>
     </div>

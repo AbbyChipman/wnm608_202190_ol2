@@ -807,6 +807,7 @@ hr {
     display: block;
     width: 100%;
     padding: 0.5rem 0.15rem;
+    text-align: left;
 }
 
 .form-button {
