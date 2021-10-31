@@ -5,6 +5,9 @@ include "../lib/php/functions.php";
 $users = file_get_json("../data/users.json");
 
 
+// file_put_contents, json_encode, explode function, $_POST
+// CRUD, Create Read Update Delete
+
 
 function showUserPage($user) {
 
@@ -31,6 +34,33 @@ echo <<<HTML
         <strong>Classes</strong>
         <span>$classes</span>
     </div>
+</div>
+<div class="card-light">
+    <h3>$user->name</h3>
+    <form>
+        <div class="form-control">
+            <label class="form-label">Example</label>
+            <input type="text" class="form-input" placeholder="Text">
+        </div>
+        <div class="form-control">
+            <label class="form-label">Example</label>
+            <input type="number" class="form-input" placeholder="Number">
+        </div>
+        <div class="form-control">
+            <label class="form-label">Example</label>
+            <input type="password" class="form-input" placeholder="Password">
+        </div>
+        <div class="form-control grid gap">
+            <div class="col-xs-12 col-md-6">
+                <label class="form-label">Example</label>
+                <input type="search" class="form-input" placeholder="Search">
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label class="form-label">Example</label>
+                <input type="search" class="form-input" placeholder="Search">
+            </div>
+        </div>
+    </form>
 </div>
 HTML;
 }
@@ -73,15 +103,15 @@ HTML;
 
             ?>
 
-            <h2>User List</h2>
+            <h3>User List</h3>
 
             <nav class="nav">
-                <ul>
+                <ul style="padding-left: 0;">
 
                     <?php 
                     
                     for($i=0;$i<count($users);$i++){
-                        echo "<li>
+                        echo "<li class='form-control'>
                             <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
                         </li>";
                     }
