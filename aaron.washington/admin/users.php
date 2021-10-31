@@ -119,7 +119,7 @@ HTML;
                     
                     for($i=0;$i<count($users);$i++){
                         echo "<li class='form-control'>
-                            <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
+                            <a href='admin/users.php?id=$i' style='padding-left: 0;'>{$users[$i]->name}</a>
                         </li>";
                     }
                     
