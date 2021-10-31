@@ -87,9 +87,9 @@ HTML;
 <body>
 
     <header class="navbar">
-        <div class="container display-flex">
+        <div class="container display-flex" style="margin-bottom: 0;">
             <div class="flex-none">
-                <h4>User Admin</h4>
+                <h5>User Admin</h5>
             </div>
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">
