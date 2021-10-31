@@ -47,11 +47,11 @@ echo <<<HTML
         <form>
             <div class="form-control">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-input" placeholder="Enter User Name">
+                <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name">
             </div>
             <div class="form-control">
                 <label class="form-label">Type</label>
-                <input type="text" class="form-input" placeholder="Enter User Type">
+                <input type="text" class="form-input" value="$user->type" placeholder="Enter User Type">
             </div>
             <div class="form-control">
                 <label class="form-label">Email</label>
@@ -59,7 +59,7 @@ echo <<<HTML
             </div>
             <div class="form-control">
                 <label class="form-label">Classes</label>
-                <input type="text" class="form-input" placeholder="Enter User Classes">
+                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes">
             </div>
             <div class="form-control">
                 <input type="submit" class="form-button form-control" value="Save Changes">
