@@ -20,47 +20,54 @@ echo <<<HTML
         <li><a href="admin/users.php">Back</a></li>
     </ul>
 </nav>
-<div>
-    <h3>$user->name</h3>
-    <div>
-        <strong>Type</strong>
-        <span>$user->type</span>
-    </div>
-    <div>
-        <strong>Email</strong>
-        <span>$user->email</span>
-    </div>
-    <div>
-        <strong>Classes</strong>
-        <span>$classes</span>
+
+<div class="grid gap">
+
+<div class="col-xs-6">
+    <div class="card-light">
+        <h3>$user->name</h3>
+        <div>
+            <strong>Type</strong>
+            <span>$user->type</span>
+        </div>
+        <div>
+            <strong>Email</strong>
+            <span>$user->email</span>
+        </div>
+        <div>
+            <strong>Classes</strong>
+            <span>$classes</span>
+        </div>
     </div>
 </div>
-<div class="card-light">
-    <h3>$user->name</h3>
-    <form>
-        <div class="form-control">
-            <label class="form-label">Example</label>
-            <input type="text" class="form-input" placeholder="Text">
-        </div>
-        <div class="form-control">
-            <label class="form-label">Example</label>
-            <input type="number" class="form-input" placeholder="Number">
-        </div>
-        <div class="form-control">
-            <label class="form-label">Example</label>
-            <input type="password" class="form-input" placeholder="Password">
-        </div>
-        <div class="form-control grid gap">
-            <div class="col-xs-12 col-md-6">
-                <label class="form-label">Example</label>
-                <input type="search" class="form-input" placeholder="Search">
+
+<div class="col-xs-6">
+    <div class="card-light">
+        <h3>Edit User</h3>
+        <form>
+            <div class="form-control">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-input" placeholder="Enter User Name">
             </div>
-            <div class="col-xs-12 col-md-6">
-                <label class="form-label">Example</label>
-                <input type="search" class="form-input" placeholder="Search">
+            <div class="form-control">
+                <label class="form-label">Type</label>
+                <input type="number" class="form-input" placeholder="Enter User Type">
             </div>
-        </div>
-    </form>
+            <div class="form-control">
+                <label class="form-label">Email</label>
+                <input type="password" class="form-input" value="$user->email" placeholder="Enter User Email">
+            </div>
+            <div class="form-control">
+                <label class="form-label">Classes</label>
+                <input type="password" class="form-input" placeholder="Enter User Classes">
+            </div>
+            <div class="form-control">
+                <input type="button" class="form-button form-control" value="Save Changes">
+            </div>
+        </form>
+    </div>
+</div>
+
 </div>
 HTML;
 }
