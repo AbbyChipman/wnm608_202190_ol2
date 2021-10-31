@@ -21,31 +21,36 @@ $users = file_get_json("../data/users.json");
     <header class="navbar">
         <div class="container display-flex">
             <div class="flex-none">
-                <h1>User Admin</h1>
+                <h5>User Admin</h5>
             </div>
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">
                 <ul>
-                    <li><a href="users.php">User List</a></li>
+                    <li><a href="admin/users.php">User List</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <div class="card-light">
-            <h2>Users</h2>
+        <div class="card-light" style="text-align: left;">
+            <h2>User List</h2>
 
-            <?php 
-            
-            for($i=0;$i<count($users);$i++){
-                echo "<li>
-                    <strong>{$users[$i]->name}</strong>
-                    <span>{$users[$i]->type}</span>
-                </li>";
-            }
-            
-            ?>
+            <nav class="nav">
+                <ul>
+
+                    <?php 
+                    
+                    for($i=0;$i<count($users);$i++){
+                        echo "<li>
+                            <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
+                        </li>";
+                    }
+                    
+                    ?>
+
+                </ul>
+            </nav>
         </div>
     </div>
     
