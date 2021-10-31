@@ -27,7 +27,7 @@ if(isset($_GET['action'])) {
             header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
         case "create":
-            $new_user->id = $uid; 
+            $new_user->id = $uid;
             $new_user->name = $_POST['user-name'];
             $new_user->type = $_POST['user-type'];
             $new_user->email = $_POST['user-email'];
@@ -36,7 +36,6 @@ if(isset($_GET['action'])) {
             $id = count($users);
 
             $users[] = $new_user;
-
 
             file_put_contents($filename,json_encode($users));
             header("location:{$_SERVER['PHP_SELF']}?id=$id");
@@ -49,20 +48,15 @@ if(isset($_GET['action'])) {
     }
 }
 
-// print_p([$_GET,$_POST]);
 
 
 function showUserPage($user) {
-$id = $_GET['id'];
-$addoredit = $id == "new" ? "Add" : "Edit";
-$createorupdate = $id == "new" ? "create" : "update";
-$classes = implode(", ", $user->classes);
-  
-    // heredoc
+    $id = $_GET['id'];
+    $addoredit = $id == "new" ? "Add" : "Edit";
+    $createorupdate = $id == "new" ? "create" : "update";
+    $classes = implode(", ", $user->classes);
 
-$form = <<<HTML
-
-
+    $form = <<<HTML
 <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 <h2>$addoredit User</h2>
 <div class="form-control" >
@@ -89,7 +83,7 @@ $form = <<<HTML
 HTML;
 
 ///heredoc
-$display = <<<HTML
+    $display = <<<HTML
 <div>
     <h2>$user->name</h2>
     <div>
@@ -107,16 +101,16 @@ $display = <<<HTML
 </div>
 HTML;
 
-$output = $id == "new" ? $form :
-    "<div class = 'grid gap'>
+    $output = $id == "new" ? $form :
+        "<div class = 'grid gap'>
     <div class='col-xs-12 col-md-7'>$display</div>
     <div class='col-xs-12 col-md-5'>$form</div>
     </div>
     ";
 
-$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+    $delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
 
-echo <<<HTML
+    echo <<<HTML
 <nav class="display-flex">
     <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
     <div class="flex-none">$delete</div>
@@ -129,7 +123,7 @@ HTML;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>User Admin Page</title>
 
     <?php include "../song.summer/parts/meta.php"; ?>
@@ -141,7 +135,7 @@ HTML;
 <header class="navbar_2">
     <div class="container display-flex">
         <div class="flex-none">
-        <h2>User Admin</h2>
+            <h2>User Admin</h2>
         </div>
         <div class="flex-stretch"></div>
         <div class="nav nav-flex flex-none">
@@ -152,42 +146,42 @@ HTML;
         </div>
     </div>
 </header>
-    <div class="container">
+<div class="container">
 
-        <div class="card soft">
+    <div class="card soft">
 
         <?php
 
-        if(isset($_GET['id'])) { 
-            showUserPage($_GET['id'] == "new" ? $new_user : $users[$_GET['id']]); 
+        if(isset($_GET['id'])) {
+            showUserPage($_GET['id'] == "new" ? $new_user : $users[$_GET['id']]);
+
         } else{
 
-        ?>
-        <h2>User List</h2>
-            
-        <nav class="nav">
-            <ul>
-        <?php 
+            ?>
+            <h2>User List</h2>
 
-        if(isset($users)) { 
-            foreach($users as $user){
-                echo "<li><a href='{$_SERVER['PHP_SELF']}?id={$user->id}'>{$user->name}</a></li>";
-            }
+            <nav class="nav">
+                <ul>
+                    <?php
+
+                    if(isset($users)) {
+                        for($i=0;$i<count($users);$i++){
+                            echo "<li><a href='{$_SERVER['PHP_SELF']}?id=$i'>{$users[$i]->name}</a></li>";
+                        }
+                    }
+                    ?>
+                </ul>
+            </nav>
+
+            <?php
         }
-        ?>
-        </ul>
-        </nav>
 
-        <?php 
-        }
-        
         ?>
 
-        </div>
     </div>
+</div>
 
-    <ul class="table_of"><a href="index.php">Back To Home</a></ul>
+<ul class="table_of"><a href="index.php">Back To Home</a></ul>
 
 </body>
 </html>
- 
