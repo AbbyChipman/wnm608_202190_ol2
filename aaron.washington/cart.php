@@ -15,7 +15,7 @@
     <nav class="nav nav-crumbs" style="margin-top: 5rem;">
         <ul style="margin-left: 0;">
             <li class="active"><a href="#">Cart Overview</a></li>
-            <li><a href="checkout.php">Checkout</a></li>
+            <li><a href="#">Checkout</a></li>
             <li><a href="#">Summary</a></li>
         </ul>
     </nav>
@@ -85,7 +85,7 @@
                             <input type="text" class="form-input" placeholder="Enter Code">
                         </div>
                     <form>
-                    <button class="dark" style="width: 100%;" action="checkout.php">Checkout</button>
+                    <button class="dark" style="width: 100%;" formaction="checkout.php">Checkout</button>
                 </div>
             </div>
         </div>
