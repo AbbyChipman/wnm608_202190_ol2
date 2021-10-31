@@ -16,7 +16,7 @@
         <ul style="margin-left: 0;">
             <li><a href="cart.php">Cart Overview</a></li>
             <li><a href="checkout.php">Checkout</a></li>
-            <li class="active"><a href="#">Summary</a></li>
+            <li class="active"><a href="summary.php">Summary</a></li>
         </ul>
     </nav>
 
