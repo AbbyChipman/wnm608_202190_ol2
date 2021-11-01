@@ -2,7 +2,8 @@
 
 include "../lib/php/functions.php";
 
-$users = file_get_json("../data/users.json");
+$file = "../data/users.json";
+$users = file_get_json($file);
 
 
 // file_put_contents, json_encode, explode function, $_POST
@@ -12,7 +13,7 @@ $users = file_get_json("../data/users.json");
 function showUserPage($user) {
 
 $id = $_GET['id'];
-$classes = implode(", ", $user->classes);
+//$classes = implode(", ", $user->classes);
 
 //heredoc, last line MUST be completely on the left
 echo <<<HTML
@@ -27,9 +28,11 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light" style="text-align: left;">
         <h3>$user->name</h3>
+        <h3>$name</h3>
         <div>
             <strong>Type</strong>
             <span>$user->type</span>
+            <span>$type</span>
         </div>
         <div>
             <strong>Email</strong>
@@ -37,7 +40,7 @@ echo <<<HTML
         </div>
         <div>
             <strong>Classes</strong>
-            <span>$classes</span>
+            <span>$user->classes</span>
         </div>
     </div>
 </div>
@@ -45,7 +48,7 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>Edit User</h3>
-        <form method="post" action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=edit">
+        <form method="post" action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=updated">
             <div class="form-control">
                 <label class="form-label">Name</label>
                 <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name" name="formName">
@@ -60,7 +63,7 @@ echo <<<HTML
             </div>
             <div class="form-control">
                 <label class="form-label">Classes</label>
-                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes" name="formClass">
+                <input type="text" class="form-input" value="$user->classes" placeholder="Enter User Classes" name="formClass">
             </div>
             <div class="form-control">
                 <input type="submit" class="form-button form-control" value="Save Changes">
@@ -74,13 +77,12 @@ HTML;
 }
 
 
-if ($_GET['action'] == "edit") {
-    // collect value of input field
+if ($_GET['action'] == "updated") {
+    // find and use values of input fields
     $name = $_POST['formName'];
     $type = $_POST['formType'];
     $email = $_POST['formEmail'];
-    $class = explode(",", $_POST['formClass']);
-
+    $numbers = explode(",", $_POST['formClass']);
 
     if (empty($name)) {
         echo "Name is empty";
@@ -100,11 +102,13 @@ if ($_GET['action'] == "edit") {
         echo $email;
     }
 
-    if (empty($class)) {
+    if (empty($numbers)) {
         echo "No classes listed";
     } else {
-        echo $class;
+        echo $numbers;
     }
+
+    file_put_contents($file, json_encode($users));
 }
 
 
