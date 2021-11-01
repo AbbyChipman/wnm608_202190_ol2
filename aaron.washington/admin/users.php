@@ -79,7 +79,8 @@ if ($_GET['action'] == "edit") {
     $name = $_POST['formName'];
     $type = $_POST['formType'];
     $email = $_POST['formEmail'];
-    $class = $_POST['formClass'];
+    $class = explode(",", $_POST['formClass']);
+
 
     if (empty($name)) {
         echo "Name is empty";
