@@ -78,7 +78,8 @@ HTML;
 
 
 // I completed Part 1 but at least wanted to attempt Part 2.
-// I tried using the form action to add "action=updated" to the URL, which would then cue the if statement that pulls all of the values from the form inputs and echos them out.
+// First I dug through PHP documentation site and the W3schools site to find those four things the teacher in the video said to look for.
+// Once I learned a bit about these four commands/functions, I tried using the form action to add "action=updated" to the URL, which would then cue the if statement that pulls all of the values from the form inputs and echos them out.
 // After trying that, I got a Warning error saying there were arguments with the implode on line 15.
 // I messed around the the $classes implode and the $numbers explode for a bit before deciding to just hide those variables and move forward with the other variables.
 // I then tried using the file_put_contents to put the submitted form content into the JSON.
