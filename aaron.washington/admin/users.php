@@ -13,7 +13,7 @@ $users = file_get_json($file);
 function showUserPage($user) {
 
 $id = $_GET['id'];
-//$classes = implode(", ", $user->classes);
+$classes = implode(", ", $user->classes);
 
 //heredoc, last line MUST be completely on the left
 echo <<<HTML
@@ -28,11 +28,9 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light" style="text-align: left;">
         <h3>$user->name</h3>
-        <h3>$name</h3>
         <div>
             <strong>Type</strong>
             <span>$user->type</span>
-            <span>$type</span>
         </div>
         <div>
             <strong>Email</strong>
@@ -40,7 +38,7 @@ echo <<<HTML
         </div>
         <div>
             <strong>Classes</strong>
-            <span>$user->classes</span>
+            <span>$classes</span>
         </div>
     </div>
 </div>
@@ -48,7 +46,7 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>Edit User</h3>
-        <form method="post" action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=updated">
+        <form method="post"><!-- action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=updated" -->
             <div class="form-control">
                 <label class="form-label">Name</label>
                 <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name" name="formName">
@@ -63,7 +61,7 @@ echo <<<HTML
             </div>
             <div class="form-control">
                 <label class="form-label">Classes</label>
-                <input type="text" class="form-input" value="$user->classes" placeholder="Enter User Classes" name="formClass">
+                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes" name="formClass">
             </div>
             <div class="form-control">
                 <input type="submit" class="form-button form-control" value="Save Changes">
@@ -77,6 +75,19 @@ HTML;
 }
 
 
+
+
+// I completed Part 1 but at least wanted to attempt Part 2.
+// I tried using the form action to add "action=updated" to the URL, which would then cue the if statement that pulls all of the values from the form inputs and echos them out.
+// After trying that, I got a Warning error saying there were arguments with the implode on line 15.
+// I messed around the the $classes implode and the $numbers explode for a bit before deciding to just hide those variables and move forward with the other variables.
+// I then tried using the file_put_contents to put the submitted form content into the JSON.
+// After a few hours of messing with all this, I decided to call it good. I think I'll pick it up much better after being walked through it, this is tought stuff to piece together!
+
+
+
+
+/*
 if ($_GET['action'] == "updated") {
     // find and use values of input fields
     $name = $_POST['formName'];
@@ -108,11 +119,12 @@ if ($_GET['action'] == "updated") {
         echo $numbers;
     }
 
-    file_put_contents($file, json_encode($users));
-}
+    file_put_contents($file, [$name,$type,$email]);
+}*/
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
