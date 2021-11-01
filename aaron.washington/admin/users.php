@@ -83,7 +83,7 @@ HTML;
 // After trying that, I got a Warning error saying there were arguments with the implode on line 15.
 // I messed around the the $classes implode and the $numbers explode for a bit before deciding to just hide those variables and move forward with the other variables.
 // I then tried using the file_put_contents to put the submitted form content into the JSON.
-// After a few hours of messing with all this, I decided to call it good. I think I'll pick it up much better after being walked through it, this is tought stuff to piece together!
+// After a few hours of messing with all this, I decided to call it good. I think I'll pick it up much better after being walked through it, this is tough stuff for me to piece together!
 
 
 
