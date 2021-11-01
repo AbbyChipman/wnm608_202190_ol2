@@ -11,6 +11,7 @@ $users = file_get_json("../data/users.json");
 
 function showUserPage($user) {
 
+$id = $_GET['id'];
 $classes = implode(", ", $user->classes);
 
 //heredoc, last line MUST be completely on the left
@@ -44,22 +45,22 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>Edit User</h3>
-        <form>
+        <form method="post" action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=edit">
             <div class="form-control">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name">
+                <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name" name="formName">
             </div>
             <div class="form-control">
                 <label class="form-label">Type</label>
-                <input type="text" class="form-input" value="$user->type" placeholder="Enter User Type">
+                <input type="text" class="form-input" value="$user->type" placeholder="Enter User Type" name="formType">
             </div>
             <div class="form-control">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-input" value="$user->email" placeholder="Enter User Email">
+                <input type="email" class="form-input" value="$user->email" placeholder="Enter User Email" name="formEmail">
             </div>
             <div class="form-control">
                 <label class="form-label">Classes</label>
-                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes">
+                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes" name="formClass">
             </div>
             <div class="form-control">
                 <input type="submit" class="form-button form-control" value="Save Changes">
@@ -70,6 +71,39 @@ echo <<<HTML
 
 </div>
 HTML;
+}
+
+
+if ($_GET['action'] == "edit") {
+    // collect value of input field
+    $name = $_POST['formName'];
+    $type = $_POST['formType'];
+    $email = $_POST['formEmail'];
+    $class = $_POST['formClass'];
+
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+
+    if (empty($type)) {
+        echo "No type listed";
+    } else {
+        echo $type;
+    }
+
+    if (empty($email)) {
+        echo "Need an email";
+    } else {
+        echo $email;
+    }
+
+    if (empty($class)) {
+        echo "No classes listed";
+    } else {
+        echo $class;
+    }
 }
 
 
