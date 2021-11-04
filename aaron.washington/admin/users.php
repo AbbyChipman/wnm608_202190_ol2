@@ -43,6 +43,10 @@ if (isset($_GET['action'])) {
             header("location:{$_SERVER['PHP_SELF']}?id=$id");
             break;
         case "delete":
+            array_splice($users,$_GET['id'],1);
+            file_put_contents($filename, json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}");
+            break;
             break;
     }
 }
