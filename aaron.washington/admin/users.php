@@ -112,12 +112,13 @@ $output = $id == "new" ? $form :
     ";
 
 
+$delete = $id == "new" ? : "<a href='{$_SESSION['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+
 
 echo <<<HTML
-<nav class="nav nav-crumbs">
-    <ul>
-        <li><a href="admin/users.php">Back</a></li>
-    </ul>
+<nav class="display-flex">
+    <div class="flex-stretch"><a href="{$_SESSION['PHP_SELF']}">Back</a></div>
+    <div class="flex-none">$delete</div>
 </nav>
 $output
 HTML;
