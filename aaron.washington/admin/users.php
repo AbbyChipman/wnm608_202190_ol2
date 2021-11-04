@@ -32,9 +32,11 @@ if (isset($_GET['action'])) {
 function showUserPage($user) {
 
 $id = $_GET['id'];
+// if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
+$addoredit = $id == "new" ? "Add" : "Edit";  
 $classes = implode(", ", $user->classes);
 
-//heredoc, last line MUST be completely on the left
+//heredoc, last line HTML; must be completely on the left
 echo <<<HTML
 <nav class="nav nav-crumbs">
     <ul>
@@ -66,6 +68,7 @@ echo <<<HTML
     <div class="card-light">
         <h3>Edit User</h3>
         <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=update">
+            <h2>$addoredit User</h2>
             <div class="form-control">
                 <label class="form-label" for="user-name">Name</label>
                 <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
