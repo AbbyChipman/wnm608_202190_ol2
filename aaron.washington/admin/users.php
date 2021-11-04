@@ -19,6 +19,7 @@ if (isset($_GET['action'])) {
             $users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
 
             file_put_contents($filename, json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
         case "create":
             break;
