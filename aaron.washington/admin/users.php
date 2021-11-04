@@ -66,9 +66,8 @@ echo <<<HTML
 
 <div class="col-xs-6">
     <div class="card-light">
-        <h3>Edit User</h3>
+        <h3>$addoredit User</h3>
         <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=update">
-            <h2>$addoredit User</h2>
             <div class="form-control">
                 <label class="form-label" for="user-name">Name</label>
                 <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
@@ -97,43 +96,6 @@ HTML;
 }
 
 
-
-/*
-if ($_GET['action'] == "updated") {
-    // find and use values of input fields
-    $name = $_POST['formName'];
-    $type = $_POST['formType'];
-    $email = $_POST['formEmail'];
-    $numbers = explode(",", $_POST['formClass']);
-
-    if (empty($name)) {
-        echo "Name is empty";
-    } else {
-        echo $name;
-    }
-
-    if (empty($type)) {
-        echo "No type listed";
-    } else {
-        echo $type;
-    }
-
-    if (empty($email)) {
-        echo "Need an email";
-    } else {
-        echo $email;
-    }
-
-    if (empty($numbers)) {
-        echo "No classes listed";
-    } else {
-        echo $numbers;
-    }
-
-    file_put_contents($file, [$name,$type,$email]);
-}*/
-
-
 ?>
 
 
@@ -156,7 +118,8 @@ if ($_GET['action'] == "updated") {
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">
                 <ul>
-                    <li><a href="admin/users.php">User List</a></li>
+                    <li><a href="<?= $_SERVER['PHP_SELF'] ?>">User List</a></li>
+                    <li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New User</a></li>
                 </ul>
             </nav>
         </div>
