@@ -6,6 +6,14 @@ $filename = "../data/users.json";
 $users = file_get_json($filename);
 
 
+$empty_user = (object) [
+    "name" => "",
+    "type" => "",
+    "email" => "",
+    "classes" => [],
+];
+
+
 // file_put_contents, json_encode, explode function, $_POST
 // CRUD, Create Read Update Delete
 
@@ -130,7 +138,7 @@ HTML;
             <?php
 
             if(isset($_GET['id'])) {
-                showUserPage($users[$_GET['id']]);
+                showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
             } else {
 
             ?>
