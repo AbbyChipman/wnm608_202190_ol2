@@ -10,16 +10,21 @@ $users = file_get_json($filename);
 // CRUD, Create Read Update Delete
 
 
-print_p([$_GET,$_POST]);
+if (isset($_GET['action'])) {
+    switch($_GET['action']) {
+        case "update":
+            $users[$_GET['id']]->name = $_POST['user-name'];
+            $users[$_GET['id']]->type = $_POST['user-type'];
+            $users[$_GET['id']]->email = $_POST['user-email'];
+            $users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
 
-
-if(isset($_POST['user-name'])) {
-    $users[$_GET['id']]->name = $_POST['user-name'];
-    $users[$_GET['id']]->type = $_POST['user-type'];
-    $users[$_GET['id']]->email = $_POST['user-email'];
-    $users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
-
-    file_put_contents($filename, json_encode($users));
+            file_put_contents($filename, json_encode($users));
+            break;
+        case "create":
+            break;
+        case "delete":
+            break;
+    }
 }
 
 
@@ -59,7 +64,7 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>Edit User</h3>
-        <form method="post" action="">
+        <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=update">
             <div class="form-control">
                 <label class="form-label" for="user-name">Name</label>
                 <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
