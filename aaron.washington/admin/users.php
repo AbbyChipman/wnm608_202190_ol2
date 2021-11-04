@@ -47,7 +47,6 @@ if (isset($_GET['action'])) {
             file_put_contents($filename, json_encode($users));
             header("location:{$_SERVER['PHP_SELF']}");
             break;
-            break;
     }
 }
 
