@@ -57,9 +57,7 @@ $createorupdate = $id == "new" ? "create" : "update";
 $classes = implode(", ", $user->classes);
 
 //heredoc, last line HTML; must be completely on the left
-$form = <<<HTML
-<div class="grid gap">
-
+$display = <<<HTML
 <div class="col-xs-6">
     <div class="card-light" style="text-align: left;">
         <h3>$user->name</h3>
@@ -77,7 +75,10 @@ $form = <<<HTML
         </div>
     </div>
 </div>
+HTML;
 
+
+$form = <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>$addoredit User</h3>
@@ -104,20 +105,28 @@ $form = <<<HTML
         </form>
     </div>
 </div>
-
-</div>
 HTML;
-}
 
 
+$output = $id == "new" ? $form : 
+    "
+    <div class='grid-gap'>
+        <div class='col-xs-12 col-md-7'>$display</div>
+        <div class='col-xs-12 col-md-5'>$form</div>
+    </div>
+    ";
+
+
+    
 echo <<<HTML
 <nav class="nav nav-crumbs">
     <ul>
         <li><a href="admin/users.php">Back</a></li>
     </ul>
 </nav>
+$output
 HTML;
-}
+
 
 
 ?>
