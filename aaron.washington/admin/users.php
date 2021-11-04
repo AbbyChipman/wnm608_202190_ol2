@@ -30,6 +30,17 @@ if (isset($_GET['action'])) {
             header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
         case "create":
+            $empty_user->name = $_POST['user-name'];
+            $empty_user->type = $_POST['user-type'];
+            $empty_user->email = $_POST['user-email'];
+            $empty_user->classes = explode(", ", $_POST['user-classes']);
+
+            $id = count($users);
+
+            $users[] = $empty_user;
+
+            file_put_contents($filename, json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
             break;
         case "delete":
             break;
@@ -42,6 +53,7 @@ function showUserPage($user) {
 $id = $_GET['id'];
 // if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
 $addoredit = $id == "new" ? "Add" : "Edit";  
+$createorupdate = $id == "new" ? "create" : "update";
 $classes = implode(", ", $user->classes);
 
 //heredoc, last line HTML; must be completely on the left
@@ -75,7 +87,7 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>$addoredit User</h3>
-        <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=update">
+        <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
             <div class="form-control">
                 <label class="form-label" for="user-name">Name</label>
                 <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
