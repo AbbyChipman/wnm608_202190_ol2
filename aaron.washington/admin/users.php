@@ -117,7 +117,7 @@ $output = $id == "new" ? $form :
     ";
 
 
-    
+
 echo <<<HTML
 <nav class="nav nav-crumbs">
     <ul>
@@ -126,6 +126,7 @@ echo <<<HTML
 </nav>
 $output
 HTML;
+}
 
 
 
