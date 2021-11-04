@@ -57,13 +57,7 @@ $createorupdate = $id == "new" ? "create" : "update";
 $classes = implode(", ", $user->classes);
 
 //heredoc, last line HTML; must be completely on the left
-echo <<<HTML
-<nav class="nav nav-crumbs">
-    <ul>
-        <li><a href="admin/users.php">Back</a></li>
-    </ul>
-</nav>
-
+$form = <<<HTML
 <div class="grid gap">
 
 <div class="col-xs-6">
@@ -112,6 +106,16 @@ echo <<<HTML
 </div>
 
 </div>
+HTML;
+}
+
+
+echo <<<HTML
+<nav class="nav nav-crumbs">
+    <ul>
+        <li><a href="admin/users.php">Back</a></li>
+    </ul>
+</nav>
 HTML;
 }
 
