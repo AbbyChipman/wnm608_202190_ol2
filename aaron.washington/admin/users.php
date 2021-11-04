@@ -58,59 +58,54 @@ $classes = implode(", ", $user->classes);
 
 //heredoc, last line HTML; must be completely on the left
 $display = <<<HTML
-<div class="col-xs-6">
-    <div class="card-light" style="text-align: left;">
-        <h3>$user->name</h3>
-        <div>
-            <strong>Type</strong>
-            <span>$user->type</span>
-        </div>
-        <div>
-            <strong>Email</strong>
-            <span>$user->email</span>
-        </div>
-        <div>
-            <strong>Classes</strong>
-            <span>$classes</span>
-        </div>
+<div class="card-light" style="text-align: left;">
+    <h3>$user->name</h3>
+    <div>
+        <strong>Type</strong>
+        <span>$user->type</span>
+    </div>
+    <div>
+        <strong>Email</strong>
+        <span>$user->email</span>
+    </div>
+    <div>
+        <strong>Classes</strong>
+        <span>$classes</span>
     </div>
 </div>
 HTML;
 
 
 $form = <<<HTML
-<div class="col-xs-6">
-    <div class="card-light">
-        <h3>$addoredit User</h3>
-        <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
-            <div class="form-control">
-                <label class="form-label" for="user-name">Name</label>
-                <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
-            </div>
-            <div class="form-control">
-                <label class="form-label" for="user-type">Type</label>
-                <input type="text" class="form-input" value="$user->type" name="user-type" id="user-type" placeholder="Enter User Type">
-            </div>
-            <div class="form-control">
-                <label class="form-label" for="user-email">Email</label>
-                <input type="email" class="form-input" value="$user->email" name="user-email" id="user-email" placeholder="Enter User Email">
-            </div>
-            <div class="form-control">
-                <label class="form-label" for="user-classes">Classes</label>
-                <input type="text" class="form-input" value="$classes" name="user-classes" id="user-classes" placeholder="Enter User Classes, comma separated">
-            </div>
-            <div class="form-control">
-                <input type="submit" class="form-button form-control" value="Save Changes">
-            </div>
-        </form>
-    </div>
+<div class="card-light">
+    <h3>$addoredit User</h3>
+    <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+        <div class="form-control">
+            <label class="form-label" for="user-name">Name</label>
+            <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="user-type">Type</label>
+            <input type="text" class="form-input" value="$user->type" name="user-type" id="user-type" placeholder="Enter User Type">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="user-email">Email</label>
+            <input type="email" class="form-input" value="$user->email" name="user-email" id="user-email" placeholder="Enter User Email">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="user-classes">Classes</label>
+            <input type="text" class="form-input" value="$classes" name="user-classes" id="user-classes" placeholder="Enter User Classes, comma separated">
+        </div>
+        <div class="form-control">
+            <input type="submit" class="form-button form-control" value="Save Changes">
+        </div>
+    </form>
 </div>
 HTML;
 
 
 $output = $id == "new" ? $form : 
-    "
-    <div class='grid-gap'>
+    "<div class='grid gap'>
         <div class='col-xs-12 col-md-7'>$display</div>
         <div class='col-xs-12 col-md-5'>$form</div>
     </div>
