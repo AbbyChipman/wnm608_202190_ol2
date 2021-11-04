@@ -46,22 +46,22 @@ echo <<<HTML
 <div class="col-xs-6">
     <div class="card-light">
         <h3>Edit User</h3>
-        <form method="post"><!-- action="/aau/wnm608_202190_ol2/aaron.washington/admin/users.php?id=$id?action=updated" -->
+        <form method="post" action="">
             <div class="form-control">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-input" value="$user->name" placeholder="Enter User Name" name="formName">
+                <label class="form-label" for="user-name">Name</label>
+                <input type="text" class="form-input" value="$user->name" name="user-name" id="user-name" placeholder="Enter User Name">
             </div>
             <div class="form-control">
-                <label class="form-label">Type</label>
-                <input type="text" class="form-input" value="$user->type" placeholder="Enter User Type" name="formType">
+                <label class="form-label" for="user-type">Type</label>
+                <input type="text" class="form-input" value="$user->type" name="user-type" id="user-type" placeholder="Enter User Type">
             </div>
             <div class="form-control">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-input" value="$user->email" placeholder="Enter User Email" name="formEmail">
+                <label class="form-label" for="user-email">Email</label>
+                <input type="email" class="form-input" value="$user->email" name="user-email" id="user-email" placeholder="Enter User Email">
             </div>
             <div class="form-control">
-                <label class="form-label">Classes</label>
-                <input type="text" class="form-input" value="$classes" placeholder="Enter User Classes" name="formClass">
+                <label class="form-label" for="user-classes">Classes</label>
+                <input type="text" class="form-input" value="$classes" name="user-classes" id="user-classes" placeholder="Enter User Classes, comma separated">
             </div>
             <div class="form-control">
                 <input type="submit" class="form-button form-control" value="Save Changes">
@@ -73,18 +73,6 @@ echo <<<HTML
 </div>
 HTML;
 }
-
-
-
-
-// I completed Part 1 but at least wanted to attempt Part 2.
-// First I dug through PHP documentation site and the W3schools site to find those four things the teacher in the video said to look for.
-// Once I learned a bit about these four commands/functions, I tried using the form action to add "action=updated" to the URL, which would then cue the if statement that pulls all of the values from the form inputs and echos them out.
-// After trying that, I got a Warning error saying there were arguments with the implode on line 15.
-// I messed around the the $classes implode and the $numbers explode for a bit before deciding to just hide those variables and move forward with the other variables.
-// I then tried using the file_put_contents to put the submitted form content into the JSON.
-// After a few hours of messing with all this, I decided to call it good. I think I'll pick it up much better after being walked through it, this is tough stuff for me to piece together!
-
 
 
 
