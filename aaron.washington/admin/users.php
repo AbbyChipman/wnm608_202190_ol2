@@ -10,6 +10,17 @@ $users = file_get_json($file);
 // CRUD, Create Read Update Delete
 
 
+print_p([$_GET,$_POST]);
+
+
+if(isset($_POST['user-name'])) {
+    $users[$_GET['id']]->name = $_POST['user-name'];
+    $users[$_GET['id']]->type = $_POST['user-type'];
+    $users[$_GET['id']]->email = $_POST['user-email'];
+    $users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
+}
+
+
 function showUserPage($user) {
 
 $id = $_GET['id'];
