@@ -208,7 +208,7 @@
 
 .content {
   grid-area: content;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .footer {

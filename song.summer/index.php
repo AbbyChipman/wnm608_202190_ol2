@@ -99,6 +99,7 @@
 						</div>
 					</article>
 				</section>
+				<ul class="table_of"><a href="active_wear.php">More Products</a></ul>
 		</article>
 
 
