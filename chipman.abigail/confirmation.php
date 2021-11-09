@@ -26,9 +26,28 @@
 
     <div class="container">
         <div class="card soft">
-            <p>When an order is completed, this is the page the user will be brought to. click the logo below to go back to the Home page.</p>
             <div class="grid gap">
-                <div class="col-xs-12 col-md-4"></div>
+                <div class="col-xs-12 col-md-3"></div>
+                <div class="col-xs-12 col-md-6">
+                    <h2>Thank you for your order!</h2>
+                    <p>You will receive an email confirmation of your order at customer@email.com</p>
+                    <p>Want text updates about your order? Enter your phone number below:</p>
+                </div>
+                <div class="col-xs-12 col-md-3"></div>
+
+                <div class="col-xs-12 col-md-3"></div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="form-control">
+                    <input type="number" class="form-input id="text-update" placeholder="123-456-8910">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="form-control"><button type="button" class="form-button">Submit</button></div>
+                </div>
+                <div class="col-xs-12 col-md-3"></div>
+            </div>
+            <div class="grid gap">
+            <div class="col-xs-12 col-md-4"></div>
                 <div class="col-xs-12 col-md-4">
                 <a href="index.php"><img src="img/logoColor.png" alt="AbbyDazzled Logo"></div></a>
                 <div class="col-xs-12 col-md-4"></div>

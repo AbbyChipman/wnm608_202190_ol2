@@ -696,7 +696,7 @@
 
         <div class="card soft">    
             <h3 id="controls">Form Controls</h3>
-                <form>
+                <form class="form">
                     <div class="form-control display-flex flex-align-center">
                         <div class="flex-none">
                             <label class="form-label">Text Label</label>
@@ -731,83 +731,131 @@
         </div>
 
         <div class="card soft">
-            <h3 id="example-form">Example Form</h3>
-            <div class="grid">
-                <div class="col-xs-12 col-md-4">
-                    <div class="form-control">
-                        <label class="form-label">First Name</label>
-                        <input type="text" placeholder="First Name" class="form-input">
+            <h3 id="address-form">Address Form</h3>
+            <form action="" class="form">
+                <div class="grid">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-control">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" placeholder="First Name" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control">
+                            <label for="initial" class="form-label">Middle Initial</label>
+                            <input type="text" placeholder="Middle Initial" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-control">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" placeholder="Last Name" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control">
+                            <label for="suffix" class="form-label">Suffix</label>
+                            <input type="text" placeholder="Suffix" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-control">
+                            <label for="address-1" class="form-label">Street Address</label>
+                            <input type="text" placeholder="Street Address" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-control">
+                            <label for="address-2" class="form-label">Address Line #2</label>
+                            <input type="text" placeholder="Address Line #2" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <div class="form-control">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" placeholder="City" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+                        <div class="form-control">
+                            <label for="state" class="form-label">ST</label>
+                            <input type="text" placeholder="ST" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs- col-md-5">
+                        <div class="form-control">
+                            <label for="zip" class="form-label">ZIP</label>
+                            <input type="number" placeholder="ZIP" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-control">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="number" placeholder="Phone" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-control">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" placeholder="email" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7"></div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control"><input type="button" class="form-button-light" value="reset"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-1"></div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control"><input type="button" class="form-button" value="Submit"></div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="form-control">
-                        <label class="form-label">Middle Initial</label>
-                        <input type="text" placeholder="Middle Initial" class="form-input">
+            </form>
+        </div>
+
+        <div class="card soft">
+            <h3 id="credit-card">Credit Card</h3>
+            <form action="" class="form">
+                <div class="grid">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-control">
+                            <label for="cc-name" class="form-label">Name (as it appears on card</label>
+                            <input type="text" placeholder="Name" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-control">
+                            <label for="cc-number" class="form-label">Credit Card Number</label>
+                            <input type="text" placeholder="#### #### #### ####" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <div class="form-control">
+                            <label for="cc-exp" class="form-label">Expiration (MM/YYYY)</label>
+                            <input type="text" placeholder="Exp (MM/YYYY)" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <div class="form-control">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" placeholder="CVV" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-control">
+                            <label for="cc-zip" class="form-label">ZIP</label>
+                            <input type="number" placeholder="ZIP" class="form-input">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7"></div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control"><input type="button" class="form-button-light" value="reset"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-1"></div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="form-control"><input type="button" class="form-button" value="Submit"></div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="form-control">
-                        <label class="form-label">Last Name</label>
-                        <input type="text" placeholder="Last Name" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="form-control">
-                        <label class="form-label">Suffix</label>
-                        <input type="text" placeholder="Suffix" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-12">
-                    <div class="form-control">
-                        <label class="form-label">Street Address</label>
-                        <input type="text" placeholder="Street Address" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-12">
-                    <div class="form-control">
-                        <label class="form-label">Address Line #2</label>
-                        <input type="text" placeholder="Address Line #2" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-5">
-                    <div class="form-control">
-                        <label class="form-label">City</label>
-                        <input type="text" placeholder="City" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-2">
-                    <div class="form-control">
-                        <label class="form-label">ST</label>
-                        <input type="text" placeholder="ST" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs- col-md-5">
-                    <div class="form-control">
-                        <label class="form-label">ZIP</label>
-                        <input type="number" placeholder="ZIP" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="form-control">
-                        <label class="form-label">Phone</label>
-                        <input type="number" placeholder="Phone" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="form-control">
-                        <label class="form-label">Email</label>
-                        <input type="email" placeholder="email" class="form-input">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-7"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="form-control"><input type="button" class="form-button-light" value="reset"></div>
-                </div>
-                <div class="col-xs-12 col-md-1"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="form-control"><input type="button" class="form-button" value="Submit"></div>
-                </div>
-            </div>
+            </form>
         </div>
 
         <div class="card soft">
@@ -947,6 +995,7 @@
             </div>
         </div>
 
+        <div class="card sof">
             <h3>Product Grid</h3>
             <div class="grid gap">
                 <div class="col-xs-12 col-md-3">
@@ -990,6 +1039,24 @@
                     </figure>
                 </div>
             </div>
+        </div>
+
+        <div class="card soft">
+            <h3>Product Horizontal</h3>
+                <div class="grid gap">
+                    <div class="col-xs-12 col-md-2">
+                        <img class="checkout-image" src="../img/logoColorNav.png" alt="AbbyDazzled Logo">
+                    </div>
+                    <div class="col-xs-12 col-md-2"></div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="checkout-title">Notebook - 4 in. by 6 in.</div>
+                    </div>
+                    <div class="col-xs-12 col-md-2"></div>
+                    <div class="col-xs-12 col-md-2">
+                        <div class="checkout-price">$9.99</div>
+                    </div>
+                </div>
+        </div>
 
         <div class="card soft">
         <h3>Product Overlay</h3>

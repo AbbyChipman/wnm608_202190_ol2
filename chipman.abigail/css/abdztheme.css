@@ -166,6 +166,23 @@ hr {
   text-decoration: none;
 }
 
+.checkout-image {
+  background-color: var(--color-main-light);
+  border-radius: 0.5em;
+}
+
+.checkout-title {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--color-secondary-medium);
+}
+
+.checkout-price {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
 .product-overlay {
   border-radius: 0.5em;
   position: relative;
@@ -291,7 +308,7 @@ hr {
   padding: 0.5em 0.5em;
 }
 .form-button-light:hover {
-  color: var(--color-main-light);
+  color: var(--color-main-dark);
 }
 
 .hotdog {
