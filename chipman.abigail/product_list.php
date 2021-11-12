@@ -31,74 +31,26 @@
                 </ul>
             </div>
             
-            <div class="grid gap">
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=1">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=2">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=3">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=4">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="grid gap">
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=5">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=6">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=7">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=8">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="grid gap">
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=9">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=10">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=11">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <a href="product_item.php?id=12">
-                    <?php include "parts/quickview.php" ?>
-                    </a>
-                </div>
-            </div>
+           
+
+            <?php
+            
+            include_once "lib/php/functions.php";
+            include_once "parts/templates.php";
+
+            $result = makeQuery(
+                makeConn(), 
+                "
+                SELECT * 
+                FROM `products`
+                ORDER by `date_create` DESC
+                LIMIT 12
+                "
+            );
+
+            echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+
+            ?>
         </div>
     </div>
 </body>

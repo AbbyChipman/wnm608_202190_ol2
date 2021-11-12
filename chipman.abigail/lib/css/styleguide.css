@@ -98,6 +98,10 @@ a:hover {
   justify-content: right;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 /* SMALL CLASSES */
 
 .media-image {
@@ -352,6 +356,11 @@ a:hover {
 .figure figcaption {
   color: var(--color-secondary-dark);
   padding: 1em;
+}
+
+.product.figure img {
+  height: 100%;
+  object-fit: contain;
 }
 
 /* FORM CLASSES */

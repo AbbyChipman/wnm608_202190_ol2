@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include "parts/meta.php" ?>
+<?php include "parts/meta.php";
+include_once "lib/php/functions.php";
 
+$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$images = explode(",", $product->images_other);
+
+$image_elements = array_reduce($images,function($r,$o){
+    return $r."<img src='lib/img/$o'>";
+});
+
+?>
+
+<script src="js/product_thumbs.js"></script>
     <title>Product # <?= $_GET['id'] ?></title>
 </head>
 <body>
@@ -11,12 +23,11 @@
 
     <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
         <div class="container">
-            <div class="grid">
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4">
+            <div class="display-flex">
+                <div class="flex-stretch"></div>
+                <div class="flex-none">
                     <div class="card section rainbow">
-                        <h2>Product # <?= $_GET['id'] ?></h2>
+                        <h2><?= $product->title?></h2>
                     </div>
                 </div>
             </div>
@@ -30,7 +41,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="product_list.php">Products</a></li>
-                    <li><a href="#">Product #<?= $_GET["id"]?></a></li>
+                    <li><a href="#"><?= $product->title ?></a></li>
                 </ul>
             </div>
 
