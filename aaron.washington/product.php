@@ -2,7 +2,7 @@
 
 include_once "lib/php/functions.php";
 
-$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id']);
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
 print_p($product);
 
@@ -36,13 +36,13 @@ print_p($product);
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
-                <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                     alt="Premium Tshirt &ndash; Mens"
-                     title="Premium Tshirt &ndash; Mens" />
+                <img src="img/$product->images"
+                     alt="$product->name &ndash; $product->category"
+                     title="$product->name &ndash; $product->category" />
             </div>
             <div class="col-xs-6 product-text">
-                <h3>Premium T-shirt &ndash; Mens</h3>
-                <h4><b>&dollar;24.99</b></h4>
+                <h3><?= $product->name ?></h3>
+                <h4><b>&dollar;<?= $product->price ?></b></h4>
                 <p>
                     Product Description copy goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Mauris non interdum erat. Quisque ut euismod lorem. Aliquam ac condimentum dui. 
