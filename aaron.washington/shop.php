@@ -4,7 +4,16 @@ include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
 // Call mySQL database
-$shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$category = $product->category;
+
+function productFilter () {
+    if ($category != $_GET['category']) {
+        
+    }
+}
+
 */
 
 ?>
@@ -48,11 +57,11 @@ $shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])
             <!--<div class="flex-none">
                 <p>Filter By&colon;&nbsp;<div class="form-select">
                     <select style="padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
-                        <option><a href="shop.php?category=Everything">Everything</a></option>
-                        <option><a href="shop.php?category=Men">Men</a></option>
-                        <option><a href="shop.php?category=Women">Women</a></option>
-                        <option><a href="shop.php?category=Teen">Teen</a></option>
-                        <option><a href="shop.php?category=Kids">Kids</a></option>
+                        <option><a href="?category=Everything">Everything</a></option>
+                        <option><a href="?category=Men">Men</a></option>
+                        <option><a href="?category=Women">Women</a></option>
+                        <option><a href="?category=Teen">Teen</a></option>
+                        <option><a href="?category=Kids">Kids</a></option>
                     </select>
                 </div></p>
                 
