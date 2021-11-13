@@ -32,7 +32,7 @@
                     <p>You will receive an email once your order is shipped.</p>
                 </div>
                 <!-- *** BUTTONS *** -->
-               <a href="shop.php?category=Everything"><button class="dark">Back to Store&nbsp;&rsaquo;</button></a>                   
+               <a href="shop.php?category=Everything"><button class="dark">Continue Shopping&nbsp;&rsaquo;</button></a>                   
             </div>
             <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
                 <div style="width: 100%; visibility: hidden;"></div>
