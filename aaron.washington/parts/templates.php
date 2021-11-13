@@ -6,7 +6,7 @@ function productListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 <!-- <a href="product.php?id=$o->id&category=$o->category&type=$o->type"> -->
-    <a href="product.php?id=$o->id&category=$o->category">
+    <a href="product.php?id=$o->id&category=$o->category&type=$o->type">
         <figure class="figure product-overlay">
             <img src="img/$o->thumbnail" alt="Placeholder image" />
             <figcaption>
