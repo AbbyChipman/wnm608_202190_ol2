@@ -1,3 +1,13 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+print_p($product);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +25,8 @@
     <nav class="nav nav-crumbs" style="margin-top: 5rem;">
         <ul style="margin-left: 0;">
             <li><a href="index.php">Home</a></li>
-            <li><a href="shop.php?id=Mens"><?= $_GET['id'] ?></a></li>
-            <li class="active"><a href="#"><?= $_GET['prd'] ?></a></li>
+            <li><a href="shop.php"><?= $_GET['category'] ?></a></li>
+            <li class="active"><a href="#"><?= $_GET['type'] ?></a></li>
         </ul>
     </nav>
 
