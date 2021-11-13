@@ -2,9 +2,16 @@
 
 include_once "lib/php/functions.php";
 
+// Call mySQL database
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-print_p($product);
+// Explode out list of images in database
+$images = explode(",", $product->images);
+
+// Use array_reduce to select individual images from the list and produce them as an img src
+$image_elements = array_reduce($images,function($r,$o){
+    return $r."<img src='img/$o' />";
+})
 
 ?>
 
@@ -36,9 +43,14 @@ print_p($product);
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
-                <img src="img/$product->images"
-                     alt="$product->name &ndash; $product->category"
-                     title="$product->name &ndash; $product->category" />
+                <div class="images-main">
+                    <img src="img/$product->images"
+                        alt="$product->name &ndash; $product->category"
+                        title="$product->name &ndash; $product->category" />
+                </div>
+                <div class="images-thumbs">
+                    <?= $image_elements ?>
+                </div>
             </div>
             <div class="col-xs-6 product-text">
                 <h3><?= $product->name ?></h3>
