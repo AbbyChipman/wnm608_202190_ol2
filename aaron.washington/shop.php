@@ -147,8 +147,9 @@
 
     <?php
 
-    include "lib/php/functions.php";
-    include "parts/templates.php";
+    // include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
 
     $result = makeQuery(
         makeConn(),
@@ -161,7 +162,7 @@
     );
 
     // Goes through whole array and reduces it to a single value, total, string, etc.
-    echo array_reduce();
+    echo array_reduce($result,'productListTemplate');
 
     ?>
 
