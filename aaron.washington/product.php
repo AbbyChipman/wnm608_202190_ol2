@@ -44,7 +44,7 @@ $image_elements = array_reduce($images,function($r,$o){
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
                 <div class="images-main">
-                    <img src="img/$product->images"
+                    <img src="img/<?=$product->images?>"
                         alt="$product->name &ndash; $product->category"
                         title="$product->name &ndash; $product->category" />
                 </div>
