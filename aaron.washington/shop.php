@@ -37,14 +37,14 @@ $shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])
 
     <!-- *** CRUMB NAV *** -->
     <div class="container">
-        <div class="display-flex">
+        <!--<div class="display-flex">-->
             <nav class="nav nav-crumbs flex-stretch">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
                 </ul>
             </nav>
-            <div class="flex-none">
+            <!--<div class="flex-none">
                 <p>Filter By&colon;&nbsp;<div class="form-select">
                     <select style="padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
                         <option><a href="shop.php?category=Everything">Everything</a></option>
@@ -56,7 +56,7 @@ $shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])
                 </div></p>
                 
             </div>
-        </div>
+        </div>-->
     </div>
 
     <!-- *** PRODUCT LIST *** -->

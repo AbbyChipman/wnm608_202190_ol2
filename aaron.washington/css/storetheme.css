@@ -114,6 +114,12 @@ body {
         width: 8rem;
         height: 8rem;
         object-fit: contain;
+        transition: all 0.2s ease;
+    }
+
+    .images-thumbs img:hover {
+        cursor: pointer;
+        opacity: 0.5;
     }
 
 
