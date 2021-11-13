@@ -149,7 +149,7 @@
 
     //Connect to mySQL database info
 
-    $host = "localhost";
+    $host = "1";
     $user = "aaronjw_wnm608";   
     $pass = "1Truth1***";
     $database = "aaronjwash_aau";
@@ -159,10 +159,13 @@
 
     if($conn->connect_errno) die($conn->connect_error);
 
+    // result variable comes from products table
     $result = $conn->query("SELECT * FROM `products`");
 
+    // if there is an error, show it to me
     if($conn->errno) die ($conn->error);
 
+    // row variable fetches object from result variable, then displays price column values
     while($row = $result->fetch_object()) {
         echo "<div>$row->price</div>";
     }
