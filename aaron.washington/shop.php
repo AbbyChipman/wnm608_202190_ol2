@@ -148,10 +148,20 @@
     <?php
 
     include "lib/php/functions.php";
+    include "parts/templates.php";
 
-    $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+    $result = makeQuery(
+        makeConn(),
+        "
+        SELECT *
+        FROM `products`
+        ORDER BY `date_create` DESC
+        LIMIT 12
+        "
+    );
 
-    print_p($result);
+    // Goes through whole array and reduces it to a single value, total, string, etc.
+    echo array_reduce();
 
     ?>
 
