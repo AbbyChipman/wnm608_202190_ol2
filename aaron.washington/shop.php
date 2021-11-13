@@ -6,6 +6,7 @@ include_once "parts/templates.php";
 // Call mySQL database
 $shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 */
+
 ?>
 
 
