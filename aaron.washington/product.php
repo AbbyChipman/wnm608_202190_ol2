@@ -43,7 +43,7 @@ $size_elements = array_reduce($sizes,function($r,$o){
     <nav class="nav nav-crumbs" style="margin-top: 5rem;">
         <ul style="margin-left: 0;">
             <li><a href="index.php">Home</a></li>
-            <li><a href="shop.php"><?= $_GET['category'] ?></a></li>
+            <li><a href="shop.php?category=<?= $_GET['category'] ?>"><?= $_GET['category'] ?></a></li>
             <li class="active"><a href="#"><?= $_GET['type'] ?></a></li>
         </ul>
     </nav>
