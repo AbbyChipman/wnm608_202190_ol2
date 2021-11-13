@@ -6,15 +6,17 @@ include_once "lib/php/functions.php";
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
 // Explode out list of images in database
-$images = explode(",",$product->images);
+$images = explode(",", $product->images);
 
 // Use array_reduce to select individual images from the list and produce them as an img src
 $image_elements = array_reduce($images,function($r,$o){
-    return $r."<img src='img/$o'>";
+    return $r."<img src='img/$o' />";
 });
 
+$image_main = $images[0];
+
 // Explode out size options list for dropdown
-$sizes = explode(",",$product->size);
+$sizes = explode(",", $product->size);
 
 $size_elements = array_reduce($sizes,function($r,$o){
     return $r."<option>$o</option>";
@@ -30,6 +32,8 @@ $size_elements = array_reduce($sizes,function($r,$o){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product &ndash; AWesome Stuff</title>
     <?php include "parts/meta.php"; ?>
+
+    <script src="js/product_thumbs.js"></script>
 </head>
 <body>
 
@@ -51,9 +55,9 @@ $size_elements = array_reduce($sizes,function($r,$o){
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
                 <div class="images-main">
-                    <img src="img/<?=$product->images?>"
-                        alt="<?=$product->name?> &ndash; <?=$product->category?>"
-                        title="<?=$product->name?> &ndash; <?=$product->category?>" />
+                    <img src="img/<?= $image_main ?>"
+                        alt="<?= $product->name ?> &ndash; <?= $product->category ?>"
+                        title="<?= $product->name ?> &ndash; <?= $product->category ?>" />
                 </div>
                 <div class="images-thumbs">
                     <?= $image_elements ?>
