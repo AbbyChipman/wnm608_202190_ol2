@@ -36,135 +36,27 @@
 
     <!-- *** PRODUCT LIST *** -->
     <div class="container">
-        <div class="grid gap">
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt1">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt2">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt3">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt4">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt5">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt6">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt7">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                <a href="product.php?id=Mens&prd=Tshirt8">
-                    <figure class="figure product-overlay">
-                        <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
-                        <figcaption>
-                            <div class="caption-body">
-                                <div>Premium T-Shirt</div>
-                                <div>$24.99</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-        </div>
+        <?php
+
+        // include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
+        include_once "lib/php/functions.php";
+        include_once "parts/templates.php";
+
+        $result = makeQuery(
+            makeConn(),
+            "
+            SELECT *
+            FROM `products`
+            ORDER BY `date_create` DESC
+            LIMIT 12
+            "
+        );
+
+        // Goes through whole array and reduces it to a single value, total, string, etc.
+        echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+
+        ?>
     </div>
-
-
-    <?php
-
-    // include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
-    include_once "lib/php/functions.php";
-    include_once "parts/templates.php";
-
-    $result = makeQuery(
-        makeConn(),
-        "
-        SELECT *
-        FROM `products`
-        ORDER BY `date_create` DESC
-        LIMIT 12
-        "
-    );
-
-    // Goes through whole array and reduces it to a single value, total, string, etc.
-    echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
-
-    ?>
 
     <!-- *** FOOTER *** -->
     <?php include "parts/footer.php"; ?>

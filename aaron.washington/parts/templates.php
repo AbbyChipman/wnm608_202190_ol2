@@ -10,8 +10,8 @@ return $r.<<<HTML
             <img src="img/$o->thumbnail" alt="Placeholder image" />
             <figcaption>
                 <div class="caption-body">
-                    <div>$o->name</div>
-                    <div>&dollar;$o->price</div>
+                    <h4>$o->name</h4>
+                    <p>&dollar;$o->price</p>
                 </div>
             </figcaption>
         </figure>
