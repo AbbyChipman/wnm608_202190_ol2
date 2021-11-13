@@ -150,7 +150,7 @@
     //Connect to mySQL database info
 
     $host = "localhost";
-    $user = "aaronjw_wnm60";   
+    $user = "aaronjw_wnm608";   
     $pass = "1Truth1***";
     $database = "aaronjwash_aau";
 
@@ -158,6 +158,14 @@
     $conn = new mysqli($host,$user,$pass,$database);
 
     if($conn->connect_errno) die($conn->connect_error);
+
+    $result = $conn->query("SELECT * FROM `products`");
+
+    if($conn->errno) die ($conn->error);
+
+    while($row = $result->fetch_object()) {
+        echo "<div>$row->price</div>";
+    }
 
     ?>
 
