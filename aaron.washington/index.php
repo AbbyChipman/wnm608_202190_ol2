@@ -17,7 +17,7 @@
             <div class="hero-text">
                 <h2>MAKING PRICES FALL</h2>
                 <h4>Get 30&percnt; off your entire purchase with code FALLISHERE.</h4>
-                <a href="shop?category=Everything.php"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
+                <a href="shop.php?category=Everything"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
             </div>
             <div class="flex-stretch"></div>
         </div>
