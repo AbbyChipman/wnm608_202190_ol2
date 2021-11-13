@@ -45,16 +45,16 @@ $shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])
                 </ul>
             </nav>
             <div class="flex-none">
-                <p>Filter By&colon;&nbsp;</p>
-                <div class="form-select" style="width: 2rem;">
-                    <select>
-                        <option>Everything</option>
-                        <option>Men</option>
-                        <option>Women</option>
-                        <option>Teen</option>
-                        <option>Kids</option>
+                <p>Filter By&colon;&nbsp;<div class="form-select">
+                    <select style="padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
+                        <option><a href="shop.php?category=Everything">Everything</a></option>
+                        <option><a href="shop.php?category=Men">Men</a></option>
+                        <option><a href="shop.php?category=Women">Women</a></option>
+                        <option><a href="shop.php?category=Teen">Teen</a></option>
+                        <option><a href="shop.php?category=Kids">Kids</a></option>
                     </select>
-                </div>
+                </div></p>
+                
             </div>
         </div>
     </div>
