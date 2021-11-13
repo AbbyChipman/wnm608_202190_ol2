@@ -147,28 +147,11 @@
 
     <?php
 
-    //Connect to mySQL database info
+    include "lib/php/functions.php";
 
-    $host = "custsqlmoo32";
-    $user = "aaronjw_wnm608";   
-    $pass = "1Truth1***";
-    $database = "aaronjwash_aau";
+    $result = makeQuery(makeConn(),"SELECT * FROM `products`");
 
-    // Stands for mySQL Improve
-    $conn = new mysqli($host,$user,$pass,$database);
-
-    if($conn->connect_errno) die($conn->connect_error);
-
-    // result variable comes from products table
-    $result = $conn->query("SELECT * FROM `products` WHERE 1");
-
-    // if there is an error, show it to me
-    if($conn->errno) die ($conn->error);
-
-    // row variable fetches object from result variable, then displays price column values
-    while($row = $result->fetch_object()) {
-        echo "<div>$row->price</div>";
-    }
+    print_p($result);
 
     ?>
 
