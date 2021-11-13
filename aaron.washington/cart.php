@@ -1,3 +1,13 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+// Call mySQL database
+$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +34,10 @@
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+
                 <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
+                    <?= array_reduce($cart,function($r,$o){return $r."<div>$o->name</div>";}) ?>
+                    <!--<div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
                             title="Premium Tshirt &ndash; Mens" />
@@ -33,8 +45,9 @@
                     <div class="flex-stretch" style="padding-left: 2em;">
                         <h3>Premium Tshirt</h3>
                         <h5>&dollar;24.99</h5>
-                    </div>
+                    </div>-->
                 </div>
+
                 <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
