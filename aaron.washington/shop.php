@@ -160,7 +160,7 @@
     if($conn->connect_errno) die($conn->connect_error);
 
     // result variable comes from products table
-    $result = $conn->query("SELECT * FROM `products`");
+    $result = $conn->query("SELECT * FROM `products` WHERE 1");
 
     // if there is an error, show it to me
     if($conn->errno) die ($conn->error);
