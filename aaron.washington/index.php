@@ -17,7 +17,7 @@
             <div class="hero-text">
                 <h2>MAKING PRICES FALL</h2>
                 <h4>Get 30&percnt; off your entire purchase with code FALLISHERE.</h4>
-                <a href="shop.php?id=Shop"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
+                <a href="shop.php"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
             </div>
             <div class="flex-stretch"></div>
         </div>
@@ -35,28 +35,28 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="grid gap">
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?id=Mens">
+                        <a href="shop.php?category=Men">
                             <div class="display-flex flex-align-center card-img card-bg-1">
                                 <h3 class="flex-stretch">Mens</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?id=Womens">
+                        <a href="shop.php?category=Women">
                             <div class="display-flex flex-align-center card-img card-bg-2">
                                 <h3 class="flex-stretch">Womens</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?id=Teen">
+                        <a href="shop.php?category=Teen">
                             <div class="display-flex flex-align-center card-img card-bg-3">
                                 <h3 class="flex-stretch">Teen</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?id=Kids">
+                        <a href="shop.php?category=Kids">
                             <div class="display-flex flex-align-center card-img card-bg-4">
                                 <h3 class="flex-stretch">Kids</h3>
                             </div>

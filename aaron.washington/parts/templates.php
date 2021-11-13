@@ -24,7 +24,7 @@ HTML;
 function cartListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="card-light cart-item form-control display-flex">
-    <div class="flex-none images-thumbs">
+    <div class="flex-none images-cart">
         <img src="img/$o->thumbnail"
             alt="Premium Tshirt &ndash; Mens"
             title="Premium Tshirt &ndash; Mens" />

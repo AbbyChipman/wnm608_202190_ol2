@@ -1,3 +1,14 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+// Call mySQL database
+$shop = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,12 +37,26 @@
 
     <!-- *** CRUMB NAV *** -->
     <div class="container">
-        <nav class="nav nav-crumbs">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#"><?= $_GET['category'] ?></a></li>
-            </ul>
-        </nav>
+        <div class="display-flex">
+            <nav class="nav nav-crumbs flex-stretch">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
+                </ul>
+            </nav>
+            <div class="flex-none">
+                <p>Filter By&semi;&nbsp;</p>
+                <div class="form-select" style="width: 2rem;">
+                    <select>
+                        <option>All Products</option>
+                        <option>Men</option>
+                        <option>Women</option>
+                        <option>Teen</option>
+                        <option>Kids</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- *** PRODUCT LIST *** -->

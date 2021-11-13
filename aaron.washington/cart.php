@@ -35,20 +35,8 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-
-                <div class="card-light cart-item form-control display-flex">
-                    <?= array_reduce($cart,'cartListTemplate') ?>
-                    <!--<div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch" style="padding-left: 2em;">
-                        <h3>Premium Tshirt</h3>
-                        <h5>&dollar;24.99</h5>
-                    </div>-->
-                </div>
-
+                <?= array_reduce($cart,'cartListTemplate') ?>
+                <!--
                 <div class="card-light cart-item form-control display-flex">
                     <div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
@@ -82,6 +70,18 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
                         <h5>&dollar;24.99</h5>
                     </div>
                 </div>
+                <div class="card-light cart-item form-control display-flex">
+                    <div class="flex-none">
+                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
+                            alt="Premium Tshirt &ndash; Mens"
+                            title="Premium Tshirt &ndash; Mens" />
+                    </div>
+                    <div class="flex-stretch" style="padding-left: 2em;">
+                        <h3>Premium Tshirt</h3>
+                        <h5>&dollar;24.99</h5>
+                    </div>
+                </div>
+                -->
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
