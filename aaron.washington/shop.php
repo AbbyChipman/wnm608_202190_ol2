@@ -29,7 +29,7 @@
         <nav class="nav nav-crumbs">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#"><?= $_GET['id'] ?></a></li>
+                <li><a href="#"><?= $_GET['category'] ?></a></li>
             </ul>
         </nav>
     </div>
