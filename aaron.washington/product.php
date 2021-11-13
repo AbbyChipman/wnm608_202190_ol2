@@ -6,7 +6,7 @@ include_once "lib/php/functions.php";
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
 // Explode out list of images in database
-$images = explode(",", $product->images);
+$images = explode(",",$product->images);
 
 // Use array_reduce to select individual images from the list and produce them as an img src
 $image_elements = array_reduce($images,function($r,$o){
@@ -14,7 +14,7 @@ $image_elements = array_reduce($images,function($r,$o){
 });
 
 // Explode out size options list for dropdown
-$sizes = explode(",", $product->size);
+$sizes = explode(",",$product->size);
 
 $size_elements = array_reduce($sizes,function($r,$o){
     return $r."<option>$o</option>";
@@ -51,7 +51,7 @@ $size_elements = array_reduce($sizes,function($r,$o){
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
                 <div class="images-main">
-                    <img src="img/<?=$product->images[0]?>"
+                    <img src="img/<?=$product->images?>"
                         alt="<?=$product->name?> &ndash; <?=$product->category?>"
                         title="<?=$product->name?> &ndash; <?=$product->category?>" />
                 </div>
@@ -74,12 +74,7 @@ $size_elements = array_reduce($sizes,function($r,$o){
                 <h5>Quantity</h5>
                 <div class="form-select form-control" style="width: 6rem;">
                     <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
+                        <?= $product->quantity ?>
                     </select>
                 </div>
                 <br />
