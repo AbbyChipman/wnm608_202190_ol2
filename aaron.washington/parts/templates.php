@@ -20,4 +20,24 @@ return $r.<<<HTML
 HTML;
 }
 
+
+function cartListTemplate($r,$o) {
+return $r.<<<HTML
+<div class="card-light cart-item form-control display-flex">
+    <div class="flex-none images-thumbs">
+        <img src="img/$o->thumbnail"
+            alt="Premium Tshirt &ndash; Mens"
+            title="Premium Tshirt &ndash; Mens" />
+    </div>
+    <div class="flex-stretch" style="padding-left: 2em;">
+        <h3>$o->name</h3>
+        <div>Delete</div>
+    </div>
+    <div class="flex-none">
+        <h5>&dollar;$o->price</h5>
+    </div>
+</div>
+HTML;
+}
+
 ?>

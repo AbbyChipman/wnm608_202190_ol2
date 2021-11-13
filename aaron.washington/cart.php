@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 // Call mySQL database
 $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
@@ -36,7 +37,7 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
 
                 <div class="card-light cart-item form-control display-flex">
-                    <?= array_reduce($cart,function($r,$o){return $r."<div>$o->name</div>";}) ?>
+                    <?= array_reduce($cart,'cartListTemplate') ?>
                     <!--<div class="flex-none">
                         <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
                             alt="Premium Tshirt &ndash; Mens"
