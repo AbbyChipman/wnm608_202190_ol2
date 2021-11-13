@@ -11,7 +11,14 @@ $images = explode(",", $product->images);
 // Use array_reduce to select individual images from the list and produce them as an img src
 $image_elements = array_reduce($images,function($r,$o){
     return $r."<img src='img/$o' />";
-})
+});
+
+// Explode out size options list for dropdown
+$sizes = explode(",", $product->size);
+
+$size_elements = array_reduce($sizes,function($r,$o){
+    return $r."<option>$o</option>";
+});
 
 ?>
 
@@ -44,9 +51,9 @@ $image_elements = array_reduce($images,function($r,$o){
         <div class="grid gap">
             <div class="col-xs-6" style="text-align: center;">
                 <div class="images-main">
-                    <img src="img/<?=$product->images?>"
-                        alt="$product->name &ndash; $product->category"
-                        title="$product->name &ndash; $product->category" />
+                    <img src="img/<?=$product->images[0]?>"
+                        alt="<?=$product->name?> &ndash; <?=$product->category?>"
+                        title="<?=$product->name?> &ndash; <?=$product->category?>" />
                 </div>
                 <div class="images-thumbs">
                     <?= $image_elements ?>
@@ -55,21 +62,12 @@ $image_elements = array_reduce($images,function($r,$o){
             <div class="col-xs-6 product-text">
                 <h3><?= $product->name ?></h3>
                 <h4><b>&dollar;<?= $product->price ?></b></h4>
-                <p>
-                    Product Description copy goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Mauris non interdum erat. Quisque ut euismod lorem. Aliquam ac condimentum dui. 
-                    Nullam purus elit, semper id suscipit non, tincidunt eget justo.
-                </p>
+                <p><?= $product->description ?></p>
                 <br />
                 <h5>Size</h5>
                 <div class="form-select form-control" style="width: 6rem;">
                     <select>
-                        <option>XS</option>
-                        <option>SM</option>
-                        <option>MD</option>
-                        <option>LG</option>
-                        <option>XL</option>
-                        <option>2X</option>
+                        <?= $size_elements ?>
                     </select>
                 </div>
                 <br />
