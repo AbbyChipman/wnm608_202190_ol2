@@ -144,6 +144,23 @@
         </div>
     </div>
 
+
+    <?php
+
+    //Connect to mySQL database info
+
+    $host = "localhost";
+    $user = "aaronjw_wnm60";   
+    $pass = "1Truth1***";
+    $database = "aaronjwash_aau";
+
+    // Stands for mySQL Improve
+    $conn = new mysqli($host,$user,$pass,$database);
+
+    if($conn->connect_errno) die($conn->connect_error);
+
+    ?>
+
     <!-- *** FOOTER *** -->
     <?php include "parts/footer.php"; ?>
 
