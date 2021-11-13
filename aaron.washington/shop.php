@@ -149,7 +149,7 @@
 
     //Connect to mySQL database info
 
-    $host = "1";
+    $host = "custsqlmoo32";
     $user = "aaronjw_wnm608";   
     $pass = "1Truth1***";
     $database = "aaronjwash_aau";
