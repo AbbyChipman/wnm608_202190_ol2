@@ -10,7 +10,7 @@ $images = explode(",",$product->images);
 
 // Use array_reduce to select individual images from the list and produce them as an img src
 $image_elements = array_reduce($images,function($r,$o){
-    return $r."<img src='img/$o' />";
+    return $r."<img src='img/$o'>";
 });
 
 // Explode out size options list for dropdown
@@ -74,7 +74,7 @@ $size_elements = array_reduce($sizes,function($r,$o){
                 <h5>Quantity</h5>
                 <div class="form-select form-control" style="width: 6rem;">
                     <select>
-                        <?= $product->quantity ?>
+                        <option><?= $product->quantity ?></option>
                     </select>
                 </div>
                 <br />
