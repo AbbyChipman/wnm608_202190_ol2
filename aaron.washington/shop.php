@@ -162,7 +162,7 @@
     );
 
     // Goes through whole array and reduces it to a single value, total, string, etc.
-    echo array_reduce($result,'productListTemplate');
+    echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
 
     ?>
 
