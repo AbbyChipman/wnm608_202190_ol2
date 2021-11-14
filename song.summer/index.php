@@ -122,7 +122,7 @@
 		</article>
 	</div>
 
-	<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+	<ul class="more_products"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
 </body>
 
 </html>
