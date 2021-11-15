@@ -9,13 +9,13 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
 $images = explode(",", $product->images_other);
 
 $image_elements = array_reduce($images,function($r,$o){
-    return $r."<img src='lib/img/$o'>";
+    return $r."<img src='img/$o'>";
 });
 
 ?>
 
 <script src="js/product_thumbs.js"></script>
-    <title>Product # <?= $_GET['id'] ?></title>
+    <title><?= $product->title ?></title>
 </head>
 <body>
 

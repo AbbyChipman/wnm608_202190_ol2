@@ -21,18 +21,7 @@
         <div class="card soft">
             <h2>Check out some of our Featured Products!</h2>
             <div class="grid gap">
-                <div class="col-xs-12 col-md-4">
-                    <figure class="figure product-overlay">
-                        <img src="img/logoColor.png" alt="AbbyDazzled Logo">
-                        <figcaption>
-                            <div class="caption-body">
-                                <div class="product-price">$3.99</div>
-                                <div class="product-title">Product Name</div>
-                                <a href="product_item.php?id=3">Learn More</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
+                
                 <div class="col-xs-12 col-md-4">
                     <figure class="figure product-overlay">
                         <img src="img/logoColor.png" alt="AbbyDazzled Logo">

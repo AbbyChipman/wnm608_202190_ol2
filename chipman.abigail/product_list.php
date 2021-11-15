@@ -43,8 +43,7 @@
                 "
                 SELECT * 
                 FROM `products`
-                ORDER by `date_create` DESC
-                LIMIT 12
+                ORDER by `date_create`
                 "
             );
 

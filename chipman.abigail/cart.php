@@ -1,3 +1,12 @@
+<?php 
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+$cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,28 +34,44 @@
 
     <div class="container">
         <div class="card soft">
-        
-            <?php include "parts/cart_prod.php" ?>
-            <?php include "parts/cart_prod.php" ?>
-            <?php include "parts/cart_prod.php" ?>
-
+            <h2>In Your Cart:</h2>
             <div class="grid gap">
-                <div class="col-xs-12 col-md-10"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="checkout-price">$Sub-total</div>
+            <div class="col-xs-12 col-md-7">
+                <?= array_reduce($cart,'cartListTemplate') ?>
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <div class="card soft light">
+                    <div class="card hard display-flex">
+                        <div class="flex-none">
+                            <strong>Sub-Total</strong>
+                        </div>
+                        <div class="flex-stretch"></div>
+                        <div class="flex-none checkout-price">
+                            &dollar;3.50
+                        </div>
+                    </div>
+                    <div class="card hard display-flex">
+                        <div class="flex-none">
+                            <strong>Taxes</strong>
+                        </div>
+                        <div class="flex-stretch"></div>
+                        <div class="flex-none checkout-price">
+                            &dollar;3.50
+                        </div>
+                    </div>
+                    <hr>
+                        <div class="card hard display-flex">
+                            <div class="flex-none">
+                                <strong>Total</strong>
+                            </div>
+                            <div class="flex-stretch"></div>
+                            <div class="flex-none checkout-price">
+                                &dollar;7.00
+                            </div>
+                        </div>
                 </div>
-                <div class="col-xs-12 col-md-10"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="checkout-price">$Shipping</div>
-                </div>
-                <div class="col-xs-12 col-md-10"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="checkout-price">$Taxes</div>
-                </div>
-                <div class="col-xs-12 col-md-10"></div>
-                <div class="col-xs-12 col-md-2">
-                    <div class="checkout-price" style="font-size:2em;">$Total</div>
-                </div>
+            </div>
+
                 <div class="col-xs-12 col-md-6"></div>
                 <div class="col-xs-12 col-md-3">
                     <a href="product_list.php" class="form-button-light">Continue Shopping</a>

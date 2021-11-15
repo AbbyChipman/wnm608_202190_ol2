@@ -6,7 +6,7 @@
     </div>
     <div class="col-xs-12 col-md-4">
         <div class="image-main">
-            <img src="lib/img/<?= $product->image_main ?>" alt="<?= $product->description ?>">
+            <img src="img/<?= $product->image_main ?>" alt="<?= $product->description ?>">
         </div>
     </div>
     <div class="col-xs-12 col-md-5">
@@ -22,7 +22,7 @@
             <div class="col-xs-12 col-md-1"></div>
             <div class="col-xs-12 col-md-6"></div>
             <div class="col-xs-12 col-md-6">
-                <a href="cart.php" class="form-button">Add to Cart</a>
+                <a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add to Cart</a>
             </div>
         </div>
     </div>
