@@ -9,11 +9,9 @@
 
     <?php include "parts/navbar.php" ?>
 
-    <div class="view-window" style="background-image:url(lib/img/glitter-background.jpg);">
-        <div class="container display-block">
-            <h1 class="page-head">Welcome to AbbyDazzled Designs</h1>
-            <h2 class="page-head">There will be more interesting things here soon.<h2>
-            <h2 class="page-head">Promise!</h2>
+    <div class="view-window" style="background-image:url(img/hero.jpg);">
+        <div class="container">
+            <h1 class="page-head" style="vertical-align: text-bottom;">New notebook sets are here!</h1>
         </div>
     </div>
 
@@ -24,7 +22,7 @@
                 
                 <div class="col-xs-12 col-md-4">
                     <figure class="figure product-overlay">
-                        <img src="img/logoColor.png" alt="AbbyDazzled Logo">
+                        <img src="img/res_set_sm.jpg" alt="Resin Notebook, Pen and Bookmark">
                         <figcaption>
                             <div class="caption-body">
                                 <div class="product-price">$3.99</div>
