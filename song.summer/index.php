@@ -51,54 +51,24 @@
 			</div>
 
 			<div class="content cnt23">
-				<section>
-					<article>
-						<div class="image i1"></div>
-						<div class="texts">
-						
-							<h4>TOPS</h4>
-							<h5></h5>
-							<p>
-								Soft touch Layered Short Sleeve SET
-							</p>
-							
-						</div>
-					</article>
-					<article>
-						<div class="image i2"></div>
-						<div class="texts">
-							<h4>BOTTOMS</h4>
-							<h5></h5>
-							<p>
-								NEW Cella Uptension Leggings 
-							</p>
-							
-						</div>
-					</article>
-					<article>
-						<div class="image i3"></div>
-						<div class="texts">
-							<h4>DRESSES</h4>
-							<h5></h5>
-							<p>
-								XELLA™ Intention Slim Fit Zip-up Jacket_Milky Peach
-							</p>
-							
-						</div>
-		
-					</article>
-					<article>
-						<div class="image i4"></div>
-						<div class="texts">
-							<h4>OTHERS</h4>
-							<h5></h5>
-							<p>
-								X-Prizma™ Alpha Binding Crop Top_Ivory
-							</p>
-							
-						</div>
-					</article>
-				</section>
+			<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+$result = makeQuery(
+	makeConn(),
+"
+SELECT *
+FROM `products`
+ORDER BY `price` ASC
+LIMIT 3
+"
+
+);
+
+echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</div>";
+?>
 				<ul class="table_of"><a href="active_wear.php">More Products</a></ul>
 		</article>
 

@@ -4,12 +4,11 @@ include_once "lib/php/function.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-// print_p($product);
+$cart_product = cartItemById($_GET['id']);
 
-?>
+?><!DOCTYPE html>
 
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Look and Fit - Cart</title>
@@ -54,8 +53,8 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 
 		<article class="card soft">
 	
-		<h2>You added <?= $product->name ?> to your cart</h2>
-            <div class="display-flex">
+		<h2>You added <?= $product->name ?> to your cart.</h2>
+		<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart. </p>
                 <div class="flex-none"><a href="active_wear.php">Continue Shopping</a></div>
                 <div class="flex-stretch"><a href="active_wear.php"></a></div>
                 <div class="flex-none"><a href="cart.php">Go to Cart</a></div>

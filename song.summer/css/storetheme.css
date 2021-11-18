@@ -310,6 +310,12 @@
     background-color: var(--color-main-light);
 }
 
+.form-button.inline {
+    width: initial;
+}
+
+
+
 .hotdog {
     background-color: var(--color-neutral-light);
     border-radius: 2em;
@@ -466,4 +472,35 @@
 
 .hotdog_dark{
     content: white;
+}
+
+span.badge::after{
+    content:')';
+}
+
+span.badge::before{
+    content:'(';
+}
+
+/* cart page */
+
+.cart_items {
+padding: 20px !important;
+
+    
+}
+
+.cart_totals {
+padding: 20px !important;
+text-align: left !important;
+}
+
+.cart_title{
+    text-align: center;
+    padding: 10px;
+}
+
+.product_description{
+margin: 0px 0px !important;
+padding: 0px 0px !important;
 }

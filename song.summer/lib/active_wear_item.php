@@ -41,12 +41,10 @@ $image_elements = array_reduce($images,function($r,$o){
                 <div class="images-thumbs">
                     <?= $image_elements ?>
                 </div>
-               
+             
         </div>
 
-        <div class="card soft medium">
-        <p class="product_description" ><?= $product->description ?></p>
-            </div>
+      
     </div>
 
             <div class="col-xs-12 col-md-6">
@@ -92,6 +90,9 @@ $image_elements = array_reduce($images,function($r,$o){
                     </div>
                 </form>
             
+                <div class="card soft medium">
+        <p><?= $product->description ?></p>
+            </div>
             </div>
         </div>  
     </div>

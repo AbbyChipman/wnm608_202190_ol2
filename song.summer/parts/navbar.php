@@ -1,3 +1,9 @@
+<?php
+
+include_once "lib/php/function.php";
+
+?>
+
 <html lang="en">
 <body>
     <div class="container">
@@ -8,7 +14,10 @@
                     <li class="flex-stretch"><a href="index.php">Home</a></li>
                     <li class="flex-stretch"><a href="active_wear.php">Active Wear</a></li>
                     <li class="flex-stretch"><a href="about.php">About</a></li>
-                    <li class="flex-stretch"><a href="cart.php">Cart</a></li>
+                    <li class="flex-stretch"><a href="cart.php">
+                        <span>Cart</span>
+                        <span class="badge"> <?= makeCartBadge();?> </span>
+                    </a></li>
                     <li class="flex-stretch"><a href="admin.php">Admin</a></li>
                 </ul>
             </nav>

@@ -5,9 +5,10 @@
     text-align: center;
 }
 .grid.gap{
-    --grid-gap: 0.5eem;
+    --grid-gap: 1.5em;
     grid-gap:var(--grid-gap);
     gap:var(--grid-gap);
+    padding: 0px 20px 0px;
 }
 
 .grid.ten {
@@ -83,7 +84,7 @@
     .col-md-4{ grid-column: span 4;}
     .col-md-5{ grid-column: span 5;}
     .col-md-6{ grid-column: span 6;}
-    .col-md-7{ grid-column: span 7;}
+    .col-md-7{ grid-column: span 9;}
     .col-md-8{ grid-column: span 8;}
     .col-md-9{ grid-column: span 9;}
     .col-md-10{ grid-column: span 10;}
@@ -228,6 +229,7 @@
 	height:100px;
 	background-color: lightgrey;
 	padding:15px;
+
 }
 
 
