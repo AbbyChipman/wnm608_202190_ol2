@@ -2,6 +2,8 @@
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
+$cart_product = cartItemById($_GET['id']);
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,8 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['i
             <div class="grid gap">
                 <div class="col-xs-12 col-md-3"></div>
                 <div class="col-xs-12 col-md-7">
-                <h2>You added <?= $product->title ?> to your cart!</h2>
+                <h2>You added <?=$product->title ?> - <?= $cart_product->color ?> to your cart!</h2>
+                <h3>You now have <?= $cart_product->quantity ?> <?= $product->title ?> - <?=$cart_product->color ?> in the cart.</h3>
                 </div>
                 <div class="col-xs-12 col-md-2"></div>
                 <div class="col-xs-12 col-md-2"></div>

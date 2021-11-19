@@ -1,8 +1,15 @@
+<?php 
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+include "parts/meta.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include "parts/meta.php" ?>
-
     <title>AbbyDazzled Designs - Checkout</title>
 </head>
 <body>
@@ -19,7 +26,6 @@
                         <h2>Checkout</h2>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>

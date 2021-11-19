@@ -3,8 +3,9 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-$cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+// $cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)");
 
+$cart_items = getCartItems();
 ?>
 
 <!DOCTYPE html>
@@ -36,41 +37,12 @@ $cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)")
         <div class="card soft">
             <h2>In Your Cart:</h2>
             <div class="grid gap">
-            <div class="col-xs-12 col-md-7">
-                <?= array_reduce($cart,'cartListTemplate') ?>
-            </div>
-            <div class="col-xs-12 col-md-5">
-                <div class="card soft light">
-                    <div class="card hard display-flex">
-                        <div class="flex-none">
-                            <strong>Sub-Total</strong>
-                        </div>
-                        <div class="flex-stretch"></div>
-                        <div class="flex-none checkout-price">
-                            &dollar;3.50
-                        </div>
-                    </div>
-                    <div class="card hard display-flex">
-                        <div class="flex-none">
-                            <strong>Taxes</strong>
-                        </div>
-                        <div class="flex-stretch"></div>
-                        <div class="flex-none checkout-price">
-                            &dollar;3.50
-                        </div>
-                    </div>
-                    <hr>
-                        <div class="card hard display-flex">
-                            <div class="flex-none">
-                                <strong>Total</strong>
-                            </div>
-                            <div class="flex-stretch"></div>
-                            <div class="flex-none checkout-price">
-                                &dollar;7.00
-                            </div>
-                        </div>
+                <div class="col-xs-12 col-md-7">
+                    <?= array_reduce($cart_items,'cartListTemplate') ?>
                 </div>
-            </div>
+                <div class="col-xs-12 col-md-5">
+                    <?= cartTotals() ?>
+                </div>
 
                 <div class="col-xs-12 col-md-6"></div>
                 <div class="col-xs-12 col-md-3">

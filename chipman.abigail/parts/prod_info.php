@@ -15,15 +15,48 @@
                 <h2><?= $product->title ?></h2>
                 <p><?= $product->description?></p>
             </div>
-            <div class="col-xs-12 col-md-8"></div>
-            <div class="col-xs-12 col-md-3">
-                <div class="checkout-price" style="text-align: right; text-size:1.5em;">&dollar;<?= $product->price ?></div>
+            <div class="col-xs-12 col-md-5">
+                <form method="post" action="cart_actions.php?action=add-to-cart">
+                <input type="hidden" name="product-id" value="<?= $product->id ?>">
+                <label for="color" class="form-label">color:</label>
+                    <div class="form-select">
+                        <select id="color"  name="color">
+                            <option value="red">red</option>
+                            <option value="blue">blue</option>
+                            <option value="yellow">yellow</option>
+                            <option value="purple">purple</option>
+                            <option value="orange">orange</option>
+                        </select>
+                    </div>
             </div>
-            <div class="col-xs-12 col-md-1"></div>
+            <div class="col-xs-12 col-md-2"></div>
+            <div class="col-xs-12 col-md-5">
+                <label for="quantity" class="form-label">Amount:</label>
+                    <div class="form-select">
+                        <select id="quantity"  name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="col-xs-12 col-md-9"></div>
+            <div class="col-xs-12 col-md-3">
+                <label for="price" class="form-label">Price Each:</label>
+                <div class="checkout-price" id="price" name="price" style="text-align: right; text-size:1.5em;">&dollar;<?= $product->price ?></div>
+            </div>
             <div class="col-xs-12 col-md-6"></div>
             <div class="col-xs-12 col-md-6">
-                <a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add to Cart</a>
+                <input type="submit" class="form-button" value="Add to Cart">
             </div>
+            </form>
         </div>
     </div>
 </div>

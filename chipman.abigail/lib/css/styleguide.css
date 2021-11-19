@@ -295,6 +295,10 @@ a:hover {
   background-position: center;
   background-attachment: fixed;
 }
+.view-window img {
+  height: 600px;
+  width: 1000px;
+}
 .view-window-small {
   position: relative;
   overflow: hidden;
@@ -408,6 +412,11 @@ a:hover {
   text-align: center;
   -webkit-appearance: none;
 }
+
+.form-button-light.inline,
+.form-button.inline {
+  width: initial;
+}
 .form-button-light:hover,
 .form-button:hover {
   text-decoration: none;
@@ -430,11 +439,11 @@ a:hover {
   right: 0.2em;
   transform: translateY(-50%);
   pointer-events: none;
-  color: var(--color-neutral-medium);
+  color: var(--color-accent-light);
 }
 .form-select > select {
   padding: 0.5em 1em;
-  background-color: var(--color-neutral-light);
+  background-color: var(--color-accent-light);
   border-radius: 1em;
   cursor: pointer;
 }

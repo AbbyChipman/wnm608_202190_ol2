@@ -1,7 +1,16 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+include "parts/meta.php";
+
+resetCart();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include "parts/meta.php" ?>
 
     <title>AbbyDazzled Designs - Order Confirmed!</title>
 </head>

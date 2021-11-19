@@ -122,7 +122,8 @@ hr {
   border: 3px solid var(--color-main-dark);
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-main-dark);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
+  text-align: center;
 }
 
 .card.light {
@@ -175,13 +176,14 @@ hr {
 .checkout-title {
   font-family: var(--font-serif);
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: var(--color-secondary-medium);
 }
 
 .checkout-price {
   font-size: 1.25em;
   font-weight: bold;
+  color: var(--color-main-dark);
 }
 
 .product-overlay {
@@ -266,11 +268,15 @@ hr {
   height: 40vh;
   object-fit: contain;
 }
-
+.cart-thumb img,
 .image-thumb img {
   width: 8em;
   height: 6em;
   object-fit: contain;
+}
+
+.cart-thumb img {
+  padding-right: .5em;
 }
 
 /* COLOR CHIP */
@@ -339,3 +345,11 @@ hr {
 .nav-crumbs a:hover {
   color: var(--color-secondary-medium);
 }
+
+span.badge:not(:empty) {
+  background-color:var(--color-accent-medium);
+  color:var(--color-main-dark);
+  border-radius: 2em;
+  padding:0.25em;
+}
+

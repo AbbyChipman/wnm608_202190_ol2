@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 <?php include "parts/meta.php" ?>
@@ -34,9 +40,6 @@
            
 
             <?php
-            
-            include_once "lib/php/functions.php";
-            include_once "parts/templates.php";
 
             $result = makeQuery(
                 makeConn(), 
