@@ -1,6 +1,9 @@
 <?php
 
 
+session_start();
+
+
 function print_p($v) {
     echo "<pre>",print_r($v),"</pre>";
 }
@@ -10,8 +13,6 @@ function file_get_json($filename) {
     $file = file_get_contents($filename);
     return json_decode($file);
 }
-
-
 
 
 
@@ -46,3 +47,63 @@ function makeQuery($conn,$qry) {
 }
 
 
+
+// *** CART FUNCTIONS ***
+
+// array_find will loop through the array, call a function on each item in the array, and if it earns a "true" from that function, it returns that object
+function array_find($array,$fn) {
+    // foreach through each item in the array passed into this, refer to each one as $o (the current object)
+    // if we call our function the current object and it returns true, we stop the function and return that object
+    foreach($array as $o) if($fn($o)) return $o;
+    // if we loop through the whole thing and don't find one that matches, we return false
+    return false;
+}
+
+function getCart() {
+    return isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+}
+
+// $p are the $_POST values passed into the function
+function addToCart($id,$quantity,$color) {
+    // Create cart array from product ids clicked
+    //$_SESSION['cart'][] = $p['product-id'];
+    $cart = getCart();
+
+    $p = array_find($cart,function($o) use($id) {
+        // Need item to match color, quantity, id, and size
+        return $o->id==$id;
+        /*return $o->color==$color;
+        return $o->size==$size;
+        return $o->quantity==$quantity;*/
+    });
+
+    if($p) {
+        $p->quantity += $quantity;
+    } else {
+        $_SESSION['cart'][] = (object) [
+            "id"=>$id,
+            "quantity"=>$quantity,
+            "color"=>$color
+        ];
+    }
+}
+
+
+function resetCart() {
+    $_SESSION['cart'] = [];
+}
+
+
+function cartItemById($id) {
+    return array_find(getCart(),function($o){return $o->id==$id;});
+}
+
+
+function makeCartBadge() {
+    $cart = getCart();
+    if (count($cart)==0) {
+        return "";
+    } else {
+        return "(".array_reduce($cart,function($r,$o){return $r+$o->quantity;},0).")";
+    }
+}

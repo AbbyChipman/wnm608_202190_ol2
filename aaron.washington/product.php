@@ -22,6 +22,13 @@ $size_elements = array_reduce($sizes,function($r,$o){
     return $r."<option>$o</option>";
 });
 
+// Explode out color options list for dropdown
+$colors = explode(",", $product->color);
+
+$color_elements = array_reduce($colors,function($r,$o){
+    return $r."<option>$o</option>";
+});
+
 ?>
 
 <!DOCTYPE html>
@@ -63,27 +70,46 @@ $size_elements = array_reduce($sizes,function($r,$o){
                     <?= $image_elements ?>
                 </div>
             </div>
-            <div class="col-xs-6 product-text">
+
+            <form class="col-xs-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
+                <input type="hidden" name="product-id" value="<?= $product->id ?>">
                 <h3><?= $product->name ?></h3>
                 <h4><b>&dollar;<?= $product->price ?></b></h4>
                 <p><?= $product->description ?></p>
                 <br />
+                <h5>Color</h5>
+                <div class="form-select form-control" style="width: 12rem;">
+                    <select id="product-color" name="product-color">
+                        <?= $color_elements ?>
+                    </select>
+                </div>
+                <br />
                 <h5>Size</h5>
                 <div class="form-select form-control" style="width: 6rem;">
-                    <select>
+                    <select id="product-size" name="product-size">
                         <?= $size_elements ?>
                     </select>
                 </div>
                 <br />
                 <h5>Quantity</h5>
                 <div class="form-select form-control" style="width: 6rem;">
-                    <select>
-                        <option><?= $product->quantity ?></option>
+                    <select id="product-quantity" name="product-quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
                     </select>
                 </div>
                 <br />
-                <a href="cart.php"><button class="dark">Add to Cart</button></a>
-            </div>
+                <input type="submit" class="form-button" value="Add to Cart">
+            </form>
+
         </div>
     </div>
 

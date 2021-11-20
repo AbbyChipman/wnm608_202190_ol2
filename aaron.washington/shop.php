@@ -1,9 +1,10 @@
 <?php
-/*
+
+// include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-// Call mySQL database
+/* Call mySQL database
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
 $category = $product->category;
@@ -72,10 +73,6 @@ function productFilter () {
     <!-- *** PRODUCT LIST *** -->
     <div class="container">
         <?php
-
-        // include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
-        include_once "lib/php/functions.php";
-        include_once "parts/templates.php";
 
         $result = makeQuery(
             makeConn(),
