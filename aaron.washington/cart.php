@@ -4,7 +4,9 @@ include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
 // Call mySQL database
-$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+//$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+$cart_items = getCartItems();
 
 ?>
 
@@ -34,72 +36,13 @@ $cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
     <!-- *** CART LIST *** -->
     <div class="container">
         <div class="grid gap">
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-                <?= array_reduce($cart,'cartListTemplate') ?>
-                <!--
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch" style="padding-left: 2em;">
-                        <h3>Premium Tshirt</h3>
-                        <h5>&dollar;24.99</h5>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch" style="padding-left: 2em;">
-                        <h3>Premium Tshirt</h3>
-                        <h5>&dollar;24.99</h5>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch" style="padding-left: 2em;">
-                        <h3>Premium Tshirt</h3>
-                        <h5>&dollar;24.99</h5>
-                    </div>
-                </div>
-                <div class="card-light cart-item form-control display-flex">
-                    <div class="flex-none">
-                        <img src="img/AW-Product-Tshirt_Premium_Mens.jpg"
-                            alt="Premium Tshirt &ndash; Mens"
-                            title="Premium Tshirt &ndash; Mens" />
-                    </div>
-                    <div class="flex-stretch" style="padding-left: 2em;">
-                        <h3>Premium Tshirt</h3>
-                        <h5>&dollar;24.99</h5>
-                    </div>
-                </div>
-                -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8" style="text-align: right;">
+                <a href="shop.php?category=Everything">Continue Shopping&nbsp;&rsaquo;</a>
+                <?= array_reduce($cart_items,'cartListTemplate') ?>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
-                    <ul>
-                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
-                        <li><b>&dollar;24.99</b> &ndash; Premium Tshirt</li>
-                    </ul>
-                    <hr>
-                    <h3>Total: &dollar;99.96</h3>
-                    <form>
-                        <div class="form-control">
-                            <label class="form-label" style="text-align: left;">Got a Promo Code&quest;</label>
-                            <input type="text" class="form-input" placeholder="Enter Code">
-                        </div>
-                    <form>
-                    <button class="dark" style="width: 100%;" formaction="checkout.php">Checkout</button>
+                    <?= cartTotals() ?>
                 </div>
             </div>
         </div>

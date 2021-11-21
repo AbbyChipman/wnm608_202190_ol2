@@ -10,10 +10,14 @@ switch($_GET['action']) {
         header("location:cart.php?id={$_POST['product-id']}");
         break;
     case "update-cart-item":
-        //header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+        $p = cartItemById($_POST['id']);
+        $p->quantity = $_POST['quantity'];
+        header("location:cart.php");
         break;
     case "delete-cart-item":
-        //header("location:{$_SERVER['PHP_SELF']}");
+        // array_filter runs a function over each array item and filters out those that return false
+        $_SESSION['cart'] = array_filter($_SESSION['cart'],function($o){return $o->id!=$_POST['id'];});
+        header("location:cart.php");
         break;
     case "reset-cart":
         resetCart();

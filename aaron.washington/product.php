@@ -107,7 +107,7 @@ $color_elements = array_reduce($colors,function($r,$o){
                     </select>
                 </div>
                 <br />
-                <input type="submit" class="form-button" value="Add to Cart">
+                <input style="max-width: 50%;" type="submit" class="form-button" value="Add to Cart">
             </form>
 
         </div>
