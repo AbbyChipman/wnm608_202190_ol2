@@ -1,45 +1,20 @@
+<?php include_once "lib/php/function.php";?><!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Look and Fit - Home </title>
-	<link rel="stylesheet" href="css/gridsystem.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Home Page</title>
 
-	<!-- JQUERY-->
+    <?php include "parts/meta.php"; ?>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
-
 <body>
+	
+<?php include "parts/navbar.php"; ?>
 
-    <div class="container">
-        <div class="card soft">
-            <h1 class="main_title" id="back_to_the_top"> <a href="index.php">Look and Fit</a> </h1>
-            <nav id="main_nav">
-                <ul class="main_nav2">
-                    <li class="flex-stretch"><a href="index.php">Home</a></li>
-                    <li class="flex-stretch"><a href="active_wear.php">Active Wear</a></li>
-                    <li class="flex-stretch"><a href="about.php">About</a></li>
-                    <li class="flex-stretch"><a href="cart.php">Cart</a></li>
-					<li class="flex-stretch"><a href="admin.php">Admin</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <div class="view-window" style="background-image:url('../song.summer/img/yoga.jpg')"></div>
 
-	<script>
-		$("#navigations a").on("click", function (e) {
-			e.preventDefault();
-			$(this).closest("li").addClass("active")
-				.siblings().removeClass("active")
-		})
-	</script>
-     
-		<div class="view-window" style="background-image:url('../song.summer/img/yoga.jpg')">
-		</div>
+
+
 
 
 	<div class="container">
@@ -53,7 +28,6 @@
 			<div class="content cnt23">
 			<?php
 
-include_once "lib/php/function.php";
 include_once "parts/templates.php";
 
 $result = makeQuery(
@@ -92,7 +66,7 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 		</article>
 	</div>
 
-	<ul class="more_products"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+	<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
 </body>
 
 </html>

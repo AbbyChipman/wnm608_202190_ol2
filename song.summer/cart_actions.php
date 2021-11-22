@@ -3,6 +3,7 @@
 include_once "lib/php/function.php";
 
 
+
 switch($_GET['action']) {
         case "add-to-cart":
 			$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_POST['product-id'])[0];

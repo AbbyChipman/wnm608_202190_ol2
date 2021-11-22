@@ -1,5 +1,7 @@
+<?php include_once "lib/php/function.php";
+resetCart(); 
+?><!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Look and Fit - Cart</title>
@@ -41,6 +43,7 @@
 
 
 	<div class="container">
+	<?php include "parts/navbar.php"?>
 
 		<article class="card soft">
 			<h2>Confirmation Page</h2>

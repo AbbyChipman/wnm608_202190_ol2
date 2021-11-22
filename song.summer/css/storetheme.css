@@ -312,6 +312,7 @@
 
 .form-button.inline {
     width: initial;
+    margin-top: 5px;
 }
 
 
@@ -486,13 +487,14 @@ span.badge::before{
 
 .cart_items {
 padding: 20px !important;
-
+width:475px;
     
 }
 
 .cart_totals {
-padding: 20px !important;
 text-align: left !important;
+width: 240px;
+
 }
 
 .cart_title{
@@ -504,3 +506,11 @@ text-align: left !important;
 margin: 0px 0px !important;
 padding: 0px 0px !important;
 }
+
+span.badge:not(:empty)::after {
+    content: "";
+  }
+  
+  span.badge:not(:empty)::before {
+    content: "";
+  }
