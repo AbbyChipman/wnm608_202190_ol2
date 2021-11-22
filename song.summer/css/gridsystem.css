@@ -240,7 +240,6 @@
 }
 
 .images-thumbs img{
-  width: 8em;
   height: 6em;
   object-fit: contain;
   display: inline;

@@ -35,7 +35,7 @@ $result = makeQuery(
 "
 SELECT *
 FROM `products`
-ORDER BY `price` ASC
+ORDER BY `price` DESC
 LIMIT 3
 "
 
