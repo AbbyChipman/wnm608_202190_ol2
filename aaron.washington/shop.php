@@ -28,6 +28,11 @@ function productFilter () {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop &ndash; AWesome Stuff</title>
     <?php include "parts/meta.php"; ?>
+
+    <script src="lib/js/functions.js"></script>
+    <script>
+        query();
+    </script>
 </head>
 
 <body>
@@ -72,6 +77,13 @@ function productFilter () {
 
     <!-- *** PRODUCT LIST *** -->
     <div class="container">
+
+        <div class="form-control">
+            <form class="hotdog light">
+                <input type="search" placeholder="Search Products">
+            </form>
+        </div>
+
         <?php
 
         $result = makeQuery(
