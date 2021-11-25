@@ -14,7 +14,7 @@
   --color-black: #000;
   --color-white: #fff;
 
-  --header-height: 3rem;
+  --header-height: 1rem;
   --spacing: 1rem;
 
   --font-serif: Georgia, "Times New Roman", serif;
@@ -216,9 +216,7 @@ a:hover {
 .navbar a {
   padding: 0 0.5em;
 }
-.logo {
-  padding-top: 1em;
-}
+
 /* CARD */
 
 .card {

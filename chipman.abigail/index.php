@@ -34,7 +34,7 @@
                 "
                 SELECT * 
                 FROM `products`
-                ORDER by `date_modify`
+                ORDER by `title` DESC
                 LIMIT 3
                 "
             );

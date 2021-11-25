@@ -58,7 +58,7 @@ resetCart();
             <div class="grid gap">
             <div class="col-xs-12 col-md-4"></div>
                 <div class="col-xs-12 col-md-4">
-                <a href="index.php"><img src="img/logoColor.png" alt="AbbyDazzled Logo"></div></a>
+                <a href="index.php"><img class="logo" src="img/logoColor.png" alt="AbbyDazzled Logo"></div></a>
                 <div class="col-xs-12 col-md-4"></div>
             </div>
         </div>

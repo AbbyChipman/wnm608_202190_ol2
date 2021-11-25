@@ -21,18 +21,19 @@ $image_elements = array_reduce($images,function($r,$o){
 
     <?php include "parts/navbar.php" ?>
 
-    <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
-        <div class="container">
-            <div class="display-flex">
-                <div class="flex-stretch"></div>
-                <div class="flex-none">
-                    <div class="card section rainbow">
-                        <h2><?= $product->title?></h2>
-                    </div>
+    <div class="view-window-small flex-align-center" style="background-image:url(lib/img/glitter-background.jpg);">
+    <div class="container">
+        <div class="grid">
+            <div class="col-xs-12 col-md-4"></div>
+            <div class="col-xs-12 col-md-4"></div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card section rainbow">
+                    <h2><?= $product->title ?></h2>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <div class="container">
         <div class="card soft">
