@@ -30,9 +30,8 @@ function productFilter () {
     <?php include "parts/meta.php"; ?>
 
     <script src="lib/js/functions.js"></script>
-    <script>
-        query();
-    </script>
+    <script src="js/templates.js"></script>
+    <script src="js/shop.js"></script>
 </head>
 
 <body>
@@ -51,55 +50,85 @@ function productFilter () {
         </div>
     </div>
 
-    <!-- *** CRUMB NAV *** -->
+    <!-- *** SEARCH BAR *** -->
     <div class="container">
-        <!--<div class="display-flex">-->
-            <nav class="nav nav-crumbs flex-stretch">
+        <div class="form-control">
+            <form id="shop-search" class="form-hotdog light">
+                <input type="search" placeholder="Search Products">
+            </form>
+        </div>
+    </div>
+
+    <!-- *** CRUMB NAV, FILTER, & SORT *** -->
+    <div class="container">
+        <div class="grid gap">
+
+            <nav class="nav nav-crumbs col-xs-12 col-sm-12 col-md-5 col-lg-6">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
                 </ul>
             </nav>
-            <!--<div class="flex-none">
-                <p>Filter By&colon;&nbsp;<div class="form-select">
-                    <select style="padding: 0.5rem 1.5rem 0.5rem 0.5rem;">
-                        <option><a href="?category=Everything">Everything</a></option>
-                        <option><a href="?category=Men">Men</a></option>
-                        <option><a href="?category=Women">Women</a></option>
-                        <option><a href="?category=Teen">Teen</a></option>
-                        <option><a href="?category=Kids">Kids</a></option>
-                    </select>
-                </div></p>
-                
+
+            <!--
+            <div class="flex-none display-flex">
+                <div class="flex-none">
+                    <button data-filter="type" data-value="" type="button" class="form-button dark">All</button>
+                </div>
+                <div class="flex-none">
+                    <button data-filter="type" data-value="t-shirt" type="button" class="form-button dark">Shirt</button>
+                </div>
+                <div class="flex-none">
+                    <button data-filter="type" data-value="scarf" type="button" class="form-button dark">Scarf</button>
+                </div>
             </div>
-        </div>-->
+            -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="form-select">
+                    <select class="js-filter">
+                        <option>Filter By</option>
+                        <option value="0">All Products</option>
+                        <optgroup label="Audience">
+                            <option value="1">Men</option>
+                            <option value="2">Women</option>
+                            <option value="3">Teen</option>
+                            <option value="4">Kids</option>
+                        </optgroup>
+                        <optgroup label="Apparel" data-filter="type">
+                            <option value="5">T-shirts</option>
+                            <option value="6">Sweaters</option>
+                            <option value="7">Scarves</option>
+                            <option value="8">Jackets</option>
+                            <option value="9">Hoodies</option>
+                            <option value="10">Hats</option>
+                            <option value="11">Button-Down Shirt</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="form-select">
+                    <select class="js-sort">
+                        <option value="1">Sort By</option>
+                        <option value="2">Top Rated</option>
+                        <option value="3">Price&colon; Low to High</option>
+                        <option value="4">Price&colon; High to Low</option>
+                        <option value="5">Name&colon; A to Z</option>
+                        <option value="6">Name&colon; Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- *** PRODUCT LIST *** -->
     <div class="container">
-
-        <div class="form-control">
-            <form class="hotdog light">
-                <input type="search" placeholder="Search Products">
-            </form>
-        </div>
-
-        <?php
-
-        $result = makeQuery(
-            makeConn(),
-            "
-            SELECT *
-            FROM `products`
-            ORDER BY `date_create` DESC
-            LIMIT 12
-            "
-        );
-
-        // Goes through whole array and reduces it to a single value, total, string, etc.
-        echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
-
-        ?>
+        <div class='shop-list grid gap'></div>
     </div>
 
     <!-- *** FOOTER *** -->
