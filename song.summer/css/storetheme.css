@@ -256,6 +256,7 @@
 
 /* forms */
 
+.form-select > select,
 .hotdog,
 .hotdog input,
 .form-input,
@@ -330,7 +331,7 @@
 }
 
 .hotdog.light {
-    background-color: var(--color-white);
+    /* background-color: var(--color-white); */
     color: var(--color-white);
 }
 
