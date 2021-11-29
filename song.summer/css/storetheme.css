@@ -515,3 +515,4 @@ span.badge:not(:empty)::after {
   span.badge:not(:empty)::before {
     content: "";
   }
+

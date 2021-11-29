@@ -23,5 +23,6 @@ include_once "parts/templates.php";
 			<div class="about"></div>
     </div>
     <ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+    <footer> <p class="footer">Look and Fit @2021</p> </footer>
 </body>
 </html>

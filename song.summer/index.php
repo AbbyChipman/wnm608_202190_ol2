@@ -50,7 +50,32 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 
 		<article class="card soft">
 			<h2>Special Offers</h2>
-			<div class="sale_flyer"></div>
+			<!-- carousel -->
+			<div class="carousel">
+            <div class="slides">
+                <div class="slide center" style="background:url(../song.summer/img/special1.png) center; background-size: cover"></div>
+                <div class="slide slide_center" style="background:url(../song.summer/img/special2.png) center; background-size: cover"></div>
+                <div class="slide" style="background: url(../song.summer/img/special3.png) center; background-size: cover"></div>
+
+            </div>
+            <div class="controls">
+                <div class="control-left">&lt;</div>
+                <div class="control-right">&gt;</div>
+                <div class="control-pagination">  
+                    <div class="control-dot">&bullet;</div>
+                    <div class="control-dot">&bullet;</div>
+                    <div class="control-dot">&bullet;</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        new Carousel({
+        element: $(".carousel").eq(0),
+        timing: 6000
+        })
+        </script>
+
 			</div>
 		</article>
 	</div>
@@ -63,10 +88,14 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 			<h2>New Memeber Benefits</h2>
 			<div class="member_gift"></div>
 			</div>
+
+			<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+
+			<footer> <p class="footer">Look and Fit @2021</p> </footer>
 		</article>
 	</div>
 
-	<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+	
 </body>
 
 </html>

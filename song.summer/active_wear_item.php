@@ -98,6 +98,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
   
     <ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
+    <footer> <p class="footer">Look and Fit @2021</p> </footer>
 </body>
 
 </html>

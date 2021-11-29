@@ -61,6 +61,7 @@ resetCart();
 	</div>
 
 	<ul class="table_of"><a href="index.php">BACK TO HOME PAGE</a></ul>
+	<footer> <p class="footer">Look and Fit @2021</p> </footer>
 </body>
 
 </html>
