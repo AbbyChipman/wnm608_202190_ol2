@@ -19,9 +19,9 @@ $empty_product = (object)[
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div class="card-light form-control" style="text-align: left;">
+<div class="card-light form-control" style="text-align: left; max-width: 65%;">
     <div class="display-flex">
-        <div class="flex-none images-thumbs"><img src='img/$o->thumbnail' /></div>
+        <div class="flex-none images-thumbs"><a href="{$_SERVER['PHP_SELF']}?id=$o->id"><img src='img/$o->thumbnail' /></a></div>
         <div class="flex-stretch" style="padding: 1rem;">$o->name</div>
         <div class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$o->id" class="form-button">Edit</a></div>
     </div>
