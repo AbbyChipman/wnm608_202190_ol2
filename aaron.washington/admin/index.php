@@ -74,7 +74,6 @@ HTML;
                     $empty_product : 
                     makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
             );
-            // showProductPage();
         } else {
 
         ?>
