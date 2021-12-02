@@ -30,23 +30,31 @@ function showProductPage($o) {
     // if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
     $addoredit = $id == "new" ? "Add" : "Edit";  
     $createorupdate = $id == "new" ? "create" : "update";
-    $images = explode(", ", $o->images);
+    $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='/img/$o'>";});
     
 //heredoc, last line HTML; must be completely on the left
 $display = <<<HTML
 <div class="card-light" style="text-align: left;">
     <h3>$o->name</h3>
-    <div>
-        <strong>Type&colon;&nbsp;</strong>
+    <div class="form-control">
+        <label class="form-label">Price&colon;</label>
         <span>$o->type</span>
     </div>
-    <div>
-        <strong>Category&colon;&nbsp;</strong>
+    <div class="form-control">
+        <label class="form-label">Category&colon;</label>
         <span>$o->category</span>
     </div>
-    <div>
-        <strong>Images&colon;&nbsp;</strong>
-        <span>$images</span>
+    <div class="form-control">
+        <label class="form-label">Description&colon;</label>
+        <span>$o->description</span>
+    </div>
+    <div class="form-control">
+        <label class="form-label">Thumbnail&colon;</label>
+        <span class="images-thumbs"><img src='/img/$o->thumbnail' /></span>
+    </div>
+    <div class="form-control">
+        <label class="form-label">Additional Images&colon;</label>
+        <span class="images-thumbs">$images</span>
     </div>
 </div>
 HTML;
@@ -70,7 +78,7 @@ $form = <<<HTML
         </div>
         <div class="form-control">
             <label class="form-label" for="product-images">Images</label>
-            <input type="text" class="form-input" value="$images" name="product-images" id="product-images" placeholder="Enter the Product Images, comma separated">
+            <input type="text" class="form-input" value="$o->images" name="product-images" id="product-images" placeholder="Enter the Product Images, comma separated">
         </div>
         <div class="form-control">
             <input type="submit" class="form-button form-control" value="Save Changes">
