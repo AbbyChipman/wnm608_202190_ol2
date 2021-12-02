@@ -37,8 +37,8 @@ function showProductPage($o) {
     $addoredit = $id == "new" ? "Add" : "Edit";  
     $createorupdate = $id == "new" ? "create" : "update";
     $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='img/$o'>";});
-    $sizes = implode(",", $o->size);
-    $colors = implode(",", $o->color);
+    $sizes = array_reduce(explode(",", $o->size),function($r,$o){return $r."$o";});
+    $colors = array_reduce(explode(",", $o->color),function($r,$o){return $r."$o";});
     
 //heredoc, last line HTML; must be completely on the left
 $display = <<<HTML
