@@ -2,6 +2,16 @@
 
 include "../lib/php/functions.php";
 
+
+
+// TEMPLATES
+
+function productListItem($r,$o) {
+return $r.<<<HTML
+<div><a href="{$_SERVER['PHP_SELF']}?id=$o->id" style='padding-left: 0;'>$o->title</a></div>
+HTML;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,9 +58,7 @@ include "../lib/php/functions.php";
             // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
             $result = makeQuery(makeConn(),"SELECT * FROM `products`");
 
-            echo array_reduce($result,function($r,$o){
-                return $r."<div><a href='{$_SERVER['PHP_SELF']}?id=$o->id' style='padding-left: 0;'>$o->title</a></div>";
-            });
+            echo array_reduce($result,'productListItem');
             
             ?>
 
