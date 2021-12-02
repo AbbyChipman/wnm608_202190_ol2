@@ -40,11 +40,11 @@ $display = <<<HTML
         <span>$o->type</span>
     </div>
     <div>
-        <strong>Email</strong>
-        <span>$o->email</span>
+        <strong>Category</strong>
+        <span>$o->category</span>
     </div>
     <div>
-        <strong>Classes</strong>
+        <strong>Images</strong>
         <span>$images</span>
     </div>
 </div>
@@ -69,7 +69,7 @@ $form = <<<HTML
         </div>
         <div class="form-control">
             <label class="form-label" for="product-images">Images</label>
-            <input type="text" class="form-input" value="$images" name="product-images" id="product-images" placeholder="Enter the product Images, comma separated">
+            <input type="text" class="form-input" value="$images" name="product-images" id="product-images" placeholder="Enter the Product Images, comma separated">
         </div>
         <div class="form-control">
             <input type="submit" class="form-button form-control" value="Save Changes">
@@ -81,8 +81,8 @@ HTML;
 
 $output = $id == "new" ? $form : 
     "<div class='grid gap'>
-        <div class='col-xs-12 col-md-7'><div class='card-light'>$display</div></div>
-        <div class='col-xs-12 col-md-5'><div class='card-light'>$form</div></div>
+        <div class='col-xs-12 col-md-7'>$display</div>
+        <div class='col-xs-12 col-md-5'>$form</div>
     </div>
     ";
 
