@@ -41,18 +41,18 @@ include "../lib/php/functions.php";
 
         ?>
 
-        <h3>Product List</h3>
+            <h3>Product List</h3>
 
-        <?php 
+            <?php 
 
-        // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
-        $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+            // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
+            $result = makeQuery(makeConn(),"SELECT * FROM `products`");
 
-        echo array_reduce($result,function($r,$o){
-            return $r."<div><a href='{$_SERVER['PHP_SELF']}?id=$o->id' style='padding-left: 0;'>$o->title</a></div>";
-        });
-        
-        ?>
+            echo array_reduce($result,function($r,$o){
+                return $r."<div><a href='{$_SERVER['PHP_SELF']}?id=$o->id' style='padding-left: 0;'>$o->title</a></div>";
+            });
+            
+            ?>
 
         <?php } ?>
 
