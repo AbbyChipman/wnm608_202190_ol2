@@ -37,6 +37,8 @@ function showProductPage($o) {
     $addoredit = $id == "new" ? "Add" : "Edit";  
     $createorupdate = $id == "new" ? "create" : "update";
     $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='img/$o'>";});
+    $sizes = implode(",", $o->size);
+    $colors = implode(",", $o->color);
     
 //heredoc, last line HTML; must be completely on the left
 $display = <<<HTML
@@ -47,12 +49,24 @@ $display = <<<HTML
         <span>$o->type</span>
     </div>
     <div class="form-control">
+        <label class="form-label">Description&colon;</label>
+        <span>$o->description</span>
+    </div>
+    <div class="form-control">
+        <label class="form-label">Type&colon;</label>
+        <span>$o->type</span>
+    </div>
+    <div class="form-control">
         <label class="form-label">Category&colon;</label>
         <span>$o->category</span>
     </div>
     <div class="form-control">
-        <label class="form-label">Description&colon;</label>
-        <span>$o->description</span>
+        <label class="form-label">Size&colon;</label>
+        <span>$sizes</span>
+    </div>
+    <div class="form-control">
+        <label class="form-label">Color&colon;</label>
+        <span>$colors</span>
     </div>
     <div class="form-control">
         <label class="form-label">Thumbnail&colon;</label>
@@ -79,12 +93,24 @@ $form = <<<HTML
             <input type="number" class="form-input" min="0" max="1000" step="0.01" value="$o->price" name="product-price" id="product-price" placeholder="Enter the Product Price">
         </div>
         <div class="form-control">
+            <label class="form-label" for="product-description">Description</label>
+            <textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description</textarea>
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-type">Type</label>
+            <input type="text" class="form-input" value="$o->type" name="product-type" id="product-type" placeholder="Enter the Product Type">
+        </div>
+        <div class="form-control">
             <label class="form-label" for="product-category">Category</label>
             <input type="text" class="form-input" value="$o->category" name="product-category" id="product-category" placeholder="Enter the Product Category">
         </div>
         <div class="form-control">
-            <label class="form-label" for="product-description">Description</label>
-            <textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description</textarea>
+            <label class="form-label" for="product-size">Size</label>
+            <input type="text" class="form-input" value="$o->size" name="product-size" id="product-size" placeholder="Enter the Product Sizes, comma separated">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-color">Color</label>
+            <input type="text" class="form-input" value="$o->color" name="product-color" id="product-color" placeholder="Enter the Product Colors,comma separated">
         </div>
         <div class="form-control">
             <label class="form-label" for="product-thumbnail">Thumbnail</label>
@@ -104,8 +130,8 @@ HTML;
 
 $output = $id == "new" ? "<div class='card-light'>$form</div>" : 
     "<div class='grid gap'>
-        <div class='col-xs-12 col-md-7'>$display</div>
-        <div class='col-xs-12 col-md-5'>$form</div>
+        <div class='col-xs-12 col-md-5'>$display</div>
+        <div class='col-xs-12 col-md-7'>$form</div>
     </div>
     ";
 
