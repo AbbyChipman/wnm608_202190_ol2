@@ -26,6 +26,7 @@ HTML;
 
 function showProductPage($o) {
 
+    $id = $_GET['id'];
     // if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
     $addoredit = $id == "new" ? "Add" : "Edit";  
     $createorupdate = $id == "new" ? "create" : "update";
@@ -53,7 +54,7 @@ HTML;
 
 $form = <<<HTML
 <div class="card-light">
-    <h3>$addoredit User</h3>
+    <h3>$addoredit Product</h3>
     <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
         <div class="form-control">
             <label class="form-label" for="product-name">Name</label>
@@ -87,7 +88,7 @@ $output = $id == "new" ? "<div class='card-light'>$form</div>" :
     ";
 
 
-$delete = $id == "new" ? : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
 
 
 echo <<<HTML
@@ -148,14 +149,18 @@ HTML;
 
             <h3>Product List</h3>
 
-            <?php 
+            <div class="card-light">
 
-            // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
-            $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+                <?php 
 
-            echo array_reduce($result,'productListItem');
-            
-            ?>
+                // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
+                $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+
+                echo array_reduce($result,'productListItem');
+                
+                ?>
+
+            </div>
 
         <?php } ?>
 
