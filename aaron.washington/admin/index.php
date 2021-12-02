@@ -19,7 +19,13 @@ $empty_product = (object)[
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div><a href="{$_SERVER['PHP_SELF']}?id=$o->id" style='padding-left: 0;'>$o->name</a></div>
+<div class="card-light" style="text-align: left;">
+    <div class="display-flex">
+        <div class="flex-none images-thumbs"><img src='img/$o->thumbnail' /></div>
+        <div class="flex-stretch" style="padding: 1rem;">$o->name</div>
+        <div class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$o->id" class="form-button">Edit</a></div>
+    </div>
+</div>
 HTML;
 }
 
@@ -165,18 +171,14 @@ HTML;
 
             <h3>Product List</h3>
 
-            <div class="card-light" style="text-align: left;">
+            <?php 
 
-                <?php 
+            // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
+            $result = makeQuery(makeConn(),"SELECT * FROM `products`");
 
-                // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
-                $result = makeQuery(makeConn(),"SELECT * FROM `products`");
-
-                echo array_reduce($result,'productListItem');
-                
-                ?>
-
-            </div>
+            echo array_reduce($result,'productListItem');
+            
+            ?>
 
         <?php } ?>
 
