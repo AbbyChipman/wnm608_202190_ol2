@@ -1,3 +1,12 @@
+<?php
+
+// include_once helps with pulling more than one file from the same folder (there's two lib files on this page)
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

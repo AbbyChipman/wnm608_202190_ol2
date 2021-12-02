@@ -108,7 +108,7 @@ button.dark {
     color: var(--color-primary-dark);
     min-width: 9rem;
     padding: 1rem;
-    border: 0.15rem solid var(--color-primary-dark);
+    border: 3px solid var(--color-primary-dark);
     background-color: rgba(0,0,0,0);
     border-radius: 0.7rem;
     font-size: 1rem;
@@ -118,7 +118,7 @@ button.dark {
 
     button.dark:hover {
         color: var(--color-primary-light);
-        border: 0.15rem solid var(--color-primary-dark);
+        border: 3px solid var(--color-primary-dark);
         cursor: pointer;
         background-color: rgba(32,33,36,1);
     }
@@ -129,7 +129,7 @@ button.light {
     color: var(--color-primary-light);
     min-width: 9rem;
     padding: 1rem;
-    border: 0.15rem solid var(--color-primary-light);
+    border: 3px solid var(--color-primary-light);
     background-color: rgba(0,0,0,0);
     border-radius: 0.7rem;
     font-size: 1rem;
@@ -139,7 +139,7 @@ button.light {
 
     button.light:hover {
         color: var(--color-primary-dark);
-        border: 0.15rem solid var(--color-primary-light);
+        border: 3px solid var(--color-primary-light);
         cursor: pointer;
         background-color: rgba(247,247,247,1);
     }
@@ -814,6 +814,12 @@ hr {
     padding: 0.75rem;
     cursor: pointer;
     text-align: center;
+    color: var(--color-primary-light);
+    background-color: var(--color-accent-red-light);
+}
+
+.form-button.inline {
+    width: initial;
 }
 
     .form-button:hover {
@@ -823,8 +829,8 @@ hr {
     }
 
     .form-button:active {
-        background-color: var(--color-accent-red-light);
-        color: var(--color-primary-light);
+        background-color: var(--color-neutral-medium);
+        color: var(--color-primary-dark);
     }
 
 
@@ -1000,6 +1006,7 @@ hr {
     margin-bottom: 1rem;
 }
 
+.cart-total h5,
 .cart-total h3 {
     text-align: left;
 }
