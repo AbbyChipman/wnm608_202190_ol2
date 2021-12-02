@@ -2,15 +2,37 @@
 
 include "../lib/php/functions.php";
 
+$empty_product = (object)[
+    "name"=>"",
+    "price"=>"",
+    "date_create"=>"",
+    "date_modify"=>"",
+    "description"=>"",
+    "type"=>"",
+    "category"=>"",
+    "size"=>"",
+    "color"=>"",
+    "thumbnail"=>"",
+    "images"=>""
+];
 
 
-// TEMPLATES
+// *** TEMPLATES ***
 
 function productListItem($r,$o) {
 return $r.<<<HTML
 <div><a href="{$_SERVER['PHP_SELF']}?id=$o->id" style='padding-left: 0;'>$o->name</a></div>
 HTML;
 }
+
+
+function showProductPage($o) {
+return <<<HTML
+<div>$o->name</div>
+<div>$o->price</div>
+HTML;
+}
+
 
 ?>
 
@@ -46,7 +68,13 @@ HTML;
         <?php
 
         if(isset($_GET['id'])) {
-            //showProductPage();
+            showProductPage(
+                // if the product is new, it's an empty product, otherwise we make a query of the product with that id
+                $_GET['id']=="new" ?
+                    $empty_product : 
+                    makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
+            );
+            // showProductPage();
         } else {
 
         ?>
