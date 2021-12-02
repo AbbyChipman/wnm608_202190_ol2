@@ -68,9 +68,9 @@ HTML;
         <?php
 
         if(isset($_GET['id'])) {
-            showProductPage(
+            echo showProductPage(
                 // if the product is new, it's an empty product, otherwise we make a query of the product with that id
-                $_GET['id']=="new" ?
+                $_GET['id'] == "new" ?
                     $empty_product : 
                     makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
             );
