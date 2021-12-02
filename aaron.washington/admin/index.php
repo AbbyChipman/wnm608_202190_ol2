@@ -8,7 +8,7 @@ include "../lib/php/functions.php";
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div><a href="{$_SERVER['PHP_SELF']}?id=$o->id" style='padding-left: 0;'>$o->title</a></div>
+<div><a href="{$_SERVER['PHP_SELF']}?id=$o->id" style='padding-left: 0;'>$o->name</a></div>
 HTML;
 }
 
