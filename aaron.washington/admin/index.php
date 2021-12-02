@@ -79,7 +79,7 @@ $form = <<<HTML
 HTML;
 
 
-$output = $id == "new" ? $form : 
+$output = $id == "new" ? "<div class='card-light'>$form</div>" : 
     "<div class='grid gap'>
         <div class='col-xs-12 col-md-7'>$display</div>
         <div class='col-xs-12 col-md-5'>$form</div>
