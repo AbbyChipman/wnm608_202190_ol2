@@ -5,8 +5,6 @@ include "../lib/php/functions.php";
 $empty_product = (object)[
     "name"=>"",
     "price"=>"",
-    "date_create"=>"",
-    "date_modify"=>"",
     "description"=>"",
     "type"=>"",
     "category"=>"",
