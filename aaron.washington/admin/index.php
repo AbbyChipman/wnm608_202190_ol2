@@ -25,9 +25,79 @@ HTML;
 
 
 function showProductPage($o) {
-return <<<HTML
-<div>$o->name</div>
-<div>$o->price</div>
+
+    // if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
+    $addoredit = $id == "new" ? "Add" : "Edit";  
+    $createorupdate = $id == "new" ? "create" : "update";
+    $images = explode(", ", $o->images);
+    
+//heredoc, last line HTML; must be completely on the left
+$display = <<<HTML
+<div class="card-light" style="text-align: left;">
+    <h3>$o->name</h3>
+    <div>
+        <strong>Type</strong>
+        <span>$o->type</span>
+    </div>
+    <div>
+        <strong>Email</strong>
+        <span>$o->email</span>
+    </div>
+    <div>
+        <strong>Classes</strong>
+        <span>$images</span>
+    </div>
+</div>
+HTML;
+
+
+$form = <<<HTML
+<div class="card-light">
+    <h3>$addoredit User</h3>
+    <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+        <div class="form-control">
+            <label class="form-label" for="product-name">Name</label>
+            <input type="text" class="form-input" value="$o->name" name="product-name" id="product-name" placeholder="Enter the Product Name">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-type">Type</label>
+            <input type="text" class="form-input" value="$o->type" name="product-type" id="product-type" placeholder="Enter the Product Type">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-category">Category</label>
+            <input type="text" class="form-input" value="$o->category" name="product-category" id="product-category" placeholder="Enter the Product Category">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-images">Images</label>
+            <input type="text" class="form-input" value="$images" name="product-images" id="product-images" placeholder="Enter the product Images, comma separated">
+        </div>
+        <div class="form-control">
+            <input type="submit" class="form-button form-control" value="Save Changes">
+        </div>
+    </form>
+</div>
+HTML;
+
+
+$output = $id == "new" ? $form : 
+    "<div class='grid gap'>
+        <div class='col-xs-12 col-md-7'><div class='card-light'>$display</div></div>
+        <div class='col-xs-12 col-md-5'><div class='card-light'>$form</div></div>
+    </div>
+    ";
+
+
+$delete = $id == "new" ? : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+
+
+echo <<<HTML
+<div class="card-light">
+    <nav class="display-flex">
+        <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
+        <div class="flex-none">$delete</div>
+    </nav>
+</div>
+$output
 HTML;
 }
 
