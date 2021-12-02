@@ -30,6 +30,17 @@ function makeConn() {
     return $conn;
 }
 
+function makePDOConn() {
+    // Method called Try and Catch, allows us to fail gracefully and not break everything
+    try {
+        $conn = new PDO(...makePDOAuth());
+    } catch (PDOException $e) {
+        die($e->getMessage());
+    }
+    // if the Try block works, it will return that connection
+    return $conn;
+}
+
 
 // This function gets passed a connection and a query that it can use
 function makeQuery($conn,$qry) {

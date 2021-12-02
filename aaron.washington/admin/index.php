@@ -15,6 +15,25 @@ $empty_product = (object)[
 ];
 
 
+
+// *** LOGIC ***
+
+if (isset($_GET['action'])) {
+    switch($_GET['action']) {
+        case "update":
+            header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+            break;
+        case "create":
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
+            break;
+        case "delete":
+            header("location:{$_SERVER['PHP_SELF']}");
+            break;
+    }
+}
+
+
+
 // *** TEMPLATES ***
 
 function productListItem($r,$o) {
@@ -105,11 +124,11 @@ $form = <<<HTML
             <input type="text" class="form-input" value="$o->category" name="product-category" id="product-category" placeholder="Enter the Product Category">
         </div>
         <div class="form-control">
-            <label class="form-label" for="product-size">Size</label>
+            <label class="form-label" for="product-size">Sizes</label>
             <input type="text" class="form-input" value="$o->size" name="product-size" id="product-size" placeholder="Enter the Product Sizes, comma separated">
         </div>
         <div class="form-control">
-            <label class="form-label" for="product-color">Color</label>
+            <label class="form-label" for="product-color">Colors</label>
             <input type="text" class="form-input" value="$o->color" name="product-color" id="product-color" placeholder="Enter the Product Colors,comma separated">
         </div>
         <div class="form-control">
