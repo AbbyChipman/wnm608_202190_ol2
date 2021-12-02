@@ -91,7 +91,7 @@ $delete = $id == "new" ? : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete
 
 
 echo <<<HTML
-<div class="card-light">
+<div class="card-light" style="margin-bottom: 3rem;">
     <nav class="display-flex">
         <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
         <div class="flex-none">$delete</div>
