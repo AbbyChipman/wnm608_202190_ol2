@@ -36,15 +36,15 @@ $display = <<<HTML
 <div class="card-light" style="text-align: left;">
     <h3>$o->name</h3>
     <div>
-        <strong>Type</strong>
+        <strong>Type&colon;</strong>
         <span>$o->type</span>
     </div>
     <div>
-        <strong>Category</strong>
+        <strong>Category&colon;</strong>
         <span>$o->category</span>
     </div>
     <div>
-        <strong>Images</strong>
+        <strong>Images&colon;</strong>
         <span>$images</span>
     </div>
 </div>
