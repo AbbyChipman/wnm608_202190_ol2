@@ -18,9 +18,38 @@ $empty_product = (object)[
 
 // *** LOGIC ***
 
-if (isset($_GET['action'])) {
+try {
+    $conn = makePDOConn();
     switch($_GET['action']) {
+        // $statement is the start of a query
         case "update":
+            $statement = $conn->prepare("UPDATE
+                `products`
+                SET 
+                    `name`=?,
+                    `price`=?,
+                    `description`=?,
+                    `type`=?,
+                    `category`=?,
+                    `size`=?,
+                    `color`=?,
+                    `thumbnail`=?,
+                    `images`=?,
+                    `date_modify`=NOW()
+                WHERE `id`=?
+                ");
+            $statement->execute([
+                $_POST['product-name'],
+                $_POST['product-price'],
+                $_POST['product-description'],
+                $_POST['product-type'],
+                $_POST['product-category'],
+                $_POST['product-size'],
+                $_POST['product-color'],
+                $_POST['product-thumbnail'],
+                $_POST['product-images'],
+                $_GET['id']
+            ]);
             header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
         case "create":
@@ -30,6 +59,8 @@ if (isset($_GET['action'])) {
             header("location:{$_SERVER['PHP_SELF']}");
             break;
     }
+} catch(PDOException $e) {
+    die ($e->getMessage());
 }
 
 
@@ -65,7 +96,7 @@ $display = <<<HTML
     <h3>$o->name</h3>
     <div class="form-control">
         <label class="form-label">Price&colon;</label>
-        <span>$o->type</span>
+        <span>$o->price</span>
     </div>
     <div class="form-control">
         <label class="form-label">Description&colon;</label>

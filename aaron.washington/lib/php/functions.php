@@ -33,7 +33,7 @@ function makeConn() {
 function makePDOConn() {
     // Method called Try and Catch, allows us to fail gracefully and not break everything
     try {
-        $conn = new PDO(...makePDOAuth());
+        $conn = new PDO(...PDOAuth());
     } catch (PDOException $e) {
         die($e->getMessage());
     }
