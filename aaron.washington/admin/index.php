@@ -30,7 +30,7 @@ function showProductPage($o) {
     // if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
     $addoredit = $id == "new" ? "Add" : "Edit";  
     $createorupdate = $id == "new" ? "create" : "update";
-    $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='../img/$o'>";});
+    $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='img/$o'>";});
     
 //heredoc, last line HTML; must be completely on the left
 $display = <<<HTML
@@ -50,7 +50,7 @@ $display = <<<HTML
     </div>
     <div class="form-control">
         <label class="form-label">Thumbnail&colon;</label>
-        <span class="images-thumbs"><img src='../img/$o->thumbnail' /></span>
+        <span class="images-thumbs"><img src='img/$o->thumbnail' /></span>
     </div>
     <div class="form-control">
         <label class="form-label">Additional Images&colon;</label>
