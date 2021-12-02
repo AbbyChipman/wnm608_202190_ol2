@@ -149,7 +149,7 @@ HTML;
 
             <h3>Product List</h3>
 
-            <div class="card-light">
+            <div class="card-light" style="text-align: left;">
 
                 <?php 
 
