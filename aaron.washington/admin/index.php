@@ -19,7 +19,7 @@ $empty_product = (object)[
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div class="card-light form-control">
+<div class="card-light form-control" style="text-align: left;">
     <div class="display-flex">
         <div class="flex-none images-thumbs"><img src='img/$o->thumbnail' /></div>
         <div class="flex-stretch" style="padding: 1rem;">$o->name</div>
