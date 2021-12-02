@@ -33,6 +33,29 @@ include "../lib/php/functions.php";
 
     <div class="container" style="padding-top: 3rem;">
 
+        <?php
+
+        if(isset($_GET['id'])) {
+            //showProductPage();
+        } else {
+
+        ?>
+
+        <h3>Product List</h3>
+
+        <?php 
+
+        // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
+        $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+
+        echo array_reduce($result,function($r,$o){
+            return $r."<div><a href='{$_SERVER['PHP_SELF']}?id=$o->id' style='padding-left: 0;'>$o->title</a></div>";
+        });
+        
+        ?>
+
+        <?php } ?>
+
     </div>
 
 </body>
