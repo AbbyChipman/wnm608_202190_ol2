@@ -69,16 +69,24 @@ $form = <<<HTML
             <input type="text" class="form-input" value="$o->name" name="product-name" id="product-name" placeholder="Enter the Product Name">
         </div>
         <div class="form-control">
-            <label class="form-label" for="product-type">Type</label>
-            <input type="text" class="form-input" value="$o->type" name="product-type" id="product-type" placeholder="Enter the Product Type">
+            <label class="form-label" for="product-type">Price</label>
+            <input type="number" class="form-input" min="0" max="1000" step="0.01" value="$o->price" name="product-price" id="product-price" placeholder="Enter the Product Price">
         </div>
         <div class="form-control">
             <label class="form-label" for="product-category">Category</label>
             <input type="text" class="form-input" value="$o->category" name="product-category" id="product-category" placeholder="Enter the Product Category">
         </div>
         <div class="form-control">
-            <label class="form-label" for="product-images">Images</label>
-            <input type="text" class="form-input" value="$o->images" name="product-images" id="product-images" placeholder="Enter the Product Images, comma separated">
+            <label class="form-label" for="product-description">Description</label>
+            <textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description</textarea>
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-thumbnail">Thumbnail</label>
+            <input type="text" class="form-input" value="$o->thumbnail" name="product-thumbnail" id="product-thumbnail" placeholder="Enter the Product Thumbnail">
+        </div>
+        <div class="form-control">
+            <label class="form-label" for="product-images">Additional Images</label>
+            <input type="text" class="form-input" value="$o->images" name="product-images" id="product-images" placeholder="Enter the Additional Product Images, comma separated">
         </div>
         <div class="form-control">
             <input type="submit" class="form-button form-control" value="Save Changes">
