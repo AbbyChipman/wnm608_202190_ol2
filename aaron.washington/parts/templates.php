@@ -94,9 +94,11 @@ HTML;
 
 
 function recommendedProducts($a) {
+
     $products = array_reduce($a,'productListTemplate');
+
 echo <<<HTML
-<div class="grid gap productlist">$products</div>
+<div class="grid gap shop-list">$products</div>
 HTML;
 }
 
