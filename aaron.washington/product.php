@@ -61,7 +61,7 @@ $color_elements = array_reduce($colors,function($r,$o){
     <br />
     <div class="container">
         <div class="grid gap">
-            <div class="col-xs-6" style="text-align: center;">
+            <div class="col-xs-12 col-sm-6" style="text-align: center;">
                 <div class="images-main">
                     <img src="img/<?= $image_main ?>"
                         alt="<?= $product->name ?> &ndash; <?= $product->category ?>"
@@ -72,12 +72,11 @@ $color_elements = array_reduce($colors,function($r,$o){
                 </div>
             </div>
 
-            <form class="col-xs-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
+            <form class="col-xs-12 col-sm-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
                 <input type="hidden" name="product-id" value="<?= $product->id ?>">
                 <h3><?= $product->name ?></h3>
-                <p><?= $product->type ?></p>
-                <br />
-                <h4><b>&dollar;<?= $product->price ?></b></h4>
+                <p style="margin-bottom: 1rem;"><?= $product->type ?></p>
+                <h4 style="margin-bottom: 1rem;"><b>&dollar;<?= $product->price ?></b></h4>
                 <p><?= $product->description ?></p>
                 <br />
                 <h5>Color</h5>
