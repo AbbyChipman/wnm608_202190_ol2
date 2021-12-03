@@ -32,57 +32,60 @@ include_once "parts/templates.php";
         </div>
     </div>
 
-    <!-- *** CATEGORIES *** -->
-    <div class="container" style="margin-top: 3rem;">
-        <div class="grid gap">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
-                <div class="flex-stretch text-center">
-                    <h2>Apparel For Everyone</h2>
-                    <h5>Find the right fit for you.</h5>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="grid gap">
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?category=Men">
-                            <div class="display-flex flex-align-center card-img card-bg-1">
-                                <h3 class="flex-stretch">Mens</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?category=Women">
-                            <div class="display-flex flex-align-center card-img card-bg-2">
-                                <h3 class="flex-stretch">Womens</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?category=Teen">
-                            <div class="display-flex flex-align-center card-img card-bg-3">
-                                <h3 class="flex-stretch">Teen</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
-                        <a href="shop.php?category=Kids">
-                            <div class="display-flex flex-align-center card-img card-bg-4">
-                                <h3 class="flex-stretch">Kids</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- *** RECOMMENDED PRODUCTS *** -->
     <div class="container">
         <h2>Trending Now<h2>
         <?php recommendedType("T-shirt"); ?>
+        <br />
         <h2>Seasonal Specials<h2>
         <?php recommendedType("Sweater"); ?>
     </div>
+
+    <!-- *** CATEGORIES *** -->
+    <section style="background-color: var(--color-accent-red-medium);">
+        <div class="container" style="margin-top: 3rem;">
+            <div class="grid gap">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
+                    <div class="flex-stretch text-center">
+                        <h2 style="color: var(--color-primary-light);">Apparel For Everyone</h2>
+                        <h5 style="color: var(--color-primary-light);">Find the right fit for you.</h5>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="grid gap">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                            <a href="shop.php?category=Men">
+                                <div class="display-flex flex-align-center card-img card-bg-1">
+                                    <h3 class="flex-stretch">Mens</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                            <a href="shop.php?category=Women">
+                                <div class="display-flex flex-align-center card-img card-bg-2">
+                                    <h3 class="flex-stretch">Womens</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                            <a href="shop.php?category=Teen">
+                                <div class="display-flex flex-align-center card-img card-bg-3">
+                                    <h3 class="flex-stretch">Teen</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                            <a href="shop.php?category=Kids">
+                                <div class="display-flex flex-align-center card-img card-bg-4">
+                                    <h3 class="flex-stretch">Kids</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 </body>
 
