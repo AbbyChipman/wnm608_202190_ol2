@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 // Call mySQL database
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
@@ -111,6 +112,17 @@ $color_elements = array_reduce($colors,function($r,$o){
             </form>
 
         </div>
+    </div>
+
+    <!-- *** RECOMMENDED PRODUCTS *** -->
+    <br />
+    <div class="container">
+        <h3>You May Also Like</h3>
+        <?php
+
+        recommendedSimilar($product->type,$product->id);
+
+        ?>
     </div>
 
     <!-- *** FOOTER *** -->

@@ -80,6 +80,8 @@ include_once "parts/templates.php";
     <div class="container">
         <h2>Trending Now<h2>
         <?php recommendedType("T-shirt"); ?>
+        <h2>Seasonal Specials<h2>
+        <?php recommendedType("Sweater"); ?>
     </div>
     
 </body>

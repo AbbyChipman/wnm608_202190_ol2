@@ -93,6 +93,8 @@ HTML;
 }
 
 
+
+
 function recommendedProducts($a) {
 
     $products = array_reduce($a,'productListTemplate');
@@ -107,5 +109,13 @@ function recommendedType($typ,$limit=3) {
     $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `type`='$typ' ORDER BY `date_create` DESC LIMIT $limit");
     recommendedProducts($result);
 }
+
+
+function recommendedSimilar($typ,$id=0,$limit=3) {
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `type`='$typ' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+    recommendedProducts($result);
+}
+
+
 
 ?>
