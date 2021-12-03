@@ -2,7 +2,7 @@
 
 include "../lib/php/functions.php";
 
-$empty_product = (object)[
+/*$empty_product = (object)[
     "name"=>"",
     "price"=>"",
     "description"=>"",
@@ -12,6 +12,19 @@ $empty_product = (object)[
     "color"=>"",
     "thumbnail"=>"",
     "images"=>""
+];*/
+
+
+$empty_product = (object)[
+    "name"=>"Favorite T-shirt",
+    "price"=>"49.99",
+    "description"=>"This is my all-time favorite t-shirt",
+    "type"=>"T-shirt",
+    "category"=>"Men",
+    "size"=>"XL, XXL, XXXL",
+    "color"=>"Black, Heather Gray",
+    "thumbnail"=>"AW-DivisionForMath-Tshirt-Premium_Men-BLACK-Thumbnail.jpg",
+    "images"=>"AW-DivisionForMath-Tshirt-Premium_Men-BLACK.jpg"
 ];
 
 
@@ -53,9 +66,40 @@ try {
             header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
             break;
         case "create":
+            $statement = $conn->prepare("INSERT INTO
+                `products`
+                ( 
+                    `name`,
+                    `price`,
+                    `description`,
+                    `type`,
+                    `category`,
+                    `size`,
+                    `color`,
+                    `thumbnail`,
+                    `images`,
+                    `date_create`,
+                    `date_modify`
+                )
+                VALUES (?,?,?,?,?,?,?,?,?,NOW(),NOW())
+                ");
+            $statement->execute([
+                $_POST['product-name'],
+                $_POST['product-price'],
+                $_POST['product-description'],
+                $_POST['product-type'],
+                $_POST['product-category'],
+                $_POST['product-size'],
+                $_POST['product-color'],
+                $_POST['product-thumbnail'],
+                $_POST['product-images']
+            ]);
+            $id = $conn->lastInsertId();
             header("location:{$_SERVER['PHP_SELF']}?id=$id");
             break;
         case "delete":
+            $statement = $conn->prepare("DELETE FROM `products` WHERE id=?");
+            $statement->execute([$_GET['id']]);
             header("location:{$_SERVER['PHP_SELF']}");
             break;
     }
@@ -96,7 +140,7 @@ $display = <<<HTML
     <h3>$o->name</h3>
     <div class="form-control">
         <label class="form-label">Price&colon;</label>
-        <span>$o->price</span>
+        <span>&dollar;$o->price</span>
     </div>
     <div class="form-control">
         <label class="form-label">Description&colon;</label>
@@ -178,7 +222,7 @@ $form = <<<HTML
 HTML;
 
 
-$output = $id == "new" ? "<div class='card-light'>$form</div>" : 
+$output = $id == "new" ? $form : 
     "<div class='grid gap'>
         <div class='col-xs-12 col-md-5'>$display</div>
         <div class='col-xs-12 col-md-7'>$form</div>
@@ -250,7 +294,7 @@ HTML;
             <?php 
 
             // Select everything from Products and turn that into a result array (using the makeQuery function we have written)
-            $result = makeQuery(makeConn(),"SELECT * FROM `products`");
+            $result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY `date_create` DESC");
 
             echo array_reduce($result,'productListItem');
             

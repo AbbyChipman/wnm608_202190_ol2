@@ -92,4 +92,18 @@ return <<<HTML
 HTML;
 }
 
+
+function recommendedProducts($a) {
+    $products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+
+function recommendedType($typ,$limit=3) {
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `type`='$typ' ORDER BY `date_create` DESC LIMIT $limit");
+    recommendedProducts($result);
+}
+
 ?>

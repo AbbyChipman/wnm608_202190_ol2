@@ -75,6 +75,12 @@ include_once "parts/templates.php";
             </div>
         </div>
     </div>
+
+    <!-- *** RECOMMENDED PRODUCTS *** -->
+    <div class="container">
+        <h2>Trending Now<h2>
+        <?php recommendedType("T-shirt"); ?>
+    </div>
     
 </body>
 
