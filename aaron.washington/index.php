@@ -42,7 +42,7 @@ include_once "parts/templates.php";
     </div>
 
     <!-- *** CATEGORIES *** -->
-    <section style="background-color: var(--color-accent-red-medium);">
+    <section style="width: 100%; background-color: var(--color-accent-red-medium);">
         <div class="container" style="margin-top: 3rem;">
             <div class="grid gap">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
