@@ -118,7 +118,7 @@ $color_elements = array_reduce($colors,function($r,$o){
     <!-- *** RECOMMENDED PRODUCTS *** -->
     <br />
     <div class="container">
-        <h3>You May Also Like</h3>
+        <h3 style="margin-bottom: 1rem;">You May Also Like&hellip;</h3>
         <?php
 
         recommendedSimilar($product->type,$product->id);
