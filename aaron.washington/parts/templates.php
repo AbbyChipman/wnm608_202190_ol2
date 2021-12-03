@@ -92,6 +92,7 @@ return <<<HTML
 HTML;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -118,4 +119,6 @@ function recommendedSimilar($typ,$id=0,$limit=4) {
 
 
 
+=======
+>>>>>>> 2909a81e9c91173d53897cb59ed9d0693eee3329
 ?>
