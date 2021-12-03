@@ -33,17 +33,18 @@ include_once "parts/templates.php";
     </div>
 
     <!-- *** RECOMMENDED PRODUCTS *** -->
+    <br />
     <div class="container">
-        <h2>Trending Now<h2>
+        <h3 style="margin-bottom: 1rem;">Trending Now<h3>
         <?php recommendedType("T-shirt"); ?>
         <br />
-        <h2>Seasonal Specials<h2>
+        <h3 style="margin-bottom: 1rem;">Seasonal Specials<h3>
         <?php recommendedType("Sweater"); ?>
     </div>
 
     <!-- *** CATEGORIES *** -->
     <section style="width: 100%; background-color: var(--color-accent-red-medium);">
-        <div class="container" style="margin-top: 3rem;">
+        <div class="container" style="margin-top: 3rem; margin-bottom: 0; padding-top: 2rem; padding-bottom: 2rem;">
             <div class="grid gap">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 display-flex flex-align-center">
                     <div class="flex-stretch text-center">
