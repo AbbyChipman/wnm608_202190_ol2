@@ -75,6 +75,8 @@ $color_elements = array_reduce($colors,function($r,$o){
             <form class="col-xs-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
                 <input type="hidden" name="product-id" value="<?= $product->id ?>">
                 <h3><?= $product->name ?></h3>
+                <p><?= $product->type ?></p>
+                <br />
                 <h4><b>&dollar;<?= $product->price ?></b></h4>
                 <p><?= $product->description ?></p>
                 <br />
