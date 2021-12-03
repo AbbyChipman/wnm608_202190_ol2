@@ -561,6 +561,7 @@ hr {
     .card-img:hover {
         background-size: 110%;
         cursor: pointer;
+        transition: all 0.5s ease-in-out;
     }
 
 
