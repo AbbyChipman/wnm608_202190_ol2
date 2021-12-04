@@ -15,7 +15,7 @@ include_once "parts/templates.php";
 	
 <?php include "parts/navbar.php"; ?>
 
-    <div class="view-window" style="background-image:url('../song.summer/img/yoga.jpg')"></div>
+    <div class="view-window" style="background-image:url('../song.summer/img/view_window.png')"></div>
 
 
 
