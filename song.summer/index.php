@@ -1,4 +1,8 @@
-<?php include_once "lib/php/function.php";?><!DOCTYPE html>
+<?php 
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,6 +50,12 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 				<ul class="table_of"><a href="active_wear.php">More Products</a></ul>
 		</article>
 
+		<div class="container card soft">
+	<h2>Recommended Pants</h2>
+		<?php
+		recommendedCategory("bottoms"); 
+		?> 
+	</div>
 
 
 		<article class="card soft">
@@ -88,6 +98,9 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 			<h2>New Memeber Benefits</h2>
 			<div class="member_gift"></div>
 			</div>
+
+
+
 
 			<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
 

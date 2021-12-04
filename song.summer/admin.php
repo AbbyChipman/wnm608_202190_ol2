@@ -18,11 +18,13 @@ include_once "parts/templates.php";
     <div class="container">
 
         <article class="card soft">
+           <a href="admin_index.php">Go to the Product List </a> <br>
             <a href="user_admin.php">Go to the User List </a>
             <!-- <p>Page for the about section</p> -->
 			<div class="about"></div>
     </div>
-    <ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
-    <footer> <p class="footer">Look and Fit @2021</p> </footer>
+    <ul class="table_of"><a href="index.php">BACK TO HOME PAGE</a></ul>
+
+<footer> <p class="footer">Look and Fit @2021</p> </footer>
 </body>
 </html>

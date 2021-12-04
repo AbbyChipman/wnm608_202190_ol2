@@ -228,7 +228,7 @@
 
     .productlist a{
         text-decoration: none;
-        font-weight: lighter;
+        /* font-weight: lighter; */
     }
 
     .product.figure:hover{
