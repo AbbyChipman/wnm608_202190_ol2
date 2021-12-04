@@ -13,6 +13,7 @@
         <div class="grid gap">
             <div class="col-xs-12 col-md-12">
                 <h2><?= $product->title ?></h2>
+                <h3>Category: <?= $product->category ?></h3>
                 <p><?= $product->description?></p>
             </div>
             <div class="col-xs-12 col-md-5">

@@ -3,6 +3,7 @@
 <head>
 <?php include "parts/meta.php";
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -49,6 +50,13 @@ $image_elements = array_reduce($images,function($r,$o){
             <?php include "parts/prod_info.php" ?>
 
             
+        </div>
+
+        <div class="card soft">
+            <h2>Related Products</h2>
+            <?php 
+                recommendedSimilar($product->category,$product->id);
+            ?>
         </div>
     </div>
 </body>

@@ -24,24 +24,13 @@
 
     <div class="container">
         <div class="card soft">
-            <h2>Check out some of our Featured Products!</h2>
-        
+            <h2 style="text-align: center">Check out some of our Newest Products!</h2>
 
-        <?php
+            <h2 style="text-align: center">New Stationery Sets!</h2>
+            <?php recommendedCategory("sets");?>
 
-            $result = makeQuery(
-                makeConn(), 
-                "
-                SELECT * 
-                FROM `products`
-                ORDER by `title` DESC
-                LIMIT 3
-                "
-            );
-
-            echo "<div class='grid gap'>",array_reduce($result,'featuredListTemplate'),"</div>";
-
-            ?>
+            <h2 style="text-align: center">New Notebooks!</h2>
+            <?php recommendedCategory("notebooks");?>
         </div>
     </div>
 </body>
