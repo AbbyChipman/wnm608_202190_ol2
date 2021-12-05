@@ -174,8 +174,8 @@ function showProductPage($o) {
         HTML;
     $output = $id == "new" ? "<div class='card soft'>$form</div>" :
         "<div class= 'grid gap'>
-            <div class='col-xs-12 col-md-7'><div class='card soft'>$display</div></div>
-            <div class='col-xs-12 col-md-5'><div class='card soft'>$form</div></div>
+            <div class='col-xs-12 col-md-6'><div class='card soft'>$display</div></div>
+            <div class='col-xs-12 col-md-6'><div class='card soft'>$form</div></div>
         </div>
         ";
 
