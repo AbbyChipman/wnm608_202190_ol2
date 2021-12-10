@@ -8,6 +8,8 @@ include_once "parts/templates.php";
 
 $cart_items = getCartItems();
 
+$cart = getCart();
+
 ?>
 
 
@@ -25,16 +27,22 @@ $cart_items = getCartItems();
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs">
-        <ul style="margin-left: 0;">
-            <li class="active"><a href="cart.php">Cart Overview</a></li>
-            <li><a href="cart.php">Checkout</a></li>
-            <li><a href="cart.php">Summary</a></li>
-        </ul>
-    </nav>
+    <div class="container" style="padding-left: 1.5rem !important;">
+        <nav class="nav nav-crumbs">
+            <ul style="margin-left: 0;">
+                <li class="active"><a href="cart.php">Cart Overview</a></li>
+                <li><a href="cart.php">Checkout</a></li>
+                <li><a href="cart.php">Summary</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- *** CART LIST *** -->
     <div class="container">
+        <?php
+        if(count($cart)) {
+        ?>
+
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8" style="text-align: right;">
                 <a href="shop.php?category=Everything"><button class="dark">Continue Shopping&nbsp;&rsaquo;</button></a> 
@@ -46,6 +54,23 @@ $cart_items = getCartItems();
                 </div>
             </div>
         </div>
+
+        <?php
+        } else {
+        ?>
+
+            <div class="col-xs-12" style="text-align: left;">
+            <h4 style="margin-bottom: 1rem;">Your cart is empty&hellip;but you'll probably like these&colon;</h4>
+            <?php
+
+            recommendedEverything(6);
+
+            ?>
+        </div>
+
+        <?php
+        }
+        ?>
     </div>
 
 </body>

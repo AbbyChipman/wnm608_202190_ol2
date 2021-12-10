@@ -18,13 +18,15 @@ include_once "lib/php/functions.php";
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs">
-        <ul style="margin-left: 0;">
-            <li><a href="cart.php">Cart Overview</a></li>
-            <li class="active"><a href="checkout.php">Checkout</a></li>
-            <li><a href="checkout.php">Summary</a></li>
-        </ul>
-    </nav>
+    <div class="container" style="padding-left: 1.5rem !important;">
+        <nav class="nav nav-crumbs">
+            <ul style="margin-left: 0;">
+                <li><a href="cart.php">Cart Overview</a></li>
+                <li class="active"><a href="checkout.php">Checkout</a></li>
+                <li><a href="checkout.php">Summary</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- *** CHECKOUT FORM *** -->
     <div class="container">
