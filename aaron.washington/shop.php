@@ -39,7 +39,7 @@ function productFilter () {
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CATEGORY HERO *** -->
-    <div class="container" style="margin-top: 0rem !important;">
+    <div class="container">
         <div class="hero display-flex flex-align-center" style="min-height: 17vh;">
             <div class="flex-stretch">
                 <div class="text-center" style="color: #fff;">
@@ -63,7 +63,7 @@ function productFilter () {
     <div class="container">
         <div class="grid gap">
 
-            <nav class="nav nav-crumbs col-xs-12 col-sm-12 col-md-5 col-lg-6">
+            <nav class="nav nav-crumbs col-xs-12 col-sm-12 col-md-5 col-lg-6" style="margin-top: 0rem !important;">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>

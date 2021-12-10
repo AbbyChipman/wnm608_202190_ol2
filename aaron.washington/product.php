@@ -71,12 +71,7 @@ $color_elements = array_reduce($colors,function($r,$o){
                     <?= $image_elements ?>
                 </div>
             </div>
-
-<<<<<<< HEAD
             <form class="col-xs-12 col-sm-12 col-md-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
-=======
-            <form class="col-xs-6 product-text" method="post" action="cart_actions.php?action=add-to-cart">
->>>>>>> 2909a81e9c91173d53897cb59ed9d0693eee3329
                 <input type="hidden" name="product-id" value="<?= $product->id ?>">
                 <h3><?= $product->name ?></h3>
                 <p style="margin-bottom: 1rem;"><?= $product->type ?></p>
