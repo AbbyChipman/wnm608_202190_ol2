@@ -21,9 +21,9 @@ resetCart();
     <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
         <div class="container">
             <div class="grid">
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-sm-2 col-md-4"></div>
+                <div class="col-xs-12 col-sm-4 col-md-4"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card section rainbow">
                         <h2>Order Confirmation</h2>
                     </div>
@@ -56,10 +56,10 @@ resetCart();
                 <div class="col-xs-12 col-md-3"></div>
             </div>
             <div class="grid gap">
-            <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4">
-                <a href="index.php"><img class="logo" src="img/logoColor.png" alt="AbbyDazzled Logo"></div></a>
-                <div class="col-xs-12 col-md-4"></div>
+            <div class="col-xs-3 col-md-4"></div>
+                <div class="col-xs-4 col-md-4">
+                <a href="index.php"><img class="logo-lg" src="img/logoColor.png" alt="AbbyDazzled Logo"></div></a>
+                <div class="col-xs-7 col-md-4"></div>
             </div>
         </div>
     </div>

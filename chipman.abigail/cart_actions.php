@@ -5,7 +5,7 @@ include_once "lib/php/functions.php";
 switch($_GET['action']) {
     case "add-to-cart":
         $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_POST['product-id'])[0];
-        addToCart($_POST['product-id'],$_POST['color'],$_POST['quantity']);
+        addToCart($_POST['product-id'],$_POST['quantity']);
         header("location:product_added_to_cart.php?id={$_POST['product-id']}");
         break;
     case "update-cart-item":

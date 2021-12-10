@@ -5,6 +5,7 @@ include_once "parts/templates.php";
 
 include "parts/meta.php";
 
+$cart = getCartItems();
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +20,9 @@ include "parts/meta.php";
     <div class="view-window-small" style="background-image:url(lib/img/glitter-background.jpg);">
         <div class="container">
             <div class="grid">
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4"></div>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-sm-2 col-md-4"></div>
+                <div class="col-xs-12 col-sm-4 col-md-4"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card section rainbow">
                         <h2>Checkout</h2>
                     </div>
@@ -34,80 +35,24 @@ include "parts/meta.php";
         <div class="card soft">
             <h2>Shipping # items</h2>
             <div class="grid gap">
-                <div class="col-xs-12 col-md-5">
-                    <div class="grid gap">
-                        <div class="col-xs-12 col-md-2">
-                            <img class="product" src="img/logoColorNav.png" alt="AbbyDazzled Logo">
+                <div class="col-xs-12 col-md-6">
+                    <?php
+                    
+                        echo array_reduce($cart,function($r,$o){
+                            $totalfixed = number_format($o->total,2,'.','');
+                            return $r."<div class='display-flex flex-align-center'>
+                            <div class='flex-none cart-thumb'>
+                                <img src='img/$o->image_main' alt='$o->description'>
+                            </div>
+                            <div class='flex-stretch'><h2 class='checkout-title'>$o->title</h2>
                         </div>
-                        <div class="col-xs-12 col-md-2"></div>
-                        <div class="col-xs-12 col-md-5">
-                            <div class="checkout-title">Item Name</div>
-                        </div>
-                        <div class="col-xs-12 col-md-1"></div>
-                        <div class="col-xs-12 col-md-2">
-                            <div class="checkout-price">$price</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="grid gap">
-                        <div class="col-xs-12 col-md-2">
-                            <img class="product" src="img/logoColorNav.png" alt="AbbyDazzled Logo">
-                        </div>
-                        <div class="col-xs-12 col-md-2"></div>
-                        <div class="col-xs-12 col-md-5">
-                            <div class="checkout-title">Item Name</div>
-                        </div>
-                        <div class="col-xs-12 col-md-1"></div>
-                        <div class="col-xs-12 col-md-2">
-                            <div class="checkout-price">$price</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="grid gap">
-                        <div class="col-xs-12 col-md-2">
-                            <img class="product" src="img/logoColorNav.png" alt="AbbyDazzled Logo">
-                        </div>
-                        <div class="col-xs-12 col-md-2"></div>
-                        <div class="col-xs-12 col-md-5">
-                            <div class="checkout-title">Item Name</div>
-                        </div>
-                        <div class="col-xs-12 col-md-1"></div>
-                        <div class="col-xs-12 col-md-2">
-                            <div class="checkout-price">$price</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <table class="table lined border">
-                        <thead>
-                            <tr>
-                                <th colspan=3 style="font-size: 1.25em; text-align: center;">Order Summary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align: left;">Sub-total:</td>
-                                <td>&nbsp</td>
-                                <td style="text-align: right; font-weight: bold; font-size: 1.25em;">$Sub-Total</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Estimated Taxes:</td>
-                                <td>&nbsp</td>
-                                <td style="text-align: right; font-weight: bold; font-size: 1.25em;">$Taxes</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Estimated Shipping:</td>
-                                <td>&nbsp</td>
-                                <td style="text-align: right;font-weight: bold; font-size: 1.25em;">$Shipping</td>
-                            </tr>
-                            <tr style="font-size: 2em; border-top: 2px solid var(--color-main-dark);">
-                                <td style="text-align: left;">Total:</td>
-                                <td>&nbsp</td>
-                                <td style="text-align: right; font-weight: bold;">$Total</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <div class='flex-none'>&dollar;$totalfixed</div>
+                        </div>";
+                    })
+
+                    ?>
+                    <?= cartTotals(); ?>
                 </div>
-                <div class="col-xs-12 col-md-1"></div>
                 <div class="col-xs-12 col-md-6">
                 <form action="" class="form">
                 <div class="grid">

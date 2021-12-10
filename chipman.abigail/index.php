@@ -27,10 +27,8 @@
             <h2 style="text-align: center">Check out some of our Newest Products!</h2>
 
             <h2 style="text-align: center">New Stationery Sets!</h2>
-            <?php recommendedCategory("sets");?>
+            <?php featuredCategory("sets");?>
 
-            <h2 style="text-align: center">New Notebooks!</h2>
-            <?php recommendedCategory("notebooks");?>
         </div>
     </div>
 </body>

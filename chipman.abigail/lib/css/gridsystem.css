@@ -39,7 +39,7 @@
 }
 
 /* small */
-@media (min-width: 350px) {
+@media (min-width: 400px) {
 
   .gap.sm-small { --grid-gap:0.5em; }
   .gap.sm-medium { --grid-gap:1em; }
@@ -61,7 +61,7 @@
 }
 
 /* medium */
-@media (min-width: 750px) {
+@media (min-width: 800px) {
 
   .gap.md-small { --grid-gap:0.5em; }
   .gap.md-medium { --grid-gap:1em; }
@@ -83,7 +83,7 @@
 }
 
 /* large */
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
 
   .gap.lg-small { --grid-gap:0.5em; }
   .gap.lg-medium { --grid-gap:1em; }

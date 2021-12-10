@@ -50,18 +50,16 @@ function getCart() {
     return isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 }
 
-function addToCart($id,$color,$quantity) {
+function addToCart($id,$quantity) {
     $cart = getCart();
 
     $p = array_find($cart,function($o) use($id) { return $o->id==$id; });
-    $c = array_find($cart,function($o) use($color) { return $o->color==$color; });
 
-    if($p and $c) {
+    if($p) {
         $p->quantity += $quantity;
     } else {
         $_SESSION['cart'][] = (object)[
             "id"=>$id,
-            "color"=>$color,
             "quantity"=>$quantity
         ];
     } 

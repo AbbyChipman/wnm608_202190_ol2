@@ -50,6 +50,10 @@ h6 {
 }
 
 @media (max-width: 800px) {
+  body {
+    font-size: 0.8em;
+  }
+
   .container {
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -58,33 +62,98 @@ h6 {
     padding-left: 0.5em;
   }
   .view-window-small {
-    height: 20vh;
+    height: 30vh;
   }
   .view-window {
-    height: 50vh;
+    height: 75vh;
     position: relative;
     overflow: hidden;
+    background-size: 800px 300px;
     background-position: center;
+    background-attachment: scroll;
   }
-  .view-window img {
-    max-width:100%;
-    height:auto;
+
+  .card.section {
+    height: 90%;
+    padding: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    border-radius: 0.5em;
+    opacity: 0.8;
+  }
+  .card.section a {
+    text-decoration: none;
+  }
+  .card.section h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 0.25em;
+  }
+
+  .nav-logo {
+    height: 3em;
+    width: auto;
+  }
+
+  .image-main img {
+    width: 8em;
+    height: 70vh;
+    object-fit: contain;
   }
 }
+
 a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 400px) {
-  body {
-    background: var(--color-main-dark);
-  }
+.menu-button label {
+  display: none;
+}
+
+@media (max-width: 425px) {
   .navbar .display-flex {
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav {
+    width: 100%;
+    display: none;
+  }
+
+  .nav-crumbs {
+    font-size: 0.7em;
+  }
+
+  .navbar .nav-flex ul {
     display: block;
   }
   .navbar .nav li {
     line-height: 1em;
+    padding: 0.25em;
   }
+
+  .menu-button label {
+    display: block;
+    font-size: 4em;
+  }
+
+  #menu:checked + .navbar .nav {
+    display: block;
+  }
+
+  .image-main img {
+    width: 5em;
+    height: 70vh;
+    object-fit: contain;
+  }
+
+  .image-thumb img {
+    width: 50px;
+    height: 25px;
+    object-fit: scale-down;
+  }
+
   .product-overlay figcaption {
     position: relative;
     display: block;
@@ -100,40 +169,140 @@ a:hover {
     padding: 0;
   }
 
-  .logo {
-    position: center;
+  .nav-logo {
+    height: 3em;
+    width: auto;
   }
 
   .view-window {
-    height: 30vh;
+    height: 40vh;
     position: relative;
     overflow: hidden;
+    background-size: 425px 400px;
+    background-position: center;
+    background-attachment: scroll;
   }
-  .view-window img {
-    max-width:100%;
-    height:auto;
+
+  .logo-lg {
+    height: 5em;
+    width: auto;
   }
 
   .view-window-small {
     height: 15vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-attachment: fixed;
   }
+
   .card.section {
-    height: 75%;
-    padding: 0.25em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    height: 10%;
+    padding: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0.1em;
     border-radius: 0.5em;
     opacity: 0.8;
   }
+
   .card.section a {
     text-decoration: none;
   }
   .card.section h2 {
-    font-size: 1.75em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 0.25em;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar .display-flex {
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar .nav-flex ul {
+    display: block;
+  }
+  .navbar .nav li {
+    line-height: 1em;
+    padding: 0.25em;
+  }
+
+  .menu-button label {
+    display: block;
+    font-size: 4em;
+  }
+
+  #menu:checked + .navbar .nav {
+    display: block;
+  }
+
+  .image-main img {
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+  }
+
+  .image-thumb img {
+    width: auto;
+    height: 3em;
+    object-fit: contain;
+  }
+
+  .product-overlay figcaption {
+    position: relative;
+    display: block;
+    top: initial;
+    left: initial;
+    width: 100%;
+    height: initial;
+    background-color: initial;
+    opacity: 1;
+  }
+  .product-overlay .caption-body {
+    transform: none;
+    padding: 0;
+  }
+
+  .nav-logo {
+    height: 3em;
+    width: auto;
+  }
+
+  .view-window {
+    height: 40vh;
+    position: relative;
+    overflow: hidden;
+    background-size: 425px 400px;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .logo-lg {
+    height: 5em;
+    width: auto;
+  }
+
+  .view-window-small {
+    height: 10vh;
+  }
+
+  .card.section {
+    height: 10%;
+    padding: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+    border-radius: 0.5em;
+    opacity: 0.8;
+  }
+
+  .card.section a {
+    text-decoration: none;
+  }
+  .card.section h2 {
+    font-size: 1em;
     font-weight: bold;
     text-align: right;
     padding-right: 0.25em;
@@ -183,6 +352,15 @@ hr {
   font-size: 1.5em;
   margin: 0;
   font-family: var(--font-serif);
+}
+
+.card.section {
+  height: 75%;
+  padding: 0.25em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  border-radius: 0.5em;
+  opacity: 0.8;
 }
 
 .card.outline {
@@ -316,7 +494,7 @@ hr {
 
 .image-main img {
   width: 100%;
-  height: 40vh;
+  height: 55vh;
   object-fit: contain;
 }
 .cart-thumb img,

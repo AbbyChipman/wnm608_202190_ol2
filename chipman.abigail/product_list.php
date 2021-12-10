@@ -23,9 +23,9 @@ include_once "parts/templates.php";
 <div class="view-window-small flex-align-center" style="background-image:url(lib/img/glitter-background.jpg);">
     <div class="container">
         <div class="grid">
-            <div class="col-xs-12 col-md-4"></div>
-            <div class="col-xs-12 col-md-4"></div>
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-sm-2 col-md-4"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="card section rainbow">
                     <h2>Product List</h2>
                 </div>

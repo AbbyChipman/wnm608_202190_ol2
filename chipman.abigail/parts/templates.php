@@ -114,6 +114,24 @@ return <<<HTML
 HTML;
 }
 
+function featuredProducts ($a) {
+$products = array_reduce($a, 'featuredListTemplate');
+
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+function featuredAny ($limit=4) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
+    featuredProducts($result);
+}
+
+function featuredCategory ($cat,$limit=4) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+    featuredProducts($result);
+}
+
 function recommendedProducts ($a) {
 $products = array_reduce($a, 'productListTemplate');
 
@@ -124,6 +142,11 @@ HTML;
 
 function recommendedCategory ($cat,$limit=4) {
     $result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+    recommendedProducts($result);
+}
+
+function recommendedAny ($limit=4) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
     recommendedProducts($result);
 }
 
