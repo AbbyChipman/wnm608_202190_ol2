@@ -37,7 +37,7 @@ $cart_items = getCartItems();
     <div class="container">
         <div class="grid gap">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8" style="text-align: right;">
-                <a href="shop.php?category=Everything">Continue Shopping&nbsp;&rsaquo;</a>
+                <a href="shop.php?category=Everything"><button class="dark">Continue Shopping&nbsp;&rsaquo;</button></a> 
                 <?= array_reduce($cart_items,'cartListTemplate') ?>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
