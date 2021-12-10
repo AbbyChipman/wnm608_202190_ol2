@@ -39,7 +39,7 @@ function productFilter () {
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CATEGORY HERO *** -->
-    <div class="container" style="margin-top: 5rem;">
+    <div class="container">
         <div class="hero display-flex flex-align-center" style="min-height: 17vh;">
             <div class="flex-stretch">
                 <div class="text-center" style="color: #fff;">

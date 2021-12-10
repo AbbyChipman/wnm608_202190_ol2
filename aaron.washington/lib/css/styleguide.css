@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 70px 0px 0px 0px;
     font-size: 100%;
     font-family: 'Rubik', Arial, sans-serif;
     overflow-x: hidden;
@@ -237,10 +237,12 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     padding: 0.75rem 2rem;
     margin: 0;
     background-color: var(--color-primary-light);
-    box-shadow: 0px 0px 8px 0px #202124;
+    box-shadow: 0px 0px 7px 0px #202124;
+    z-index: 50;
 }   
 
     .navbar a h3 {
