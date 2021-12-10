@@ -25,7 +25,7 @@ $cart_items = getCartItems();
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
+    <nav class="nav nav-crumbs">
         <ul style="margin-left: 0;">
             <li class="active"><a href="cart.php">Cart Overview</a></li>
             <li><a href="cart.php">Checkout</a></li>

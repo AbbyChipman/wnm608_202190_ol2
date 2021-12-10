@@ -48,7 +48,7 @@ $color_elements = array_reduce($colors,function($r,$o){
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
+    <nav class="nav nav-crumbs" style="margin-top: 8rem;">
         <ul style="margin-left: 0;">
             <li><a href="index.php">Home</a></li>
             <li><a href="shop.php?category=<?= $_GET['category'] ?>"><?= $_GET['category'] ?></a></li>

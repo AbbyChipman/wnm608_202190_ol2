@@ -339,31 +339,36 @@ hr {
     padding: 0.5rem 1rem;
 }
 
-.nav-crumbs a {
-    display: inline-block;
-    padding: 0rem 1.5rem;
+.nav-crumbs {
+    margin-top: 8rem;
 }
 
-.nav-crumbs ul {
-    padding-left: 0;
-}
-
-.nav-crumbs ul li {
-    color: var(--color-primary-dark);
-    background-color: transparent;
-}
-
-    .nav-crumbs ul li:hover a {
-        color: var(--color-neutral-light) !important;
-        background-color: transparent !important;
-        text-decoration: none;
+    .nav-crumbs a {
+        display: inline-block;
+        padding: 0rem 1.5rem;
     }
 
+    .nav-crumbs ul {
+        padding-left: 0;
+    }
 
-.nav-crumbs li:not(:first-child)::before {
-    content:'/';
-}
+    .nav-crumbs ul li {
+        color: var(--color-primary-dark);
+        background-color: transparent;
+    }
 
+        .nav-crumbs ul li:hover a {
+            color: var(--color-neutral-light) !important;
+            background-color: transparent !important;
+            text-decoration: none;
+        }
+
+
+    .nav-crumbs li:not(:first-child)::before {
+        content:'/';
+    }
+
+    
 .nav-material li {
     padding: 0.5rem 1rem;
     position: relative;

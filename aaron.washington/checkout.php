@@ -18,7 +18,7 @@ include_once "lib/php/functions.php";
     <?php include "parts/navbar.php"; ?>
 
     <!-- *** CRUMB NAV *** -->
-    <nav class="nav nav-crumbs" style="margin-top: 5rem;">
+    <nav class="nav nav-crumbs">
         <ul style="margin-left: 0;">
             <li><a href="cart.php">Cart Overview</a></li>
             <li class="active"><a href="checkout.php">Checkout</a></li>
