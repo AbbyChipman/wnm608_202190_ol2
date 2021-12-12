@@ -89,21 +89,21 @@ function productFilter () {
                 <div class="form-select">
                     <select class="js-filter">
                         <option>Filter By</option>
-                        <option value="0">All Products</option>
+                        <option value="everything">All Products</option>
                         <optgroup label="Audience">
-                            <option value="1">Men</option>
-                            <option value="2">Women</option>
-                            <option value="3">Teen</option>
-                            <option value="4">Kids</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="teen">Teen</option>
+                            <option value="kids">Kids</option>
                         </optgroup>
                         <optgroup label="Apparel" data-filter="type">
-                            <option value="5">T-shirts</option>
-                            <option value="6">Sweaters</option>
-                            <option value="7">Scarves</option>
-                            <option value="8">Jackets</option>
-                            <option value="9">Hoodies</option>
-                            <option value="10">Hats</option>
-                            <option value="11">Button-Down Shirt</option>
+                            <option value="t-shirt">T-shirts</option>
+                            <option value="sweater">Sweaters</option>
+                            <option value="scarf">Scarves</option>
+                            <option value="jacket">Jackets</option>
+                            <option value="hoodie">Hoodies</option>
+                            <option value="headwear">Hats</option>
+                            <option value="button down shirt">Button-Down Shirt</option>
                         </optgroup>
                     </select>
                 </div>

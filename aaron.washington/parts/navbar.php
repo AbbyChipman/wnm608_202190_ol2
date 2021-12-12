@@ -25,7 +25,6 @@ include_once "lib/php/functions.php";
             <ul class="display-flex">
                 <li><a href="shop.php?category=Everything">What&apos;s New</a></li>
                 <li><a href="shop.php?category=Everything">Shop</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="cart.php">
                     <span>Cart</span>
                     <span class="badge"><?= makeCartBadge(); ?></span>

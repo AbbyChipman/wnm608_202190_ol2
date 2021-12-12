@@ -29,7 +29,7 @@ $(()=>{
     })*/
 
     $(".js-filter").on("change",function(e){
-        (
+        /*(
             this.value==0 ? query({type:'everything'}) :
             this.value==1 ? query({type:'product_filter_category',column:'men'}) :
             this.value==2 ? query({type:'product_filter_category',column:'women'}) :
@@ -43,6 +43,12 @@ $(()=>{
             this.value==10 ? query({type:'product_filter_type',column:'headwear'}) :
             this.value==11 ? query({type:'product_filter_type',column:'button down shirt'}) :
             query({type:'everything'})
+        ).then(showResults);*/
+        let value = this.value;
+        (
+            value == 'everything' ? query({type:'everything'}) :
+            query({type:'product_filter_category',column:value})
+            //query({type:'everything'})
         ).then(showResults);
     })
 
