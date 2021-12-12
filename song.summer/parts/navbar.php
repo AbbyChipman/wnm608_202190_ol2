@@ -2,14 +2,21 @@
 
 include_once "lib/php/function.php";
 
+
 ?>
 
-<html lang="en">
-<body>
-    <div class="container">
-        <div class="card soft">
+<input type = "checkbox" id ="menu" class="hidden"> 
+<header class="navbar">
+    <div class="container display-flex">
+    <div class="flex-none">
+
             <h1 class="main_title" id="back_to_the_top"> <a href="index.php">Look and Fit</a> </h1>
-            <nav id="main_nav">
+    </div>
+            <div class="flex-stretch"></div>
+            <div class="flex-none menu-button">
+                <label for="menu">&equiv;</label>
+            </div>
+            <nav class= "nav nav-flex ">
                 <ul class="main_nav2">
                     <li class="flex-stretch"><a href="index.php">Home</a></li>
                     <li class="flex-stretch"><a href="active_wear.php">Active Wear</a></li>
@@ -23,3 +30,5 @@ include_once "lib/php/function.php";
             </nav>
         </div>
     </div>
+
+</header>

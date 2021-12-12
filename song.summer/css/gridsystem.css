@@ -1,8 +1,8 @@
 .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    border: 1px solid var(--color-neutral-light);
-    text-align: center;
+    /* border: 1px solid var(--color-neutral-light); */
+    text-align: left;
 }
 .grid.gap{
     --grid-gap: 0.5em;
@@ -219,6 +219,7 @@
   text-align: center;
 }
 
+
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
@@ -242,7 +243,10 @@
 
 .images-thumbs img{
   height: 6em;
+  
+  padding-left: 1.7em;
+  padding-top: 0.7em;
   object-fit: contain;
-  display: inline;
+
 
 }

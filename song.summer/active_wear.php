@@ -18,7 +18,7 @@ include_once "parts/templates.php";
 <body>
     <?php include "parts/navbar.php"; ?>
 
-    <div class="container">
+    <div class="container card soft">
         <h2>Activewear</h2>
 
         <div class="form-control">
@@ -28,8 +28,8 @@ include_once "parts/templates.php";
         </div>
 
         <div class="form-control">
-        <div class="card soft">
-<div class="display-flex">
+        <div class=" soft">
+<div class="display-flex flex-wrap">
     <div class="flex-stretch display-flex">
          
                 <div class="flex-none">

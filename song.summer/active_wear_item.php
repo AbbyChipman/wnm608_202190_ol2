@@ -30,12 +30,14 @@ $image_elements = array_reduce($images,function($r,$o){
 <body>
 
             <?php include "parts/navbar.php"?>
-            <h2>Item Details</h2>            
+                     
  
     <div class="container">
+    <h2>Item Details</h2>   
         <div class="grid gap">
+           
             <div class="col-xs-12 col-md-6">
-                <div class="card soft">
+                <div class="card ">
                 <div class="images-main">
                     <img src="img/<?= $product->thumbnail ?>"></div>
                 <div class="images-thumbs">
@@ -44,9 +46,6 @@ $image_elements = array_reduce($images,function($r,$o){
                
         </div>
 
-        <div class="card soft medium">
-        <p class="product_description" ><?= $product->description ?></p>
-            </div>
     </div>
 
             <div class="col-xs-12 col-md-6">
@@ -55,8 +54,11 @@ $image_elements = array_reduce($images,function($r,$o){
                 <input type="hidden" name="product-id" value="<?=$product->id ?>">
 
                     <div class="card-section">
-                        <h2 class="product-name"><?= $product->name ?></h2>
+                    <h2 class="product-name"><?= $product->name ?></h2>
                     <div class="product-price">&dollar;<?= $product->price ?> </div></div>
+                    <div class="card light">
+        <p class="product_description" ><?= $product->description ?></p>
+            </div>
 
                     <div class="card-section">
                         <div class="form-control">

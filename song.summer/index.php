@@ -30,9 +30,8 @@ include_once "parts/templates.php";
 			</div>
 
 			<div class="content cnt23">
-			<?php
-
-include_once "parts/templates.php";
+			
+			<?php include_once "parts/templates.php";
 
 $result = makeQuery(
 	makeConn(),
@@ -99,13 +98,21 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 			<div class="member_gift"></div>
 			</div>
 
-
+			</article>
 
 
 			<ul class="table_of"><a href="#back_to_the_top">BACK TO THE TOP</a></ul>
 
-			<footer> <p class="footer">Look and Fit @2021</p> </footer>
-		</article>
+			<section class="footer">
+    <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+    </div>
+
+    <p class="footer">Look and Fit @2021</p> 
+</section>
+		
 	</div>
 
 	
