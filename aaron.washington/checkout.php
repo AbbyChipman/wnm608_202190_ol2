@@ -1,6 +1,9 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+$cart = getCartItems();
 
 ?>
 
@@ -31,10 +34,10 @@ include_once "lib/php/functions.php";
     <!-- *** CHECKOUT FORM *** -->
     <div class="container">
         <div class="grid gap">
-            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+            <!--<div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
                 <div style="width: 100%; visibility: hidden;"></div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+            </div>-->
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7">
                 <div class="card-light text-left form-control">
                     <h4><b>Personal</b></h4>
                     <form>
@@ -93,6 +96,26 @@ include_once "lib/php/functions.php";
                         </div>
                     </form>
                 </div>
+            </div>
+            
+            <!-- *** CART REVIEW *** -->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-5">
+                <div class="card-light text-left form-control">
+                    <h4><b>Cart Review</b></h4>
+                    <?php
+                    /*echo array_reduce($cart,function($r,$o){
+                            $total_fixed = number_format($o->total,2,'.','');
+                            return $r."<div class='display-flex'>
+                                        <div class='flex-stretch'>$o->name</div>
+                                        <div class='flex-none'>&dollar;$total_fixed</div>
+                                    </div>";
+                        })*/
+                    ?>
+                    <?= array_reduce($cart,'cartListTemplate') ?>
+                    <br />
+                    <?= cartTotals(); ?>
+                </div>
+
                 <!-- *** BUTTONS *** -->
                 <div class="display-flex">
                     <div class="flex-none">
@@ -104,9 +127,9 @@ include_once "lib/php/functions.php";
                     </div>
                 </div>
             </div>
-            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+            <!--<div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
                 <div style="width: 100%; visibility: hidden;"></div>
-            </div>
+            </div>-->
         </div>
     </div>
 

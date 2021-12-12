@@ -51,6 +51,13 @@ $cart = getCart();
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
                 <div class="card-light cart-total form-control">
                     <?= cartTotals() ?>
+                    <form action="checkout.php" method="post">
+                        <div class="form-control">
+                            <label class="form-label" style="text-align: left;">Got a Promo Code&quest;</label>
+                            <input type="text" class="form-input" placeholder="Enter Code">
+                        </div>
+                    <form>
+                    <a href="checkout.php" class="form-button">Checkout</a>
                 </div>
             </div>
         </div>

@@ -167,9 +167,51 @@ span.badge:not(:empty)::after {
 
 
 
+.navbar .display-flex {
+    flex-wrap: nowrap;
+}
+
+.menu-button label {
+    display: none;
+}
+
+
+
 
 
 @media (max-width: 800px) {
+
+    .navbar .display-flex {
+        flex-wrap: wrap;
+    }
+
+    .navbar .nav {
+        width: 100%;
+        display: none;
+    }
+
+    .navbar .nav ul {
+        display: block;
+    }
+
+        .navbar .nav li {
+            line-height: 2em;
+        }
+
+
+    .menu-button label {
+        display: block;
+        padding: 0rem 1rem;
+        font-size: 1.8rem;
+        color: var(--color-primary-dark);
+    }
+
+        .menu-button label:hover {
+            cursor: pointer;
+            color: var(--color-neutral-medium);
+        }
+        
+
     .container {
         padding-left: 1em;
         padding-right: 1em;
@@ -179,9 +221,9 @@ span.badge:not(:empty)::after {
         width: 80%;
     }
     
-    /*.navbar h1 {
-        padding-left: 1em;
-    }*/
+    #menu:checked+.navbar .nav {
+        display: block;
+    }
 }
 
 
@@ -212,15 +254,9 @@ span.badge:not(:empty)::after {
 
 
 @media (max-width: 400px) {
-    .navbar .display-flex {
-        display: block;
-    }
-
-    .navbar .nav li {
-        line-height: 2em;
-    }
 
     #tableofcontents .card {
         width: 100%;
     }
+
 }

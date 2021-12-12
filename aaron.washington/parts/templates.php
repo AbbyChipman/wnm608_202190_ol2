@@ -46,7 +46,7 @@ return $r.<<<HTML
             title="$o->name &ndash; $o->category" />
     </div>
     <div class="flex-stretch" style="padding-left: 2em;">
-        <h3 style="font-size: 1.75rem;">$o->name</h3>
+        <h3 style="font-size: 1.5rem;">$o->name</h3>
         <form action="cart_actions.php?action=delete-cart-item" method="post">
             <input type="hidden" name="id" value="$o->id">
             <input type="submit" class="form-button inline" value="Delete" style="font-size: 0.9rem;">
@@ -82,13 +82,6 @@ return <<<HTML
 <h5>Taxes&colon;&nbsp;&dollar;$tax_fixed</h5>
 <hr>
 <h3>Total&colon;&nbsp;&dollar;$taxed_fixed</h3>
-<form action="checkout.php" method="post">
-    <div class="form-control">
-        <label class="form-label" style="text-align: left;">Got a Promo Code&quest;</label>
-        <input type="text" class="form-input" placeholder="Enter Code">
-        <input type="submit" class="form-button" value="Checkout" style="margin-top: 2rem; padding-top: 1rem; padding-bottom: 1rem;">
-    </div>
-<form>
 HTML;
 }
 
