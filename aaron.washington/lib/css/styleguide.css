@@ -835,7 +835,7 @@ hr {
 }
 
 .form-button {
-    padding: 0.75rem;
+    padding: 0.85rem;
     cursor: pointer;
     text-align: center;
     color: var(--color-primary-light);

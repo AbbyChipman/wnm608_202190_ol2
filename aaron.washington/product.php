@@ -110,7 +110,7 @@ $color_elements = array_reduce($colors,function($r,$o){
                     </select>
                 </div>
                 <br />
-                <input style="max-width: 50%;" type="submit" class="form-button" value="Add to Cart">
+                <input type="submit" class="form-button add-cart" value="Add to Cart">
             </form>
 
         </div>
@@ -119,7 +119,7 @@ $color_elements = array_reduce($colors,function($r,$o){
     <!-- *** RECOMMENDED PRODUCTS *** -->
     <br />
     <div class="container">
-        <h3 style="margin-bottom: 1rem;">You'll probably like these too<h3>
+        <h4 style="margin-bottom: 1rem;">You'll probably like these too<h4>
         <?php
 
         recommendedSimilar($product->type,$product->id);

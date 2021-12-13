@@ -45,8 +45,8 @@ return $r.<<<HTML
             alt="$o->name &ndash; $o->category"
             title="$o->name &ndash; $o->category" />
     </div>
-    <div class="flex-stretch" style="padding-left: 2em;">
-        <h3 style="font-size: 1.5rem;">$o->name</h3>
+    <div class="flex-stretch">
+        <h3>$o->name</h3>
         <form action="cart_actions.php?action=delete-cart-item" method="post">
             <input type="hidden" name="id" value="$o->id">
             <input type="submit" class="form-button inline" value="Delete" style="font-size: 0.9rem;">

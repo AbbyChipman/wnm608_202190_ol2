@@ -224,8 +224,8 @@ HTML;
 
 $output = $id == "new" ? $form : 
     "<div class='grid gap'>
-        <div class='col-xs-12 col-md-5'>$display</div>
-        <div class='col-xs-12 col-md-7'>$form</div>
+        <div class='col-xs-12 col-lg-5'>$display</div>
+        <div class='col-xs-12 col-lg-7'>$form</div>
     </div>
     ";
 
@@ -261,7 +261,7 @@ HTML;
     <header class="navbar">
         <div class="container display-flex" style="margin-bottom: 0;">
             <div class="flex-none">
-                <h5>Product Admin</h5>
+                <h5>PRODUCT ADMIN</h5>
             </div>
             <div class="flex-stretch"></div>
             <nav class="nav nav-flex flex-none">

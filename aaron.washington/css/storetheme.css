@@ -132,6 +132,20 @@ body {
     object-fit: contain;
 }
 
+.cart-item .flex-stretch {
+    padding-left: 2rem;
+}
+
+    .cart-item .flex-stretch h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+
+.add-cart {
+    max-width: 50%;
+}
+
 
 #grid .card-light .title,
 #forms .card-light,
@@ -278,6 +292,19 @@ span.badge:not(:empty)::after {
     .product-overlay .caption-body {
         transform: none;
         padding: 0;
+    }
+
+    .cart-item .flex-stretch {
+        padding-left: 1rem;
+    }
+
+    .cart-item .flex-stretch h3 {
+        font-size: 1.15rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .add-cart {
+        max-width: 100%;
     }
 
     footer .nav a {
