@@ -70,7 +70,7 @@ $classes = implode(", ", $user->classes);*/
             <nav class="nav nav-crumbs col-xs-12 col-sm-12 col-md-5 col-lg-6" style="margin-top: 0rem !important;">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li class="active crumb-second" value="<?=$_GET['category']?>"><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
+                    <li class="active"><a class="crumb-second" id="<?=$_GET['category']?>" href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
                 </ul>
             </nav>
 

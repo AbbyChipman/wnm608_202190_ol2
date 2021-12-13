@@ -31,8 +31,8 @@ $cart = getCart();
         <nav class="nav nav-crumbs">
             <ul style="margin-left: 0;">
                 <li class="active"><a href="cart.php">Cart Overview</a></li>
-                <li><a href="cart.php">Checkout</a></li>
-                <li><a href="cart.php">Summary</a></li>
+                <li><a href="cart.php" class="disabled">Checkout</a></li>
+                <li><a href="cart.php" class="disabled">Summary</a></li>
             </ul>
         </nav>
     </div>

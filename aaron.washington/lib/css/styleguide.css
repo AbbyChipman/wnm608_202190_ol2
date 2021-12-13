@@ -233,6 +233,17 @@ hr {
     text-align: center !important;
 }
 
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+    a.disabled:hover,
+    a.disabled:active {
+        color: var(--color-primary-dark);
+    }
+    
+
 
 
 

@@ -113,7 +113,7 @@ try {
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div class="card-light form-control" style="text-align: left; max-width: 65%;">
+<div class="card-light form-control product-list-item" style="text-align: left;">
     <div class="display-flex">
         <div class="flex-none images-thumbs"><a href="{$_SERVER['PHP_SELF']}?id=$o->id"><img src='img/$o->thumbnail' /></a></div>
         <div class="flex-stretch" style="padding: 1rem;">$o->name</div>

@@ -34,7 +34,7 @@ $(()=>{
 
     $(".crumb-second").on("click",function(e){
 
-        let value = this.value;
+        let value = this.id;
         (
             value == 'Everything' ? query({type:'Everything'}) :
             value == 'Men' ? query({type:'product_filter_category',column:value}) :

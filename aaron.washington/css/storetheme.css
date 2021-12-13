@@ -192,6 +192,11 @@ span.badge:not(:empty)::after {
 }
 
 
+.product-list-item {
+    max-width: 65%;
+}
+
+
 
 
 
@@ -261,6 +266,11 @@ span.badge:not(:empty)::after {
 
 @media (max-width: 600px) {
 
+    .nav-crumbs a {
+        font-size: 0.85rem;
+        padding: 0rem 0.85rem;
+    }
+
     .hero-text h2 {
         font-size: 2rem;
     }
@@ -304,6 +314,10 @@ span.badge:not(:empty)::after {
     }
 
     .add-cart {
+        max-width: 100%;
+    }
+
+    .product-list-item {
         max-width: 100%;
     }
 
