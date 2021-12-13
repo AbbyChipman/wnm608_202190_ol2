@@ -32,7 +32,9 @@ $(()=>{
         ).then(showResults);
     })
 
-    $(".crumb-second").on("click",function(e){
+
+    // **** TRIED TO HAVE THE SECOND NAV CRUMB INITIATE THE FILTER QUERY AS WELL, BUT NO DICE ****
+    /*$(".crumb-second").on("click",function(e){
 
         let value = this.id;
         (
@@ -43,7 +45,14 @@ $(()=>{
             value == 'Kids' ? query({type:'product_filter_category',column:value}) :
             query({type:'Everything'})
         ).then(showResults);
-    })
+    })*/
+
+
+    // **** TRIED TO LOAD THE SELECTOR ATTRIBUTE FOR THE CORRECT OPTION ELEMENT ON PAGE LOAD, BUT NO DICE ****
+    /*jQuery(document).ready(function($){
+        $(".js-filter").find(".starter").attr('selected','selected');
+    });*/
+
 
     $(".js-sort").on("change",function(e){
         (

@@ -77,7 +77,9 @@ $classes = implode(", ", $user->classes);*/
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="form-select">
                     <select class="js-filter">
-                        <option value="<?=$_GET['category']?>" selected>Filter By</option>
+                        <!-- *** THOUGHT IF I COULD MAKE THE DEFAULT OPTION HAVE THE RIGHT VALUE FROM THE URL, THEN IT WOULD FILTER THE PRODUCTS ON PAGE LOAD.
+                        IT DID MANAGE TO WORK WELL AT FILTERING THE PRODUCTS AFTER A DIFFERENT FILTER HAD BEEN SELECTED, THE ISSUE IS CUING THE FILTER DEFAULT ON PAGE LOAD **** -->
+                        <option class="starter" value="<?=$_GET['category']?>" >Filter By</option>
                         <option value="Everything">All Products</option>
                         <optgroup label="Audience">
                             <option value="Men">Men</option>

@@ -233,16 +233,6 @@ hr {
     text-align: center !important;
 }
 
-a.disabled {
-    pointer-events: none;
-    cursor: default;
-}
-
-    a.disabled:hover,
-    a.disabled:active {
-        color: var(--color-primary-dark);
-    }
-    
 
 
 
@@ -381,6 +371,16 @@ a.disabled {
             background-color: transparent !important;
             text-decoration: none;
         }
+
+        .nav-crumbs ul li a.disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+            .nav-crumbs ul li:hover a.disabled,
+            .nav-crumbs ul li:active a.disabled {
+                color: var(--color-primary-dark) !important;
+            }
 
 
     .nav-crumbs li:not(:first-child)::before {
