@@ -51,7 +51,8 @@ body {
     transform: translateY(0);
 }
 
-    .product-overlay:hover {
+    .product-overlay:hover,
+    .product-overlay:active {
         box-shadow: 0 8px 10px rgba(0,0,0,0.3);
         transform: translateY(-0.75rem);
     }
@@ -85,7 +86,8 @@ body {
             transition: all 0.25s ease-in-out;
         }
 
-            .product-overlay:hover .caption-body {
+            .product-overlay:hover .caption-body,
+            .product-overlay:active .caption-body {
                 transform: translateY(0);
             }
 
@@ -192,6 +194,9 @@ span.badge:not(:empty)::after {
 
     .navbar .nav ul {
         display: block;
+        padding-left: 0rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-neutral-light);
     }
 
         .navbar .nav li {
@@ -215,6 +220,14 @@ span.badge:not(:empty)::after {
     .container {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    .hero .discount-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero .discount-text h4 {
+        font-size: 1.3rem;
     }
 
     #tableofcontents .card {
@@ -262,15 +275,21 @@ span.badge:not(:empty)::after {
         transform: none;
         padding: 0;
     }
+
+        .product-overlay .caption-body h4 {
+            font-size: 1.3rem;
+        }
+
+    
+    footer .nav a {
+        padding: 0rem;
+    }
+
 }
 
 
 
 @media (max-width: 400px) {
-
-    footer .nav a {
-        padding: 0rem;
-    }
 
     #tableofcontents .card {
         width: 100%;

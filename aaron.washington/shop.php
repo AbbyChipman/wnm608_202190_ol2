@@ -40,9 +40,9 @@ function productFilter () {
 
     <!-- *** CATEGORY HERO *** -->
     <div class="container">
-        <div class="hero display-flex flex-align-center" style="min-height: 17vh;">
+        <div class="hero display-flex flex-align-center" style="min-height: 17vh; margin-top: 2rem;">
             <div class="flex-stretch">
-                <div class="text-center" style="color: #fff;">
+                <div class="text-center discount-text" style="color: #fff;">
                     <h2>IT'S THAT TIME OF YEAR</h2>
                     <h4 style="color: var(--color-neutral-light);">Use Code FALLISHERE to get 30&percnt; off your entire purchase.</h4>
                 </div>

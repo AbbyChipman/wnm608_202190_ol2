@@ -104,7 +104,7 @@ function recommendedEverything($limit=3) {
 }
 
 
-function recommendedType($typ,$limit=6) {
+function recommendedType($typ,$limit=8) {
     $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `type`='$typ' ORDER BY `date_create` DESC LIMIT $limit");
     recommendedProducts($result);
 }
