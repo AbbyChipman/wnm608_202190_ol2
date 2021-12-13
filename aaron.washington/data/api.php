@@ -10,7 +10,7 @@ $data = json_decode(file_get_contents("php://input"));
 //print_p($data);
 
 switch($data->type) {
-    case "everything":
+    case "Everything":
         $output['result'] = makeQuery(makeConn(),"SELECT * 
             FROM `products` 
             ORDER BY `date_create` DESC 

@@ -8,7 +8,7 @@ const showResults = d => {
         );
 }
 
-query({type:'everything'}).then(showResults);
+query({type:'Everything'}).then(showResults);
 
 $(()=>{
     // e is the event data
@@ -23,12 +23,25 @@ $(()=>{
 
         let value = this.value;
         (
-            value == 'everything' ? query({type:'everything'}) :
-            value == 'men' ? query({type:'product_filter_category',column:value}) :
-            value == 'women' ? query({type:'product_filter_category',column:value}) :
-            value == 'teen' ? query({type:'product_filter_category',column:value}) :
-            value == 'kids' ? query({type:'product_filter_category',column:value}) :
+            value == 'Everything' ? query({type:'Everything'}) :
+            value == 'Men' ? query({type:'product_filter_category',column:value}) :
+            value == 'Women' ? query({type:'product_filter_category',column:value}) :
+            value == 'Teen' ? query({type:'product_filter_category',column:value}) :
+            value == 'Kids' ? query({type:'product_filter_category',column:value}) :
             query({type:'product_filter_type',column:value})
+        ).then(showResults);
+    })
+
+    $(".crumb-second").on("click",function(e){
+
+        let value = this.value;
+        (
+            value == 'Everything' ? query({type:'Everything'}) :
+            value == 'Men' ? query({type:'product_filter_category',column:value}) :
+            value == 'Women' ? query({type:'product_filter_category',column:value}) :
+            value == 'Teen' ? query({type:'product_filter_category',column:value}) :
+            value == 'Kids' ? query({type:'product_filter_category',column:value}) :
+            query({type:'Everything'})
         ).then(showResults);
     })
 
@@ -42,7 +55,7 @@ $(()=>{
             this.value==5 ? query({type:'product_sort',column:'name',dir:'ASC'}) :
             this.value==6 ? query({type:'product_sort',column:'name',dir:'DESC'}) :
             // if neither are true, we will just have everything
-            query({type:'everything'})
+            query({type:'Everything'})
         ).then(showResults);
     })
 })

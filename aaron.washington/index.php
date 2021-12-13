@@ -57,21 +57,21 @@ include_once "parts/templates.php";
                         <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Men">
                                 <div class="display-flex flex-align-center card-img card-bg-1">
-                                    <h3 class="flex-stretch">Mens</h3>
+                                    <h3 class="flex-stretch">Men</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Women">
                                 <div class="display-flex flex-align-center card-img card-bg-2">
-                                    <h3 class="flex-stretch">Womens</h3>
+                                    <h3 class="flex-stretch">Women</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Teen">
                                 <div class="display-flex flex-align-center card-img card-bg-3">
-                                    <h3 class="flex-stretch">Teen</h3>
+                                    <h3 class="flex-stretch">Teens</h3>
                                 </div>
                             </a>
                         </div>

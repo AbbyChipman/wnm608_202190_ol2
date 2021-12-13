@@ -4,18 +4,22 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-/* Call mySQL database
-$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-$category = $product->category;
+/*function crumbNav() {
+    $category = $_GET['category'];
 
-function productFilter () {
-    if ($category != $_GET['category']) {
-        
-    }
+    $filter = $category == "new" ? "Add" : "Edit";  
+
+
 }
 
-*/
+
+
+$id = $_GET['id'];
+// if it's TRUE that our condition "$id" equals "new", then the value is "Add"; Otherwise the value is "Edit"
+$addoredit = $id == "new" ? "Add" : "Edit";  
+$createorupdate = $id == "new" ? "create" : "update";
+$classes = implode(", ", $user->classes);*/
 
 ?>
 
@@ -66,48 +70,32 @@ function productFilter () {
             <nav class="nav nav-crumbs col-xs-12 col-sm-12 col-md-5 col-lg-6" style="margin-top: 0rem !important;">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
+                    <li class="active crumb-second" value="<?=$_GET['category']?>"><a href="shop.php?category=<?=$_GET['category']?>"><?=$_GET['category']?></a></li>
                 </ul>
             </nav>
 
-            <!--
-            <div class="flex-none display-flex">
-                <div class="flex-none">
-                    <button data-filter="type" data-value="" type="button" class="form-button dark">All</button>
-                </div>
-                <div class="flex-none">
-                    <button data-filter="type" data-value="t-shirt" type="button" class="form-button dark">Shirt</button>
-                </div>
-                <div class="flex-none">
-                    <button data-filter="type" data-value="scarf" type="button" class="form-button dark">Scarf</button>
-                </div>
-            </div>
-            -->
-
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-
                 <div class="form-select">
                     <select class="js-filter">
-                        <option>Filter By</option>
-                        <option value="everything">All Products</option>
+                        <option value="<?=$_GET['category']?>" selected>Filter By</option>
+                        <option value="Everything">All Products</option>
                         <optgroup label="Audience">
-                            <option value="men">Men</option>
-                            <option value="women">Women</option>
-                            <option value="teen">Teen</option>
-                            <option value="kids">Kids</option>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                            <option value="Teen">Teen</option>
+                            <option value="Kids">Kids</option>
                         </optgroup>
                         <optgroup label="Apparel" data-filter="type">
-                            <option value="t-shirt">T-shirts</option>
-                            <option value="sweater">Sweaters</option>
-                            <option value="scarf">Scarves</option>
-                            <option value="jacket">Jackets</option>
-                            <option value="hoodie">Hoodies</option>
-                            <option value="headwear">Hats</option>
-                            <option value="button down shirt">Button-Down Shirt</option>
+                            <option value="T-shirt">T-shirts</option>
+                            <option value="Sweater">Sweaters</option>
+                            <option value="Scarf">Scarves</option>
+                            <option value="Jacket">Jackets</option>
+                            <option value="Hoodie">Hoodies</option>
+                            <option value="Headwear">Hats</option>
+                            <option value="Button Down Shirt">Button-Down Shirt</option>
                         </optgroup>
                     </select>
                 </div>
-
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
