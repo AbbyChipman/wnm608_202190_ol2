@@ -8,7 +8,7 @@ include_once "parts/templates.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>Admin</title>
 
     <?php include "parts/meta.php"; ?>
 </head>

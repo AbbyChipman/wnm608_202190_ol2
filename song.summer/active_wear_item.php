@@ -17,6 +17,7 @@ $image_elements = array_reduce($images,function($r,$o){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Item Details</title>
     <div class="container">
     <link rel="stylesheet" href="css/storetheme.css">
 

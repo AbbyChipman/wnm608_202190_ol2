@@ -7,7 +7,7 @@ include_once "parts/templates.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product List</title>
+    <title>Activewear</title>
 
     <?php include "parts/meta.php"; ?>
 
