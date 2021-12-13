@@ -230,6 +230,10 @@ span.badge:not(:empty)::after {
         font-size: 1.3rem;
     }
 
+    .product-overlay .caption-body h4 {
+        font-size: 1.3rem;
+    }
+
     #tableofcontents .card {
         width: 80%;
     }
@@ -276,11 +280,6 @@ span.badge:not(:empty)::after {
         padding: 0;
     }
 
-        .product-overlay .caption-body h4 {
-            font-size: 1.3rem;
-        }
-
-    
     footer .nav a {
         padding: 0rem;
     }
