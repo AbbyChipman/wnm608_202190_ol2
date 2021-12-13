@@ -422,14 +422,13 @@ hr {
 }
 
 .hero-text {
-    max-width: 50%;
-    padding: 2rem 3rem;
+    padding: 2rem;
     color: var(--color-primary-light);
 }
 
     .hero-text h2 {
         color: #e7aa55;
-        line-height: 4rem;
+        line-height: 3rem;
     }
 
     .hero-text h4 {
@@ -447,7 +446,8 @@ hr {
         border: 0.15rem solid #e7aa55;
     }
 
-        .hero-text button:hover {
+        .hero-text button:hover,
+        .hero-text button:active {
             border: 0.15rem solid #e7aa55;
             background-color: rgba(231,170,85,1);
         }

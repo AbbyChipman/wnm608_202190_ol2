@@ -22,8 +22,8 @@ include_once "parts/templates.php";
 
     <!-- *** HERO *** -->
     <div class="hero hero-landing display-flex flex-align-center" style="min-height: 45vh;">
-        <div class="container flex-stretch">
-            <div class="hero-text">
+        <div class="container grid">
+            <div class="col-xs-12 col-sm-12 col-md-6 hero-text">
                 <h2>MAKING PRICES FALL</h2>
                 <h4>Get 30&percnt; off your entire purchase with code FALLISHERE.</h4>
                 <a href="shop.php?category=Everything"><button class="light">Start Saving&nbsp;&rsaquo;</button></a>
@@ -54,28 +54,28 @@ include_once "parts/templates.php";
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="grid gap">
-                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                        <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Men">
                                 <div class="display-flex flex-align-center card-img card-bg-1">
                                     <h3 class="flex-stretch">Mens</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                        <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Women">
                                 <div class="display-flex flex-align-center card-img card-bg-2">
                                     <h3 class="flex-stretch">Womens</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                        <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Teen">
                                 <div class="display-flex flex-align-center card-img card-bg-3">
                                     <h3 class="flex-stretch">Teen</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-6">
+                        <div class="col-xs-12 col-sm-6">
                             <a href="shop.php?category=Kids">
                                 <div class="display-flex flex-align-center card-img card-bg-4">
                                     <h3 class="flex-stretch">Kids</h3>
