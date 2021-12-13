@@ -47,7 +47,11 @@ $(()=>{
         let value = this.value;
         (
             value == 'everything' ? query({type:'everything'}) :
-            query({type:'product_filter_category',column:value})
+            value == 'men' ? query({type:'product_filter_category',column:value}) :
+            value == 'women' ? query({type:'product_filter_category',column:value}) :
+            value == 'teen' ? query({type:'product_filter_category',column:value}) :
+            value == 'kids' ? query({type:'product_filter_category',column:value}) :
+            query({type:'product_filter_type',column:value})
             //query({type:'everything'})
         ).then(showResults);
     })
