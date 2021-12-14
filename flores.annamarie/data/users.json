@@ -1,0 +1,9 @@
+[
+	{
+"name":"Joe Biden","type":"President","email":"president@art.edu","classes":["605","608","623"]},
+	{"name":"Kamala Harris","type":"Vice President","email":"vicepresident@art.edu","classes":[605,608,623]},
+	{"name":"Donald Trump","type":"Ex President","email":"ex.president@art.edu","classes":[605,608,623]},
+	{"name":"Janet Yellen","type":"Treasury Secretary","email":"treasury_secretary@art.edu","classes":[605,608,623]},
+	{"name":"Nancy Pelosi","type":"Congress Girl","email":"congress_girl@art.edu","classes":[605,608,623]
+	}
+]
