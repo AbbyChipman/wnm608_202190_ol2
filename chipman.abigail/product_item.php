@@ -25,9 +25,9 @@ $image_elements = array_reduce($images,function($r,$o){
     <div class="view-window-small flex-align-center" style="background-image:url(lib/img/glitter-background.jpg);">
     <div class="container">
         <div class="grid">
-            <div class="col-xs-12 col-sm-2 col-md-4"></div>
-            <div class="col-xs-12 col-sm-4 col-md-4"></div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-0 col-md-0"></div>
+            <div class="col-xs-12 col-sm-3 col-md-6"></div>
+            <div class="col-xs-12 col-sm-9 col-md-6">
                 <div class="card section rainbow">
                     <h2><?= $product->title ?></h2>
                 </div>
@@ -48,13 +48,13 @@ $image_elements = array_reduce($images,function($r,$o){
             </div>
 
             <div class="grid gap">
-                <div class="col-xs-1 col-sm-2 col-md-2">
+                <div class="col-xs-1 col-sm-5 col-md-2">
                     <div class="image-thumb">
                         <?= $image_elements ?>
                     </div>
                 </div>
-                <div class="col-xs-0 col-sm-2 col-md-0"></div>
-                <div class="col-xs-11 col-sm-8 col-md-5">
+                <div class="col-xs-0 col-sm-0 col-md-0"></div>
+                <div class="col-xs-11 col-sm-7 col-md-5">
                     <div class="image-main">
                         <img src="img/<?= $product->image_main ?>" alt="<?= $product->description ?>">
                     </div>

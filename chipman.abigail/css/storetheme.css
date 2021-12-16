@@ -19,7 +19,7 @@
     display: block;
   }
   .navbar .nav li {
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
@@ -116,11 +116,10 @@ body {
     width: 100%;
     height: initial;
     background-color: initial;
-    opacity:1;
+    opacity: 1;
   }
   .product-overlay .caption-body {
     transform: none;
-    padding:0;
+    padding: 0;
   }
-
 }
