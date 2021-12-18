@@ -217,6 +217,7 @@
   color: white;
   background-color: rgb(185, 185, 185);
   text-align: center;
+  padding-top: 5px;
 }
 
 
@@ -243,9 +244,9 @@
 
 .images-thumbs img{
   height: 6em;
-  
+  padding-right: 0.6em;
   padding-left: 1.7em;
-  padding-top: 0.7em;
+  padding-top: 0.8em;
   object-fit: contain;
 
 

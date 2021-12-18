@@ -16,8 +16,8 @@
 <!-- carousel -->
         <div class="carousel">
             <div class="slides">
-                <div class="slide center" style="background:url(../song.summer/img/about.png) center; background-size: cover"></div>
-                <div class="slide slide_center" style="background:url(../song.summer/img/about_1.png) center; background-size: cover"></div>
+                <div class="slide center" style="background:url(../song.summer/img/about_1.png) center; background-size: cover"></div>
+                <div class="slide slide_center" style="background:url(../song.summer/img/about.png) center; background-size: cover"></div>
                 <div class="slide" style="background: url(../song.summer/img/about_2.png) center; background-size: cover"></div>
 
             </div>

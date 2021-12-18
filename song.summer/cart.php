@@ -26,7 +26,7 @@ $cart = getCart();
 			if(count($cart)){
 				?>
 				<div class="grid gap">
-				<div class="col-xs-12 col-md-7">
+				<div class="card col-xs-12 col-md-7">
 					<div class="cart_items">
 						<?= array_reduce($cart_items,'cartListTemplate') ?>
 					</div> 
@@ -35,7 +35,7 @@ $cart = getCart();
 					<div class="card soft flat cart_totals">
 					<?= cartTotals() ?>
 					<div class="card-section">
-    
+					<a href="product_checkout.php" class="form-button">Checkout</a>
     </div>
 					</div> 
 				</div>

@@ -1,60 +1,34 @@
-<?php include_once "lib/php/function.php";
+<?php 
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+
 resetCart(); 
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Look and Fit - Cart</title>
-	<link rel="stylesheet" href="css/gridsystem.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-	<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+    <title>Confirmation Page</title>
 
-	<!-- JQUERY-->
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<?php include "parts/meta.php"; ?>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="card soft">
-            <h1 class="main_title" id="back_to_the_top"> <a href="index.php">Look and Fit</a> </h1>
-            <nav id="main_nav">
-                <ul class="main_nav2">
-                    <li class="flex-stretch"><a href="index.php">Home</a></li>
-                    <li class="flex-stretch"><a href="active_wear.php">Active Wear</a></li>
-                    <li class="flex-stretch"><a href="about.php">About</a></li>
-                    <li class="flex-stretch"><a href="cart.php">Cart</a></li>
-					<li class="flex-stretch"><a href="admin.php">Admin</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-	<script>
-		$("#navigations a").on("click", function (e) {
-			e.preventDefault();
-			$(this).closest("li").addClass("active")
-				.siblings().removeClass("active")
-		})
-	</script>
-     
 
 
 	<div class="container">
 	<?php include "parts/navbar.php"?>
 
-		<article class="card soft">
+		<article class="container card soft">
 			<h2>Confirmation Page</h2>
-            <h3>Thank you!</h3>
-            <p>A confirmation has been sent to your email!</p>
+			<div class="card soft"> 
+            <p>Thank you! A confirmation has been sent to your email!</p>
             <div class="display-flex">
-                <div class="flex-none"><a href="active_wear.php">Continue Shopping</a></div>
+                <div class="flex-none form-button4"><a href="active_wear.php">Continue Shopping</a></div>
                 <div class="flex-stretch"><a href="active_wear.php"></a></div>
-                <div class="flex-none"><a href="cart.php">Go to Cart</a></div>
+                <div class="flex-none form-button5"><a href="cart.php">Go to Cart</a></div>
             </div>
-
+			</div>
 			<div class="cart"></div>
 			</div>
 		</article>

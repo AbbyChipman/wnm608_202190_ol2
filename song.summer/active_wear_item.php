@@ -18,11 +18,9 @@ $image_elements = array_reduce($images,function($r,$o){
 <head>
     <meta charset="UTF-8">
     <title>Item Details</title>
-    <div class="container">
+ 
     <link rel="stylesheet" href="css/storetheme.css">
 
-        <article class="article card soft">
-            
 
             <?php include "parts/meta.php"?>
             <script src="js/product_thumbs.js"></script>
@@ -30,7 +28,7 @@ $image_elements = array_reduce($images,function($r,$o){
 </head>
 <body>
 
-            <?php include "parts/navbar.php"?>
+    <?php include "parts/navbar.php"?>
                      
  
     <div class="container">

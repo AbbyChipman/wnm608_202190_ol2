@@ -15,9 +15,10 @@ include_once "parts/templates.php";
 	
 <?php include "parts/navbar.php"; ?>
 
-    <div class="view-window" style="background-image:url('../song.summer/img/view_window.png')"></div>
 
-
+	<div id="viewWindow">
+        <div class="view-window" style="background-image: url('../song.summer/img/view_window.png');"><a href="index.php"></a></div>
+    </div>
 
 
 
@@ -50,9 +51,9 @@ echo "<div class='grid gap'>" ,array_reduce($result,'productListTemplate'),"</di
 		</article>
 
 		<div class="container card soft">
-	<h2>Recommended Pants</h2>
+	<h2>Recommended Tops</h2>
 		<?php
-		recommendedCategory("bottoms"); 
+		recommendedCategory("tops"); 
 		?> 
 	</div>
 

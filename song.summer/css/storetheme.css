@@ -93,12 +93,20 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+[class*="col-"] > .card {
+    height: 100%;
+    margin: 0;
+  }
+  
 /* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
     position: relative;
 }
 
+.container.check {
+    max-width: 800px;
+  }
 .card-box {
     display: flex;
     flex-direction: row;
@@ -116,14 +124,20 @@
     color: white;
 }
 
+
 .view-window {
-    height: 50vh;
+    height: 55vh;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    width: 100%;
 }
+
+/* img.view-window\>\<a.href\= {
+    width: 100%;
+} */
 
 /* tables */
 
@@ -168,7 +182,7 @@
 }
 
 .figure img {
-    height: 300px;
+    /* height: 100%; */
     width: 100%;
     vertical-align: text-bottom;
     
@@ -196,6 +210,8 @@
 .product-overlay {
     position: relative;
 }
+
+@media (max-width: 600px) {
     .product-overlay figcaption {
     position: absolute;
     top:0;
@@ -209,6 +225,7 @@
     align-items:center;
     justify-content: center;
     }
+}
 
     .product-overlay:hover figcaption {
     opacity: 1;
@@ -421,7 +438,7 @@
 /* Buttons */
 
 .button-default{
-    background-color: #e5e5e5; /* Green */
+    background-color: #e5e5e5; 
     border: none;
     color: black;
     padding: 15px 32px;
@@ -433,7 +450,7 @@
     height: 50px;
 }
 .button1 {
-    background-color: #000000; /* Green */
+    background-color: #000000; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -470,6 +487,35 @@
     font-size: 16px;
     width: 100px;
     height: 20px;
+  }
+
+
+  .form-button4{
+    background-color: #000000; 
+    border: none;
+    color: #e5e5e5;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 190px;
+    height: 50px;
+ 
+  }
+
+  .form-button5{
+    background-color:white; 
+    border: solid 1px black;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 140px;
+    height: 50px;
+ 
   }
 .butto_add{
     width:115px;

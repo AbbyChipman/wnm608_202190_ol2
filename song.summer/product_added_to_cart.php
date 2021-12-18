@@ -23,9 +23,11 @@ $cart_product = cartItemById($_GET['id']);
 	
 		<h2>You added <?= $product->name ?> to your cart.</h2>
 		<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart. </p>
-                <div class="flex-none"><a href="active_wear.php">Continue Shopping</a></div>
+        <div class="display-flex">
+                <div class="flex-none form-button4"><a href="active_wear.php">Continue Shopping</a></div>
                 <div class="flex-stretch"><a href="active_wear.php"></a></div>
-                <div class="flex-none"><a href="cart.php">Go to Cart</a></div>
+                <div class="flex-none form-button5"><a href="cart.php">Go to Cart</a></div>
+        </div>
             </div>
 
 			<div class="cart"></div>

@@ -12,16 +12,16 @@ include_once "lib/php/function.php";
 
             <h1 class="main_title" id="back_to_the_top"> <a href="index.php">Look and Fit</a> </h1>
     </div>
-            <div class="flex-stretch"></div>
+            <div class="flex-stretch flex-wrap"></div>
             <div class="flex-none menu-button">
                 <label for="menu">&equiv;</label>
             </div>
-            <nav class= "nav nav-flex ">
-                <ul class="main_nav2">
-                    <li class="flex-stretch"><a href="index.php">Home</a></li>
-                    <li class="flex-stretch"><a href="active_wear.php">Active Wear</a></li>
-                    <li class="flex-stretch"><a href="about.php">About</a></li>
-                    <li class="flex-stretch"><a href="cart.php">
+            <nav class= "nav nav-flex">
+                <ul class= "main_nav2">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="active_wear.php">Active Wear</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="cart.php">
                         <span>Cart</span>
                         <span class="badge"> <?= makeCartBadge();?> </span>
                     </a></li>

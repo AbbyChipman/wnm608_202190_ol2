@@ -13,10 +13,10 @@ $cart = getCartItems();
 <body>
     <?php include "parts/navbar.php"; ?>
 
-<div class="container"> 
+<div class="container check"> 
 <div class="grid gap">
 
-<div class="col-xs-10 col-md-6"> 
+<div class="col-xs-12 col-md-5"> 
         <div class="card soft">
         <h2> Item Review </h2>
             <div class="card-section">
@@ -36,12 +36,12 @@ $cart = getCartItems();
     </div>
 
 
-    <div class="col-xs-6 col-md7">
+    <div class="col-xs-12 col-md-6">
 		<div class="card soft">
             <h2>Product Checkout</h2>
 			<h3>Address</h3>
             <form>
-            <div class="form-control display-flex">
+            <div class="form-control">
                 <div class="flex-none">
                     <label class="form-label"></label>
                 </div>
