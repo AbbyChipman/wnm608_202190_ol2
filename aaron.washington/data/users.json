@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Aaron Washington",
+        "type": "Parent",
+        "email":"aaronjwashington2@gmail.com",
+        "classes":[606,608,123]
+    },
+    {
+        "name":"Rebecca Washington",
+        "type": "Parent",
+        "email":"abwashington1216@gmail.com",
+        "classes":[123,456,789]
+    },
+    {
+        "name":"Larry Armstrong",
+        "type": "Friend",
+        "email":"goodbrother@gmail.com",
+        "classes":[395,936,507]
+    },
+    {
+        "name":"Lucas Suddreth",
+        "type": "Friend",
+        "email":"bestbuddy@gmail.com",
+        "classes":[256,945,937]
+    }
+    
+]

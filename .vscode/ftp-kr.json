@@ -1,0 +1,16 @@
+{
+    "host": "ftp.aaronjosephmusic.com",
+    "username": "aaronjosephmusiccom",
+    "password": "1Truth1***",
+    "remotePath": "/aau/wnm608_202190_ol2",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}
