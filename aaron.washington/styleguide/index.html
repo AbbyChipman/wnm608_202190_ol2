@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Styleguide &ndash; Aaron Washington</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style> 
+    <link rel="stylesheet" href="../lib/css/gridsystem.css">
+    <link rel="stylesheet" href="../lib/css/styleguide.css">
+    <link rel="stylesheet" href="../css/storetheme.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    
+<!-- ** Navbar ** header>h1+p -->    
+<header class="container" id="top">
+    <div class="display-flex flex-align-center navbar">
+        <div class="flex-none">
+            <a href="#">
+                <div class="home-logo"></div>
+            </a>
+        </div>
+        <div class="flex-none">
+            <a href="#">
+                <h3>esome&nbsp;&nbsp;Styleguide</h3>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<!-- ** Table of Contents ** -->
+<div class="container" id="tableofcontents" style="margin-top: 1.5rem;">
+    <div class="display-block card">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#typography">Typography</a></li>
+            <ul>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#paragraphs">Paragraphs</a></li>
+            </ul>
+            <li><a href="#colors">Color Palette</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#navigation">Navigation</a></li>
+            <li><a href="#grid">Grid System</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#figures">Figures</a></li>
+            <li><a href="#figures">Forms</a></li>
+            <ul>
+                <li><a href="#inputs">Inputs</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#hotdog">Hotdog</a></li>
+                <li><a href="#select">Select</a></li>
+                <li><a href="#checkbox">Check Boxes</a></li>
+            </ul>
+            <li><a href="#notify">Notifications</a></li>
+            <li><a href="#hero">Product Hero Banner</a></li>
+            <li><a href="#callout">Callout Banner</a></li>
+            <li><a href="#product">Product Page</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ** Typography ** -->
+<div class="container" id="typography">
+    <hr>
+    <h3 style="margin-left: 1rem;">TYPOGRAPHY</h3>
+    <hr>
+    <br />
+    <h4>Fonts&colon;&nbsp;&nbsp;<span style="font-family: BrandonText-Regular;"><b style="font-family: BrandonText-Bold;">Brandon Text</b> for Headings</span>, <span style="font-family: Rubik"><b>Rubik</b> for Body Copy</span></h4>
+    <br />
+    <div class="display-block" id="headings">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+    </div>
+    <br />
+    <div class="display-block" id="paragraphs">
+        <h3>Paragraphs</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maxime recusandae laborum labore culpa accusantium debitis quod sapiente impedit eos, eius perferendis, obcaecati similique consequatur tenetur libero, adipisci illum voluptatem?</p>
+        <p>Molestiae dolore exercitationem, sint excepturi laboriosam enim dolorem animi esse similique tenetur, quibusdam repudiandae nobis qui iure consequatur sapiente architecto, doloribus magni repellat. Officia minus minima fuga, doloremque omnis maiores.</p>
+        <p>Ducimus nesciunt debitis illo, veniam unde quisquam, rerum saepe repudiandae aperiam eveniet tempora mollitia sed non accusantium accusamus doloribus quaerat molestias praesentium vero necessitatibus nihil minus blanditiis eius sint. Magnam!</p>
+    </div>
+</div>
+
+<!-- ** Colors ** -->
+<div class="container" id="colors">
+    <hr>
+    <h3 style="margin-left: 1rem;">COLOR PALETTE</h3>
+    <hr>
+    <br />
+    <div class="grid gap">
+        <div class="col-xs-12 col-md-4">
+            <div class="card primlight">
+                <h4>Primary Light<br />&num;FFF</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card acclight">
+                <h4>Accent Light<br />&num;EA3D3D</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card neutlight">
+                <h4>Neutral Light<br />&num;D0D2D8</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card primmed">
+                <h4>Primary Medium<br />&num;3D3E44</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card accmed">
+                <h4>Accent Medium<br />&num;AB3934</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card neutmed">
+                <h4>Neutral Medium<br />&num;73757F</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card primdark">
+                <h4>Primary Dark<br />&num;202124</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card accdark">
+                <h4>Accent Dark<br />&num;672320</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card neutdark">
+                <h4>Neutral Dark<br />&num;000</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ** Cards ** -->
+<div class="container" id="cards">
+    <hr>
+    <h3 style="margin-left: 1rem;">CARDS</h3>
+    <hr>
+    <br />
+    <div class="grid gap">
+        <div class="col-xs-12 col-md-4">
+            <div class="card-light">
+                <h4>Card Light</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card-dark">
+                <h4>Card Dark</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card card-img card-bg-1">
+                <h4>Card Image</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ** NAVIGATION ** -->
+<div class="container" id="navigation">
+    <hr>
+    <h3 style="margin-left: 1rem;">NAVIGATION</h3>
+    <hr>
+    <br />
+    <script>
+        const makeNav = (classes='') => {
+            const links = ['home','store','about'];
+            let ran = Math.floor(Math.random()*links.length);
+            document.write(`
+            <div class="card-light">
+                <nav class="${classes}">
+                    <h4><b>Crumbs Nav</b></h4>
+                    <ul>
+                    ${links.reduce((r,o,i)=>{
+                        return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+                    },'')}
+                    </ul>
+                </nav>
+            </div>
+            `);
+        }
+    </script>
+    <div class="card-light">
+        <nav class="nav flex-none">
+            <h4><b>Basic Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-flex">
+            <h4><b>Flex Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-stretch">
+            <h4><b>Stretch Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-pills">
+            <h4><b>Pills Nav</b></h4>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br />
+    <script>makeNav('nav nav-crumbs')</script>
+    <br />
+    <div class="card-light">
+        <nav class="nav nav-material">
+            <h4><b>Material Nav</b></h4>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">store</a></li>
+                <li class="active"><a href="#">about</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $("#navigation li").on("click", function(e) {
+            e.preventDefault();
+            $(this).closest("li").addClass("active")
+            .siblings().removeClass("active")
+        })
+    </script>
+</div>
+
+
+
+<!-- ** GRID SYSTEM ** -->
+<div class="container" id="grid">
+    <hr>
+    <h3 style="margin-left: 1rem;">GRID SYSTEM</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <h4 class="title"><b>Basic Grid</b></h4>
+        <div class="grid gap">
+            <div class="col-xs-12">
+                <div class="card-light">
+                    <h4>12</h4>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="card-light">
+                    <h4>6</h4>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="card-light">
+                    <h4>6</h4>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="card-light">
+                    <h4>4</h4>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="card-light">
+                    <h4>4</h4>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="card-light">
+                    <h4>4</h4>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="card-light">
+                    <h4>3</h4>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="card-light">
+                    <h4>3</h4>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="card-light">
+                    <h4>3</h4>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="card-light">
+                    <h4>3</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4 class="title"><b>Responsive Grid</b></h4>
+        <div class="grid gap">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                <div class="card-light">
+                    <h4>1</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6">
+                <div class="card-light">
+                    <h4>2</h4>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                <div class="card-light">
+                    <h4>3</h4>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-5 col-lg-8">
+                <div class="card-light">
+                    <h4>4</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2">
+                <div class="card-light">
+                    <h4>5</h4>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-3">
+                <div class="card-light">
+                    <h4>6</h4>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-7 col-lg-2">
+                <div class="card-light">
+                    <h4>7</h4>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-1 col-lg-4">
+                <div class="card-light">
+                    <h4>8</h4>
+                </div>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-2 col-lg-1">
+                <div class="card-light">
+                    <h4>9</h4>
+                </div>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-12 col-lg-2">
+                <div class="card-light">
+                    <h4>10</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ** TABLES ** -->
+<script>
+    const makeTable = (classes='') => {
+        const head = ['ID','Universe','Hero Name','Alter Ego','Rank'];
+        const body = [
+            ['DC','Batman','Bruce Wayne','1'],
+            ['DC','Deathstroke','Slade Wilson','2'],
+            ['MARVEL','Venom','Eddy Brock','3'],
+            ['DC','Joker','Unknown','4'],
+            ['MARVEL','Carnage','Cletus Kasady','5'],
+        ];
+
+        document.write (`
+        <table class="${classes}">
+            <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+            <tbody>${body.reduce((r,o,i)=>r+
+                `<tr>${
+                    [i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+                }</tr>`,'')
+            }</tbody>
+        </table>
+        `);
+    }
+</script>
+
+<div class="container" id="tables">
+    <hr>
+    <h3 style="margin-left: 1rem;">TABLES</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <h4><b>Basic Table</b></h4>
+        <script>makeTable("table")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Striped Table</b></h4>
+        <script>makeTable("table striped")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Lined Vertical Table</b></h4>
+        <script>makeTable("table lined vertical")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Lined Horizontal Table</b></h4>
+        <script>makeTable("table lined horizontal")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Lined Border Table</b></h4>
+        <script>makeTable("table lined border")</script>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Fully Lined Table</b></h4>
+        <script>makeTable("table lined all")</script>
+    </div>
+</div>
+
+
+<!-- ** FIGURES ** -->
+<div class="container" id="figures">
+    <hr>
+    <h3 style="margin-left: 1rem;">FIGURES</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <h4><b>Basic Figure</b></h4>
+        <figure class="figure">
+            <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+            <figcaption>Product</figcaption>
+        </figure>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Figure Grid</b></h4>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>Product</figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>Product</figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>Product</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Product Grid</b></h4>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div>T-Shirt</div>
+                        <div>$24.99</div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div>Hoodie</div>
+                        <div>$34.99</div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div>Socks</div>
+                        <div>$14.99</div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Product Overlay</b></h4>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product-overlay">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div class="caption-body">
+                            <div>T-Shirt</div>
+                            <div>$24.99</div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product-overlay">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div class="caption-body">
+                            <div>Hoodie</div>
+                            <div>$34.99</div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure class="figure product-overlay">
+                    <img src="https://i.imgur.com/q2EKStt.png" alt="Placeholder image" />
+                    <figcaption>
+                        <div class="caption-body">
+                            <div>Socks</div>
+                            <div>$14.99</div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ** FORMS ** -->
+<div class="container" id="forms">
+    <hr>
+    <h3 style="margin-left: 1rem;">FORMS</h3>
+    <hr>
+    <br />
+    <h4 id="inputs"><b>Inputs</b></h4>
+    <div class="card-light">
+        <h4><b>Default Inputs</b></h4>
+        <form>
+            <input type="text"><br />
+            <input type="number"><br />
+            <input type="password"><br />
+            <input type="url"><br />
+            <input type="email"><br />
+            <input type="datetime-local"><br />
+            <input type="date"><br />
+            <input type="search">
+        </form>
+        <br />
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Branded Inputs</b></h4>
+        <form>
+            <input type="text" class="form-input" placeholder="Text"><br />
+            <input type="number" class="form-input" placeholder="Number"><br />
+            <input type="password" class="form-input" placeholder="Password"><br />
+            <input type="search" class="form-input" placeholder="Search">
+        </form>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Form Labels</b></h4>
+        <form>
+            <label class="form-label">Example</label>
+            <input type="text" class="form-input" placeholder="Text"><br />
+            <label class="form-label">Example</label>
+            <input type="number" class="form-input" placeholder="Number"><br />
+            <label class="form-label">Example</label>
+            <input type="password" class="form-input" placeholder="Password"><br />
+            <label class="form-label">Example</label>
+            <input type="search" class="form-input" placeholder="Search">
+        </form>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Form Controls</b></h4>
+        <form>
+            <div class="form-control">
+                <label class="form-label">Example</label>
+                <input type="text" class="form-input" placeholder="Text">
+            </div>
+            <div class="form-control">
+                <label class="form-label">Example</label>
+                <input type="number" class="form-input" placeholder="Number">
+            </div>
+            <div class="form-control">
+                <label class="form-label">Example</label>
+                <input type="password" class="form-input" placeholder="Password">
+            </div>
+            <div class="form-control grid gap">
+                <div class="col-xs-12 col-md-6">
+                    <label class="form-label">Example</label>
+                    <input type="search" class="form-input" placeholder="Search">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <label class="form-label">Example</label>
+                    <input type="search" class="form-input" placeholder="Search">
+                </div>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <h4 id="buttons"><b>Buttons</b></h4>
+    <div class="card-light">
+        <h4><b>Default Button</b></h4>
+        <button>Button</button>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Custom Button</b></h4>
+        <button class="form-button form-control">Button</button>
+        <input type="button" class="form-button form-control" value="Input">
+        <a href="#buttons" class="form-button form-control">Anchor</a>
+        <br />
+        <div class="display-flex">
+            <div class="flex-stretch" style="text-align: center; padding: 1rem;">
+                <a href="#buttons"><button class="dark">Button Dark</button></a>
+            </div>
+            <br />
+            <div class="flex-stretch" style="background-color: var(--color-primary-dark); text-align: center; padding: 2rem;">
+                <a href="#buttons"><button class="light" style="margin-top: 0;">Button Light</button></a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h4 id="hotdog"><b>Hotdog</b></h4>
+    <div class="card-light">
+        <div class="form-control">
+            <form class="form-control">
+                <input type="search" class="form-hotdog" placeholder="Search">
+            </form>
+            <form class="form-hotdog form-control">
+                <span>&equiv;</span>
+                <input type="search" placeholder="Search">
+            </form>
+            <form class="form-hotdog dark form-control">
+                <span>&equiv;</span>
+                <input type="search" placeholder="Search">
+            </form>
+            <form class="form-hotdog light form-control">
+                <span>&equiv;</span>
+                <input type="search" placeholder="Search">
+            </form>
+            <form class="form-hotdog light form-control">
+                <input type="search" placeholder="Search">
+                <span>&equiv;</span>
+            </form>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h4 id="select"><b>Select</b></h4>
+    <div class="card-light">
+        <div class="form-select form-control">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="display-flex">
+            <div class="flex-stretch"></div>
+            <div class="flex-none">
+                <div class="form-select">
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h4 id="checkbox"><b>Check Boxes</b></h4>
+    <div class="card-light">
+        <h4><b>Basic Checkbox</b></h4>
+        <label>Label <input type="checkbox" id="input-1"></label>
+        <label for="input-1">Label</label>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Heart Checkbox</b></h4>
+        <div class="favorite">
+            <input type="checkbox" id="heart" class="hidden">
+            <label for="heart">&hearts;</label>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Toggle</b></h4>
+        <div class="toggle">
+            <input type="checkbox" id="toggle-1" class="hidden">
+            <label for="toggle-1"></label>
+        </div>
+        <div class="display-flex flex-align-center">
+            <div class="flex-stretch">
+                <label for="toggle-2" class="form-label">Display Warning!</label>
+            </div>
+            <div class="flex-none">
+                <div class="toggle">
+                    <input type="checkbox" id="toggle-2" class="hidden">
+                    <label for="toggle-2"></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ** NOTIFICATIONS ** -->
+<div class="container" id="notify">
+    <hr>
+    <h3 style="margin-left: 1rem;">NOTIFICATIONS</h3>
+    <hr>
+    <br />
+    <div class="card-light">
+        <h4><b>Warning</b></h4>
+        <div class="card warning">
+            <h5>&nbsp;&nbsp;WARNING: Lorem ipsum set dolor amit!</h5>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Error</b></h4>
+        <div class="card error">
+            <h5>&nbsp;&nbsp;ERROR: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nulla non molestie orci. Quisque sed dolor vitae dolor elementum tincidunt congue ut eros. 
+                Integer efficitur finibus ornare. Quisque tincidunt volutpat nulla, nec pulvinar nisi fermentum ut. 
+                Phasellus congue consectetur nunc. Cras eu urna et neque dapibus eleifend. 
+                Duis urna eros, vehicula nec massa a, rutrum auctor lacus.</h5>
+        </div>
+    </div>
+    <br />
+    <div class="card-light">
+        <h4><b>Payment Successful</b></h4>
+        <div class="card pay-success">
+            <h5>&nbsp;&nbsp;Payment Successful! Thank you for your purchase.</h5>
+        </div>
+    </div>
+</div>
+
+
+<!-- ** HERO BANNER ** -->
+<div class="container" id="hero">
+    <hr>
+    <h3 style="margin-left: 1rem;">PRODUCT HERO BANNER</h3>
+    <hr>
+    <br />
+    <div class="hero hero-landing display-flex flex-align-center">
+        <div class="container flex-stretch">
+            <div class="hero-text">
+                <h2>TITLE GOES HERE</h2>
+                <h4>Subtitle Here</h4>
+                <!--<p>Check out this season&apos;s featured designs.</p>-->
+                <button class="light">CTA Button</button>
+            </div>
+            <div class="flex-stretch"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- *** CALLOUT BANNER *** -->
+<div class="container" id="callout">
+    <hr>
+    <h3 style="margin-left: 1rem;">CALLOUT BANNER</h3>
+    <hr>
+    <br />
+    <div class="news-row display-flex flex-align-center">
+        <div class="flex-none news-img"></div>
+        <div class="flex-stretch news-text">
+            <h3>TITLE GOES HERE</h3>
+            <p>Body copy description here.</p>
+            <button class="light">CTA Button</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- *** PRODUCT PAGE *** -->
+<div class="container" id="product">
+    <hr>
+    <h3 style="margin-left: 1rem;">PRODUCT PAGE</h3>
+    <hr>
+    <br />
+    <div class="grid gap">
+        <div class="col-xs-6" style="text-align: center;">
+            <img src="../img/AW-Product_Image-TEST.jpg"
+                 alt="Kids Product Image"
+                 title="Kids Product Image" />
+        </div>
+        <div class="col-xs-6 product-text">
+            <h3>Product Name</h3>
+            <h4><b>&dollar;00.00</b></h4>
+            <p>
+                Product Description copy goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Mauris non interdum erat. Quisque ut euismod lorem. Aliquam ac condimentum dui. 
+                Nullam purus elit, semper id suscipit non, tincidunt eget justo.
+            </p>
+            <br />
+            <h5>Size</h5>
+            <div class="form-select form-control" style="width: 6rem;">
+                <select>
+                    <option>XS</option>
+                    <option>SM</option>
+                    <option>MD</option>
+                    <option>LG</option>
+                    <option>XL</option>
+                    <option>2X</option>
+                </select>
+            </div>
+            <br />
+            <h5>Quantity</h5>
+            <div class="form-select form-control" style="width: 6rem;">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <br />
+            <button class="dark">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ** BACK TO TOP ** -->
+<div class="container">
+    <a href="#top"><button class="dark">Back to Top&nbsp;&uarr;</button></a>
+</div>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+
+body {
+    background-color: var(--color-primary-light);
+}
+
+#tableofcontents ul li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+    #tableofcontents ul li a:hover {
+        color: var(--color-accent-red-light);
+    }
+
+
+    #tableofcontents .card {
+        width: 50%;
+        text-align: left;
+    }
+
+    #tableofcontents h3 {
+        padding-left: 1rem;
+    }
+
+
+#cards .card-img h4 {
+    position: relative;
+    top: 4.75rem;
+}
+
+
+.card nav,
+.card-light nav,
+.card-dark nav {
+    text-align: left;
+}
+
+
+.figure.product {
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.product-overlay {
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid var(--color-neutral-light);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.25s ease-in-out;
+    transform: translateY(0);
+}
+
+    .product-overlay:hover,
+    .product-overlay:active {
+        box-shadow: 0 8px 10px rgba(0,0,0,0.3);
+        transform: translateY(-0.75rem);
+    }
+
+    .product-overlay figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.9);
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .product-overlay:hover figcaption {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .product-overlay .caption-body {
+            text-align: center;
+            /*background-color: #fff;*/
+            color: var(--color-primary-dark);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            transform: translateY(1rem);
+            transition: all 0.25s ease-in-out;
+        }
+
+            .product-overlay:hover .caption-body,
+            .product-overlay:active .caption-body {
+                transform: translateY(0);
+            }
+
+
+        /*.product-overlay img {
+            transform: scale(1,1);
+            transition: all 0.3s ease;
+        }
+
+            .product-overlay:hover img {
+                transform: scale(1.2,1.2);
+            }*/
+
+
+
+.images-main img {
+    width: 100%;
+    height: 55vh;
+    object-fit: contain;
+}
+
+.images-thumbs {
+    margin-top: 0.5rem;
+}
+
+    .images-thumbs img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+        transition: all 0.2s ease;
+    }
+
+    .images-thumbs img:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+
+.images-cart img {
+    width: 100%;
+    height: 8rem;
+    object-fit: contain;
+}
+
+.cart-item .flex-stretch {
+    padding-left: 2rem;
+}
+
+    .cart-item .flex-stretch h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+
+.add-cart {
+    max-width: 50%;
+}
+
+
+#grid .card-light .title,
+#forms .card-light,
+#notify .card-light {
+    text-align: left;
+}
+
+.favorite label {
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: var(--color-neutral-medium);
+    cursor: pointer;
+}
+
+/* input inside favorite, if checked, do this to the following element of label */
+.favorite input:checked + label {
+    color: var(--color-accent-red-light);
+    transform: scale(1.5, 1.5);
+}
+
+
+
+#grid .grid div .card-light {
+    background-color: var(--color-neutral-light);
+}
+
+
+span.badge:not(:empty)::before {
+    content: '(';
+}
+
+span.badge:not(:empty)::after {
+    content: ')';
+}
+
+
+
+.navbar .display-flex {
+    flex-wrap: nowrap;
+}
+
+.menu-button label {
+    display: none;
+}
+
+
+.product-list-item {
+    max-width: 65%;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+
+    .navbar .display-flex {
+        flex-wrap: wrap;
+    }
+
+    .navbar .nav {
+        width: 100%;
+        display: none;
+    }
+
+    .navbar .nav ul {
+        display: block;
+        padding-left: 0rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-neutral-light);
+    }
+
+        .navbar .nav li {
+            line-height: 2em;
+        }
+
+
+    .menu-button label {
+        display: block;
+        padding: 0rem 1rem;
+        font-size: 1.8rem;
+        color: var(--color-primary-dark);
+    }
+
+        .menu-button label:hover {
+            cursor: pointer;
+            color: var(--color-neutral-medium);
+        }
+        
+
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .hero .discount-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero .discount-text h4 {
+        font-size: 1.3rem;
+    }
+
+    .product-overlay .caption-body h4 {
+        font-size: 1.3rem;
+    }
+
+    #tableofcontents .card {
+        width: 80%;
+    }
+    
+    #menu:checked+.navbar .nav {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .nav-crumbs ul li a {
+        font-size: 0.85rem;
+        padding: 0rem 0.85rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h4 {
+        font-size: 1.3rem;
+    }
+
+    .hero-landing {
+        background-image: url('../img/AW-landing-Hero_ForMobile.jpg');
+    }
+
+    .card-img:hover {
+        background-size: 150%;
+        cursor: pointer;
+    }
+
+    .product-overlay figcaption {
+        position: relative;
+        display: block;
+        top: initial;
+        left: initial;
+        width: 100%;
+        height: initial;
+        opacity: 1;
+        background-color: initial;
+    }
+
+    .product-overlay .caption-body {
+        transform: none;
+        padding: 0;
+    }
+
+    .cart-item .flex-stretch {
+        padding-left: 1rem;
+    }
+
+    .cart-item .flex-stretch h3 {
+        font-size: 1.15rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .add-cart {
+        max-width: 100%;
+    }
+
+    .product-list-item {
+        max-width: 100%;
+    }
+
+    footer .nav a {
+        padding: 0rem;
+    }
+
+}
+
+
+
+@media (max-width: 400px) {
+
+    #tableofcontents .card {
+        width: 100%;
+    }
+
+}

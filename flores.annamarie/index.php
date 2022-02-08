@@ -1,0 +1,115 @@
+<?php 
+include_once "lib/php/functions.php";
+include_once "parts/template.php";
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Prospect Market</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+	<meta name="viewport" content="width=device-width">
+
+	<!-- When ever loading in files, you always want to upload library files first, local files second-- this allows for css local files to override library files-->
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
+	<link rel="stylesheet" href="css/storetheme.css">
+ 		
+
+</head>
+
+
+ 
+
+<body class="flush">
+	<?php include "parts/navbar.php"; ?>
+	<!--EMMET string:  header>h1+p -->
+	
+<div class="view-window" style="background-image:url('img/bounty1.png')"> 
+	</div>
+
+	<!-- EMMET string:  .containter>article#article$.article*4>h2{Article $}+div.article-body>p*3>lorem40  -->
+	<div class="container">
+
+
+<h2> Products, News & Latest Produce</h2>
+
+
+<div class="container">
+	<h3>Lastest Fruit</h3>
+	<?php recommendedCategory("fruit"); ?>
+	<h3>Lastest Vegetables</h3>
+	<?php recommendedCategory("vegetable"); ?>
+</div>
+
+
+
+<hr color="var(--color-offwhite)" size="1" width="100%">
+
+
+
+
+
+
+<hr color="var(--color-offwhite)" size="1" width="100%">
+
+
+<h2>Delivered to your Door Step</h2>
+		<article id="article1" class="article card soft">
+			<div class="display-flex flex-align-center">
+				<div class="flex-stretch">
+				</div>
+				<div class="flex-none">
+		
+				</div>
+			</div>
+
+			<div class="article-body">
+				<h3>Your Shopping List</h3>
+				<img class="produce_image" src="img/prospectOldCouple.jpg" alt="Image"> 
+				<p class="articleImg">We offer a wide selection of fresh produce hand picked from our communities local farmers. Our purpose is to provide and deliver sustainable, organic, non- pesticide whole foods to our community and those in need. Our marker is online so all of our items are listed in our catalog page where you have the freedom of choice to select what produce is available.</p>
+				<p class="articleImg">We also offer delivery services for those who need assistance with picking , carrying and transporting food. We will deliver what ever is on your shopping list..</p>
+				<img class="produce_image" src="img/bounty.png" alt="bountyImage"> 
+				<p class="articleImg">Serving our clients and community is a priority. We would love to have you as a member of our company so please register for an account or subscribe to our newletters to be updated with discounts, sales, new items and to keep in touch!</p>
+			</div>
+		</article>
+</div>
+
+
+			<div class="grid gap xs-small md-medium">
+				<!--  .col-xs-6.col-md-3*4>.card>{Card}  -->
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src='img/heroFamilyBanner.jpg' alt="" class="media-image"></div>
+				</div>
+
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src='img/handblueberries.jpg' alt="" class="media-image"></div>
+				</div>
+
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src='img/farmerhandshake.jpg' alt="" class="media-image"></div>
+				</div>
+
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src='img/tomatohands.jpg' alt="" class="media-image"></div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+<div class="view-window" style="background-image:url('img/greenproduce.jpg')"> 
+	</div>	
+
+	
+
+</body>
+</html>
